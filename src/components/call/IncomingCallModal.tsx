@@ -17,12 +17,16 @@ interface IncomingCall {
   createdAt: string;
 }
 
+// Time in seconds before call times out
+const CALL_TIMEOUT_SECONDS = 60;
+
 export default function IncomingCallNotifier() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [incomingCall, setIncomingCall] = useState<IncomingCall | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [pollingActive, setPollingActive] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(CALL_TIMEOUT_SECONDS);
 
   const checkForIncomingCalls = useCallback(async () => {
     if (status !== "authenticated") return;
@@ -39,12 +43,44 @@ export default function IncomingCallNotifier() {
       if (response.ok && data.call) {
         setIncomingCall(data.call);
         setPollingActive(true);
+        setTimeLeft(CALL_TIMEOUT_SECONDS); // Reset timeout when new call arrives
       }
     } catch (error) {
       // Silently handle network errors - this is expected when the server is unavailable
       console.error("Error checking for calls:", error);
     }
   }, [status]);
+
+  // Countdown timer for call timeout
+  useEffect(() => {
+    if (!incomingCall) return;
+
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          // Call timed out - auto-reject
+          handleTimeout();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [incomingCall]);
+
+  // Handle call timeout (auto-reject)
+  const handleTimeout = async () => {
+    if (!incomingCall) return;
+    
+    await fetch(`/api/calls/${incomingCall.id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "reject" }),
+    });
+    
+    setIncomingCall(null);
+  };
 
   // Poll for incoming calls every 3 seconds
   useEffect(() => {
@@ -72,8 +108,12 @@ export default function IncomingCallNotifier() {
       const data = await response.json();
 
       if (response.ok) {
-        // Navigate to call page or open video interface
+        // Navigate to call page - check if current user is professional or client
+        const sessionRes = await fetch("/api/users/me", { credentials: "include" });
+        const sessionData = await sessionRes.json();
+        
         setIncomingCall(null);
+        // Both professionals and clients can use the same call page
         router.push(`/client/call/${incomingCall.id}`);
       } else {
         alert(data.error || "Failed to accept call");
@@ -148,10 +188,15 @@ export default function IncomingCallNotifier() {
               </p>
             </div>
 
-            {/* Call Type Label */}
-            <p className="text-sm text-muted-foreground">
-              incoming call...
-            </p>
+{/* Call Type Label */}
+             <div>
+               <p className="text-sm text-muted-foreground">
+                 incoming call...
+               </p>
+               <p className="text-xs text-red-400 mt-1">
+                 Call will end in {timeLeft} seconds
+               </p>
+             </div>
 
             {/* Action Buttons */}
             <div className="flex justify-center gap-4 pt-4">
