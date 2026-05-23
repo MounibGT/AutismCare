@@ -1,0 +1,14 @@
+{
+  "accuracy": 0.8325,
+  "precision": 0.9583,
+  "recall": 0.6935,
+  "f1": 0.8047,
+  "val_samples": 400,
+  "model": "ViT-B/16 (fine-tuned on autism face dataset)",
+  "architecture": "vit_b_16",
+  "classes": [
+    "Non-Autistic",
+    "Autistic"
+  ],
+  "has_metrics": "raw_state_dict"
+}

@@ -1,0 +1,100 @@
+1: Page 01:
+2: {
+3: "section": "Family History",
+4: "description": "Questionnaire for developmental screening (not a diagnostic tool)",
+5: "risk_levels": {
+6: "low": "0-5",
+7: "moderate": "6-12",
+8: "high": "13+"
+9: },
+10: "questions": [
+11: {
+12: "id": 1,
+13: "question_en": "Can you describe the child's family structure?",
+14: "question_fr": "Pouvez-vous décrire la composition de la famille de l’enfant ?",
+15: "question_ar": "هل يمكنك وصف تركيبة عائلة الطفل؟",
+16: "category": "family_history",
+17: "answer_type": "single_choice",
+18: "possible_answers": [
+19: "Normal nuclear family",
+20: "Single parent",
+21: "Separated parents",
+22: "Extended family",
+23: "Other"
+24: ],
+25: "score_map": {
+26: "Normal nuclear family": 0,
+27: "Single parent": 1,
+28: "Separated parents": 1,
+29: "Extended family": 0,
+30: "Other": 1
+31: },
+32: "weight": 1
+33: },
+34: {
+35: "id": 2,
+36: "question_en": "Does the child have brothers or sisters?",
+37: "question_fr": "هل لدى الطفل إخوة أو أخوات؟",
+38: "question_ar": "A-t-il des frères et sœurs ?",
+39: "category": "family_history",
+40: "answer_type": "yes_no",
+41: "possible_answers": ["Yes", "No"],
+42: "score_map": {
+43: "Yes": 0,
+44: "No": 1
+45: },
+46: "weight": 1
+47: },
+48: {
+49: "id": 3,
+50: "question_en": "Can you provide the names and ages of the siblings?",
+51: "question_fr": "هل يمكنك ذكر أسماء وأعمار الإخوة والأخوات؟",
+52: "question_ar": "Pouvez-vous donner les noms et âges de ses frères et sœurs ?",
+53: "category": "family_history",
+54: "answer_type": "text",
+55: "possible_answers": [],
+56: "score_map": {},
+57: "weight": 1
+58: },
+59: {
+60: "id": 4,
+61: "question_en": "Do they all have the same biological parents?",
+62: "question_fr": "هل جميع الإخوة لديهم نفس الوالدين البيولوجيين؟",
+63: "question_ar": "Ont-ils les mêmes parents biologiques ?",
+64: "category": "family_history",
+65: "answer_type": "yes_no",
+66: "possible_answers": ["Yes", "No"],
+67: "score_map": {
+68: "Yes": 0,
+69: "No": 1
+70: },
+71: "weight": 2
+72: },
+73: {
+74: "id": 5,
+75: "question_en": "Are any of the children adopted or fostered?",
+76: "question_fr": "هل هناك أطفال تم تبنيهم أو احتضانهم في العائلة؟",
+77: "question_ar": "Certains enfants ont-ils été adoptés ou accueillis dans la famille ?",
+78: "category": "family_history",
+79: "answer_type": "yes_no",
+80: "possible_answers": ["Yes", "No"],
+81: "score_map": {
+82: "Yes": 1,
+83: "No": 0
+84: },
+85: "weight": 1
+86: },
+87: {
+88: "id": 6,
+89: "question_en": "Are any of the children from a previous marriage?",
+90: "question_fr": "هل هناك أطفال من زواج سابق؟",
+91: "question_ar": "Certains enfants sont-ils issus d’un mariage précédent ?",
+92: "category": "family_history",
+93: "answer_type": "yes_no",
+94: "possible_answers": ["Yes", "No"],
+95: "score_map": {
+96: "Yes": 1,
+97: "No": 0
+98: },
+99: "weight": 1
+100: },

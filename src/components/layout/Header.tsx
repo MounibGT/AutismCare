@@ -1,0 +1,307 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  Menu,
+  ChevronDown,
+  UserCircle,
+  Briefcase,
+  LogOut,
+  Settings,
+  User,
+} from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { useSession, signOut } from "next-auth/react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
+import Image from "next/image";
+
+export function Header() {
+  const pathname = usePathname();
+  const t = useTranslations("Header");
+  const locale = useLocale();
+  const { data: session, status } = useSession();
+
+  const navLinks = [
+    { href: "/", label: t("nav.home") },
+    { href: "/approaches", label: t("nav.approaches") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
+
+  const aboutDropdownItems = [
+    { href: "/who-we-are", label: t("nav.whoWeAre") },
+    { href: "/why-us", label: t("nav.whyUs") },
+  ];
+
+  const servicesDropdownItems = [
+    { href: "/services", label: t("nav.servicesOverview") },
+    {
+      href: "/services#sentiers",
+      label: t("nav.schoolServices"),
+      highlight: true,
+    },
+  ];
+
+  return (
+    <header className="fixed top-0 z-50 w-full border-b border-border/20 bg-card">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex h-14 items-center justify-between">
+          {/* Logo/Brand */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              tabIndex={-1}
+              className="flex items-center hover:opacity-80 transition-opacity"
+            >
+              <Image
+                width={256}
+                height={256}
+                src="/Picture2.png"
+                alt="Je Chemine"
+                className="h-8 w-auto"
+              />
+              <span className="ml-2 font-semibold inline-flex items-center h-8">AutismeCare</span>
+            </Link>
+          </div>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-5">
+            {/* Home link */}
+            <Link
+              href="/"
+              className={`text-sm font-semibold transition-all duration-300 ease-in-out ${
+                pathname === "/"
+                  ? "text-primary font-semibold underline underline-offset-4"
+                  : "text-foreground hover:text-primary"
+              }`}
+            >
+              {t("nav.home")}
+            </Link>
+
+            {/* About Us Dropdown */}
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger
+                className={`inline-flex items-center gap-1 text-sm font-semibold transition-all duration-300 ease-in-out focus-visible:outline-none ${
+                  pathname === "/who-we-are" || pathname === "/why-us"
+                    ? "text-primary underline underline-offset-4"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                {t("nav.aboutUs")}
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 data-[state=open]:rotate-180" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="w-44">
+                {aboutDropdownItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center gap-2 cursor-pointer text-sm ${
+                        pathname === item.href ? "text-primary font-medium" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Services Dropdown */}
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger
+                className={`inline-flex items-center gap-1 text-sm font-semibold transition-all duration-300 ease-in-out focus-visible:outline-none ${
+                  pathname.startsWith("/services")
+                    ? "text-primary underline underline-offset-4"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                {t("nav.services")}
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 data-[state=open]:rotate-180" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="w-44">
+                {servicesDropdownItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center gap-2 cursor-pointer text-sm ${
+                        item.highlight ? "text-primary font-medium" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Approaches link */}
+            <Link
+              href="/approaches"
+              className={`text-sm font-semibold transition-all duration-300 ease-in-out ${
+                pathname === "/approaches"
+                  ? "text-primary font-semibold underline underline-offset-4"
+                  : "text-foreground hover:text-primary"
+              }`}
+            >
+              {t("nav.approaches")}
+            </Link>
+
+            {/* Contact link */}
+            <Link
+              href="/contact"
+              className={`text-sm font-semibold transition-all duration-300 ease-in-out ${
+                pathname === "/contact"
+                  ? "text-primary font-semibold underline underline-offset-4"
+                  : "text-foreground hover:text-primary"
+              }`}
+            >
+              {t("nav.contact")}
+            </Link>
+
+            {/* I'm a Professional link */}
+            <Link
+              href="/professional"
+              className={`text-sm font-semibold transition-all duration-300 ease-in-out ${
+                pathname === "/professional"
+                  ? "text-primary font-semibold underline underline-offset-4"
+                  : "text-foreground hover:text-primary"
+              }`}
+            >
+              {t("nav.professional")}
+            </Link>
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-3">
+            <LocaleSwitcher currentLocale={locale} />
+
+            {status === "loading" ? (
+              // Loading state
+              <div className="hidden sm:flex items-center gap-2">
+                <div className="w-18 h-7 bg-muted animate-pulse rounded"></div>
+              </div>
+            ) : session?.user ? (
+              // Authenticated user
+              <>
+                <DropdownMenu modal={false}>
+                  <DropdownMenuTrigger className="hidden sm:inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                    <User className="w-3.5 h-3.5" />
+                    {session.user.name || session.user.email}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 data-[state=open]:rotate-180" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-52">
+                    <div className="px-2 py-1.5 text-sm font-medium text-muted-foreground">
+                      Signed in as {session.user.email}
+                    </div>
+                    <DropdownMenuSeparator />
+
+                    {/* Role-based dashboard links */}
+                    {session.user.role === "admin" && (
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/admin/dashboard"
+                          className="flex items-center gap-2 cursor-pointer text-sm"
+                        >
+                          <Settings className="w-3.5 h-3.5" />
+                          Admin Dashboard
+                        </Link>
+                      </DropdownMenuItem>
+                    )}
+
+                    {session.user.role === "professional" && (
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/professional/dashboard"
+                          className="flex items-center gap-2 cursor-pointer text-sm"
+                        >
+                          <Briefcase className="w-3.5 h-3.5" />
+                          Professional Dashboard
+                        </Link>
+                      </DropdownMenuItem>
+                    )}
+
+                    {session.user.role === "client" && (
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/client/dashboard"
+                          className="flex items-center gap-2 cursor-pointer text-sm"
+                        >
+                          <UserCircle className="w-3.5 h-3.5" />
+                          Client Dashboard
+                        </Link>
+                      </DropdownMenuItem>
+                    )}
+
+                    {session.user.role === "guest" && (
+                      <>
+                        <DropdownMenuItem asChild>
+                          <Link
+                            href="/appointment"
+                            className="flex items-center gap-2 cursor-pointer text-sm"
+                          >
+                            <UserCircle className="w-3.5 h-3.5" />
+                            Book Appointment
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <Link
+                            href="/signup"
+                            className="flex items-center gap-2 cursor-pointer text-sm text-primary"
+                          >
+                            <UserCircle className="w-3.5 h-3.5" />
+                            Create Full Account
+                          </Link>
+                        </DropdownMenuItem>
+                      </>
+                    )}
+
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem
+                      onClick={() => signOut({ callbackUrl: "/" })}
+                      className="flex items-center gap-2 cursor-pointer text-sm text-red-600 focus:text-red-600"
+                    >
+                      <LogOut className="w-3.5 h-3.5" />
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </>
+            ) : (
+              // Unauthenticated user
+              <>
+                <Link
+                  href="/login"
+                  className="hidden sm:inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  {t("login")}
+                </Link>
+                <Link
+                  href="/signup"
+                  className="hidden sm:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  {t("getStarted")}
+                </Link>
+              </>
+            )}
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Menu"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+

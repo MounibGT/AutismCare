@@ -1,0 +1,3840 @@
+0: Page 01:
+1: {
+2: "section": "Family History",
+3: "description": "Questionnaire for developmental screening (not a diagnostic tool)",
+4: "risk_levels": {
+5: "low": "0-5",
+6: "moderate": "6-12",
+7: "high": "13+"
+8: },
+9: "questions": [
+10: {
+11: "id": 1,
+12: "question_en": "Can you describe the child's family structure?",
+13: "question_fr": "Pouvez-vous décrire la composition de la famille de l’enfant ?",
+14: "question_ar": "هل يمكنك وصف تركيبة عائلة الطفل؟",
+15: "category": "family_history",
+16: "answer_type": "single_choice",
+17: "possible_answers": [
+18: "Normal nuclear family",
+19: "Single parent",
+20: "Separated parents",
+21: "Extended family",
+22: "Other"
+23: ],
+24: "score_map": {
+25: "Normal nuclear family": 0,
+26: "Single parent": 1,
+27: "Separated parents": 1,
+28: "Extended family": 0,
+29: "Other": 1
+30: },
+31: "weight": 1
+32: },
+33: {
+34: "id": 2,
+35: "question_en": "Does the child have brothers or sisters?",
+36: "question_fr": "هل لدى الطفل إخوة أو أخوات؟",
+37: "question_ar": "A-t-il des frères et sœurs ?",
+38: "category": "family_history",
+39: "answer_type": "yes_no",
+40: "possible_answers": ["Yes", "No"],
+41: "score_map": {
+42: "Yes": 0,
+43: "No": 1
+44: },
+45: "weight": 1
+46: },
+47: {
+48: "id": 3,
+49: "question_en": "Can you provide the names and ages of the siblings?",
+50: "question_fr": "هل يمكنك ذكر أسماء وأعمار الإخوة والأخوات؟",
+51: "question_ar": "Pouvez-vous donner les noms et âges de ses frères et sœurs ?",
+52: "category": "family_history",
+53: "answer_type": "text",
+54: "possible_answers": [],
+55: "score_map": {},
+56: "weight": 1
+57: },
+58: {
+59: "id": 4,
+60: "question_en": "Do they all have the same biological parents?",
+61: "question_fr": "هل جميع الإخوة لديهم نفس الوالدين البيولوجيين؟",
+62: "question_ar": "Ont-ils les mêmes parents biologiques ?",
+63: "category": "family_history",
+64: "answer_type": "yes_no",
+65: "possible_answers": ["Yes", "No"],
+66: "score_map": {
+67: "Yes": 0,
+68: "No": 1
+69: },
+70: "weight": 2
+71: },
+72: {
+73: "id": 5,
+74: "question_en": "Are any of the children adopted or fostered?",
+75: "question_fr": "هل هناك أطفال تم تبنيهم أو احتضانهم في العائلة؟",
+76: "question_ar": "Certains enfants ont-ils été adoptés ou accueillis dans la famille ?",
+77: "category": "family_history",
+78: "answer_type": "yes_no",
+79: "possible_answers": ["Yes", "No"],
+80: "score_map": {
+81: "Yes": 1,
+82: "No": 0
+83: },
+84: "weight": 1
+85: },
+86: {
+87: "id": 6,
+88: "question_en": "Are any of the children from a previous marriage?",
+89: "question_fr": "هل هناك أطفال من زواج سابق؟",
+90: "question_ar": "Certains enfants sont-ils issus d’un mariage précédent ?",
+91: "category": "family_history",
+92: "answer_type": "yes_no",
+93: "possible_answers": ["Yes", "No"],
+94: "score_map": {
+95: "Yes": 1,
+96: "No": 0
+97: },
+98: "weight": 1
+99: },
+100: {
+101: "id": 7,
+102: "question_en": "Are there other people living with the child at home?",
+103: "question_fr": "هل هناك أشخاص آخرون يعيشون مع الطفل في المنزل؟",
+104: "question_ar": "Y a-t-il d'autres personnes qui vivent avec l’enfant à la maison ?",
+105: "category": "family_history",
+106: "answer_type": "yes_no",
+107: "possible_answers": ["Yes", "No"],
+108: "score_map": {
+109: "Yes": 0,
+110: "No": 1
+111: },
+112: "weight": 1
+113: },
+114: {
+115: "id": 8,
+116: "question_en": "Have any siblings experienced developmental delays?",
+117: "question_fr": "هل عانى أحد الإخوة أو الأخوات من تأخر في النمو؟",
+118: "question_ar": "Certains frères et sœurs ont-ils eu un retard de développement ?",
+119: "category": "family_history",
+120: "answer_type": "yes_no",
+121: "possible_answers": ["Yes", "No"],
+122: "score_map": {
+123: "Yes": 2,
+124: "No": 0
+125: },
+126: "weight": 2
+127: },
+128: {
+129: "id": 9,
+130: "question_en": "Have any siblings had developmental problems requiring treatment?",
+131: "question_fr": "هل عانى أحد الإخوة أو الأخوات من مشاكل في النمو استدعت علاجًا؟",
+132: "question_ar": "Certains frères et sœurs ont-ils eu des problèmes de développement nécessitant un traitement ?",
+133: "category": "family_history",
+134: "answer_type": "yes_no",
+135: "possible_answers": ["Yes", "No"],
+136: "score_map": {
+137: "Yes": 2,
+138: "No": 0
+139: },
+140: "weight": 2
+141: },
+142: {
+143: "id": 10,
+144: "question_en": "Has either parent had developmental difficulties (such as delayed walking or speaking)?",
+145: "question_fr": "هل عانى أحد الوالدين من صعوبات في النمو (مثل تأخر المشي أو الكلام)؟",
+146: "question_ar": "L’un des parents a-t-il eu des difficultés de développement (comme retard de marche ou de parole) ?",
+147: "category": "family_history",
+148: "answer_type": "yes_no",
+149: "possible_answers": ["Yes", "No"],
+150: "score_map": {
+151: "Yes": 2,
+152: "No": 0
+153: },
+154: "weight": 3
+155: },
+156: {
+157: "id": 11,
+158: "question_en": "Has either parent had developmental problems requiring treatment?",
+159: "question_fr": "هل عانى أحد الوالدين من مشاكل في النمو استدعت علاجًا؟",
+160: "question_ar": "L’un des parents a-t-il eu des problèmes de développement nécessitant un traitement ?",
+161: "category": "family_history",
+162: "answer_type": "yes_no",
+163: "possible_answers": ["Yes", "No"],
+164: "score_map": {
+165: "Yes": 2,
+166: "No": 0
+167: },
+168: "weight": 3
+169: },
+170: {
+171: "id": 12,
+172: "question_en": "Is there anyone in the family with difficulties similar to the child's?",
+173: "question_fr": "هل يوجد شخص في العائلة يعاني من صعوبات مشابهة لصعوبات الطفل؟",
+174: "question_ar": "Y a-t-il quelqu’un dans la famille ayant des difficultés similaires à celles de l’enfant ?",
+175: "category": "family_history",
+176: "answer_type": "yes_no",
+177: "possible_answers": ["Yes", "No"],
+178: "score_map": {
+179: "Yes": 2,
+180: "No": 0
+181: },
+182: "weight": 3
+183: }
+184: ]
+185: }
+186: Page 2:
+187: {
+188: "section": "Educational and Medical History",
+189: "description": "Developmental background, education path, medical and diagnostic history",
+190: "questions": [
+191: {
+192: "id": 1,
+193: "category": "education_history",
+194: "question_en": "What type of educational setting did the child attend (kindergarten, primary school, special education)?",
+195: "question_fr": "Quelle sorte de structures d'accueil et d'écoles l’enfant a-t-il fréquenté ?",
+196: "question_ar": "ما نوع المؤسسات التعليمية التي التحق بها الطفل؟",
+197: "answer_type": "multi_choice",
+198: "possible_answers": [
+199: "Kindergarten",
+200: "Regular primary school",
+201: "Special education school",
+202: "Home schooling",
+203: "Did not attend school"
+204: ],
+205: "score_map": {
+206: "Kindergarten": 0,
+207: "Regular primary school": 0,
+208: "Special education school": 2,
+209: "Home schooling": 1,
+210: "Did not attend school": 2
+211: },
+212: "weight": 2
+213: },
+214: {
+215: "id": 2,
+216: "category": "education_history",
+217: "question_en": "How long did the child attend school?",
+218: "question_fr": "Combien de temps l'a-t-il fréquentée ?",
+219: "question_ar": "كم مدة التحاقه بالمدرسة؟",
+220: "answer_type": "text",
+221: "possible_answers": [],
+222: "score_map": {},
+223: "weight": 1
+224: },
+225: {
+226: "id": 3,
+227: "category": "education_support",
+228: "question_en": "Did the child need special support or assistance at school?",
+229: "question_fr": "A-t-il eu besoin d'une aide particulière / d'un soutien spécialisé ?",
+230: "question_ar": "هل احتاج إلى دعم خاص في المدرسة؟",
+231: "answer_type": "yes_no",
+232: "possible_answers": ["Yes", "No"],
+233: "score_map": {
+234: "Yes": 2,
+235: "No": 0
+236: },
+237: "weight": 3
+238: },
+239: {
+240: "id": 4,
+241: "category": "learning_difficulties",
+242: "question_en": "Did the child have difficulties with reading or spelling?",
+243: "question_fr": "A-t-il présenté des problèmes particuliers avec la lecture ou l'orthographe ?",
+244: "question_ar": "هل يعاني من مشاكل في القراءة أو الإملاء؟",
+245: "answer_type": "yes_no",
+246: "possible_answers": ["Yes", "No"],
+247: "score_map": {
+248: "Yes": 2,
+249: "No": 0
+250: },
+251: "weight": 2
+252: },
+253: {
+254: "id": 5,
+255: "category": "current_status",
+256: "question_en": "What is the child doing after leaving school?",
+257: "question_fr": "Que fait-il depuis qu'il a quitté l'école ?",
+258: "question_ar": "ماذا يفعل الطفل بعد مغادرة المدرسة؟",
+259: "answer_type": "text",
+260: "possible_answers": [],
+261: "score_map": {},
+262: "weight": 1
+263: },
+264: {
+265: "id": 6,
+266: "category": "memory_reference",
+267: "question_en": "What helps you best remember the period between age 4 and 5?",
+268: "question_fr": "Qu'est-ce qui vous aide à vous rappeler la période entre 4 et 5 ans ?",
+269: "question_ar": "ما الذي يساعدك على تذكر فترة ما بين 4 و5 سنوات؟",
+270: "answer_type": "text",
+271: "possible_answers": [],
+272: "score_map": {},
+273: "weight": 0
+274: },
+275: {
+276: "id": 7,
+277: "category": "life_events",
+278: "question_en": "Where were you living during that time?",
+279: "question_fr": "Où habitiez-vous alors ?",
+280: "question_ar": "أين كنتم تعيشون في تلك الفترة؟",
+281: "answer_type": "text",
+282: "possible_answers": [],
+283: "score_map": {},
+284: "weight": 0
+285: },
+286: {
+287: "id": 8,
+288: "category": "life_events",
+289: "question_en": "Were there any major events during that period (birth of sibling, moving house, family death, job change)?",
+290: "question_fr": "Y a-t-il eu des événements importants durant cette période ?",
+291: "question_ar": "هل حدثت أحداث مهمة خلال تلك الفترة؟",
+292: "answer_type": "multi_select",
+293: "possible_answers": [
+294: "Birth of sibling",
+295: "Moving house",
+296: "Family death",
+297: "Parental job change",
+298: "None"
+299: ],
+300: "score_map": {
+301: "Birth of sibling": 0,
+302: "Moving house": 0,
+303: "Family death": 1,
+304: "Parental job change": 0,
+305: "None": 0
+306: },
+307: "weight": 1
+308: },
+309: {
+310: "id": 9,
+311: "category": "diagnosis",
+312: "question_en": "Has the child ever been diagnosed with a medical or developmental condition?",
+313: "question_fr": "Quelqu'un vous a-t-il déjà donné un diagnostic pour l’enfant ?",
+314: "question_ar": "هل تم تشخيص الطفل بأي حالة طبية أو نمائية؟",
+315: "answer_type": "text",
+316: "important_note": "No scoring applied",
+317: "score_map": {},
+318: "weight": 0
+319: },
+320: {
+321: "id": 10,
+322: "category": "hearing",
+323: "question_en": "Does the child have any hearing problems?",
+324: "question_fr": "Qu'en est-il de son audition ?",
+325: "question_ar": "هل لدى الطفل مشاكل في السمع؟",
+326: "answer_type": "yes_no",
+327: "possible_answers": ["Yes", "No"],
+328: "score_map": {
+329: "Yes": 2,
+330: "No": 0
+331: },
+332: "weight": 3
+333: },
+334: {
+335: "id": 11,
+336: "category": "medication",
+337: "question_en": "Is the child currently taking any medication or treatment?",
+338: "question_fr": "Est-ce qu'il prend actuellement des médicaments ?",
+339: "question_ar": "هل يتناول الطفل أي أدوية حالياً؟",
+340: "answer_type": "text",
+341: "important_note": "No scoring applied",
+342: "score_map": {},
+343: "weight": 0
+344: }
+345: ]
+346: }
+347: Page 7:
+348: {
+349: "section": "Introductory Behavioral Overview",
+350: "description": "General description of the child’s behavior, communication, and social functioning",
+351: "questions": [
+352: {
+353: "id": 1,
+354: "category": "global_description",
+355: "question_en": "Can you tell me a general description of the child?",
+356: "question_fr": "Pouvez-vous me parler un peu de l’enfant ?",
+357: "question_ar": "هل يمكنك تقديم وصف عام للطفل؟",
+358: "answer_type": "text",
+359: "possible_answers": [],
+360: "score_map": {},
+361: "weight": 0
+362: },
+363: {
+364: "id": 2,
+365: "category": "social_identification",
+366: "question_en": "How would you describe the child's behavior if you had to identify them in a group of children of the same age?",
+367: "question_fr": "Comment décririez-vous le comportement de l’enfant dans un groupe d’enfants du même âge ?",
+368: "question_ar": "كيف تصف سلوك الطفل داخل مجموعة من الأطفال في نفس العمر؟",
+369: "answer_type": "text",
+370: "possible_answers": [],
+371: "score_map": {},
+372: "weight": 0
+373: },
+374: {
+375: "id": 3,
+376: "category": "independent_behavior",
+377: "question_en": "What kinds of things does the child do when left alone?",
+378: "question_fr": "Quelles sortes de choses fait-il quand il est livré à lui-même ?",
+379: "question_ar": "ماذا يفعل الطفل عندما يكون بمفرده؟",
+380: "answer_type": "text",
+381: "possible_answers": [],
+382: "score_map": {},
+383: "weight": 0
+384: },
+385: {
+386: "id": 4,
+387: "category": "emotional_state",
+388: "question_en": "When does the child feel best?",
+389: "question_fr": "Quand se sent-il le mieux ?",
+390: "question_ar": "متى يشعر الطفل بأفضل حالاته؟",
+391: "answer_type": "text",
+392: "possible_answers": [],
+393: "score_map": {},
+394: "weight": 0
+395: },
+396: {
+397: "id": 5,
+398: "category": "difficult_moments",
+399: "question_en": "What are the most difficult moments for the child?",
+400: "question_fr": "Que diriez-vous des moments les plus difficiles ?",
+401: "question_ar": "ما هي أصعب اللحظات بالنسبة للطفل؟",
+402: "answer_type": "text",
+403: "possible_answers": [],
+404: "score_map": {},
+405: "weight": 0
+406: },
+407: {
+408: "id": 6,
+409: "category": "language_development",
+410: "question_en": "How would you describe the child's language?",
+411: "question_fr": "À quoi ressemble le langage de l’enfant ?",
+412: "question_ar": "كيف تصف لغة الطفل وتواصله؟",
+413: "answer_type": "text",
+414: "possible_answers": [],
+415: "score_map": {},
+416: "weight": 0
+417: }
+418: ]
+419: }
+420: Page 8 :
+421: {
+422: "section": "Current Concerns",
+423: "description": "Parent/caregiver current concerns about the child's development and behavior (no scoring applied)",
+424: "questions": [
+425: {
+426: "id": 1,
+427: "category": "current_concerns",
+428: "question_en": "Do you currently have any concerns about the child's behavior or development? What are they?",
+429: "question_fr": "Actuellement, avez-vous des préoccupations sur le comportement ou le développement de l’enfant ? Quelles sont-elles ?",
+430: "question_ar": "هل لديك حالياً أي مخاوف بشأن سلوك أو تطور الطفل؟ ما هي؟",
+431: "answer_type": "text",
+432: "possible_answers": [],
+433: "score_map": {},
+434: "weight": 0,
+435: "important_note": "No scoring applied - used for qualitative analysis only"
+436: }
+437: ]
+438: }
+439: Page 9:
+440: {
+441: "section": "Early Development and Symptom Onset",
+442: "description": "Age at first parental concern and description of early developmental symptoms (language, social, behavior)",
+443: "questions": [
+444: {
+445: "id": 1,
+446: "category": "age_of_concern",
+447: "question_en": "How old was the child (in months) when you first noticed something unusual in their language, social interaction, or behavior?",
+448: "question_fr": "Quel âge avait l’enfant quand vous vous êtes inquiété pour la première fois ?",
+449: "question_ar": "كم كان عمر الطفل عندما لاحظتم لأول مرة شيئًا غير طبيعي في اللغة أو السلوك أو العلاقات؟",
+450: "answer_type": "numeric_months",
+451: "allowed_special_codes": {
+452: "991": "No concern despite referral",
+453: "992": "Concern from birth",
+454: "996": "Unknown but before 3 years",
+455: "997": "Unknown but after 3 years",
+456: "998": "Not applicable",
+457: "999": "Unknown / not asked"
+458: },
+459: "rules": "If age given in weeks → convert to nearest month. If range → use middle value.",
+460: "score_map": {},
+461: "weight": 0
+462: },
+463: {
+464: "id": 2,
+465: "category": "early_symptoms",
+466: "question_en": "What were the first signs or symptoms that concerned you?",
+467: "question_fr": "Quels sont les premiers éléments qui vous ont inquiété ?",
+468: "question_ar": "ما هي أول العلامات أو الأعراض التي أثارت قلقكم؟",
+469: "answer_type": "text",
+470: "possible_answers": [],
+471: "score_map": {},
+472: "weight": 0,
+473: "important_note": "Used for qualitative clinical interpretation only"
+474: }
+475: ]
+476: }
+477: Page10:
+478: {
+479: "section": "Retrospective Developmental Onset",
+480: "description": "Determination of the earliest perceived developmental or behavioral abnormalities based on parental retrospective judgment",
+481: "questions": [
+482: {
+483: "id": 1,
+484: "category": "retrospective_onset",
+485: "question_en": "Looking back, when do you think the child first showed developmental or behavioral difficulties?",
+486: "question_fr": "Avec du recul, quand pensez-vous que les premiers problèmes sont apparus ?",
+487: "question_ar": "بأثر رجعي، متى تعتقدون أن أول مشاكل في التطور أو السلوك ظهرت؟",
+488: "answer_type": "coded_choice",
+489: "possible_answers": [
+490: "0",
+491: "1",
+492: "2",
+493: "3",
+494: "4",
+495: "5",
+496: "6",
+497: "7",
+498: "8",
+499: "9"
+500: ],
+501: "coding_system": {
+502: "0": "Problems present within first 12 months",
+503: "1": "Before 2nd year",
+504: "2": "Before or at 3rd year",
+505: "3": "Before or at 4th year",
+506: "4": "Before or at 5th year",
+507: "5": "Before or at 6th year",
+508: "6": "After 6th year (specify details)",
+509: "7": "Child always different but not seen as abnormal",
+510: "8": "No problems noticed",
+511: "9": "Unknown / not reported"
+512: },
+513: "rules": "Use informant judgment only; no medical validation implied",
+514: "score_map": {
+515: "0": 3,
+516: "1": 3,
+517: "2": 2,
+518: "3": 2,
+519: "4": 1,
+520: "5": 1,
+521: "6": 1,
+522: "7": 2,
+523: "8": 0,
+524: "9": 0
+525: },
+526: "weight": 3
+527: }
+528: ]
+529: }
+531: Page 7-2
+533: {
+534: "section": "Motor Development",
+535: "description": "Assessment of early motor milestones, especially autonomous walking development",
+536: "questions": [
+537: {
+538: "id": 1,
+539: "category": "walking_milestone",
+540: "question_en": "At what age did the child walk without support?",
+541: "question_fr": "À quel âge l’enfant a-t-il marché sans être tenu ?",
+542: "question_ar": "في أي عمر مشى الطفل بشكل مستقل دون مساعدة؟",
+543: "answer_type": "numeric_months",
+544: "normal_range_note": "Typical development < 18 months",
+545: "rules": "If age given in range → take median and round to nearest month",
+546: "allowed_special_codes": {
+547: "995": "Stage not yet achieved",
+548: "996": "Unknown but development seems normal",
+549: "997": "Unknown but development seems delayed",
+550: "998": "Not applicable",
+551: "999": "Unknown / not asked"
+552: },
+553: "score_map": {
+554: "0-12": 0,
+555: "13-15": 1,
+556: "16-18": 2,
+557: "19+": 3
+558: },
+559: "weight": 2
+560: },
+561: {
+562: "id": 2,
+563: "category": "motor_development_fallback",
+564: "question_en": "If walking was delayed, at what age did the child sit without support?",
+565: "question_fr": "Si la marche était retardée, à quel âge s’est-il assis sans aide ?",
+566: "question_ar": "إذا كان المشي متأخراً، في أي عمر جلس الطفل بدون دعم؟",
+567: "answer_type": "numeric_months",
+568: "rules": "Only used if walking milestone is delayed or unclear",
+569: "allowed_special_codes": {
+570: "995": "Not achieved",
+571: "996": "Unknown but normal",
+572: "997": "Unknown but delayed",
+573: "998": "Not applicable",
+574: "999": "Unknown"
+575: },
+576: "score_map": {},
+577: "weight": 1
+578: }
+579: ]
+580: }
+581: Page 8-2
+582: {
+583: "section": "Toilet Training",
+584: "description": "Assessment of daytime bladder control acquisition, stability, and possible regression",
+585: "questions": [
+586: {
+587: "id": 1,
+588: "category": "toilet_training_overview",
+589: "question_en": "How did toilet training progress in the child?",
+590: "question_fr": "Comment l'apprentissage de la propreté s'est-il passé ?",
+591: "question_ar": "كيف كان تطور تدريب الطفل على استخدام المرحاض؟",
+592: "answer_type": "text",
+593: "possible_answers": [],
+594: "score_map": {},
+595: "weight": 0
+596: },
+597: {
+598: "id": 2,
+599: "category": "daytime_control",
+600: "question_en": "Is the child dry during the day?",
+601: "question_fr": "Est-ce que l’enfant est propre durant la journée ?",
+602: "question_ar": "هل الطفل جاف خلال النهار؟",
+603: "answer_type": "yes_no",
+604: "possible_answers": ["Yes", "No"],
+605: "score_map": {
+606: "Yes": 0,
+607: "No": 2
+608: },
+609: "weight": 2
+610: },
+611: {
+612: "id": 3,
+613: "category": "first_acquisition_age",
+614: "question_en": "At what age was the child first toilet trained?",
+615: "question_fr": "À quel âge a-t-il été propre pour la première fois ?",
+616: "question_ar": "في أي عمر أصبح الطفل متحكمًا في التبول لأول مرة؟",
+617: "answer_type": "numeric_months",
+618: "allowed_special_codes": {
+619: "994": "Never achieved continence",
+620: "996": "Unknown but normal acquisition",
+621: "997": "Unknown but delayed acquisition",
+622: "998": "Not applicable",
+623: "999": "Unknown / not asked"
+624: },
+625: "score_map": {},
+626: "weight": 1
+627: },
+628: {
+629: "id": 4,
+630: "category": "stable_control_12months",
+631: "question_en": "At what age did the child achieve 12 consecutive months of dryness without accidents?",
+632: "question_fr": "Quand a-t-il été propre pendant 12 mois consécutifs sans accident ?",
+633: "question_ar": "متى أصبح الطفل جافًا لمدة 12 شهرًا متتالية بدون حوادث؟",
+634: "answer_type": "numeric_months",
+635: "rules": "Exclude isolated accidents (fever, illness, stress, environment change)",
+636: "allowed_special_codes": {
+637: "993": "Was dry for 12 months but regressed",
+638: "994": "Never achieved continence",
+639: "995": "Stage not achieved (<12 months stability)",
+640: "996": "Unknown but normal acquisition",
+641: "997": "Unknown but delayed acquisition",
+642: "998": "Not applicable",
+643: "999": "Unknown / not asked"
+644: },
+645: "score_map": {
+646: "0-36": 0,
+647: "37-48": 1,
+648: "49+": 2
+649: },
+650: "weight": 2
+651: }
+652: ]
+653: }
+654: Page 9-2
+655: {
+656: "section": "Toilet Training - Nighttime Bladder Control",
+657: "description": "Assessment of nighttime bladder control acquisition, stability over 12 months, and possible regression",
+658: "questions": [
+659: {
+660: "id": 1,
+661: "category": "night_control_status",
+662: "question_en": "Is the child dry during the night?",
+663: "question_fr": "Est-ce que l’enfant est propre durant la nuit ?",
+664: "question_ar": "هل الطفل جاف أثناء الليل؟",
+665: "answer_type": "yes_no",
+666: "possible_answers": ["Yes", "No"],
+667: "score_map": {
+668: "Yes": 0,
+669: "No": 2
+670: },
+671: "weight": 2
+672: },
+673: {
+674: "id": 2,
+675: "category": "night_first_acquisition",
+676: "question_en": "At what age was the child first dry at night?",
+677: "question_fr": "À quel âge a-t-il été propre la nuit pour la première fois ?",
+678: "question_ar": "في أي عمر أصبح الطفل جافًا أثناء الليل لأول مرة؟",
+679: "answer_type": "numeric_months",
+680: "allowed_special_codes": {
+681: "994": "Never achieved nighttime continence",
+682: "996": "Unknown but normal acquisition",
+683: "997": "Unknown but delayed acquisition",
+684: "998": "Not applicable",
+685: "999": "Unknown / not asked"
+686: },
+687: "score_map": {},
+688: "weight": 1
+689: },
+690: {
+691: "id": 3,
+692: "category": "night_stable_control_12months",
+693: "question_en": "At what age did the child achieve 12 consecutive months of dry nights without accidents?",
+694: "question_fr": "Quand a-t-il été propre la nuit pendant 12 mois consécutifs sans accident ?",
+695: "question_ar": "متى أصبح الطفل جافًا ليلاً لمدة 12 شهرًا متتالية بدون حوادث؟",
+696: "answer_type": "numeric_months",
+697: "rules": "Exclude isolated accidents (illness, fever, stress, environmental change)",
+698: "allowed_special_codes": {
+699: "993": "Was dry for 12 months but regressed",
+700: "994": "Never achieved continence",
+701: "995": "Stage not achieved (<12 months stability)",
+702: "996": "Unknown but normal acquisition",
+703: "997": "Unknown but delayed acquisition",
+704: "998": "Not applicable",
+705: "999": "Unknown / not asked"
+706: },
+707: "score_map": {
+708: "0-48": 0,
+709: "49-60": 1,
+710: "61+": 2
+711: },
+712: "weight": 2
+713: }
+714: ]
+715: }
+716: Page 10 -2 :
+717: {
+718: "section": "Toilet Training - Bowel Control",
+719: "description": "Assessment of bowel (stool) continence acquisition, stability over 12 months, and regression patterns",
+720: "questions": [
+721: {
+722: "id": 1,
+723: "category": "bowel_control_status",
+724: "question_en": "Does the child have bowel control (does not soil himself)?",
+725: "question_fr": "Est-ce que l’enfant contrôle ses intestins ?",
+726: "question_ar": "هل الطفل يتحكم في التبرز؟",
+727: "answer_type": "yes_no",
+728: "possible_answers": ["Yes", "No"],
+729: "score_map": {
+730: "Yes": 0,
+731: "No": 2
+732: },
+733: "weight": 2
+734: },
+735: {
+736: "id": 2,
+737: "category": "bowel_first_acquisition",
+738: "question_en": "At what age did the child first achieve full bowel control?",
+739: "question_fr": "À quel âge a-t-il contrôlé complètement ses intestins pour la première fois ?",
+740: "question_ar": "في أي عمر تحكم الطفل في الأمعاء لأول مرة بشكل كامل؟",
+741: "answer_type": "numeric_months",
+742: "allowed_special_codes": {
+743: "994": "Never achieved bowel continence",
+744: "996": "Unknown but normal acquisition",
+745: "997": "Unknown but delayed acquisition",
+746: "998": "Not applicable",
+747: "999": "Unknown / not asked"
+748: },
+749: "score_map": {},
+750: "weight": 1
+751: },
+752: {
+753: "id": 3,
+754: "category": "bowel_stable_control_12months",
+755: "question_en": "At what age did the child achieve 12 consecutive months of bowel control without accidents?",
+756: "question_fr": "Quand a-t-il été propre pendant 12 mois consécutifs sans accident ?",
+757: "question_ar": "متى أصبح الطفل متحكمًا في التبرز لمدة 12 شهرًا متتالية بدون حوادث؟",
+758: "answer_type": "numeric_months",
+759: "rules": "Include both stool accidents and mixed stool/urine accidents",
+760: "allowed_special_codes": {
+761: "993": "Was continent for 12 months but regressed",
+762: "994": "Never achieved continence",
+763: "995": "Stage not achieved (<12 months stability)",
+764: "996": "Unknown but normal acquisition",
+765: "997": "Unknown but delayed acquisition",
+766: "998": "Not applicable",
+767: "999": "Unknown / not asked"
+768: },
+769: "score_map": {
+770: "0-48": 0,
+771: "49-60": 1,
+772: "61+": 2
+773: },
+774: "weight": 2
+775: }
+776: ]
+777: }
+778: Page 11 :
+779: {
+780: "section": "Language Acquisition and Loss",
+781: "description": "Assessment of early language development, first words, meaning use, and possible regression",
+782: "questions": [
+783: {
+784: "id": 1,
+785: "category": "current_language",
+786: "question_en": "How is the child's language currently? Has the child already started speaking?",
+787: "question_fr": "Comment est le langage de l’enfant actuellement ? A-t-il déjà appris à parler ?",
+788: "question_ar": "كيف هي لغة الطفل حالياً؟ هل بدأ بالكلام؟",
+789: "answer_type": "text",
+790: "possible_answers": [],
+791: "score_map": {},
+792: "weight": 0
+793: },
+794: {
+795: "id": 2,
+796: "category": "first_words_age",
+797: "question_en": "At what age did the child say his first meaningful words (other than 'mama' or 'papa')?",
+798: "question_fr": "À quel âge a-t-il utilisé ses premiers mots dotés de sens ?",
+799: "question_ar": "في أي عمر قال الطفل أول كلمات ذات معنى؟",
+800: "answer_type": "numeric_months",
+801: "definition": "Meaningful words = repeated, consistent use of words to communicate objects, people, or events",
+802: "allowed_special_codes": {
+803: "993": "Had words but lost them (regression, not yet re-acquired)",
+804: "994": "Never reached milestone",
+805: "996": "Unknown but normal acquisition",
+806: "997": "Unknown but delayed acquisition",
+807: "999": "Unknown / not asked"
+808: },
+809: "score_map": {
+810: "0-12": 0,
+811: "13-18": 1,
+812: "19-24": 2,
+813: "25+": 3
+814: },
+815: "weight": 3
+816: },
+817: {
+818: "id": 3,
+819: "category": "first_words_examples",
+820: "question_en": "What were the child's first words?",
+821: "question_fr": "Quels étaient ses premiers mots ?",
+822: "question_ar": "ما هي أول كلمات الطفل؟",
+823: "answer_type": "text",
+824: "possible_answers": [],
+825: "score_map": {},
+826: "weight": 1
+827: },
+828: {
+829: "id": 4,
+830: "category": "word_understanding",
+831: "question_en": "How did the child show that he understood the meaning of these words? Can you give examples?",
+832: "question_fr": "Comment montrait-il qu'il comprenait ces mots ?",
+833: "question_ar": "كيف كان يظهر أنه يفهم معنى الكلمات؟ أعط أمثلة.",
+834: "answer_type": "text",
+835: "possible_answers": [],
+836: "score_map": {},
+837: "weight": 0
+838: },
+839: {
+840: "id": 5,
+841: "category": "misuse_of_words",
+842: "question_en": "Did the child ever use words without meaning or use them to name unrelated things?",
+843: "question_fr": "Est-ce qu’il utilisait parfois les mots sans signification claire ?",
+844: "question_ar": "هل كان يستخدم الكلمات أحياناً بدون معنى واضح أو في غير مكانها؟",
+845: "answer_type": "yes_no",
+846: "possible_answers": ["Yes", "No"],
+847: "score_map": {
+848: "Yes": 2,
+849: "No": 0
+850: },
+851: "weight": 2
+852: }
+853: ]
+854: }
+855: Page 12
+856: {
+857: "section": "Language Development - First Sentences",
+858: "description": "Assessment of age at first meaningful sentence production and quality of early sentence structure",
+859: "questions": [
+860: {
+861: "id": 1,
+862: "category": "first_sentences_age",
+863: "question_en": "At what age did the child first combine words into meaningful sentences (2–3 words including a verb)?",
+864: "question_fr": "À quel âge a-t-il utilisé ses premières phrases ?",
+865: "question_ar": "في أي عمر بدأ الطفل بتركيب جمل من كلمتين أو ثلاث كلمات؟",
+866: "answer_type": "numeric_months",
+867: "definition": "Sentence = at least 2 words including a verb (not echolalia or fixed expressions)",
+868: "rules": "Exclude memorized phrases (e.g., 'see you later'), echolalia, or non-productive word combinations",
+869: "allowed_special_codes": {
+870: "993": "Used phrases but lost them (regression not yet recovered)",
+871: "994": "Never reached milestone",
+872: "996": "Unknown but normal acquisition",
+873: "997": "Unknown but delayed acquisition",
+874: "999": "Unknown / not asked"
+875: },
+876: "score_map": {
+877: "0-24": 0,
+878: "25-30": 1,
+879: "31-33": 2,
+880: "34+": 3
+881: },
+882: "weight": 4
+883: },
+884: {
+885: "id": 2,
+886: "category": "first_sentences_examples",
+887: "question_en": "What were the child's first sentences? Can you give examples?",
+888: "question_fr": "Quelles étaient ses premières phrases ?",
+889: "question_ar": "ما هي أول الجمل التي قالها الطفل؟ أعط أمثلة.",
+890: "answer_type": "text",
+891: "possible_answers": [],
+892: "score_map": {},
+893: "weight": 1
+894: },
+895: {
+896: "id": 3,
+897: "category": "verb_usage",
+898: "question_en": "Did the child use sentences that included verbs? Can you give examples?",
+899: "question_fr": "Qu'en est-il des phrases incluant un verbe ?",
+900: "question_ar": "هل استخدم الطفل جمل تحتوي على أفعال؟ أعط أمثلة.",
+901: "answer_type": "text",
+902: "possible_answers": [],
+903: "score_map": {},
+904: "weight": 2
+905: }
+906: ]
+907: }
+908: Page 17
+909: {
+910: "section": "Language Regression",
+911: "description": "Assessment of loss of previously acquired communicative language skills lasting at least 3 months",
+912: "questions": [
+913: {
+914: "id": 1,
+915: "category": "language_regression_presence",
+916: "question_en": "Has the child ever lost previously acquired language skills during early development?",
+917: "question_fr": "Avez-vous déjà remarqué une perte des compétences de langage chez l’enfant ?",
+918: "question_ar": "هل لاحظتم فقدان الطفل لمهارات لغوية سبق أن اكتسبها؟",
+919: "answer_type": "yes_no",
+920: "possible_answers": ["Yes", "No"],
+921: "score_map": {
+922: "Yes": 3,
+923: "No": 0
+924: },
+925: "weight": 4,
+926: "branching_logic": {
+927: "Yes": "continue_to_item_2",
+928: "No": "skip_to_next_section_item_20"
+929: }
+930: },
+931: {
+932: "id": 2,
+933: "category": "language_regression_description",
+934: "question_en": "Was there a period where the child stopped speaking for several months after learning to talk?",
+935: "question_fr": "Y a-t-il eu un moment où il a arrêté de parler pendant quelques mois ?",
+936: "question_ar": "هل حدث أن توقف الطفل عن الكلام لعدة أشهر بعد أن بدأ الكلام؟",
+937: "answer_type": "yes_no",
+938: "possible_answers": ["Yes", "No"],
+939: "score_map": {
+940: "Yes": 3,
+941: "No": 0
+942: },
+943: "weight": 4
+944: },
+945: {
+946: "id": 3,
+947: "category": "pre_regression_language_level",
+948: "question_en": "Before the loss, did the child use at least 5 different meaningful words daily for at least 3 months?",
+949: "question_fr": "Avant la perte, utilisait-il au moins 5 mots différents quotidiennement ?",
+950: "question_ar": "قبل فقدان المهارات، هل كان يستخدم 5 كلمات مختلفة على الأقل يوميًا؟",
+951: "answer_type": "yes_no",
+952: "possible_answers": ["Yes", "No", "Not sure"],
+953: "score_map": {
+954: "Yes": 2,
+955: "No": 0,
+956: "Not sure": 1
+957: },
+958: "weight": 3
+959: }
+960: ],
+961: "coding_system": {
+962: "0": "No language regression",
+963: "1": "Confirmed language regression (loss ≥ 3 months after acquisition)"
+964: }
+965: }
+966: Page 18
+967: {
+968: "section": "Pre-Regression Language Level",
+969: "description": "Assessment of communicative language ability before any reported language loss",
+970: "questions": [
+971: {
+972: "id": 1,
+973: "category": "pre_regression_language_level",
+974: "question_en": "What level of language did the child use before the loss occurred?",
+975: "question_fr": "Quelle quantité de langage utilisait l’enfant avant la perte ?",
+976: "question_ar": "ما مستوى اللغة الذي كان يستخدمه الطفل قبل فقدان المهارات؟",
+977: "answer_type": "coded_choice",
+978: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+979: "coding_system": {
+980: "0": "Functional spontaneous language with ≥5 meaningful words used communicatively",
+981: "1": "Occasional spontaneous use of <5 words or mixed with imitation",
+982: "2": "Only speech/sounds produced on request",
+983: "3": "Spontaneous vocal imitation only (no functional language)",
+984: "8": "No change or no loss reported",
+985: "9": "Unknown / not reported"
+986: },
+987: "score_map": {
+988: "0": 0,
+989: "1": 1,
+990: "2": 2,
+991: "3": 3,
+992: "8": 0,
+993: "9": 0
+994: },
+995: "weight": 4
+996: },
+997: {
+998: "id": 2,
+999: "category": "pre_regression_examples",
+1000: "question_en": "What could the child say before the change? Can you give examples?",
+1001: "question_fr": "Qu'était-il capable de dire avant le changement ?",
+1002: "question_ar": "ماذا كان الطفل قادرًا على قوله قبل التراجع؟ أعط أمثلة.",
+1003: "answer_type": "text",
+1004: "possible_answers": [],
+1005: "score_map": {},
+1006: "weight": 1
+1007: }
+1008: ]
+1009: }
+1010: Page 19:
+1011: {
+1012: "section": "Language Regression - Types of Skills Lost",
+1013: "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired",
+1014: "common_coding_system": {
+1015: "0": "No clear loss",
+1016: "1": "Probable loss",
+1017: "2": "Clear loss",
+1018: "8": "Insufficient language to assess",
+1019: "9": "Unknown / not reported"
+1020: },
+1021: "questions": [
+1022: {
+1023: "id": 1,
+1024: "category": "loss_spontaneous_words",
+1025: "question_en": "Did the child stop using at least 5 meaningful words spontaneously?",
+1026: "question_fr": "A-t-il arrêté d'utiliser spontanément au moins 5 mots dotés de sens ?",
+1027: "question_ar": "هل توقف الطفل عن استخدام 5 كلمات ذات معنى بشكل تلقائي؟",
+1028: "answer_type": "coded_choice",
+1029: "possible_answers": ["0", "1", "2", "8", "9"],
+1030: "score_map": {
+1031: "0": 0,
+1032: "1": 2,
+1033: "2": 3,
+1034: "8": 0,
+1035: "9": 0
+1036: },
+1037: "weight": 4
+1038: },
+1039: {
+1040: "id": 2,
+1041: "category": "loss_communication_intent",
+1042: "question_en": "Did the child stop using words to communicate with others?",
+1043: "question_fr": "A-t-il arrêté d'utiliser les mots pour communiquer avec les autres ?",
+1044: "question_ar": "هل توقف الطفل عن استخدام الكلمات للتواصل مع الآخرين؟",
+1045: "answer_type": "coded_choice",
+1046: "possible_answers": ["0", "1", "2", "8", "9"],
+1047: "score_map": {
+1048: "0": 0,
+1049: "1": 2,
+1050: "2": 3,
+1051: "8": 0,
+1052: "9": 0
+1053: },
+1054: "weight": 5
+1055: },
+1056: {
+1057: "id": 3,
+1058: "category": "loss_syntax",
+1059: "question_en": "Was there a loss in grammar or sentence structure abilities?",
+1060: "question_fr": "Y a-t-il eu une perte des compétences syntaxiques (grammaire) ?",
+1061: "question_ar": "هل فقد الطفل مهارات القواعد (التركيب اللغوي)؟",
+1062: "answer_type": "coded_choice",
+1063: "possible_answers": ["0", "1", "2", "8", "9"],
+1064: "score_map": {
+1065: "0": 0,
+1066: "1": 1,
+1067: "2": 2,
+1068: "8": 0,
+1069: "9": 0
+1070: },
+1071: "weight": 3
+1072: },
+1073: {
+1074: "id": 4,
+1075: "category": "loss_articulation",
+1076: "question_en": "Was the child's pronunciation or articulation affected?",
+1077: "question_fr": "La prononciation des mots a-t-elle été affectée ?",
+1078: "question_ar": "هل تأثرت طريقة نطق الكلمات لدى الطفل؟",
+1079: "answer_type": "coded_choice",
+1080: "possible_answers": ["0", "1", "2", "8", "9"],
+1081: "score_map": {
+1082: "0": 0,
+1083: "1": 1,
+1084: "2": 2,
+1085: "8": 0,
+1086: "9": 0
+1087: },
+1088: "weight": 2
+1089: }
+1090: ]
+1091: }
+page 20
+1092: {
+1093: "section": "Language Regression - Timeline and Context",
+1094: "description": "Assessment of age at onset of language loss, possible association with physical illness, and duration of regression",
+1095: "questions": [
+1096: {
+1097: "id": 1,
+1098: "category": "regression_onset_age",
+1099: "question_en": "At what age did the child first begin to lose language skills?",
+1100: "question_fr": "À quel âge la perte du langage est-elle apparue pour la première fois ?",
+1101: "question_ar": "في أي عمر بدأ الطفل يفقد مهارات اللغة لأول مرة؟",
+1102: "answer_type": "numeric_months",
+1103: "allowed_special_codes": {
+1104: "998": "No loss",
+1105: "999": "Unknown / not asked"
+1106: },
+1107: "score_map": {
+1108: "0-18": 3,
+1109: "19-36": 2,
+1110: "37+": 1,
+1111: "998": 0,
+1112: "999": 0
+1113: },
+1114: "weight": 3
+1115: },
+1116: {
+1117: "id": 2,
+1118: "category": "regression_medical_association",
+1119: "question_en": "Was the language loss associated with a significant physical illness?",
+1120: "question_fr": "La perte du langage était-elle associée à une maladie physique ?",
+1121: "question_ar": "هل كان فقدان اللغة مرتبطًا بمرض جسدي؟",
+1122: "answer_type": "coded_choice",
+1123: "possible_answers": ["0", "1", "2", "8", "9"],
+1124: "coding_system": {
+1125: "0": "Loss not associated with physical illness",
+1126: "1": "Associated with illness (e.g., fever, ear infection)",
+1127: "2": "Associated with seizures or suspected neurological condition",
+1128: "8": "No loss",
+1129: "9": "Unknown / not reported"
+1130: },
+1131: "score_map": {
+1132: "0": 3,
+1133: "1": 2,
+1134: "2": 1,
+1135: "8": 0,
+1136: "9": 0
+1137: },
+1138: "weight": 3
+1139: },
+1140: {
+1141: "id": 3,
+1142: "category": "regression_duration",
+1143: "question_en": "How long did it take for the child to regain language skills after the loss?",
+1144: "question_fr": "Combien de temps a-t-il fallu pour récupérer le langage ?",
+1145: "question_ar": "كم استغرق الطفل لاستعادة مهارات اللغة؟",
+1146: "answer_type": "numeric_months",
+1147: "definition": "Time from onset of loss to recovery of previous language level",
+1148: "allowed_special_codes": {
+1149: "993": "Loss still present (no recovery)",
+1150: "994": "Progressive deterioration ongoing",
+1151: "998": "No loss",
+1152: "999": "Unknown / not asked"
+1153: },
+1154: "score_map": {
+1155: "0-6": 1,
+1156: "7-12": 2,
+1157: "13+": 3,
+1158: "993": 3,
+1159: "994": 3,
+1160: "998": 0,
+1161: "999": 0
+1162: },
+1163: "weight": 4
+1164: }
+1165: ]
+1166: }
+1167: Page 21
+1168: {
+1169: "section": "General Skill Regression (Non-Language)",
+1170: "description": "Assessment of loss of non-language developmental skills lasting at least 3 months",
+1171: "definition": "Loss = a skill previously used daily for at least 3 months, then largely or completely lost for at least 3 months",
+1172: "exclusions": [
+1173: "Toilet accidents unless part of broader regression",
+1174: "Temporary behavioral fluctuations with full recovery"
+1175: ],
+1176: "questions": [
+1177: {
+1178: "id": 1,
+1179: "category": "general_regression_presence",
+1180: "question_en": "Has there been a period when the child clearly regressed or seemed to lose developmental skills?",
+1181: "question_fr": "Y a-t-il eu une période où l’enfant a régressé ou perdu des compétences ?",
+1182: "question_ar": "هل مرّ الطفل بفترة تراجع فيها أو فقد مهارات مكتسبة؟",
+1183: "answer_type": "coded_choice",
+1184: "possible_answers": ["0", "1", "2", "9"],
+1185: "coding_system": {
+1186: "0": "No significant loss (normal fluctuations only)",
+1187: "1": "Probable loss but does not fully meet criteria",
+1188: "2": "Clear loss of skills for a defined period",
+1189: "9": "Unknown / not reported"
+1190: },
+1191: "score_map": {
+1192: "0": 0,
+1193: "1": 2,
+1194: "2": 4,
+1195: "9": 0
+1196: },
+1197: "weight": 5,
+1198: "branching_logic": {
+1199: "0": "skip_to_item_29",
+1200: "1": "continue_to_item_2",
+1201: "2": "continue_to_item_2",
+1202: "9": "skip_to_item_29"
+1203: }
+1204: },
+1205: {
+1206: "id": 2,
+1207: "category": "regression_timing",
+1208: "question_en": "When did this regression occur?",
+1209: "question_fr": "Quand cette régression s’est-elle produite ?",
+1210: "question_ar": "متى حدث هذا التراجع؟",
+1211: "answer_type": "numeric_months",
+1212: "possible_answers": [],
+1213: "score_map": {},
+1214: "weight": 2
+1215: },
+1216: {
+1217: "id": 3,
+1218: "category": "regression_types",
+1219: "question_en": "What types of skills were lost?",
+1220: "question_fr": "Quels types de compétences ont été perdus ?",
+1221: "question_ar": "ما هي المهارات التي فقدها الطفل؟",
+1222: "answer_type": "multi_select",
+1223: "possible_answers": [
+1224: "Social interaction",
+1225: "Play skills",
+1226: "Motor skills",
+1227: "Adaptive skills",
+1228: "Other"
+1229: ],
+1230: "score_map": {
+1231: "Social interaction": 3,
+1232: "Play skills": 2,
+1233: "Motor skills": 2,
+1234: "Adaptive skills": 2,
+1235: "Other": 1
+1236: },
+1237: "weight": 4
+1238: },
+1239: {
+1240: "id": 4,
+1241: "category": "regression_parallel_with_language",
+1242: "question_en": "Did the child lose these skills at the same time as language loss?",
+1243: "question_fr": "Ces pertes ont-elles eu lieu en même temps que la perte du langage ?",
+1244: "question_ar": "هل حدث فقدان هذه المهارات في نفس وقت فقدان اللغة؟",
+1245: "answer_type": "yes_no",
+1246: "possible_answers": ["Yes", "No", "Not applicable"],
+1247: "score_map": {
+1248: "Yes": 3,
+1249: "No": 1,
+1250: "Not applicable": 0
+1251: },
+1252: "weight": 4
+1253: }
+1254: ]
+1255: }
+1256: Page 22
+1257: {
+1258: "section": "General Regression - Types of Skills Lost",
+1259: "description": "Assessment of specific non-language skills lost for at least 3 months after being previously acquired",
+1260: "common_coding_system": {
+1261: "0": "No loss",
+1262: "1": "Probable loss",
+1263: "2": "Clear loss"
+1264: },
+1265: "questions": [
+1266: {
+1267: "id": 21,
+1268: "category": "loss_fine_motor_hand_use",
+1269: "question_en": "Was there a loss in intentional hand movements (grasping/holding objects)?",
+1270: "question_fr": "Y a-t-il eu une perte des mouvements intentionnels des mains ?",
+1271: "question_ar": "هل فقد الطفل مهارات استخدام اليدين (الإمساك بالأشياء)؟",
+1272: "answer_type": "coded_choice",
+1273: "possible_answers": ["0", "1", "2"],
+1274: "score_map": {
+1275: "0": 0,
+1276: "1": 1,
+1277: "2": 2
+1278: },
+1279: "weight": 2
+1280: },
+1281: {
+1282: "id": 22,
+1283: "category": "loss_gross_motor_skills",
+1284: "question_en": "Was there a loss in motor skills (posture, walking, coordination)?",
+1285: "question_fr": "Y a-t-il eu une perte des compétences motrices ?",
+1286: "question_ar": "هل فقد الطفل مهاراته الحركية (المشي، التوازن، التنسيق)؟",
+1287: "answer_type": "coded_choice",
+1288: "possible_answers": ["0", "1", "2"],
+1289: "score_map": {
+1290: "0": 0,
+1291: "1": 1,
+1292: "2": 2
+1293: },
+1294: "weight": 3
+1295: },
+1296: {
+1297: "id": 23,
+1298: "category": "loss_adaptive_skills",
+1299: "question_en": "Was there a loss in self-care abilities (eating, dressing, toileting)?",
+1300: "question_fr": "Y a-t-il eu une perte des capacités d’autonomie ?",
+1301: "question_ar": "هل فقد الطفل مهارات الاعتماد على النفس (الأكل، اللباس، النظافة)؟",
+1302: "answer_type": "coded_choice",
+1303: "possible_answers": ["0", "1", "2"],
+1304: "score_map": {
+1305: "0": 0,
+1306: "1": 1,
+1307: "2": 2
+1308: },
+1309: "weight": 3
+1310: },
+1311: {
+1312: "id": 24,
+1313: "category": "loss_play_skills",
+1314: "question_en": "Was there a loss in play skills (constructive or imaginative play)?",
+1315: "question_fr": "Y a-t-il eu une perte des compétences de jeu ?",
+1316: "question_ar": "هل فقد الطفل مهارات اللعب (اللعب التخيلي أو البنائي)؟",
+1317: "answer_type": "coded_choice",
+1318: "possible_answers": ["0", "1", "2"],
+1319: "score_map": {
+1320: "0": 0,
+1321: "1": 2,
+1322: "2": 3
+1323: },
+1324: "weight": 4
+1325: },
+1326: {
+1327: "id": 25,
+1328: "category": "loss_social_engagement",
+1329: "question_en": "Was there a loss in social engagement and responsiveness?",
+1330: "question_fr": "Y a-t-il eu une perte de l’engagement social et de la réactivité ?",
+1331: "question_ar": "هل فقد الطفل التفاعل الاجتماعي والاستجابة للآخرين؟",
+1332: "answer_type": "coded_choice",
+1333: "possible_answers": ["0", "1", "2"],
+1334: "score_map": {
+1335: "0": 0,
+1336: "1": 2,
+1337: "2": 4
+1338: },
+1339: "weight": 5
+1340: }
+1341: ]
+1342: }
+1343: Page 23
+1344: {
+1345: "section": "General Skill Regression - Timeline and Context",
+1346: "description": "Assessment of age at onset of non-language skill loss, association with physical illness, and duration until recovery",
+1347: "questions": [
+1348: {
+1349: "id": 26,
+1350: "category": "general_regression_onset_age",
+1351: "question_en": "At what age did the main loss of non-language skills first clearly appear?",
+1352: "question_fr": "À quel âge la perte principale des compétences s’est-elle manifestée pour la première fois ?",
+1353: "question_ar": "في أي عمر ظهرت خسارة المهارات غير اللغوية لأول مرة بشكل واضح؟",
+1354: "answer_type": "numeric_months",
+1355: "allowed_special_codes": {
+1356: "998": "No loss corresponding to levels 1 or 2",
+1357: "999": "Unknown / not asked"
+1358: },
+1359: "score_map": {
+1360: "0-18": 3,
+1361: "19-36": 2,
+1362: "37+": 1,
+1363: "998": 0,
+1364: "999": 0
+1365: },
+1366: "weight": 3
+1367: },
+1368: {
+1369: "id": 27,
+1370: "category": "general_regression_medical_association",
+1371: "question_en": "Was the loss of skills associated with a significant physical illness?",
+1372: "question_fr": "La perte de compétences était-elle associée à une maladie physique ?",
+1373: "question_ar": "هل كان فقدان المهارات مرتبطًا بمرض جسدي؟",
+1374: "answer_type": "coded_choice",
+1375: "possible_answers": ["0", "1", "2", "8", "9"],
+1376: "coding_system": {
+1377: "0": "Loss not associated with a specific physical illness",
+1378: "1": "Associated with illness (e.g., fever, ear infection)",
+1379: "2": "Associated with seizures or suspected neurological condition",
+1380: "8": "No loss",
+1381: "9": "Unknown / not reported"
+1382: },
+1383: "score_map": {
+1384: "0": 3,
+1385: "1": 2,
+1386: "2": 1,
+1387: "8": 0,
+1388: "9": 0
+1389: },
+1390: "weight": 3
+1391: },
+1392: {
+1393: "id": 28,
+1394: "category": "general_regression_duration",
+1395: "question_en": "How long did it take for the child to recover the lost skills?",
+1396: "question_fr": "Combien de temps a-t-il fallu pour récupérer les compétences perdues ?",
+1397: "question_ar": "كم استغرق الطفل لاستعادة المهارات المفقودة؟",
+1398: "answer_type": "numeric_months",
+1399: "definition": "Time from onset of regression to recovery of previous skill level",
+1400: "allowed_special_codes": {
+1401: "993": "Loss still present (no recovery)",
+1402: "994": "Progressive deterioration ongoing",
+1403: "998": "No loss",
+1404: "999": "Unknown / not asked"
+1405: },
+1406: "score_map": {
+1407: "0-6": 1,
+1408: "7-12": 2,
+1409: "13+": 3,
+1410: "993": 3,
+1411: "994": 3,
+1412: "998": 0,
+1413: "999": 0
+1414: },
+1415: "weight": 4
+1416: }
+1417: ]
+1418: }
+1419: Page 24
+1420: {
+1421: "section": "Language Comprehension (Simple Verbal Understanding)",
+1422: "description": "Assessment of the child's ability to understand spoken language without contextual cues such as gestures, pointing, or situational hints",
+1423: "questions": [
+1424: {
+1425: "id": 29,
+1426: "category": "simple_language_comprehension",
+1427: "question_en": "How much spoken language does the child understand without gestures or contextual cues?",
+1428: "question_fr": "Quelle quantité de langage comprend l’enfant sans gestes ni contexte ?",
+1429: "question_ar": "ما مدى فهم الطفل للغة المنطوقة بدون إشارات أو سياق؟",
+1430: "answer_type": "coded_choice",
+1431: "possible_answers": ["0", "1", "2", "3", "4", "8", "9"],
+1432: "coding_system": {
+1433: "0": "Can perform complex, non-routine actions with objects in new contexts (e.g., place an unfamiliar object in a new location)",
+1434: "1": "Can retrieve objects from another room but cannot perform new actions with them",
+1435: "2": "Understands many words (>50), including names, objects, food, but cannot perform complex instructions",
+1436: "3": "Understands <50 words; limited comprehension (e.g., 'no', familiar names, routine words)",
+1437: "4": "Very little or no understanding of spoken words",
+1438: "8": "Not applicable (e.g., hearing impairment)",
+1439: "9": "Unknown / not reported"
+1440: },
+1441: "score_map": {
+1442: "0": 0,
+1443: "1": 1,
+1444: "2": 2,
+1445: "3": 3,
+1446: "4": 4,
+1447: "8": 0,
+1448: "9": 0
+1449: },
+1450: "weight": 5
+1451: },
+1452: {
+1453: "id": 30,
+1454: "category": "examples_comprehension",
+1455: "question_en": "Can the child follow instructions such as retrieving objects, placing them somewhere new, or understanding 'yes' and 'no' without gestures?",
+1456: "question_fr": "L’enfant peut-il suivre des consignes sans gestes ?",
+1457: "question_ar": "هل يستطيع الطفل اتباع التعليمات بدون إشارات؟",
+1458: "answer_type": "text",
+1459: "possible_answers": [],
+1460: "score_map": {},
+1461: "weight": 1
+1462: }
+1463: ]
+1464: }
+1465: Page 25
+1466: {
+1467: "section": "Global Expressive Language Level",
+1468: "description": "Summary rating of the child's current functional use of spoken language, including spontaneous, echolalic, or stereotyped speech used meaningfully",
+1469: "questions": [
+1470: {
+1471: "id": 30,
+1472: "category": "global_language_level",
+1473: "question_en": "What is the child's current level of spoken language use?",
+1474: "question_fr": "Quel est le niveau global de langage de l’enfant ?",
+1475: "question_ar": "ما هو المستوى العام للغة لدى الطفل؟",
+1476: "answer_type": "coded_choice",
+1477: "possible_answers": ["0", "1", "2"],
+1478: "coding_system": {
+1479: "0": "Functional use of language with daily sentences of 3+ words (including verbs), understandable by others",
+1480: "1": "No functional 3-word sentences, but uses at least 5 different words in the last month",
+1481: "2": "Less than 5 words total or not used daily"
+1482: },
+1483: "score_map": {
+1484: "0": 0,
+1485: "1": 3,
+1486: "2": 5
+1487: },
+1488: "weight": 6,
+1489: "branching_logic": {
+1490: "if_1_or_2_and_never_reached_level_0": {
+1491: "next_step": "go_to_item_31_then_skip_to_item_42",
+1492: "instruction": "Items 32–41 must be coded as 8 (Not applicable)"
+1493: },
+1494: "if_1_or_2_but_reached_level_0_between_4_5_years": {
+1495: "next_step": "continue_items_32_to_41",
+1496: "instruction": "Code current as 8, but score based on age 4–5 period or lifetime"
+1497: },
+1498: "if_0": {
+1499: "next_step": "continue_items_32_to_41_normally"
+1500: }
+1501: }
+1502: },
+1503: {
+1504: "id": 31,
+1505: "category": "language_examples",
+1506: "question_en": "Can you provide examples of the child's speech (words, phrases, or sentences)?",
+1507: "question_fr": "Pouvez-vous donner des exemples du langage de l’enfant ?",
+1508: "question_ar": "هل يمكنك إعطاء أمثلة على كلام الطفل؟",
+1509: "answer_type": "text",
+1510: "weight": 1
+1511: }
+1512: ]
+1513: }
+1514: Page 26
+1515: {
+1516: "section": "Social Communication - Use of Another Person's Body",
+1517: "description": "Assessment of whether the child uses another person's body (e.g., hand) as a tool rather than communicating socially",
+1518: "questions": [
+1519: {
+1520: "id": 32,
+1521: "category": "use_of_other_body_for_communication",
+1522: "question_en": "Does the child use another person's hand or body as a tool to obtain something or perform an action?",
+1523: "question_fr": "L’enfant utilise-t-il le corps d’une autre personne comme un outil ?",
+1524: "question_ar": "هل يستخدم الطفل يد أو جسم شخص آخر كأداة للحصول على شيء؟",
+1525: "answer_type": "coded_choice",
+1526: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+1527: "coding_system": {
+1528: "0": "Does not use another person's body except rarely when other strategies fail",
+1529: "1": "Occasional use, combined with other communication methods (gestures, sounds)",
+1530: "2": "Occasional use without combining with other communication methods",
+1531: "3": "Frequent/regular use as a tool without social communication intent",
+1532: "8": "Little or no spontaneous communication",
+1533: "9": "Unknown / not reported"
+1534: },
+1535: "score_map": {
+1536: "0": 0,
+1537: "1": 2,
+1538: "2": 3,
+1539: "3": 5,
+1540: "8": 4,
+1541: "9": 0
+1542: },
+1543: "weight": 6
+1544: },
+1545: {
+1546: "id": 33,
+1547: "category": "behavior_details",
+1548: "question_en": "How does the child behave when using another person's body (eye contact, sounds, gestures)?",
+1549: "question_fr": "Comment l’enfant se comporte-t-il lorsqu’il utilise le corps de l’autre ?",
+1550: "question_ar": "كيف يتصرف الطفل عند استخدامه لجسم شخص آخر؟",
+1551: "answer_type": "text",
+1552: "weight": 1
+1553: }
+1554: ]
+1555: }
+1556: Page 27
+1557: {
+1558: "section": "Speech Production - Articulation",
+1559: "description": "Assessment of how clearly the child produces speech sounds and how understandable their speech is to others",
+1560: "applicability": "Only for verbal children aged 4 years or older",
+1561: "questions": [
+1562: {
+1563: "id": 32,
+1564: "category": "articulation_pronunciation",
+1565: "question_en": "How clear is the child's pronunciation, and how well can others understand their speech?",
+1566: "question_fr": "Comment est la prononciation de l’enfant ?",
+1567: "question_ar": "ما مدى وضوح نطق الطفل؟",
+1568: "answer_type": "coded_choice",
+1569: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+1570: "coding_system": {
+1571: "0": "Speech is clear and understood by everyone, with only minor errors",
+1572: "1": "Better understood by family than strangers, but generally understandable",
+1573: "2": "Noticeable articulation difficulties causing misunderstanding for unfamiliar listeners",
+1574: "3": "Speech is very difficult to understand, even for familiar people",
+1575: "8": "Not applicable (non-verbal or developmental level below 4 years)",
+1576: "9": "Unknown / not reported"
+1577: },
+1578: "score_map": {
+1579: "0": 0,
+1580: "1": 1,
+1581: "2": 2,
+1582: "3": 3,
+1583: "8": 0,
+1584: "9": 0
+1585: },
+1586: "weight": 2
+1587: },
+1588: {
+1589: "id": 33,
+1590: "category": "articulation_examples",
+1591: "question_en": "Can you provide examples of sounds or words the child mispronounces?",
+1592: "question_fr": "Pouvez-vous donner des exemples d’erreurs de prononciation ?",
+1593: "question_ar": "هل يمكنك إعطاء أمثلة على أخطاء النطق؟",
+1594: "answer_type": "text",
+1595: "weight": 1
+1596: }
+1597: ]
+1598: }
+1599: Page 28
+1600: {
+1601: "section": "Language Use - Stereotyped Speech and Delayed Echolalia",
+1602: "description": "Assessment of repetitive, non-functional, or context-inappropriate use of phrases, including delayed echolalia and self-directed speech",
+1603: "applicability": "Only for children who use phrases (see Item 30)",
+1604: "questions": [
+1605: {
+1606: "id": 33,
+1607: "category": "stereotyped_speech_echolalia",
+1608: "question_en": "Does the child use repetitive or stereotyped phrases (including delayed echolalia)?",
+1609: "question_fr": "L’enfant utilise-t-il des énoncés stéréotypés ou de l’écholalie différée ?",
+1610: "question_ar": "هل يستخدم الطفل عبارات متكررة أو صدى الكلام (إيكولاليا)؟",
+1611: "answer_type": "coded_choice",
+1612: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+1613: "coding_system": {
+1614: "0": "Rarely or never uses stereotyped phrases",
+1615: "1": "Speech is somewhat repetitive but not unusually stereotyped; occasional echolalia with functional language",
+1616: "2": "Frequently uses stereotyped phrases but still has some functional language",
+1617: "3": "Speech is almost entirely stereotyped or echolalic",
+1618: "8": "Not applicable (no phrase-level speech; Item 30 = 1 or 2)",
+1619: "9": "Unknown / not reported"
+1620: },
+1621: "score_map": {
+1622: "0": 0,
+1623: "1": 1,
+1624: "2": 3,
+1625: "3": 5,
+1626: "8": 0,
+1627: "9": 0
+1628: },
+1629: "weight": 5
+1630: },
+1631: {
+1632: "id": 34,
+1633: "category": "echolalia_examples",
+1634: "question_en": "Can you provide examples of repetitive or unusual phrases the child uses?",
+1635: "question_fr": "Pouvez-vous donner des exemples de phrases répétitives ou inhabituelles ?",
+1636: "question_ar": "هل يمكنك إعطاء أمثلة على العبارات المتكررة أو غير العادية؟",
+1637: "answer_type": "text",
+1638: "weight": 1
+1639: }
+1640: ]
+1641: }
+1642: Page 29
+1643: {
+1644: "section": "Social Communication - Verbal Social Use (Phatic Speech)",
+1645: "description": "Assessment of whether the child uses speech for social interaction (small talk, comments) rather than only to request or express needs",
+1646: "applicability": "Only for verbal children with phrase-level speech",
+1647: "questions": [
+1648: {
+1649: "id": 34,
+1650: "category": "social_verbalization_chatter",
+1651: "question_en": "Does the child use speech to engage socially (e.g., commenting, chatting) rather than only to request things?",
+1652: "question_fr": "L’enfant utilise-t-il le langage pour bavarder socialement ?",
+1653: "question_ar": "هل يستخدم الطفل الكلام للتفاعل الاجتماعي وليس فقط لتلبية الاحتياجات؟",
+1654: "answer_type": "coded_choice",
+1655: "possible_answers": ["0", "1", "2", "8", "9"],
+1656: "coding_system": {
+1657: "0": "Clear social use of speech for friendliness, interest, or interaction (not just needs)",
+1658: "1": "Some social use of speech (to gain attention or respond), but limited in frequency or contexts",
+1659: "2": "Speech mainly used for needs or requests, minimal social verbalization",
+1660: "8": "Not applicable (no phrase-level speech; Item 30 = 1 or 2)",
+1661: "9": "Unknown / not reported"
+1662: },
+1663: "score_map": {
+1664: "0": 0,
+1665: "1": 2,
+1666: "2": 4,
+1667: "8": 0,
+1668: "9": 0
+1669: },
+1670: "weight": 5
+1671: },
+1672: {
+1673: "id": 35,
+1674: "category": "social_speech_examples",
+1675: "question_en": "Can you give examples of the child's social speech or comments?",
+1676: "question_fr": "Pouvez-vous donner des exemples de bavardage social ?",
+1677: "question_ar": "هل يمكنك إعطاء أمثلة على كلام اجتماعي؟",
+1678: "answer_type": "text",
+1679: "weight": 1
+1680: }
+1681: ]
+1682: }
+1683: Page 30
+1684: {
+1685: "section": "Social Communication - Reciprocal Conversation",
+1686: "description": "Assessment of the ability to maintain a back-and-forth conversation by building on another person's speech and maintaining topic continuity",
+1687: "applicability": "Adjusted for the child's expressive language level",
+1688: "questions": [
+1689: {
+1690: "id": 35,
+1691: "category": "reciprocal_conversation",
+1692: "question_en": "Can the child maintain a reciprocal conversation by building on what others say?",
+1693: "question_fr": "L’enfant peut-il maintenir une conversation réciproque ?",
+1694: "question_ar": "هل يستطيع الطفل الحفاظ على محادثة تبادلية؟",
+1695: "answer_type": "coded_choice",
+1696: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+1697: "coding_system": {
+1698: "0": "Fluent reciprocal conversation with appropriate turn-taking and topic development",
+1699: "1": "Some reciprocal conversation, but less frequent, limited flexibility or restricted topics",
+1700: "2": "Very limited reciprocity; difficulty building on others' speech even if language is present",
+1701: "3": "Very little spontaneous speech",
+1702: "8": "Not applicable (Item 30 level 1 or 2 - insufficient phrase-level speech)",
+1703: "9": "Unknown / not reported"
+1704: },
+1705: "score_map": {
+1706: "0": 0,
+1707: "1": 2,
+1708: "2": 4,
+1709: "3": 5,
+1710: "8": 0,
+1711: "9": 0
+1712: },
+1713: "weight": 6
+1714: },
+1715: {
+1716: "id": 36,
+1717: "category": "conversation_examples",
+1718: "question_en": "Can you provide examples of how the child responds in conversation?",
+1719: "question_fr": "Pouvez-vous donner des exemples de conversations avec l’enfant ?",
+1720: "question_ar": "هل يمكنك إعطاء أمثلة على محادثات الطفل؟",
+1721: "answer_type": "text",
+1722: "weight": 1
+1723: }
+1724: ]
+1725: }
+1726: Page 31
+1727: {
+1728: "section": "Social Communication - Pragmatic Appropriateness",
+1729: "description": "Assessment of socially inappropriate questions or remarks due to lack of understanding of social context",
+1730: "applicability": "Only for verbal children with functional speech",
+1731: "questions": [
+1732: {
+1733: "id": 36,
+1734: "category": "inappropriate_questions_remarks",
+1735: "question_en": "Does the child ask socially inappropriate questions or make comments at inappropriate times?",
+1736: "question_fr": "L’enfant pose-t-il des questions ou fait-il des remarques inappropriées ?",
+1737: "question_ar": "هل يطرح الطفل أسئلة أو تعليقات غير مناسبة اجتماعياً؟",
+1738: "answer_type": "coded_choice",
+1739: "possible_answers": ["0", "1", "2", "8", "9"],
+1740: "coding_system": {
+1741: "0": "No or very rare inappropriate questions/remarks",
+1742: "1": "Occasional mildly inappropriate or repetitive remarks/questions",
+1743: "2": "Frequent clearly inappropriate or odd social comments/questions",
+1744: "8": "Not applicable (Item 30 level 1 or 2 - insufficient speech)",
+1745: "9": "Unknown / not reported"
+1746: },
+1747: "score_map": {
+1748: "0": 0,
+1749: "1": 2,
+1750: "2": 4,
+1751: "8": 0,
+1752: "9": 0
+1753: },
+1754: "weight": 5
+1755: },
+1756: {
+1757: "id": 37,
+1758: "category": "examples_inappropriate_speech",
+1759: "question_en": "Can you give examples of inappropriate questions or remarks?",
+1760: "question_fr": "Pouvez-vous donner des exemples de remarques inappropriées ?",
+1761: "question_ar": "هل يمكنك إعطاء أمثلة؟",
+1762: "answer_type": "text",
+1763: "weight": 1
+1764: }
+1765: ]
+1766: }
+1767: Page 32
+1768: {
+1769: "section": "Language Use - Pronoun Reversal",
+1770: "description": "Assessment of confusion or abnormal use of personal pronouns (I, you, he/she) in speech",
+1771: "applicability": "Only for children using pronouns in speech",
+1772: "questions": [
+1773: {
+1774: "id": 37,
+1775: "category": "pronoun_reversal",
+1776: "question_en": "Does the child confuse personal pronouns (I, you, he/she) in speech?",
+1777: "question_fr": "L’enfant confond-il les pronoms personnels ?",
+1778: "question_ar": "هل يخلط الطفل بين الضمائر الشخصية؟",
+1779: "answer_type": "coded_choice",
+1780: "possible_answers": ["0", "1", "2", "3", "7", "8", "9"],
+1781: "coding_system": {
+1782: "0": "No pronoun confusion once phrase speech is established",
+1783: "1": "Uses own name instead of 'I', but no persistent pronoun confusion",
+1784: "2": "Confusion between I/you or I/he/she without question intonation",
+1785: "3": "Pronoun confusion including incorrect question-like intonation",
+1786: "7": "Other pronoun confusion patterns",
+1787: "8": "Not applicable (no phrase speech or no pronouns used)",
+1788: "9": "Unknown / not reported"
+1789: },
+1790: "score_map": {
+1791: "0": 0,
+1792: "1": 1,
+1793: "2": 3,
+1794: "3": 4,
+1795: "7": 2,
+1796: "8": 0,
+1797: "9": 0
+1798: },
+1799: "weight": 5
+1800: },
+1801: {
+1802: "id": 38,
+1803: "category": "pronoun_examples",
+1804: "question_en": "Can you provide examples of pronoun errors the child makes?",
+1805: "question_fr": "Pouvez-vous donner des exemples d’erreurs de pronoms ?",
+1806: "question_ar": "هل يمكنك إعطاء أمثلة؟",
+1807: "answer_type": "text",
+1808: "weight": 1
+1809: }
+1810: ]
+1811: }
+1812: Page 33
+1813: {
+1814: "section": "Language Use - Neologisms and Idiosyncratic Language",
+1815: "description": "Assessment of invented words or unusual personal meanings assigned to real words or phrases",
+1816: "applicability": "Only for children with functional speech",
+1817: "questions": [
+1818: {
+1819: "id": 38,
+1820: "category": "neologisms_idiosyncratic_language",
+1821: "question_en": "Does the child use invented words or unusual personal meanings for words or phrases?",
+1822: "question_fr": "L’enfant utilise-t-il des néologismes ou un langage idiosyncrasique ?",
+1823: "question_ar": "هل يستخدم الطفل كلمات مبتكرة أو معاني خاصة غير مألوفة؟",
+1824: "answer_type": "coded_choice",
+1825: "possible_answers": ["0", "1", "2", "8", "9"],
+1826: "coding_system": {
+1827: "0": "No neologisms or idiosyncratic language",
+1828: "1": "Occasional use of neologisms or idiosyncratic expressions used over time",
+1829: "2": "Frequent neologisms or idiosyncratic meanings, extending beyond original context",
+1830: "8": "Not applicable (insufficient phrase speech - Item 30 level 1 or 2)",
+1831: "9": "Unknown / not reported"
+1832: },
+1833: "score_map": {
+1834: "0": 0,
+1835: "1": 2,
+1836: "2": 4,
+1837: "8": 0,
+1838: "9": 0
+1839: },
+1840: "weight": 5
+1841: },
+1842: {
+1843: "id": 39,
+1844: "category": "neologism_examples",
+1845: "question_en": "Provide examples of invented words or unusual meanings used by the child.",
+1846: "question_fr": "Donnez des exemples de mots ou expressions inventés.",
+1847: "question_ar": "أعط أمثلة.",
+1848: "answer_type": "text",
+1849: "weight": 1
+1850: }
+1851: ]
+1852: }
+1853: Page 34
+1854: {
+1855: "section": "Language Use - Verbal Rituals",
+1856: "description": "Assessment of compulsive, fixed, or ritualized verbal sequences that must be said in a specific order or manner",
+1857: "applicability": "Only for children with functional speech",
+1858: "questions": [
+1859: {
+1860: "id": 39,
+1861: "category": "verbal_rituals",
+1862: "question_en": "Does the child repeat phrases in a fixed or ritualized way, or insist others respond in a specific way?",
+1863: "question_fr": "L’enfant utilise-t-il des rituels verbaux ?",
+1864: "question_ar": "هل يستخدم الطفل طقوسًا لفظية متكررة؟",
+1865: "answer_type": "coded_choice",
+1866: "possible_answers": ["0", "1", "2", "3", "8", "9"],
+1867: "coding_system": {
+1868: "0": "No verbal rituals",
+1869: "1": "Some ritualized speech patterns, but not compulsive and can stop easily",
+1870: "2": "Clear verbal rituals that may disrupt daily life or involve others, causing mild to moderate disruption",
+1871: "3": "Strong compulsive verbal rituals, highly intrusive and distressing when interrupted",
+1872: "8": "Not applicable (Item 30 level 1 or 2 - insufficient phrase speech)",
+1873: "9": "Unknown / not reported"
+1874: },
+1875: "score_map": {
+1876: "0": 0,
+1877: "1": 2,
+1878: "2": 4,
+1879: "3": 5,
+1880: "8": 0,
+1881: "9": 0
+1882: },
+1883: "weight": 6
+1884: },
+1885: {
+1886: "id": 40,
+1887: "category": "verbal_ritual_examples",
+1888: "question_en": "Can you provide examples of repeated or ritualized speech patterns?",
+1889: "question_fr": "Pouvez-vous donner des exemples de rituels verbaux ?",
+1890: "question_ar": "هل يمكنك إعطاء أمثلة؟",
+1891: "answer_type": "text",
+1892: "weight": 1
+1893: }
+1894: ]
+1895: }
+1896: Page 35
+1897: {
+1898: "section": "Speech Production - Prosody",
+1899: "description": "Assessment of abnormal speech prosody including intonation, volume, rhythm, and speech rate",
+1900: "applicability": "Only for verbal children with phrase-level speech",
+1901: "questions": [
+1902: {
+1903: "id": 40,
+1904: "category": "speech_prosody",
+1905: "question_en": "Is there anything unusual in the child's intonation, volume, rhythm, or speech rate?",
+1906: "question_fr": "Y a-t-il des anomalies dans la prosodie de la parole ?",
+1907: "question_ar": "هل توجد مشاكل في نبرة أو سرعة أو صوت كلام الطفل؟",
+1908: "answer_type": "coded_choice",
+1909: "possible_answers": ["0", "1", "2", "3", "7", "8", "9"],
+1910: "coding_system": {
+1911: "0": "Normal prosody: appropriate intonation, volume, rhythm, and speed",
+1912: "1": "Mild abnormalities in one or more prosodic features without affecting intelligibility",
+1913: "2": "Clearly abnormal prosody (flat, monotone, unusual pitch, inappropriate volume or rhythm)",
+1914: "3": "Frequent and strong prosodic abnormalities making speech difficult to understand",
+1915: "7": "Stuttering, neurological or auditory-related prosodic abnormality",
+1916: "8": "Not applicable (Item 30 level 1 or 2 - insufficient phrase speech)",
+1917: "9": "Unknown / not reported"
+1918: },
+1919: "score_map": {
+1920: "0": 0,
+1921: "1": 2,
+1922: "2": 4,
+1923: "3": 5,
+1924: "7": 3,
+1925: "8": 0,
+1926: "9": 0
+1927: },
+1928: "weight": 4
+1929: },
+1930: {
+1931: "id": 41,
+1932: "category": "prosody_examples",
+1933: "question_en": "Can you provide examples of unusual speech tone or rhythm?",
+1934: "question_fr": "Pouvez-vous donner des exemples de prosodie anormale ?",
+1935: "question_ar": "هل يمكنك إعطاء أمثلة؟",
+1936: "answer_type": "text",
+1937: "weight": 1
+1938: }
+1939: ]
+1940: }
+1941: Page 36
+1942: {
+1943: "section": "Current Communicative Language",
+1944: "item_id": 41,
+1945: "purpose": "Evaluate functional use of language for communication in current daily life",
+1946: "questions": [
+1947: {
+1948: "id": 41,
+1949: "question_en": "How does the child currently use words to communicate?",
+1950: "question_fr": "Comment l’enfant utilise-t-il les mots actuellement ?",
+1951: "question_ar": "كيف يستخدم الطفل الكلمات حالياً للتواصل؟",
+1952: "follow_up": [
+1953: "In what situations does he speak the most?",
+1954: "Does he use the caller’s name or words to gain attention?",
+1955: "Does he talk about events not present (past/future)?",
+1956: "What was his communication like at age 5?"
+1957: ],
+1958: "answer_type": "coded_choice",
+1959: "possible_answers": {
+1960: "0": "Functional, frequent communication across contexts, including reference to non-immediate events",
+1961: "1": "Some communicative use of words, but limited in frequency or context",
+1962: "2": "Few spontaneous words and/or echolalic speech with limited communicative function",
+1963: "3": "Little or no communicative language (mostly non-communicative echolalia or minimal speech)",
+1964: "8": "Not applicable (level 1–2 language or age < 5 for comparison item)",
+1965: "9": "Unknown / not reported"
+1966: },
+1967: "coding_rule": "Focus is FUNCTIONAL communication, not vocabulary size",
+1968: "severity_mapping_autism_signal": {
+1969: "0": "Low communication impairment",
+1970: "1": "Mild pragmatic impairment",
+1971: "2": "Moderate communication impairment",
+1972: "3": "Severe communication impairment"
+1973: }
+1974: }
+1975: ]
+1976: }
+1977: Page 37
+1978: {
+1979: "section": "Non-verbal communication - Joint attention",
+1980: "item_id": 42,
+1981: "domain": "social communication / joint attention",
+1982: "core_definition": "Spontaneous, non-request pointing used to share interest, not to request objects",
+1983: "important_rule": "Must include coordinated eye contact AND be initiated by the child",
+1984: "excluded_behaviors": [
+1985: "pointing to request objects",
+1986: "trained or prompted pointing",
+1987: "pointing while naming objects in exercises",
+1988: "hand-over-hand pointing",
+1989: "pure reaching without social intent"
+1990: ],
+1991: "questions": [
+1992: {
+1993: "question_en": "Does the child spontaneously point to objects around them to show interest?",
+1994: "question_fr": "Est-ce que l’enfant pointe spontanément pour montrer un intérêt ?",
+1995: "question_ar": "هل يشير الطفل بشكل تلقائي لإظهار الاهتمام؟",
+1996: "follow_up": [
+1997: "Does he point with finger or whole hand?",
+1998: "Does he point at distant objects (window, outside, cars)?",
+1999: "Does he coordinate pointing with eye contact?",
+2000: "Can he follow the 'look → point → look' sequence?",
+2001: "What was it like at age 4–5?"
+2002: ],
+2003: "answer_type": "coded_choice",
+2004: "possible_scores": {
+2005: "0": "Spontaneous distal pointing with coordinated eye contact (normal joint attention)",
+2006: "1": "Some attempts, but poorly coordinated or inconsistent",
+2007: "2": "No or very limited spontaneous pointing for shared interest",
+2008: "8": "Not applicable",
+2009: "9": "Unknown / not reported"
+2010: },
+2011: "autism_relevance": {
+2012: "high_value_marker": true,
+2013: "reason": "Joint attention deficit is a core early autism indicator"
+2014: }
+2015: }
+2016: ],
+2017: "severity_weights": {
+2018: "0": 0,
+2019: "1": 3,
+2020: "2": 5,
+2021: "8": 0,
+2022: "9": 0
+2023: }
+2024: }
+2025: Page 38
+2026: {
+2027: "section": "Non-verbal communication - Conventional gestures",
+2028: "items": [
+2029: {
+2030: "item_id": 43,
+2031: "name": "Head nodding (YES)",
+2032: "purpose": "Assess spontaneous use of head nodding to indicate affirmation",
+2033: "core_rule": "Must be spontaneous and conventionally meaningful across multiple contexts",
+2034: "questions": [
+2035: "Does the child nod their head to mean 'yes'?",
+2036: "What about at age 4–5?"
+2037: ],
+2038: "coding": {
+2039: "0": "Spontaneous consistent nodding for YES across contexts",
+2040: "1": "Occasional spontaneous nodding",
+2041: "2": "Never uses head nodding spontaneously",
+2042: "8": "Not applicable",
+2043: "9": "Unknown / not reported"
+2044: },
+2045: "autism_relevance": "Reduced use of conventional gestures may indicate impaired non-verbal communication"
+2046: },
+2047: {
+2048: "item_id": 44,
+2049: "name": "Head shaking (NO)",
+2050: "purpose": "Assess spontaneous use of head shaking to indicate negation",
+2051: "core_rule": "Must be socially conventional and spontaneously used",
+2052: "questions": [
+2053: "Does the child shake their head to mean 'no'?",
+2054: "What about at age 4–5?"
+2055: ],
+2056: "coding": {
+2057: "0": "Spontaneous consistent head shaking for NO across contexts",
+2058: "1": "Occasional spontaneous head shaking",
+2059: "2": "Never uses head shaking spontaneously",
+2060: "8": "Not applicable",
+2061: "9": "Unknown / not reported"
+2062: },
+2063: "autism_relevance": "Impairment may reflect reduced use of socially learned gestures"
+2064: }
+2065: ]
+2066: }
+2067: Page 39
+2068: {
+2069: "section": "Non-verbal communication - Functional gestures",
+2070: "item_id": 45,
+2071: "definition": "Spontaneous culturally appropriate hand/arm gestures used to communicate a message (instrumental gestures)",
+2072: "important_exclusions": [
+2073: "emotional expressions (fear, embarrassment gestures)",
+2074: "self-touching (scratching, touching face)",
+2075: "pulling/taking someone by hand to request something",
+2076: "pure pointing (covered in item 42)",
+2077: "learned ritual gestures without communicative intent"
+2078: ],
+2079: "examples_included": [
+2080: "waving goodbye",
+2081: "blowing a kiss",
+2082: "clapping to show success",
+2083: "finger to lips (shh)",
+2084: "hand gesture meaning 'no'",
+2085: "palm up requesting object or help",
+2086: "waving to attract attention"
+2087: ],
+2088: "questions": [
+2089: {
+2090: "question_en": "Does the child wave goodbye or use other conventional gestures?",
+2091: "question_fr": "Est-ce que l’enfant utilise des gestes conventionnels comme dire au revoir ?",
+2092: "question_ar": "هل يستخدم الطفل إيماءات اجتماعية مثل التلويح؟",
+2093: "follow_up": [
+2094: "When does he use them?",
+2095: "Does he use other gestures like blowing a kiss or clapping?",
+2096: "Does he use gestures to request help or objects?",
+2097: "Does he use gestures when speech is not enough?",
+2098: "What about at age 4–5?"
+2099: ],
+2100: "answer_type": "coded_choice",
+2101: "possible_scores": {
+2102: "0": "Spontaneous, varied and appropriate use of multiple conventional/instrumental gestures",
+2103: "1": "Uses gestures spontaneously but limited in variety or contexts",
+2104: "2": "Inconsistent use or only simple/learned gestures without flexibility",
+2105: "3": "No use of conventional/instrumental gestures",
+2106: "8": "Not applicable",
+2107: "9": "Unknown / not reported"
+2108: },
+2109: "autism_relevance": {
+2110: "importance": "moderate-high",
+2111: "reason": "Gesture diversity reflects non-verbal communication development"
+2112: }
+2113: }
+2114: ],
+2115: "severity_weight": {
+2116: "0": 0,
+2117: "1": 2,
+2118: "2": 4,
+2119: "3": 5,
+2120: "8": 0,
+2121: "9": 0
+2122: }
+2123: }
+2124: Page 40
+2125: {
+2126: "section": "Social responsiveness - Attention to voice",
+2127: "item_id": 46,
+2128: "focus": "spontaneous orienting response to human voice (not obedience)",
+2129: "age_range_note": "For age ≥5, consider behavior specifically at 4–5 years period",
+2130: "core_definition": "Automatic orienting response to someone speaking (looking up, facial orientation, attention shift)",
+2131: "important_distinction": {
+2132: "NOT_MEASURED": [
+2133: "obedience to instructions",
+2134: "compliance with requests",
+2135: "response only after name is called"
+2136: ],
+2137: "MEASURED": [
+2138: "spontaneous attention shift to neutral speech",
+2139: "orientation toward voice",
+2140: "social attention response without prompting"
+2141: ]
+2142: },
+2143: "questions": [
+2144: {
+2145: "question_en": "What does the child do when someone enters a room and speaks without calling their name?",
+2146: "question_fr": "Que fait l’enfant quand quelqu’un parle sans l’appeler par son nom ?",
+2147: "follow_up": [
+2148: "Does he look up spontaneously?",
+2149: "Does he maintain attention?",
+2150: "Does he only respond when his name is used?",
+2151: "Does he respond only to strong/loud voice?",
+2152: "What about at age 4–5?"
+2153: ],
+2154: "answer_type": "coded_choice",
+2155: "scores": {
+2156: "0": "Usually orients to voice spontaneously and shows appropriate attention",
+2157: "1": "Inconsistent or brief attention; limited response to voice",
+2158: "2": "Rarely or never orients to voice unless name or strong prompting is used",
+2159: "3": "Very rare response even with normal hearing",
+2160: "8": "Not applicable",
+2161: "9": "Unknown / not reported"
+2162: },
+2163: "autism_relevance": {
+2164: "importance": "high",
+2165: "reason": "Early social orienting deficit is a core marker of autism risk"
+2166: }
+2167: }
+2168: ],
+2169: "severity_weight": {
+2170: "0": 0,
+2171: "1": 3,
+2172: "2": 5,
+2173: "3": 4,
+2174: "8": 0,
+2175: "9": 0
+2176: }
+2177: }
+2178: Page 41
+2179: {
+2180: "item_id": 47,
+2181: "title": "Imitation spontanée d'actions",
+2182: "description": "Évalue l'imitation spontanée non provoquée d'actions et comportements d'autres personnes (exclut TV/films et imitation demandée).",
+2183: "age_focus": "4-5 ans (ou développement précoce si >10 ans)",
+2184: "questions": [
+2185: "Est-ce que l'enfant imite spontanément les membres de la famille ?",
+2186: "Imite-t-il sans qu'on lui demande ?",
+2187: "Utilise-t-il des objets pour faire semblant en imitant ?",
+2188: "L'imitation apparaît-elle spontanément dans le jeu ou seulement immédiatement après observation ?",
+2189: "Quelle variété d'actions imite-t-il ?",
+2190: "Imite-t-il des gestes ou caractéristiques personnelles (marche, gestes, posture) ?"
+2191: ],
+2192: "scoring": {
+2193: "0": "Imitation spontanée variée, flexible, parfois différée et intégrée au jeu",
+2194: "1": "Quelques imitations spontanées, mais limitées en variété ou fréquence",
+2195: "2": "Imitation limitée à des routines simples ou objets appris, peu intégrée au jeu",
+2196: "3": "Imitation spontanée très rare ou absente",
+2197: "8": "Non applicable",
+2198: "9": "Information inconnue"
+2199: },
+2200: "data_fields": {
+2201: "spontaneous_imitation": null,
+2202: "delayed_imitation": null,
+2203: "pretend_play_imitation": null,
+2204: "variety_of_actions": null,
+2205: "social_imitation_examples": []
+2206: }
+2207: }
+2208: Page 43
+2209: {
+2210: "item_id": 49,
+2211: "title": "Jeu imaginatif avec les pairs",
+2212: "age_focus": "4-5 ans (rétrospectif pour sujets >10 ans)",
+2213: "definition": "Évalue le jeu imaginatif partagé avec d'autres enfants, incluant la créativité, la spontanéité et la réciprocité sociale.",
+2214: "key_aspects": [
+2215: "jeu de faire semblant partagé",
+2216: "initiative spontanée",
+2217: "réciprocité sociale",
+2218: "variété des scénarios imaginatifs",
+2219: "interaction avec pairs (pas seulement frères/sœurs dirigés)"
+2220: ],
+2221: "questions": [
+2222: "L'enfant a-t-il déjà joué à des jeux imaginatifs avec d'autres enfants ?",
+2223: "Comprenaient-ils le scénario du jeu partagé ?",
+2224: "Peut-il donner un exemple de ce type de jeu ?",
+2225: "Prend-il l'initiative dans le jeu ou suit-il les autres ?",
+2226: "Qu'en était-il entre 4 et 5 ans ?"
+2227: ],
+2228: "scoring": {
+2229: "0": "Jeu imaginatif coopératif et spontané avec pairs, avec initiative et réciprocité",
+2230: "1": "Participation à des jeux imaginatifs mais réciprocité limitée ou créativité restreinte",
+2231: "2": "Jeu avec autres enfants sans véritable jeu de faire semblant ou très limité",
+2232: "3": "Pas de jeu avec autres enfants ou absence de jeu imaginatif même seul",
+2233: "8": "Non applicable",
+2234: "9": "Information inconnue"
+2235: },
+2236: "data_fields": {
+2237: "peer_imaginative_play": null,
+2238: "initiative_level": null,
+2239: "social_reciprocity": null,
+2240: "pretend_play_variety": null,
+2241: "examples": []
+2242: }
+2243: }
+2244: Page 44
+2245: {
+2246: "item_id": 50,
+2247: "title": "Regard direct",
+2248: "age_focus": "moins de 5 ans (ou 4-5 ans rétrospectif pour sujets >5 ans)",
+2249: "definition": "Évalue l'utilisation du regard direct dans les interactions sociales et la réponse du sujet aux tentatives des autres de capter son attention visuelle.",
+2250: "dimensions_evaluees": [
+2251: "contact visuel spontané",
+2252: "réciprocité du regard",
+2253: "durée et constance du regard",
+2254: "réponse au regard des autres",
+2255: "variation selon les interlocuteurs"
+2256: ],
+2257: "questions": [
+2258: "Est-ce que l'enfant regarde directement lorsqu'il interagit ou parle ?",
+2259: "Peut-on capter facilement son regard ?",
+2260: "Suit-il les déplacements des autres avec le regard ?",
+2261: "Regarde-t-il le visage des autres de manière intermittente ?",
+2262: "Qu'en était-il avec différentes personnes ?",
+2263: "À 4-5 ans, comment était son contact visuel ?"
+2264: ],
+2265: "scoring": {
+2266: "0": "Regard direct normal, spontané et réciproque dans diverses situations sociales",
+2267: "1": "Regard direct présent mais bref ou non constant",
+2268: "2": "Regard direct occasionnel ou incertain, rarement utilisé en interaction sociale",
+2269: "3": "Regard inhabituel ou qualitativement atypique",
+2270: "8": "Non applicable",
+2271: "9": "Information inconnue"
+2272: },
+2273: "data_fields": {
+2274: "eye_contact_quality": null,
+2275: "eye_contact_frequency": null,
+2276: "eye_contact_duration": null,
+2277: "response_to_eye_contact": null,
+2278: "social_context_variation": null
+2279: }
+2280: }
+2281: Page 45
+2282: {
+2283: "item_id": 51,
+2284: "title": "Sourire social",
+2285: "age_focus": "4-5 ans (rétrospectif si sujet >5 ans)",
+2286: "definition": "Évalue la présence de sourires spontanés dirigés vers les autres et leur réciprocité sociale (réponse au sourire, accueil, interactions sociales positives).",
+2287: "dimensions_evaluees": [
+2288: "sourire spontané en interaction",
+2289: "réciprocité du sourire",
+2290: "sourire en réponse aux autres",
+2291: "sourire lors des retrouvailles",
+2292: "variété des personnes ciblées"
+2293: ],
+2294: "questions": [
+2295: "L'enfant sourit-il lorsqu'il s'approche de quelqu'un ?",
+2296: "Sourit-il en guise d'accueil lors des rencontres ?",
+2297: "Comment réagit-il lorsqu'on lui sourit ?",
+2298: "Sourit-il lors des retrouvailles avec des personnes connues ?",
+2299: "Qu'en était-il à l'âge de 4 à 5 ans ?"
+2300: ],
+2301: "scoring": {
+2302: "0": "Sourire social réciproque régulier et spontané envers différentes personnes",
+2303: "1": "Quelques sourires sociaux mais fréquence ou variété insuffisante",
+2304: "2": "Sourires présents mais peu ou pas de réciprocité ou limités aux proches / contextes spécifiques",
+2305: "3": "Peu ou pas de sourire social dirigé vers les personnes",
+2306: "8": "Non applicable",
+2307: "9": "Information inconnue"
+2308: },
+2309: "data_fields": {
+2310: "social_smile_frequency": null,
+2311: "social_smile_reciprocity": null,
+2312: "social_context_variation": null,
+2313: "response_to_smile": null,
+2314: "examples": []
+2315: }
+2316: }
+2317: Page 46
+2318: {
+2319: "item_id": 52,
+2320: "title": "Montrer et diriger l'attention",
+2321: "age_focus": "4-5 ans (rétrospectif si sujet >5 ans)",
+2322: "definition": "Évalue la capacité de l'enfant à partager spontanément son intérêt en montrant des objets ou événements à d'autres personnes pour diriger leur attention.",
+2323: "dimensions_evaluees": [
+2324: "partage spontané d'intérêt",
+2325: "pointage ou présentation d'objets",
+2326: "direction de l'attention d'autrui",
+2327: "variété des objets montrés",
+2328: "motivation sociale (partage vs besoin)"
+2329: ],
+2330: "questions": [
+2331: "L'enfant montre-t-il spontanément des objets qui l'intéressent ?",
+2332: "Apporte-t-il des jouets pour les montrer ?",
+2333: "Attire-t-il l'attention sur ce qu'il fait ou regarde ?",
+2334: "Le fait-il uniquement pour partager ou pour obtenir quelque chose ?",
+2335: "Qu'en était-il entre 4 et 5 ans ?"
+2336: ],
+2337: "scoring": {
+2338: "0": "Montre spontanément des objets pour partager l'intérêt avec autrui",
+2339: "1": "Montre parfois des objets, mais comportement peu fréquent ou peu clairement social",
+2340: "2": "Montre surtout pour demander de l'aide, de la nourriture ou lié à ses propres besoins",
+2341: "3": "Approche sociale de type partage rare ou absente",
+2342: "8": "Non applicable",
+2343: "9": "Information inconnue"
+2344: },
+2345: "data_fields": {
+2346: "spontaneous_showing": null,
+2347: "joint_attention": null,
+2348: "object_sharing_frequency": null,
+2349: "social_motivation": null,
+2350: "examples": []
+2351: }
+2352: }
+2353: Page 47
+2354: {
+2355: "item_id": 53,
+2356: "title": "Offre de partage",
+2357: "age_focus": "4-5 ans (rétrospectif si sujet >5 ans)",
+2358: "definition": "Évalue la capacité de l'enfant à offrir spontanément de partager des objets ou ressources avec d'autres sans incitation externe et en dehors de routines.",
+2359: "dimensions_evaluees": [
+2360: "partage spontané",
+2361: "variété des objets partagés",
+2362: "initiative sociale",
+2363: "partage avec pairs et adultes",
+2364: "différence entre spontané et sur demande"
+2365: ],
+2366: "questions": [
+2367: "L'enfant offre-t-il spontanément de partager des objets (jouets, nourriture, etc.) ?",
+2368: "Partage-t-il avec d'autres enfants ?",
+2369: "Le partage est-il spontané ou sur demande ?",
+2370: "À quelle fréquence cela se produit-il ?",
+2371: "Qu'en était-il entre 4 et 5 ans ?"
+2372: ],
+2373: "scoring": {
+2374: "0": "Partage spontané fréquent et varié avec différentes personnes et objets",
+2375: "1": "Quelques offres spontanées de partage mais limitées en fréquence ou en contexte",
+2376: "2": "Partage uniquement sur demande ou spontané limité à la nourriture",
+2377: "3": "Pas de comportement de partage",
+2378: "8": "Non applicable",
+2379: "9": "Information inconnue"
+2380: },
+2381: "data_fields": {
+2382: "spontaneous_sharing": null,
+2383: "sharing_variety": null,
+2384: "peer_sharing": null,
+2385: "adult_sharing": null,
+2386: "frequency": null,
+2387: "examples": []
+2388: }
+2389: }
+2390: Page 48
+2391: {
+2392: "item_id": 54,
+2393: "title": "Chercher à partager son plaisir avec les autres",
+2394: "age_focus": "4-5 ans (rétrospectif si sujet >5 ans)",
+2395: "definition": "Évalue la tendance de l'enfant à partager spontanément ses émotions positives et son plaisir avec d'autres personnes sans objectif instrumental.",
+2396: "dimensions_evaluees": [
+2397: "partage émotionnel positif",
+2398: "expression du plaisir",
+2399: "initiative sociale spontanée",
+2400: "partage avec différentes personnes",
+2401: "qualité du partage affectif"
+2402: ],
+2403: "questions": [
+2404: "Qu'est-ce qui rend l'enfant heureux ou lui fait plaisir ?",
+2405: "Comment exprime-t-il son plaisir ?",
+2406: "Cherche-t-il à partager son plaisir avec les autres ?",
+2407: "Montre-t-il ses réussites ou découvertes avec enthousiasme ?",
+2408: "Sourit-il, parle-t-il ou vocalise-t-il pour partager ses émotions positives ?",
+2409: "Qu'en était-il entre 4 et 5 ans ?"
+2410: ],
+2411: "scoring": {
+2412: "0": "Partage fréquent et spontané du plaisir avec différentes personnes",
+2413: "1": "Quelques tentatives de partage du plaisir, mais limitées ou peu spontanées",
+2414: "2": "Peu ou pas de partage du plaisir avec les autres",
+2415: "8": "Non applicable",
+2416: "9": "Information inconnue"
+2417: },
+2418: "data_fields": {
+2419: "positive_affect_sharing": null,
+2420: "spontaneous_joy_expression": null,
+2421: "social_engagement": null,
+2422: "variety_of_contexts": null,
+2423: "examples": []
+2424: }
+2425: }
+2426: Page 49
+2427: {
+2428: "item_id": 55,
+2429: "title": "Offre de réconfort",
+2430: "age_focus": "4-5 ans (rétrospectif si sujet >5 ans)",
+2431: "definition": "Évalue la capacité de l'enfant à offrir spontanément du réconfort à autrui en détresse (physique ou émotionnelle) par des gestes, contacts, expressions faciales ou vocalisations.",
+2432: "dimensions_evaluees": [
+2433: "réactivité à la détresse d'autrui",
+2434: "gestes de réconfort spontanés",
+2435: "expression faciale empathique",
+2436: "contact physique de soutien",
+2437: "variété des situations sociales"
+2438: ],
+2439: "questions": [
+2440: "L'enfant réconforte-t-il spontanément lorsqu'une personne est triste ou blessée ?",
+2441: "Que fait-il lorsqu'un parent pleure ou est blessé ?",
+2442: "Son expression faciale change-t-elle pour montrer de l'empathie ?",
+2443: "Réconforte-t-il aussi des frères et sœurs ?",
+2444: "Le fait-il dans différentes situations ?",
+2445: "Qu'en était-il entre 4 et 5 ans ?"
+2446: ],
+2447: "scoring": {
+2448: "0": "Offres spontanées et variées de réconfort avec gestes, contact, vocalisations et expression faciale appropriée",
+2449: "1": "Réponses partielles ou limitées, parfois indirectes ou contextuelles, sans véritable réconfort complet",
+2450: "2": "Offres rares ou comportements de réconfort atypiques",
+2451: "3": "N'offre jamais de réconfort",
+2452: "8": "Non applicable",
+2453: "9": "Information inconnue"
+2454: },
+2455: "data_fields": {
+2456: "spontaneous_comforting": null,
+2457: "empathy_expression": null,
+2458: "physical_contact_comfort": null,
+2459: "facial_empathy": null,
+2460: "context_variation": null,
+2461: "examples": []
+2462: }
+2463: }
+2464: Page 50
+2465: 56 QUALITÉ DES OUVERTURES SOCIALES
+2466: L'ACCENT EST MIS SUR LA QUALITÉ DE L'INTENTIONNALITÉ SOCIALE QUAND LE SUJET RECHERCHE DE L'AIDE, ET PAS SUR LE NOMBRE DE CONTEXTES DANS LESQUELS DE TELLES APPROCHES APPARAISSENT. COTER « O » UNIQUEMENT SI LE SUJET, PENDANT DES APPROCHES FORTEMENT MOTIVÉES (COMME LA DEMANDE D'AIDE) PRODUIT DES VOCALISATIONS, DE MANIÈRE COHÉRENTE ET COORDONNÉE AVEC SES AUTRES COMPORTEMENTS COMME L'ORIENTATION DU REGARD ET DIRIGE SON ATTENTION VERS L'OBJET ET L'AUTRE PERSONNE. COTER LES OUVERTURES LES PLUS CARACTÉRISTIQUES, PLUTÔT QUE LES MEILLEURES ET/OU LES PLUS MOTIVEES.
+2468: Lorsqu'il veut quelque chose ou veut de l'aide, comment fait-il pour attirer votre attention ?
+2469: Est-ce qu'il pointe du doigt, vous donne des objets, ou vient vous solliciter quand il a besoin d'aide ?
+2470: Est-ce qu'il regarde l'objet ou est-ce qu'il vous regarde ?
+2471: Est-ce qu'il a déjà utilisé des gestes ou des mouvements accompagnés de sons ou de mots pour attirer votre attention ?
+2472: Si vous ne comprenez pas tout de suite, que fait [prénom du sujet]?
+2473: Est-ce qu'il vous regarde et puis parle ou émet un son ?
+2474: Qu'en était-il pour [prénom du sujet] à l'âge de 4 à 5 ans ?
+2475: (OBTENIR DES EXEMPLES.)
+2476: Est-ce qu'il manifeste de l'intérêt pour d'autres personnes ou pour d'autres activités ?
+2477: Comment manifeste-t-il son intérêt, ou attire-t-il
+2478: T'attention des autres? Avec quelle fréquence fait-il cela ?
+2480: Coter en fonction de la majorité des ouvertures plutôt qu'en fonction des meilleures.
+2482: 0 = Utilise constamment le regard coordonné conjointement à des vocalisations dans des situations typiques quand il est motivé pour communiquer
+2484: 1 = Peut utiliser le regard ou les vocalisations, mais ces comportements sont faiblement intégrés
+2486: 2 = Manifeste rarement des comportements bien coordonnés, avec une intentionnalité socialement ciblée intégrant le regard ou les vocalisations, ou comportement manifesté de manière bizarre
+2488: 3 = Pas de coordination du regard et des vocalisations
+2490: 8 = Non applicable
+2492: 9 = Information inconnue ou question non posée
+2495: Page 51
+2496: {
+2497: "item": 57,
+2498: "code_actuel": 9,
+2499: "code_4_5_ans": 9,
+2500: "raison": "Information non fournie sur la diversité des expressions faciales utilisées pour communiquer",
+2501: "commentaire": "Aucune donnée permettant d'évaluer la variété (joie, surprise, embarras, etc.) ni la comparaison avec les pairs."
+2502: }
+2503: Page 62
+2504: {
+2505: "item": 58,
+2506: "code_actuel": 9,
+2507: "code_passe_4_5_ans": 9,
+2508: "description": "Information inconnue ou question non posée",
+2509: "justification": "Aucune information fournie sur des expressions faciales inappropriées (rire/sourire/pleurer hors contexte)."
+2510: }
+2511: Page53
+2512: {
+2513: "item": 59,
+2514: "code_actuel": 9,
+2515: "code_4_5_ans": 9,
+2516: "description": "Information inconnue ou question non posée",
+2517: "commentaire": "Aucune donnée fournie sur la qualité des réponses sociales aux interactions initiées par des adultes."
+2518: }
+2519: Page55
+2520: {
+2521: "section": "Initiatives pour des activités appropriées",
+2522: "description": "Cet item évalue la capacité du sujet à s'engager spontanément dans des activités appropriées, variées et non répétitives lorsqu'il est seul et non guidé.",
+2523: "accessibility": "S'applique aux sujets verbaux et non verbaux. Évaluer les comportements actuels et vers 4–5 ans.",
+2524: "questions": [
+2525: {
+2526: "id": 60,
+2527: "question_en": "Can the child organize his/her own play or activities without help?",
+2528: "question_fr": "Est-ce que l’enfant est capable d’organiser ses propres jeux ou activités sans aide ?",
+2529: "question_ar": "هل يستطيع الطفل تنظيم لعبه أو أنشطته بدون مساعدة؟",
+2530: "category": "spontaneous_activity",
+2531: "answer_type": "single_choice",
+2532: "possible_answers": [
+2533: "Spontaneously engages in varied appropriate activities",
+2534: "Limited range of initiated activities",
+2535: "Passive activities only (TV, listening)",
+2536: "No active or only repetitive/stereotyped activities"
+2537: ],
+2538: "score_map": {
+2539: "Spontaneously engages in varied appropriate activities": 0,
+2540: "Limited range of initiated activities": 1,
+2541: "Passive activities only (TV, listening)": 2,
+2542: "No active or only repetitive/stereotyped activities": 3
+2543: },
+2544: "weight": 3
+2545: },
+2546: {
+2547: "id": 60,
+2548: "question_en": "What does the child do when left alone?",
+2549: "question_fr": "Que fait l’enfant lorsqu’il est laissé seul ?",
+2550: "question_ar": "ماذا يفعل الطفل عندما يُترك وحده؟",
+2551: "category": "behavior_observation",
+2552: "answer_type": "text",
+2553: "possible_answers": [],
+2554: "score_map": {},
+2555: "weight": 2
+2556: },
+2557: {
+2558: "id": 60,
+2559: "question_en": "What was the behavior at 4–5 years old?",
+2560: "question_fr": "Quel était le comportement à l’âge de 4 à 5 ans ?",
+2561: "question_ar": "كيف كان السلوك بين عمر 4 إلى 5 سنوات؟",
+2562: "category": "developmental_history",
+2563: "answer_type": "text",
+2564: "possible_answers": [],
+2565: "score_map": {},
+2566: "weight": 2
+2567: }
+2568: ]
+2569: }
+2570: Page56
+2571: {
+2572: "section": "Jeu social imitatif",
+2573: "description": "Cet item évalue la capacité de l’enfant à participer à des jeux sociaux précoces impliquant imitation, réciprocité et coordination simple des actions avec un adulte ou un autre enfant.",
+2574: "accessibility": "Applicable aux sujets verbaux et non verbaux. Pour les enfants <4 ans : évaluation actuelle uniquement. Pour les ≥10 ans : se baser sur la période la plus anormale entre 4;0–5;0 ans.",
+2575: "questions": [
+2576: {
+2577: "id": 61,
+2578: "question_en": "Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games?",
+2579: "question_fr": "Est-ce que l’enfant comprenait des jeux sociaux simples comme « le fermier est dans son pré » ou les rondes enfantines ?",
+2580: "question_ar": "هل كان الطفل يفهم الألعاب الاجتماعية البسيطة مثل الأناشيد أو الدوائر الغنائية؟",
+2581: "category": "social_imitation_play",
+2582: "answer_type": "yes_no",
+2583: "possible_answers": ["Yes", "No"],
+2584: "score_map": {
+2585: "Yes": 0,
+2586: "No": 3
+2587: },
+2588: "weight": 2
+2589: },
+2590: {
+2591: "id": 61,
+2592: "question_en": "Did the child participate spontaneously and initiate actions in these games?",
+2593: "question_fr": "Est-ce que l’enfant participait spontanément et initiait les actions dans ces jeux ?",
+2594: "question_ar": "هل كان الطفل يشارك تلقائيًا ويبدأ الأفعال في هذه الألعاب؟",
+2595: "category": "social_initiation",
+2596: "answer_type": "single_choice",
+2597: "possible_answers": [
+2598: "Initiates and responds normally",
+2599: "Some participation but limited",
+2600: "Very limited participation",
+2601: "No participation"
+2602: ],
+2603: "score_map": {
+2604: "Initiates and responds normally": 0,
+2605: "Some participation but limited": 1,
+2606: "Very limited participation": 2,
+2607: "No participation": 3
+2608: },
+2609: "weight": 3
+2610: },
+2611: {
+2612: "id": 61,
+2613: "question_en": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games?",
+2614: "question_fr": "Est-ce que l’enfant participait à des jeux taquins comme « Je vais t’attraper ! » ou « la bébête qui monte » ?",
+2615: "question_ar": "هل شارك الطفل في ألعاب المزاح مثل المطاردة أو الدغدغة؟",
+2616: "category": "interactive_play",
+2617: "answer_type": "single_choice",
+2618: "possible_answers": [
+2619: "Regular reciprocal play",
+2620: "Occasional participation",
+2621: "Minimal participation",
+2622: "No participation"
+2623: ],
+2624: "score_map": {
+2625: "Regular reciprocal play": 0,
+2626: "Occasional participation": 1,
+2627: "Minimal participation": 2,
+2628: "No participation": 3
+2629: },
+2630: "weight": 3
+2631: },
+2632: {
+2633: "id": 61,
+2634: "question_en": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'?",
+2635: "question_fr": "Est-ce que l’enfant joue à « coucou-caché », aux jeux de tape-mains ou à « Jacques a dit » ?",
+2636: "question_ar": "هل يلعب الطفل ألعاب مثل الغميضة أو التصفيق أو لعبة 'سايمون يقول'؟",
+2637: "category": "structured_social_play",
+2638: "answer_type": "single_choice",
+2639: "possible_answers": [
+2640: "Yes, flexible and reciprocal",
+2641: "Yes, but limited",
+2642: "Rarely",
+2643: "No"
+2644: ],
+2645: "score_map": {
+2646: "Yes, flexible and reciprocal": 0,
+2647: "Yes, but limited": 1,
+2648: "Rarely": 2,
+2649: "No": 3
+2650: },
+2651: "weight": 2
+2652: }
+2653: ]
+2654: }
+2655: Page57
+2656: {
+2657: "section": "Intérêt pour les autres enfants",
+2658: "description": "Cet item évalue le niveau d’intérêt spontané du sujet pour les enfants du même âge qu’il ne connaît pas, ainsi que ses comportements d’observation, d’approche et d’interaction sociale.",
+2659: "accessibility": "Applicable aux sujets verbaux et non verbaux. Pour les ≥10 ans, se référer à la période 4;0–5;0 ans (période la plus anormale).",
+2660: "questions": [
+2661: {
+2662: "id": 62,
+2663: "question_en": "What does the child think about other same-age children he does not know?",
+2664: "question_fr": "Que pense l’enfant des autres enfants du même âge qu’il ne connaît pas ?",
+2665: "question_ar": "ماذا يفكر الطفل في الأطفال الآخرين من نفس العمر الذين لا يعرفهم؟",
+2666: "category": "peer_interest",
+2667: "answer_type": "text",
+2668: "possible_answers": [],
+2669: "score_map": {},
+2670: "weight": 2
+2671: },
+2672: {
+2673: "id": 62,
+2674: "question_en": "Is the child interested in other children?",
+2675: "question_fr": "Est-ce que l’enfant est intéressé par les autres enfants ?",
+2676: "question_ar": "هل يهتم الطفل بالأطفال الآخرين؟",
+2677: "category": "peer_interest",
+2678: "answer_type": "single_choice",
+2679: "possible_answers": [
+2680: "Clearly interested and tries to approach",
+2681: "Interested but no attempts to engage",
+2682: "Occasional interest",
+2683: "No interest"
+2684: ],
+2685: "score_map": {
+2686: "Clearly interested and tries to approach": 0,
+2687: "Interested but no attempts to engage": 1,
+2688: "Occasional interest": 2,
+2689: "No interest": 3
+2690: },
+2691: "weight": 3
+2692: },
+2693: {
+2694: "id": 62,
+2695: "question_en": "What does the child do when he sees another child in familiar situations?",
+2696: "question_fr": "Que fait l’enfant lorsqu’il voit un autre enfant dans une situation familière (bus, centre de loisirs, etc.) ?",
+2697: "question_ar": "ماذا يفعل الطفل عندما يرى طفلاً آخر في أماكن مألوفة؟",
+2698: "category": "peer_interaction_behavior",
+2699: "answer_type": "single_choice",
+2700: "possible_answers": [
+2701: "Approaches or tries to interact",
+2702: "Observes but does not approach",
+2703: "Rarely notices other children",
+2704: "No interest at all"
+2705: ],
+2706: "score_map": {
+2707: "Approaches or tries to interact": 0,
+2708: "Observes but does not approach": 1,
+2709: "Rarely notices other children": 2,
+2710: "No interest at all": 3
+2711: },
+2712: "weight": 3
+2713: }
+2714: ]
+2715: }
+2716: Page58
+2717: {
+2718: "section": "Réponse à l’approche des autres enfants",
+2719: "description": "Cet item évalue la manière dont le sujet réagit lorsqu’un autre enfant s’approche de lui, et si cette réaction soutient ou non une interaction sociale.",
+2720: "accessibility": "Applicable aux sujets verbaux et non verbaux. Pour les ≥10 ans, se référer à la période 4;0–5;0 ans (comportement le plus anormal).",
+2721: "questions": [
+2722: {
+2723: "id": 63,
+2724: "question_en": "What happens when another child approaches the child?",
+2725: "question_fr": "Que se passe-t-il lorsqu’un autre enfant s’approche de lui ?",
+2726: "question_ar": "ماذا يحدث عندما يقترب طفل آخر منه؟",
+2727: "category": "peer_approach_response",
+2728: "answer_type": "text",
+2729: "possible_answers": [],
+2730: "score_map": {},
+2731: "weight": 3
+2732: },
+2733: {
+2734: "id": 63,
+2735: "question_en": "Does the child respond differently to siblings or familiar children?",
+2736: "question_fr": "Est-ce que l’enfant se comporte différemment avec un frère/sœur ou un enfant familier ?",
+2737: "question_ar": "هل يتصرف الطفل بشكل مختلف مع الإخوة أو الأطفال الذين يعرفهم؟",
+2738: "category": "familiar_vs_unfamiliar_response",
+2739: "answer_type": "single_choice",
+2740: "possible_answers": [
+2741: "Responds normally to peers and tries to interact",
+2742: "Responds sometimes, mainly with familiar children",
+2743: "Rare or inconsistent response",
+2744: "Avoids other children"
+2745: ],
+2746: "score_map": {
+2747: "Responds normally to peers and tries to interact": 0,
+2748: "Responds sometimes, mainly with familiar children": 1,
+2749: "Rare or inconsistent response": 2,
+2750: "Avoids other children": 3
+2751: },
+2752: "weight": 3
+2753: },
+2754: {
+2755: "id": 63,
+2756: "question_en": "Does the child actively avoid other children?",
+2757: "question_fr": "Est-ce que l’enfant évite activement les autres enfants ?",
+2758: "question_ar": "هل يتجنب الطفل الأطفال الآخرين بشكل نشط؟",
+2759: "category": "avoidance_behavior",
+2760: "answer_type": "single_choice",
+2761: "possible_answers": [
+2762: "No avoidance",
+2763: "Occasional avoidance",
+2764: "Frequent avoidance",
+2765: "Persistent avoidance"
+2766: ],
+2767: "score_map": {
+2768: "No avoidance": 0,
+2769: "Occasional avoidance": 1,
+2770: "Frequent avoidance": 2,
+2771: "Persistent avoidance": 3
+2772: },
+2773: "weight": 2
+2774: }
+2775: ]
+2776: }
+2777: Page 59
+2778: {
+2779: "id": 60,
+2780: "question_en": "Is the child able to spontaneously organize appropriate activities without help?",
+2781: "question_fr": "Est-ce que l’enfant est capable d’organiser spontanément des activités appropriées sans aide ?",
+2782: "question_ar": "هل يستطيع الطفل تنظيم أنشطة مناسبة بشكل تلقائي دون مساعدة؟",
+2783: "category": "play_initiative",
+2784: "description": "This item assesses spontaneous engagement in appropriate, non-repetitive activities when the child is unstructured or alone.",
+2785: "answer_type": "single_choice",
+2786: "possible_answers": [
+2787: "Diverse spontaneous appropriate play activities",
+2788: "Limited spontaneous appropriate activities",
+2789: "Passive activities only (TV, radio, etc.)",
+2790: "No active or constructive play / repetitive behaviors",
+2791: "Not applicable",
+2792: "Unknown"
+2793: ],
+2794: "score_map": {
+2795: "Diverse spontaneous appropriate play activities": 0,
+2796: "Limited spontaneous appropriate activities": 1,
+2797: "Passive activities only (TV, radio, etc.)": 2,
+2798: "No active or constructive play / repetitive behaviors": 3,
+2799: "Not applicable": 8,
+2800: "Unknown": 9
+2801: },
+2802: "weight": 2
+2803: }
+2804: Page 60
+2805: {
+2806: "id": 65,
+2807: "question_en": "Does the child have friends or a best friend?",
+2808: "question_fr": "Est-ce que l’enfant a des amis ou un meilleur ami ?",
+2809: "question_ar": "هل لدى الطفل أصدقاء أو صديق مقرّب (أفضل صديق)؟",
+2810: "category": "friendships",
+2811: "description": "This item assesses the presence and quality of selective, reciprocal friendships with peers of similar age, including shared interests and voluntary social interaction outside structured settings.",
+2812: "age_range": {
+2813: "min": 5,
+2814: "max": null,
+2815: "note": "Only applicable for subjects aged 5 years or older"
+2816: },
+2817: "answer_type": "single_choice",
+2818: "possible_answers": [
+2819: "Normal reciprocal friendship with shared activities and social engagement",
+2820: "Some friendships but limited by restricted interests or reduced reciprocity",
+2821: "Some peer contact but only in group or structured situations",
+2822: "No selective or reciprocal peer relationships",
+2823: "Not applicable",
+2824: "Unknown"
+2825: ],
+2826: "score_map": {
+2827: "Normal reciprocal friendship with shared activities and social engagement": 0,
+2828: "Some friendships but limited by restricted interests or reduced reciprocity": 1,
+2829: "Some peer contact but only in group or structured situations": 2,
+2830: "No selective or reciprocal peer relationships": 3,
+2831: "Not applicable": 8,
+2832: "Unknown": 9
+2833: },
+2834: "weight": 3
+2835: }
+2836: Page 61
+2837: {
+2838: "id": 66,
+2839: "question_en": "Does the child adjust their behavior depending on the social situation and people involved?",
+2840: "question_fr": "Est-ce que l’enfant adapte son comportement en fonction des personnes et des situations sociales ?",
+2841: "question_ar": "هل يغير الطفل سلوكه حسب الأشخاص أو المواقف الاجتماعية المختلفة؟",
+2842: "category": "social_behavior",
+2843: "description": "This item evaluates social disinhibition, meaning inappropriate or poorly modulated social behavior due to reduced sensitivity to social norms and context. It excludes inappropriate questions/remarks already covered in Item 36.",
+2844: "age_range": {
+2845: "min": 4,
+2846: "max": null,
+2847: "note": "Applicable only for subjects aged 4 years or older"
+2848: },
+2849: "answer_type": "single_choice",
+2850: "possible_answers": [
+2851: "Normal social inhibition appropriate to context",
+2852: "Occasional socially inappropriate behavior or mild social naivety",
+2853: "Clear difficulty understanding social rules and contexts; socially inappropriate behavior occurs",
+2854: "Marked social disinhibition with frequent inappropriate or embarrassing behavior",
+2855: "Not applicable",
+2856: "Unknown"
+2857: ],
+2858: "score_map": {
+2859: "Normal social inhibition appropriate to context": 0,
+2860: "Occasional socially inappropriate behavior or mild social naivety": 1,
+2861: "Clear difficulty understanding social rules and contexts; socially inappropriate behavior occurs": 2,
+2862: "Marked social disinhibition with frequent inappropriate or embarrassing behavior": 3,
+2863: "Not applicable": 8,
+2864: "Unknown": 9
+2865: },
+2866: "weight": 3
+2867: }
+2868: Paage 62
+2869: {
+2870: "id": 67,
+2871: "question_en": "Does the child have unusual or highly specific interests that are intense, repetitive, and socially atypical?",
+2872: "question_fr": "Est-ce que l’enfant a des intérêts inhabituels ou très spécifiques qui sont intenses, répétitifs et socialement atypiques ?",
+2873: "question_ar": "هل لدى الطفل اهتمامات غير عادية أو محددة جدًا تكون شديدة ومتكررة وغير مناسبة اجتماعيًا؟",
+2874: "category": "restricted_interests",
+2875: "description": "This item assesses unusual preoccupations or restricted interests that are intense, repetitive, and may interfere with family life or the child’s social functioning. These interests must have been present for at least 3 months to be considered.",
+2876: "criteria_notes": {
+2877: "duration_requirement": "At least 3 months",
+2878: "definition": "Interest is unusual in intensity, quality, or social appropriateness and may persist even when the object is not present"
+2879: },
+2880: "answer_type": "single_choice",
+2881: "possible_answers": [
+2882: "No unusual preoccupations",
+2883: "Unusual interests without interference in family or social functioning",
+2884: "Clear repetitive interests causing mild interference or constraints",
+2885: "Strong preoccupations causing marked interference or severe limitation of functioning",
+2886: "Unknown"
+2887: ],
+2888: "score_map": {
+2889: "No unusual preoccupations": 0,
+2890: "Unusual interests without interference in family or social functioning": 1,
+2891: "Clear repetitive interests causing mild interference or constraints": 2,
+2892: "Strong preoccupations causing marked interference or severe limitation of functioning": 3,
+2893: "Unknown": 9
+2894: },
+2895: "weight": 3
+2896: }
+2897: Paage 63
+2898: {
+2899: "id": 68,
+2900: "question_en": "Does the child have restricted interests or hobbies that are unusually intense or narrow in focus?",
+2901: "question_fr": "Est-ce que l’enfant a des intérêts ou passe-temps restreints qui sont inhabituels par leur intensité ou leur focalisation ?",
+2902: "question_ar": "هل لدى الطفل اهتمامات أو هوايات محدودة تكون غير عادية من حيث الشدة أو التركيز؟",
+2903: "category": "restricted_interests",
+2904: "description": "This item evaluates restricted interests characterized by unusual intensity, narrow focus, limited social sharing, and little developmental progression over time. These interests are defined by their qualitative nature rather than unusual content. Duration must be at least 3 months.",
+2905: "age_range": {
+2906: "min": 3,
+2907: "max": null,
+2908: "note": "Applicable only for subjects aged 3 years or older"
+2909: },
+2910: "criteria_notes": {
+2911: "minimum_duration": "At least 3 months",
+2912: "key_features": [
+2913: "Unusually intense focus",
+2914: "Narrow range of interest",
+2915: "Limited social sharing",
+2916: "Limited development over time"
+2917: ],
+2918: "difference_from_item_67": "Item 67 focuses on unusual content; item 68 focuses on the qualitative nature of the interest"
+2919: },
+2920: "answer_type": "single_choice",
+2921: "possible_answers": [
+2922: "No restricted interests",
+2923: "Restricted interest present but not interfering with daily life",
+2924: "Clear restricted interest causing mild interference or constraint",
+2925: "Strong restricted interest causing marked social or functional disturbance",
+2926: "Not applicable (under age 3)",
+2927: "Unknown"
+2928: ],
+2929: "score_map": {
+2930: "No restricted interests": 0,
+2931: "Restricted interest present but not interfering with daily life": 1,
+2932: "Clear restricted interest causing mild interference or constraint": 2,
+2933: "Strong restricted interest causing marked social or functional disturbance": 3,
+2934: "Not applicable (under age 3)": 8,
+2935: "Unknown": 9
+2936: },
+2937: "weight": 3
+2938: }
+2939: Paage 64
+2940: {
+2941: "id": 69,
+2942: "question_en": "Does the child use objects in a repetitive or non-functional way, or show unusual interest in parts of objects?",
+2943: "question_fr": "Est-ce que l’enfant utilise les objets de manière répétitive ou s’intéresse uniquement à des parties d’objets ?",
+2944: "question_ar": "هل يستخدم الطفل الأشياء بطريقة متكررة أو غير وظيفية أو يهتم فقط بأجزاء من الأشياء؟",
+2945: "category": "repetitive_behavior_objects",
+2946: "description": "This item evaluates repetitive or stereotyped use of objects, or an unusual focus on parts of objects rather than their whole functional use. It includes behaviors such as spinning wheels, lining objects, or repetitive dropping. Duration must be at least 3 months.",
+2947: "criteria_notes": {
+2948: "minimum_duration": "At least 3 months",
+2949: "focus": [
+2950: "Repetitive use of objects",
+2951: "Interest in parts of objects",
+2952: "Non-functional play patterns",
+2953: "Stereotyped manipulation of objects"
+2954: ]
+2955: },
+2956: "answer_type": "single_choice",
+2957: "possible_answers": [
+2958: "No repetitive or unusual object use",
+2959: "Some repetitive use or mild interest in parts of objects without interference",
+2960: "Clear stereotyped object use or focus on parts of objects without major interference",
+2961: "Strong stereotyped object use that interferes with other activities",
+2962: "Not applicable (no object play)",
+2963: "Unknown",
+2964: "Interest in baby toys but without stereotyped use patterns"
+2965: ],
+2966: "score_map": {
+2967: "No repetitive or unusual object use": 0,
+2968: "Some repetitive use or mild interest in parts of objects without interference": 1,
+2969: "Clear stereotyped object use or focus on parts of objects without major interference": 2,
+2970: "Strong stereotyped object use that interferes with other activities": 3,
+2971: "Not applicable (no object play)": 8,
+2972: "Unknown": 9,
+2973: "Interest in baby toys but without stereotyped use patterns": 7
+2974: },
+2975: "weight": 3
+2976: }
+2977: Paage 65
+2978: {
+2979: "id": 70,
+2980: "question_en": "Does the child show compulsions or rituals involving fixed sequences of actions or strict ordering of activities?",
+2981: "question_fr": "Est-ce que l’enfant présente des compulsions ou des rituels impliquant des séquences d’actions fixes ou un ordre strict des activités ?",
+2982: "question_ar": "هل يظهر الطفل طقوسًا أو سلوكيات قهرية تتضمن تسلسلات ثابتة أو ترتيبًا صارمًا للأفعال؟",
+2983: "category": "rituals_compulsions",
+2984: "description": "This item assesses compulsions or ritualistic behaviors involving fixed sequences of actions, strict ordering, or spatial arrangements of objects. The behavior is driven by an internal sense of obligation and may cause distress if interrupted. Bedtime rituals are excluded. Duration must be at least 3 months.",
+2985: "criteria_notes": {
+2986: "minimum_duration": "At least 3 months",
+2987: "key_features": [
+2988: "Fixed action sequences",
+2989: "Need for strict order",
+2990: "Placement of objects in specific positions",
+2991: "Anxiety or distress if interrupted"
+2992: ],
+2993: "exclusions": [
+2994: "Bedtime routines",
+2995: "Simple preference for routine without compulsion"
+2996: ]
+2997: },
+2998: "answer_type": "single_choice",
+2999: "possible_answers": [
+3000: "No compulsions or rituals",
+3001: "Some fixed routines without compulsive quality",
+3002: "Clear rituals with some pressure or anxiety but limited interference",
+3003: "Strong compulsions causing distress and clear interference with daily or family life",
+3004: "Unknown"
+3005: ],
+3006: "score_map": {
+3007: "No compulsions or rituals": 0,
+3008: "Some fixed routines without compulsive quality": 1,
+3009: "Clear rituals with some pressure or anxiety but limited interference": 2,
+3010: "Strong compulsions causing distress and clear interference with daily or family life": 3,
+3011: "Unknown": 9
+3012: },
+3013: "weight": 3
+3014: }
+3015: Paage 66
+3016: {
+3017: "section": "Restricted and Repetitive Behaviours",
+3018: "description": "Items 67–71: interests, repetitive behaviours, compulsions and sensory features",
+3019: "rules": {
+3020: "duration_minimum": "behaviours must be present for at least 3 months",
+3021: "coding_note": "Coded based on current functioning and/or most abnormal period when specified"
+3022: },
+3023: "questions": [
+3024: {
+3025: "id": 67,
+3026: "question_en": "Does the child have unusual or highly focused interests that are intense, repetitive, and not socially typical?",
+3027: "question_fr": "L’enfant a-t-il des intérêts inhabituels ou très spécifiques, intenses et répétitifs ?",
+3028: "category": "unusual_preoccupations",
+3029: "answer_type": "semi_structured",
+3030: "examples": [
+3031: "interest in traffic lights",
+3032: "metal objects",
+3033: "toilets",
+3034: "repetitive talking about specific topics"
+3035: ],
+3036: "score_map": {
+3037: "0": "No unusual preoccupations",
+3038: "1": "Present but no major interference",
+3039: "2": "Interferes mildly with family or child activities",
+3040: "3": "Major interference or severe limitation",
+3041: "9": "Unknown / not asked"
+3042: },
+3043: "weight": 2
+3044: },
+3045: {
+3046: "id": 68,
+3047: "question_en": "Does the child have restricted interests or hobbies that are unusually intense or narrow?",
+3048: "question_fr": "L’enfant a-t-il des intérêts restreints ou des loisirs très spécifiques et intenses ?",
+3049: "category": "restricted_interests",
+3050: "answer_type": "semi_structured",
+3051: "score_map": {
+3052: "0": "No restricted interests",
+3053: "1": "Present but limited impact",
+3054: "2": "Clearly restricted but not significantly disruptive",
+3055: "3": "Restricted interest causing major disruption",
+3056: "9": "Unknown / not asked"
+3057: },
+3058: "weight": 2
+3059: },
+3060: {
+3061: "id": 69,
+3062: "question_en": "Does the child use objects repetitively or focus on parts of objects rather than using them functionally?",
+3063: "question_fr": "L’enfant utilise-t-il les objets de façon répétitive ou s’intéresse-t-il à des parties d’objets ?",
+3064: "category": "repetitive_object_use",
+3065: "answer_type": "semi_structured",
+3066: "examples": [
+3067: "spinning wheels",
+3068: "opening/closing doors repeatedly",
+3069: "lining objects",
+3070: "dropping objects repeatedly"
+3071: ],
+3072: "score_map": {
+3073: "0": "No repetitive object use",
+3074: "1": "Some repetitive use without disruption",
+3075: "2": "Clear stereotyped use without major disruption",
+3076: "3": "Strong stereotyped use interfering with functioning",
+3077: "7": "Toy-like repetitive play but flexible",
+3078: "9": "Unknown / not asked"
+3079: },
+3080: "weight": 2
+3081: },
+3082: {
+3083: "id": 70,
+3084: "question_en": "Does the child show compulsions or rituals (fixed sequences of actions or strict ordering)?",
+3085: "question_fr": "L’enfant présente-t-il des rituels ou compulsions (séquences fixes d’actions) ?",
+3086: "category": "rituals_compulsions",
+3087: "answer_type": "semi_structured",
+3088: "examples": [
+3089: "needing objects placed in exact positions",
+3090: "insisting on specific order before tasks",
+3091: "distress if sequence is interrupted"
+3092: ],
+3093: "score_map": {
+3094: "0": "No rituals",
+3095: "1": "Some fixed routines but not compulsive",
+3096: "2": "Compulsive behaviour with mild interference",
+3097: "3": "Severe compulsions causing distress and disruption",
+3098: "9": "Unknown / not asked"
+3099: },
+3100: "weight": 3
+3101: },
+3102: {
+3103: "id": 71,
+3104: "question_en": "Does the child show unusual sensory interests (touching, smelling, looking, listening excessively)?",
+3105: "question_fr": "L’enfant présente-t-il des intérêts sensoriels inhabituels (toucher, odeur, son, vision) ?",
+3106: "category": "sensory_interests",
+3107: "answer_type": "semi_structured",
+3108: "examples": [
+3109: "smelling objects or people",
+3110: "staring at objects for long periods",
+3111: "touching textures repeatedly",
+3112: "putting objects in mouth for sensory exploration"
+3113: ],
+3114: "score_map": {
+3115: "0": "No unusual sensory interests",
+3116: "1": "Some sensory interests without major impact",
+3117: "2": "Strong sensory seeking limiting normal use of objects",
+3118: "9": "Unknown / not asked"
+3119: },
+3120: "weight": 2
+3121: }
+3122: ]
+3123: }
+3124: Paage 67
+3125: {
+3126: "id": 72,
+3127: "section": "Sensory Processing",
+3128: "title_en": "General hypersensitivity to sounds",
+3129: "title_fr": "Sensibilité générale excessive aux bruits",
+3130: "description": "This item assesses predictable, general sensitivity to everyday environmental sounds (not sudden or very specific noises).",
+3131: "instructions": {
+3132: "focus": "Reactions to common daily sounds (traffic, household noise, background noise)",
+3133: "exclude": [
+3134: "Startle responses to sudden loud noises",
+3135: "Idiosyncratic reactions to very specific sounds (covered in item 73)"
+3136: ],
+3137: "duration_required": "Symptoms must be present for at least 3 months"
+3138: },
+3139: "questions": [
+3140: {
+3141: "question_en": "Does the child show general hypersensitivity to everyday sounds?",
+3142: "question_fr": "L’enfant semble-t-il hypersensible aux bruits du quotidien ?",
+3143: "follow_up": [
+3144: "Does he cover his ears intentionally and repeatedly in response to normal sounds?",
+3145: "Which types of sounds trigger this reaction (traffic, household appliances, voices)?",
+3146: "Has this sensitivity required changes in family routines?"
+3147: ],
+3148: "timeframes": {
+3149: "current": "ACTUALLY",
+3150: "developmental": "AT ANY TIME DURING DEVELOPMENT"
+3151: }
+3152: }
+3153: ],
+3154: "score_map": {
+3155: "0": "No general sensitivity to noise",
+3156: "1": "Mild sensitivity to loud noises (e.g., vacuum cleaner, motorcycles)",
+3157: "2": "Clear sensitivity to everyday noises with observable behavioural change (avoidance, covering ears, crying)",
+3158: "3": "Severe sensitivity causing major interference with family life or routines",
+3159: "9": "Unknown / not asked"
+3160: },
+3161: "weight": 2
+3162: }
+3163: Paage 68
+3164: {
+3165: "id": 73,
+3166: "section": "Sensory Processing",
+3167: "title_en": "Negative, abnormal and idiosyncratic response to specific sensory stimuli",
+3168: "title_fr": "Réponse négative, anormale et idiosyncrasique à des stimuli sensoriels spécifiques",
+3169: "description": "This item assesses predictable and specific negative emotional reactions (often irritation or anger) to particular identifiable sensory stimuli. General noise sensitivity and fear-based reactions are excluded.",
+3170: "instructions": {
+3171: "focus": "Specific and consistent reactions to identifiable stimuli (sounds, sights, smells, textures, tastes)",
+3172: "key_requirement": [
+3173: "Response must be idiosyncratic and predictable",
+3174: "Must include negative emotional reaction (often anger or irritation, not fear)"
+3175: ],
+3176: "exclusions": [
+3177: "General fear responses (e.g., sudden loud noises)",
+3178: "General environmental changes (covered in items 72, 74, 75)"
+3179: ],
+3180: "duration_required": "At least 3 months"
+3181: },
+3182: "questions": [
+3183: {
+3184: "question_en": "Has the child shown unusual negative or irritated reactions to specific sounds (e.g., coughing, baby crying)?",
+3185: "question_fr": "L’enfant a-t-il déjà réagi de manière inhabituelle à des sons spécifiques (toux, bébé qui pleure) ?",
+3186: "follow_up": [
+3187: "What does he do when this happens?",
+3188: "How does he show distress or irritation?",
+3189: "Is the reaction more anger/irritation or fear?",
+3190: "Is it linked to a specific type of sound?"
+3191: ]
+3192: },
+3193: {
+3194: "question_en": "Has the child shown similar negative reactions to other specific sensory stimuli (smells, tastes, visual patterns, touch)?",
+3195: "question_fr": "L’enfant a-t-il réagi de façon inhabituelle à d’autres stimuli sensoriels (odeurs, goûts, images, textures) ?",
+3196: "follow_up": [
+3197: "Which specific stimuli trigger the reaction?",
+3198: "Since when has this been observed?",
+3199: "Has this ever caused problems in daily life?"
+3200: ]
+3201: }
+3202: ],
+3203: "score_map": {
+3204: "0": "No negative, abnormal, idiosyncratic sensory reactions",
+3205: "1": "Mild predictable reaction to specific stimuli without interference",
+3206: "2": "Clear reactions causing occasional disruption or avoidance strategies",
+3207: "3": "Severe reactions that significantly interfere with family life or activities",
+3208: "9": "Unknown / not asked"
+3209: },
+3210: "weight": 2
+3211: }
+3212: Paage 69
+3213: {
+3214: "id": 74,
+3215: "section": "Rigidity and Change Tolerance",
+3216: "title_en": "Difficulties with minor changes in routines",
+3217: "title_fr": "Difficultés avec les changements mineurs dans les routines",
+3218: "description": "This item assesses negative reactions to small, everyday changes in routine or environment. It excludes major life transitions such as moving or changing school.",
+3219: "instructions": {
+3220: "focus": "Reactions to small changes in daily routines (timing, order, minor environmental changes)",
+3221: "exclusions": [
+3222: "Major transitions (moving house, changing school)",
+3223: "Large life disruptions affecting everyone equally"
+3224: ],
+3225: "examples_of_minor_changes": [
+3226: "Clothing changes (winter to summer clothes)",
+3227: "Small schedule changes (bath or meal timing)",
+3228: "Object placement changes (table setup, food arrangement)"
+3229: ],
+3230: "duration_required": "At least 3 months"
+3231: },
+3232: "questions": [
+3233: {
+3234: "question_en": "Does the child become upset or resistant to minor changes in daily routines?",
+3235: "question_fr": "L’enfant devient-il contrarié par des changements mineurs dans ses routines quotidiennes ?",
+3236: "follow_up": [
+3237: "What happens if clothing or routine order is changed?",
+3238: "Does small schedule variation (e.g., meal or bath time) affect him?",
+3239: "How does he react to changes in meal setup or object placement?",
+3240: "Has this caused difficulties in the past?"
+3241: ]
+3242: }
+3243: ],
+3244: "score_map": {
+3245: "0": "No difficulty with minor changes",
+3246: "1": "Mild negative reactions without significant distress or family disruption",
+3247: "2": "Clear resistance or distress requiring family adaptation but limited overall impact",
+3248: "3": "Marked resistance causing significant disruption to family activities",
+3249: "9": "Unknown / not asked"
+3250: },
+3251: "weight": 2
+3252: }
+3253: Paage 70
+3254: {
+3255: "id": 75,
+3256: "section": "Rigidity and Change Tolerance",
+3257: "title_en": "Resistance to insignificant changes in the environment",
+3258: "title_fr": "Résistance à des changements insignifiants dans son environnement",
+3259: "description": "This item assesses abnormal negative reactions to minor environmental changes that do not directly affect the child.",
+3260: "instructions": {
+3261: "focus": "Reactions to small changes in surroundings that are not directly related to the child",
+3262: "examples_of_changes": [
+3263: "Objects moved in the house",
+3264: "Small decorative items rearranged",
+3265: "Television or phone orientation changed",
+3266: "Other people wearing different clothing (hat, glasses, etc.)"
+3267: ],
+3268: "duration_required": "At least 3 months"
+3269: },
+3270: "questions": [
+3271: {
+3272: "question_en": "Does the child react negatively to small, insignificant changes in the environment?",
+3273: "question_fr": "L’enfant réagit-il négativement à des changements insignifiants dans son environnement ?",
+3274: "follow_up": [
+3275: "Does he show distress when objects are moved or rearranged?",
+3276: "Does he react to changes in other people's appearance (clothes, glasses, hats)?",
+3277: "Does he become upset or insist on restoring the original situation?",
+3278: "Has this been a problem in the past?"
+3279: ]
+3280: }
+3281: ],
+3282: "score_map": {
+3283: "0": "No resistance to insignificant environmental changes",
+3284: "1": "Mild negative reaction without significant distress or disruption",
+3285: "2": "Clear reactions causing distress or family adaptation but limited impact",
+3286: "3": "Marked resistance causing clear disruption to family activities",
+3287: "9": "Unknown / not asked"
+3288: },
+3289: "weight": 2
+3290: }
+3291: Paage 71
+3292: {
+3293: "id": 76,
+3294: "section": "Restricted and Repetitive Behaviours",
+3295: "title_en": "Unusual attachment to objects",
+3296: "title_fr": "Attachement inhabituel aux objets",
+3297: "description": "This item assesses strong, atypical attachment to specific objects, especially unusual ones, and the degree to which this attachment interferes with daily functioning.",
+3298: "instructions": {
+3299: "focus": "Attachment to a specific object that is unusual in nature and/or intensity",
+3300: "key_points": [
+3301: "Object is carried frequently or constantly",
+3302: "Difficulty separating from the object",
+3303: "Interference with daily life or family routines"
+3304: ],
+3305: "exclusions": [
+3306: "Normal comfort objects such as blankets or soft toys in young children"
+3307: ],
+3308: "duration_required": "At least 3 months (object may change over time)"
+3309: },
+3310: "questions": [
+3311: {
+3312: "question_en": "Does the child have a specific object he is unusually attached to and carries with him?",
+3313: "question_fr": "L’enfant est-il attaché de façon inhabituelle à un objet qu’il transporte partout ?",
+3314: "follow_up": [
+3315: "What is the object?",
+3316: "Is it a typical comfort object (toy/blanket) or something unusual?",
+3317: "What does he do with it?",
+3318: "Can he tolerate leaving it when asked?",
+3319: "Does he take it to bed?",
+3320: "What happens if it is lost or taken away?",
+3321: "Has this happened in the past?"
+3322: ]
+3323: }
+3324: ],
+3325: "score_map": {
+3326: "0": "No unusual attachment or only normal comfort object (e.g., soft toy)",
+3327: "1": "Mild attachment to slightly unusual object without interference and can separate when needed",
+3328: "2": "Clear attachment causing distress on separation or requiring family management, with occasional interference",
+3329: "3": "Severe attachment that significantly interferes with daily functioning",
+3330: "6": "Normal comfort object in young children or severe interference (special case coding)",
+3331: "7": "Short-term shifting attachments to unusual objects",
+3332: "9": "Unknown / not asked"
+3333: },
+3334: "weight": 2
+3335: }
+3336: Paage 72
+3337: {
+3338: "id": 77,
+3339: "section": "Motor Stereotypies",
+3340: "title_en": "Hand and finger mannerisms",
+3341: "title_fr": "Maniérismes des mains et des doigts",
+3342: "description": "This item assesses repetitive, rapid, voluntary hand and finger movements that are unusual in form and not part of normal expressive behavior.",
+3343: "instructions": {
+3344: "focus": "Repetitive hand and finger movements (e.g., twisting fingers, waving hands in front of eyes)",
+3345: "exclusions": [
+3346: "Nail biting",
+3347: "Hair twisting",
+3348: "Thumb sucking",
+3349: "Clapping",
+3350: "General excitement movements in young children",
+3351: "Whole-body stereotypies (covered in item 78 if applicable)"
+3352: ],
+3353: "duration_required": "At least 3 months"
+3354: },
+3355: "questions": [
+3356: {
+3357: "question_en": "Does the child show unusual or repetitive movements of the hands or fingers?",
+3358: "question_fr": "L’enfant présente-t-il des mouvements répétitifs ou bizarres des mains ou des doigts ?",
+3359: "follow_up": [
+3360: "Does he twist, flap, or move fingers in front of his eyes?",
+3361: "Does this interfere with his activities?",
+3362: "What happens if you try to stop it?",
+3363: "Are there specific situations where it happens more?",
+3364: "Has this been present in the past?"
+3365: ]
+3366: }
+3367: ],
+3368: "score_map": {
+3369: "0": "No hand or finger mannerisms",
+3370: "1": "Occasional or non-specific movements",
+3371: "2": "Clear and frequent mannerisms without distress or interference",
+3372: "3": "Marked mannerisms causing distress or social/functional interference",
+3373: "8": "Not applicable (e.g., physical disability)",
+3374: "9": "Unknown / not asked"
+3375: },
+3376: "weight": 2
+3377: }
+3378: Paage 73
+3379: {
+3380: "id": 78,
+3381: "section": "Motor Stereotypies",
+3382: "title_en": "Other complex mannerisms or stereotyped body movements",
+3383: "title_fr": "Autres maniérismes complexes ou mouvements stéréotypés du corps",
+3384: "description": "This item assesses complex repetitive whole-body stereotyped movements such as spinning or repetitive jumping, excluding isolated rocking unless combined with other movements.",
+3385: "instructions": {
+3386: "focus": "Complex repetitive movements involving the whole body (e.g., spinning, repetitive jumping, combined motor patterns)",
+3387: "exclusions": [
+3388: "Isolated rocking movements without additional components"
+3389: ],
+3390: "inclusions": [
+3391: "Movements combining rocking with arm movements",
+3392: "Repetitive whole-body stereotypies"
+3393: ],
+3394: "duration_required": "At least 3 months"
+3395: },
+3396: "questions": [
+3397: {
+3398: "question_en": "Does the child show complex repetitive whole-body movements such as spinning or repetitive jumping?",
+3399: "question_fr": "L’enfant présente-t-il des mouvements complexes et répétitifs du corps (tourner sur lui-même, sauter de façon répétée) ?",
+3400: "follow_up": [
+3401: "Does it interfere with other activities?",
+3402: "What happens if you try to stop it?",
+3403: "Are there situations where it appears more frequently?",
+3404: "Has this been present in the past?"
+3405: ]
+3406: }
+3407: ],
+3408: "score_map": {
+3409: "0": "No complex stereotyped body movements",
+3410: "1": "Occasional complex stereotyped movements",
+3411: "2": "Clear and frequent stereotyped movements that can be interrupted without distress",
+3412: "3": "Marked stereotyped movements with social or functional impairment",
+3413: "8": "Not applicable",
+3414: "9": "Unknown / not asked"
+3415: },
+3416: "weight": 2
+3417: }
+3418: Paage 74
+3419: {
+3420: "section": "79 - Mouvements des mains dans la ligne médiane",
+3421: "description": "Cotation des mouvements stéréotypés des mains effectués dans la ligne médiane du corps, souvent avec les deux mains en mouvements symétriques (torsion, frottement, 'lavage des mains').",
+3422: "accessibility": "Uniquement pour les sujets avec observation ou entretien parental concernant les comportements moteurs répétitifs.",
+3423: "time_requirement": "Les comportements doivent être présents depuis au moins 3 mois pour être cotés.",
+3424: "questions": [
+3425: {
+3426: "id": 1,
+3427: "question_en": "Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them?",
+3428: "question_fr": "Est-ce qu’il a une manière particulière de bouger ses mains devant son corps, par exemple se tordre les mains ou les frotter comme s’il les lavait ?",
+3429: "question_ar": "هل يقوم بحركات خاصة بيديه أمام جسمه مثل لف اليدين أو فركهما كأنه يغسلهما؟",
+3430: "category": "motor_stereotypies",
+3431: "answer_type": "yes_no",
+3432: "possible_answers": ["Yes", "No"],
+3433: "score_map": {
+3434: "Yes": "0-2 depending on frequency and severity",
+3435: "No": 0
+3436: },
+3437: "follow_up_questions": [
+3438: "How often does it happen?",
+3439: "In what situations does it occur most?",
+3440: "Does it stop when you ask him/her?",
+3441: "Has this behavior been present for more than 3 months?"
+3442: ]
+3443: },
+3444: {
+3445: "id": 2,
+3446: "question_en": "Does this behavior interfere with other activities?",
+3447: "question_fr": "Est-ce que ce comportement interfère avec les autres activités ?",
+3448: "question_ar": "هل يؤثر هذا السلوك على أنشطته الأخرى؟",
+3449: "answer_type": "yes_no",
+3450: "score_map": {
+3451: "Yes": 2,
+3452: "No": 0
+3453: }
+3454: },
+3455: {
+3456: "id": 3,
+3457: "question_en": "What happens if you try to stop this behavior?",
+3458: "question_fr": "Que se passe-t-il si vous essayez de le faire arrêter ?",
+3459: "question_ar": "ماذا يحدث إذا حاولت منعه من القيام بذلك؟",
+3460: "answer_type": "text"
+3461: }
+3462: ],
+3463: "scoring": {
+3464: "0": "No midline hand movements",
+3465: "1": "Occasional or unclear stereotyped movements",
+3466: "2": "Clear and frequent abnormal midline hand movements",
+3467: "8": "Not applicable",
+3468: "9": "Unknown / not asked"
+3469: }
+3470: }
+3471: Paage 75
+3472: {
+3473: "section": "80 - Démarche",
+3474: "description": "Évaluation des anomalies de la marche (démarche) telles que marche sur la pointe des pieds, sautillement ou mouvements inhabituels, non expliqués par un handicap moteur ou neurologique évident.",
+3475: "accessibility": "Question basée sur l’observation ou les rapports des parents concernant la marche de l’enfant.",
+3476: "time_requirement": "Présence du comportement depuis au moins 3 mois pour être cotée.",
+3477: "questions": [
+3478: {
+3479: "id": 1,
+3480: "question_en": "Is there anything unusual in how the child walks? For example, does he/she walk on tiptoes, skip, or exaggerate foot movements?",
+3481: "question_fr": "Est-ce qu’il y a quelque chose d’inhabituel dans la manière de marcher de [prénom du sujet] ? Par exemple, marche-t-il sur la pointe des pieds, sautille-t-il ou exagère-t-il ses mouvements de pieds ?",
+3482: "question_ar": "هل توجد أي طريقة غير عادية في مشي الطفل؟ مثل المشي على أطراف الأصابع أو القفز أو المبالغة في حركة القدمين؟",
+3483: "answer_type": "open_text",
+3484: "follow_up_questions": [
+3485: "Is this behavior noticed by other people (teachers, relatives, strangers)?",
+3486: "Has this ever been present in the past?",
+3487: "Was his/her walking different at 4–5 years old?",
+3488: "Does this change depending on the situation?"
+3489: ]
+3490: },
+3491: {
+3492: "id": 2,
+3493: "question_en": "Do other people notice his/her way of walking?",
+3494: "question_fr": "Pensez-vous que les autres personnes remarquent sa manière de marcher ?",
+3495: "question_ar": "هل يلاحظ الآخرون طريقة مشيه؟",
+3496: "answer_type": "yes_no"
+3497: }
+3498: ],
+3499: "scoring": {
+3500: "0": "Normal gait",
+3501: "1": "Slightly unusual gait",
+3502: "2": "Clearly unusual gait (e.g., tiptoe walking or abnormal skipping)",
+3503: "3": "Very noticeable abnormal gait for people outside the family or teachers",
+3504: "7": "Gait abnormality due to neurological or severe motor development disorder",
+3505: "8": "Not applicable",
+3506: "9": "Unknown / not asked"
+3507: }
+3508: }
+3509: Paage 76
+3510: {
+3511: "section": "81 - Agression envers les personnes qui s’occupent du sujet ou les membres de la famille",
+3512: "description": "Évaluation des comportements agressifs dirigés vers les membres de la famille ou les personnes qui s’occupent de l’enfant, incluant coups, morsures ou utilisation d’objets, avec une attention portée à la fréquence et à la gravité.",
+3513: "accessibility": "Basé sur entretien parental et observation clinique des comportements agressifs en contexte familial.",
+3514: "time_requirement": "Les comportements doivent être présents depuis au moins 3 mois pour être cotés.",
+3515: "questions": [
+3516: {
+3517: "id": 1,
+3518: "question_en": "Has the child ever been aggressive toward family members or caregivers?",
+3519: "question_fr": "Y a-t-il eu des moments où [prénom du sujet] a été agressif envers les membres de la famille ou les personnes qui s’occupent de lui ?",
+3520: "question_ar": "هل سبق أن كان الطفل عدوانيًا تجاه أفراد العائلة أو الأشخاص الذين يعتنون به؟",
+3521: "answer_type": "yes_no",
+3522: "follow_up_questions": [
+3523: "Has he/she ever hit or bitten someone?",
+3524: "In what situations does this happen?",
+3525: "What usually triggers the aggression?",
+3526: "Has he/she ever seriously hurt someone?",
+3527: "Has any object (stick, knife, etc.) ever been used?",
+3528: "How long do these episodes last?",
+3529: "How often do they occur?",
+3530: "Was it the same when he/she was younger?"
+3531: ]
+3532: }
+3533: ],
+3534: "scoring": {
+3535: "0": "No aggression or very rare mild episodes that are not a serious problem",
+3536: "1": "Mild aggression (verbal threats or rough play or hitting only in immediate reaction to provocation)",
+3537: "2": "Clear physical aggression (hitting, biting) without use of objects",
+3538: "3": "Severe aggression involving the use of an object or weapon",
+3539: "9": "Unknown / not asked"
+3540: }
+3541: }
+3542: Paage 77
+3543: {
+3544: "section": "82 - Agression envers des personnes extérieures à la famille ou personnes non habituelles",
+3545: "description": "Évaluation des comportements agressifs dirigés vers des personnes extérieures à la famille (pairs, enseignants, inconnus), incluant menaces, agressions physiques ou utilisation d’objets.",
+3546: "accessibility": "Basé sur entretien parental et observation des comportements en milieu scolaire ou social.",
+3547: "time_requirement": "Les comportements doivent être présents depuis au moins 3 mois pour être cotés.",
+3548: "questions": [
+3549: {
+3550: "id": 1,
+3551: "question_en": "Has the child shown aggression toward people outside the family, such as at school, in shops, or in public transport?",
+3552: "question_fr": "Qu'en est-il des agressions envers des personnes en dehors de la famille, comme à l'école, dans les magasins ou dans l'autobus ?",
+3553: "question_ar": "هل يظهر الطفل سلوكًا عدوانيًا تجاه أشخاص خارج العائلة مثل المدرسة أو المتاجر أو الحافلة؟",
+3554: "answer_type": "yes_no",
+3555: "follow_up_questions": [
+3556: "Has he/she ever behaved in a way that made others think he/she might become aggressive?",
+3557: "What usually triggers this behavior?",
+3558: "Has he/she ever actually hurt someone?",
+3559: "Has any object (stick, knife, etc.) ever been used?",
+3560: "How long do these episodes last?",
+3561: "How often do they occur?",
+3562: "Was this present when he/she was younger?"
+3563: ]
+3564: }
+3565: ],
+3566: "scoring": {
+3567: "0": "Rare aggression that is not a serious problem",
+3568: "1": "Mild aggression (threats without physical contact or rough play or hitting in immediate reaction to provocation)",
+3569: "2": "Clear physical aggression (hitting or biting) without use of an object",
+3570: "3": "Severe violence involving use of an object or weapon",
+3571: "9": "Unknown / not asked"
+3572: }
+3573: }
+3574: Paage 73
+3575: {
+3576: "section": "83 - Automutilation",
+3577: "description": "Évaluation des comportements d’automutilation, définis comme des actes intentionnels dirigés contre soi-même entraînant des lésions tissulaires (ex : se mordre, se frapper la tête, s’arracher les cheveux).",
+3578: "accessibility": "Basé sur entretien avec les parents ou observation clinique des comportements auto-agressifs.",
+3579: "time_requirement": "Les comportements doivent être présents depuis au moins 3 mois pour être cotés.",
+3580: "questions": [
+3581: {
+3582: "id": 1,
+3583: "question_en": "Has the child ever intentionally harmed himself/herself, such as biting the arm, hitting the head, or other self-injurious behaviors?",
+3584: "question_fr": "Est-ce que [prénom du sujet] s’est déjà blessé de manière délibérée, par exemple en se mordant le bras ou en se frappant la tête ?",
+3585: "question_ar": "هل قام الطفل بإيذاء نفسه عمداً مثل عض الذراع أو ضرب الرأس أو غير ذلك من سلوكيات إيذاء الذات؟",
+3586: "answer_type": "yes_no",
+3587: "follow_up_questions": [
+3588: "What exactly does he/she do?",
+3589: "How often does it happen?",
+3590: "In what situations does it occur?",
+3591: "Does it cause visible injuries?",
+3592: "Has this been a problem in the past?"
+3593: ]
+3594: }
+3595: ],
+3596: "scoring": {
+3597: "0": "No self-injurious behavior",
+3598: "1": "Mild self-injury (e.g., occasional biting, hair pulling, or self-slapping without tissue damage)",
+3599: "2": "Clear self-injury with noticeable tissue damage (e.g., bruises, repetitive head banging, hair pulling causing damage)",
+3600: "3": "Severe self-injury resulting in serious injury (e.g., skull fracture, eye injury)",
+3601: "9": "Unknown / not asked"
+3602: }
+3603: }
+3604: Paage 79
+3605: {
+3606: "section": "84 - Hyperventilation",
+3607: "description": "Évaluation des épisodes d’hyperventilation, caractérisés par une respiration rapide, profonde et répétitive, en dehors de situations typiques de panique.",
+3608: "accessibility": "Basé sur entretien parental et observation des épisodes respiratoires inhabituels.",
+3609: "time_requirement": "Les comportements doivent être observés ou rapportés de manière répétée (depuis au moins 3 mois pour cotation globale).",
+3610: "questions": [
+3611: {
+3612: "id": 1,
+3613: "question_en": "Has the child ever had episodes of rapid, deep, and repetitive breathing?",
+3614: "question_fr": "Est-ce que [prénom du sujet] a déjà respiré de manière rapide, profonde et répétitive ?",
+3615: "question_ar": "هل حدث أن تنفس الطفل بسرعة وعمق وبشكل متكرر؟",
+3616: "answer_type": "yes_no",
+3617: "follow_up_questions": [
+3618: "In what situations does this happen?",
+3619: "How long do these episodes last?",
+3620: "Does it seem related to stress or panic?",
+3621: "Has it been noticed repeatedly over time?"
+3622: ]
+3623: },
+3624: {
+3625: "id": 2,
+3626: "question_en": "Has he/she ever appeared to be repeatedly short of breath for a few seconds?",
+3627: "question_fr": "Est-ce qu’il a déjà semblé manquer d’air de manière répétée durant quelques secondes ?",
+3628: "question_ar": "هل يبدو عليه أحيانًا أنه يعاني من نقص في التنفس لعدة ثوانٍ بشكل متكرر؟",
+3629: "answer_type": "yes_no"
+3630: }
+3631: ],
+3632: "scoring": {
+3633: "0": "No hyperventilation",
+3634: "1": "Occasional hyperventilation",
+3635: "2": "Frequent hyperventilation",
+3636: "9": "Unknown / not asked"
+3637: }
+3638: }
+3639: Paage 80
+3640: {
+3641: "section": "85 - Syncopes / crises d’épilepsie / pertes de connaissance",
+3642: "description": "Évaluation des épisodes de perte de conscience, syncopes ou crises convulsives, avec ou sans diagnostic d’épilepsie, incluant leur fréquence, contexte et prise en charge médicale.",
+3643: "accessibility": "Basé sur entretien parental et historique médical (diagnostic, traitement, hospitalisation).",
+3644: "time_requirement": "Les épisodes doivent être rapportés depuis au moins 3 mois pour être considérés dans la cotation.",
+3645: "questions": [
+3646: {
+3647: "id": 1,
+3648: "question_en": "Has the child ever had fainting spells, seizures, epilepsy, or convulsions?",
+3649: "question_fr": "Est-ce que [prénom du sujet] a déjà été victime d’une syncope, d’un évanouissement, d’une crise d’épilepsie ou de convulsions ?",
+3650: "question_ar": "هل سبق أن تعرض الطفل لإغماء أو نوبات صرع أو تشنجات؟",
+3651: "answer_type": "yes_no",
+3652: "follow_up_questions": [
+3653: "At what age did these episodes start?",
+3654: "How often do they occur?",
+3655: "Can you describe what happens during an episode?",
+3656: "Have medical tests or hospitalizations been done?",
+3657: "Is there a diagnosis of epilepsy?",
+3658: "Is there or was there any medication used?"
+3659: ]
+3660: }
+3661: ],
+3662: "scoring": {
+3663: "0": "No seizures or loss of consciousness",
+3664: "1": "History of possible seizures but diagnosis not confirmed",
+3665: "2": "Clear diagnosis of epilepsy",
+3666: "7": "Febrile seizures only, without ongoing daily medication outside fever periods",
+3667: "9": "Unknown / not asked"
+3668: },
+3669: "development_history_item_86": {
+3670: "section": "86 - Age at which abnormalities first became evident",
+3671: "description": "Assessment of the age period when developmental abnormalities first became clearly evident, based on caregiver report and developmental history.",
+3672: "questions": [
+3673: {
+3674: "id": 1,
+3675: "question_en": "At what age did you first notice developmental or behavioral differences in the child?",
+3676: "question_fr": "À quel âge avez-vous remarqué pour la première fois des difficultés dans le développement ou le comportement de [prénom du sujet] ?",
+3677: "question_ar": "في أي عمر لاحظتم لأول مرة وجود صعوبات في تطور الطفل أو سلوكه؟",
+3678: "answer_type": "open_text",
+3679: "follow_up_questions": [
+3680: "How was the child around age 3?",
+3681: "What was his/her play like?",
+3682: "Did he/she engage in pretend play?",
+3683: "How was language development?",
+3684: "How was self-care (eating, dressing, hygiene)?",
+3685: "How were social interactions with other children?",
+3686: "How was development at ages 1 and 2?"
+3687: ]
+3688: }
+3689: ],
+3690: "scoring": {
+3691: "0": "Normal development during the first 3 years",
+3692: "1": "Apparently normal development but some uncertainty",
+3693: "2": "Probably abnormal development by age 3",
+3694: "3": "Clearly abnormal development but not strongly autistic in quality",
+3695: "4": "Clearly abnormal development with strong autistic features",
+3696: "9": "Unknown / not asked"
+3697: }
+3698: }
+3699: }
+3700: Paage 82
+3701: {
+3702: "section": "87 - Jugement de l’intervieweur sur l’âge d’apparition des anomalies",
+3703: "description": "Évaluation clinique basée sur l’ensemble de l’entretien permettant de déterminer l’âge probable auquel les premières anomalies développementales ou comportementales sont devenues évidentes.",
+3704: "accessibility": "Basé sur le jugement de l’intervieweur à partir de toutes les informations recueillies (anamnèse, développement précoce, comportement).",
+3705: "time_requirement": "Analyse rétrospective couvrant les premières années de vie (en particulier avant 3 ans si possible).",
+3706: "questions": [
+3707: {
+3708: "id": 1,
+3709: "question_en": "Based on all available information, at what age did developmental abnormalities most likely first appear?",
+3710: "question_fr": "Selon toutes les informations disponibles, à quel âge les anomalies du développement ont-elles probablement commencé à apparaître pour la première fois ?",
+3711: "question_ar": "بناءً على جميع المعلومات المتوفرة، في أي عمر ظهرت على الأرجح أولى علامات الاضطراب في التطور؟",
+3712: "answer_type": "age_estimation",
+3713: "follow_up_questions": [
+3714: "Were there signs before age 3?",
+3715: "Was development normal during infancy?",
+3716: "When did social, language, or behavioral differences become noticeable?"
+3717: ]
+3718: }
+3719: ],
+3720: "scoring": {
+3721: "type": "age_estimation",
+3722: "format": "estimated age in months or years",
+3723: "guidance": [
+3724: "Use all interview data to estimate onset",
+3725: "Prioritize earliest consistent signs",
+3726: "Consider social, communication, and behavioral domains together"
+3727: ]
+3728: }
+3729: }
+3730: Paage 83
+3731: {
+3732: "section": "88-93 - Compétences spéciales isolées",
+3733: "description": "Évaluation des compétences exceptionnelles ou inhabituelles dans des domaines spécifiques (mémoire, calcul, musique, dessin, formes/puzzles, lecture), en précisant leur niveau, leur utilisation fonctionnelle et leur lien avec les intérêts restreints.",
+3734: "accessibility": "Exploration clinique basée sur l’entretien avec les parents et l’observation du fonctionnement quotidien et cognitif du sujet.",
+3735: "time_requirement": "Évaluation actuelle et à tout moment du développement.",
+3736: "instructions": "Décrire en détail le type de compétence, son intensité, sa fréquence, son lien avec les intérêts spécifiques et sa généralisation dans la vie quotidienne.",
+3737: "questions": [
+3738: {
+3739: "id": 1,
+3740: "question_en": "Does the child have any unusually advanced or special skills?",
+3741: "question_fr": "Est-ce que [prénom du sujet] a des compétences spéciales particulièrement inhabituelles ?",
+3742: "question_ar": "هل لدى الطفل مهارات خاصة أو غير عادية بشكل ملحوظ؟",
+3743: "answer_type": "open_text",
+3744: "follow_up_questions": [
+3745: "Is he/she particularly talented in any domain (past or present)?",
+3746: "Are these skills linked to special interests or repetitive behaviors?",
+3747: "How do these skills compare to peers?",
+3748: "Are these skills useful in daily life?"
+3749: ]
+3750: },
+3751: {
+3752: "id": 2,
+3753: "question_en": "Is the child particularly good with shapes, puzzles, or pattern recognition?",
+3754: "question_fr": "Est-ce qu’il est particulièrement doué avec les formes (puzzles, encastrements) ?",
+3755: "question_ar": "هل هو بارع بشكل خاص في الأشكال مثل الألغاز أو تركيب القطع؟",
+3756: "answer_type": "yes_no_open_detail"
+3757: },
+3758: {
+3759: "id": 3,
+3760: "question_en": "Does the child have an exceptional memory?",
+3761: "question_fr": "Qu'en est-il de sa mémoire ? A-t-elle déjà été exceptionnelle ?",
+3762: "question_ar": "ماذا عن الذاكرة؟ هل كانت مميزة أو استثنائية؟",
+3763: "answer_type": "yes_no_open_detail"
+3764: },
+3765: {
+3766: "id": 4,
+3767: "question_en": "Does the child have special musical skills?",
+3768: "question_fr": "A-t-il des compétences musicales particulières ?",
+3769: "question_ar": "هل لديه مهارات موسيقية خاصة؟",
+3770: "answer_type": "yes_no_open_detail"
+3771: },
+3772: {
+3773: "id": 5,
+3774: "question_en": "Does the child show exceptional drawing skills?",
+3775: "question_fr": "Est-il particulièrement doué en dessin ?",
+3776: "question_ar": "هل هو بارع في الرسم؟",
+3777: "answer_type": "yes_no_open_detail"
+3778: },
+3779: {
+3780: "id": 6,
+3781: "question_en": "Does the child have special reading abilities?",
+3782: "question_fr": "Qu'en est-il pour la lecture ?",
+3783: "question_ar": "ماذا عن القراءة؟",
+3784: "answer_type": "yes_no_open_detail"
+3785: },
+3786: {
+3787: "id": 7,
+3788: "question_en": "Does the child have special calculation skills?",
+3789: "question_fr": "Qu'en est-il pour le calcul ?",
+3790: "question_ar": "ماذا عن الحساب؟",
+3791: "answer_type": "yes_no_open_detail"
+3792: }
+3793: ],
+3794: "scoring_guidance": {
+3795: "note": "Each skill must be rated both for presence and functional use.",
+3796: "scale": {
+3797: "0": "No special skill",
+3798: "1": "Mildly unusual ability without functional impact",
+3799: "2": "Clear special skill not used functionally in daily life",
+3800: "7": "Special skill applied in real-life situations (adaptive use)",
+3801: "9": "Unknown / not assessed"
+3802: }
+3803: }
+3804: }
+3805: Paage 84
+3806: {
+3807: "items": [
+3808: {
+3809: "item": 85,
+3810: "titre": "Syncopes / crises d'épilepsie / pertes de connaissance",
+3811: "description": "Épisodes de perte de conscience inexpliquée, avec ou sans convulsions.",
+3812: "questions": [
+3813: "A-t-il déjà eu une syncope ou un évanouissement ?",
+3814: "A-t-il eu des crises d'épilepsie ou convulsions ?",
+3815: "Prend-il un traitement pour ces crises ?",
+3816: "À quel âge ont commencé les épisodes ?",
+3817: "Quelle est leur fréquence ?",
+3818: "A-t-il été hospitalisé ou examiné ?"
+3819: ],
+3820: "cotations": {
+3821: "0": "Aucune crise",
+3822: "1": "Antécédents possibles sans diagnostic établi",
+3823: "2": "Diagnostic d'épilepsie confirmé",
+3824: "7": "Convulsions fébriles uniquement",
+3825: "9": "Information inconnue"
+3826: },
+3827: "moment_evaluation": [
+3828: "Actuellement",
+3829: "À tout moment du développement"
+3830: ]
+3831: },
+3832: {
+3833: "item": 86,
+3834: "titre": "Âge d'apparition des anomalies",
+3835: "description": "Estimation de l'âge auquel les anomalies de développement sont apparues pour la première fois.",
+3836: "questions": [
+3837: "Comment était l'enfant à 3 ans ?",
+3838: "Comment était son jeu ?",
+3839: "Avait-il du jeu symbolique ?",
+3840: "Comment était son langage ?",
+3841: "Comment étaient ses relations sociales ?",
+3842: "Qu'en était-il à 1 an et 2 ans ?"
+3843: ],
+3844: "cotations": {
+3845: "1": "Développement globalement normal avec incertitude",
+3846: "2": "Probablement anormal à 3 ans",
+3847: "3": "Anormal précoce non clairement autistique",
+3848: "4": "Anormal avec signes autistiques précoces",
+3849: "9": "Information inconnue"
+3850: }}]}

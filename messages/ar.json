@@ -1,0 +1,203 @@
+{
+  "Header": {
+    "nav": {
+      "home": "الرئيسية",
+      "aboutUs": "عن المنصة",
+      "whoWeAre": "من نحن",
+      "whyUs": "لماذا نحن",
+      "approaches": "نهجنا",
+      "services": "الخدمات",
+      "servicesOverview": "جميع الخدمات",
+      "schoolServices": "الخدمات المدرسية",
+      "platform": "المنصة",
+      "contact": "اتصل بنا",
+      "professional": "أنا محترف"
+    },
+    "login": "تسجيل الدخول",
+    "getStarted": "ابدأ الآن",
+    "memberLogin": "دخول الأعضاء",
+    "memberLoginDesc": "الوصول إلى رحلتك العلاجية",
+    "professionalLogin": "دخول المحترفين",
+    "professionalLoginDesc": "الوصول إلى لوحة التحكم"
+  },
+  "Footer": {
+    "partners": "الشركاء",
+    "partnerWithUs": "كن شريكاً",
+    "company": "الشركة",
+    "aboutUs": "عن المنصة",
+    "careers": "الوظائف",
+    "press": "الصحافة",
+    "culture": "الثقافة والرعاية والمجتمع",
+    "brandGuidelines": "إرشادات العلامة التجارية",
+    "platform": "المنصة",
+    "integratedHealthPlatform": "منصة الصحة المتكاملة",
+    "eap": "برنامج مساعدة الموظفين",
+    "mentalHealthPlus": "الصحة النفسية+",
+    "primaryCareWellness": "الرعاية الأولية والعافية",
+    "eapCalculator": "حاسبة مدخرات برنامج مساعدة الموظفين",
+    "contact": "اتصل بنا",
+    "ios": "AutismeCare للآيفون",
+    "android": "AutismeCare للأندرويد",
+    "helpCentre": "مركز المساعدة",
+    "status": "الحالة",
+    "contactUs": "اتصل بنا",
+    "copyright": "AutismeCare © {year}",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfUse": "شروط الاستخدام",
+    "aoda": "AODA",
+    "cookiePolicy": "سياسة ملفات تعريف الارتباط",
+    "rightsAndResponsibilities": "الحقوق والمسؤوليات"
+  },
+  "Chatbot": {
+    "title": "مساعد توحد التواصل",
+    "welcome": "مرحباً! أنا مساعدك في فهم التوحد. كيف يمكنني مساعدتك؟",
+    "placeholder": "اسأل عن التوحد أو ارفع صورة للتحليل...",
+    "send": "إرسال",
+    "analyzeImage": "تحليل الصورة",
+    "removeImage": "إزالة الصورة",
+    "typing": "يكتب...",
+    "uploadImage": "ارفع صورة للتحليل",
+    "imageAnalysis": "تحليل الصورة باستخدام Vision Transformer",
+    "confidence": "الثقة",
+    "systemInfo": "معلومات النظام",
+    "notAutismRelated": "أنا متخصص في مواضيع التوحد. يرجى طرح أسئلة حول اضطراب طيف التوحد أو العلاجات أو الدعم.",
+    "warning": "تحذير طبي: تحليل الصور الوجهية لا يشكل تشخيصاً طبياً. هذا أداة دعم فقط."
+  },
+  "Questionnaire": {
+    "title": "استبيان فحص التوحد",
+    "subtitle": "أداة تقييم تفاعلية مستندة إلى ADI-R",
+    "description": "هذا الاستبيان مصمم لمساعدة الأهالي في فهم سلوكات والديهم. لا يعتبر تشخيصاً طبياً.",
+    "start": "بدء الاستبيان",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إنهاء الاستبيان",
+    "results": "نتائج الاستبيان",
+    "score": "النتيجة",
+    "recommendation": "توصيات",
+    "disclaimer": "هذا الاستبيان هو أداة عرض فقط ولا يقاس على البروتوكول الطبي الدقيق. يرجى استشارة مختص للحصول على تقييم دقيق."
+  },
+  "ImageAnalysis": {
+    "title": "تحليل الصور الوجهية",
+    "subtitle": "تحليل مبكر للمؤشرات البصرية",
+    "upload": "ارفع صورة الطفل",
+    "analyzing": "جاري التحليل...",
+    "result": "نتيجة التحليل",
+    "autistic": "تقارب سلوكيات التوحد",
+    "nonAutistic": "غير متوافق مع سلوكيات التوحد",
+    "probability": "الاحتمالية",
+    "note": "ملاحظة طبية مهمة: لا يمكن لتحليل الوجه وحده تشخيص التوحد. هذا أداة دعم ولا تعتبر بديلاً عن التقييم الطبي المتخصص."
+  },
+  "Report": {
+    "title": "تقرير التشخيص القائم على الذكاء الاصطناعي",
+    "generate": "إنشاء تقرير",
+    "download": "تنزيل PDF",
+    "sections": {
+      "summary": "ملخص التقييم",
+      "chatbotResults": "نتائج المحادثة",
+      "questionnaireResults": "نتائج الاستبيان",
+      "imageResults": "نتائج التحليل البصري",
+      "recommendations": "توصيات الأهل"
+    }
+  },
+  "ParentGuidance": {
+    "title": "إرشادات الوالدين",
+    "sections": {
+      "understanding": "فهم التوحد",
+      "communication": "استراتيجيات التواصل",
+      "support": "الدعم العائلي",
+      "resources": "الموارد المتاحة"
+    }
+  },
+  "billing": {
+    "title": "الفواتير والمدفوعات",
+    "subtitle": "إدارة فواتيرك وسجل المدفوعات",
+    "totalOwed": "إجمالي المبلغ المستحق",
+    "totalPaid": "إجمالي المبلغ المدفوع",
+    "paymentsOwed": "المدفوعات المستحقة",
+    "paymentHistory": "سجل المدفوعات",
+    "noPaymentsOwed": "لا توجد مدفوعات مستحقة حالياً",
+    "noPaymentHistory": "لا يوجد سجل مدفوعات متاح حتى الآن",
+    "session": "جلسة",
+    "status": {
+      "pending": "قيد الانتظار",
+      "processing": "قيد المعالجة",
+      "paid": "مدفوع",
+      "refunded": "مسترد",
+      "cancelled": "ملغى"
+    },
+    "invoiceNumber": "رقم الفاتورة",
+    "amount": "المبلغ",
+    "downloadReceipt": "تنزيل الإيصال",
+    "payNow": "ادفع الآن",
+    "awaitingConfirmation": "في انتظار تأكيد المحترف قبل الدفع",
+    "totalReceivables": "إجمالي المستحقات",
+    "totalReceived": "إجمالي المبلغ المستلم",
+    "monthlyRevenue": "الإيرادات الشهرية",
+    "receivables": "المستحقات",
+    "noReceivables": "لا توجد مدفوعات مستحقة",
+    "grossAmount": "المبلغ الإجمالي",
+    "platformFee": "رسوم المنصة",
+    "netAmount": "صافي المبلغ",
+    "paidDate": "تاريخ الدفع",
+    "cancelReason": "سبب الإلغاء"
+  },
+  "Dashboard": {
+    "profileModal": {
+      "title": "أكمل ملفك الشخصي",
+      "subtitle": "ساعدنا في العثور على أفضل تناسب لك مع العملاء",
+      "steps": {
+        "issueTypes": "أنواع المشاكل",
+        "issueTypesDesc": "التخصصات",
+        "approaches": "المنهجيات",
+        "approachesDesc": "الأساليب",
+        "ageGroups": "الفئات العمرية",
+        "ageGroupsDesc": "الفئات",
+        "additionalInfo": "معلومات إضافية",
+        "additionalInfoDesc": "المهارات والسيرة الذاتية"
+      },
+      "step1": {
+        "title": "أنواع المشاكل التي تتفرد بها",
+        "required": "*",
+        "subtitle": "اختر التحديات الصحية النفسية التي أنت مؤهل لمعالجتها",
+        "minSelection": "اختر نوع مشكلة واحدة على الأقل"
+      },
+      "step2": {
+        "title": "المنهجيات العلاجية",
+        "subtitle": "اختر الأساليب والمنهجيات التي تستخدمها في ممارستك",
+        "minSelection": "اختر منهجية واحدة على الأقل"
+      },
+      "step3": {
+        "title": "الفئات العمرية",
+        "subtitle": "اختر الفئات العمرية التي تعمل معها",
+        "minSelection": "اختر فئة عمرية واحدة على الأقل"
+      },
+      "step4": {
+        "title": "معلومات إضافية",
+        "subtitle": "أخبرنا المزيد عن خبرتك ومهاراتك",
+        "yearsExp": "سنوات الخبرة",
+        "yearsExpRequired": "*",
+        "yearsPlaceholder": "مثال: 5",
+        "additionalSkills": "مهارات إضافية (اختياري)",
+        "additionalSkillsDesc": "اختر أي مهارة إضافية تمتلكها",
+        "servicesOffered": "الخدمات المقدمة",
+        "servicesOfferedDesc": "ما أنواع الجلسات التي تقدمها؟ (اختر الكل)",
+        "sessionFormats": "تنسيقات الجلسات",
+        "sessionFormatsDesc": "ما أنواع الجلسات التي تقدمها؟",
+        "languagesSpoken": "اللغات المنطوقة",
+        "languagesDesc": "ما هي اللغات التي تتحدثها مع العملاء؟",
+        "certifications": "الشهادات والمؤهلات",
+        "certificationsDesc": "اختر جميع الشهادات والمؤهلات التي تمتلكها (اختياري)",
+        "bio": "السيرة الذاتية المهنية",
+        "bioRequired": "*",
+        "bioPlaceholder": "حدثنا عن منهجك, خبرتك, وما يميز ممارستك...",
+        "bioMinLength": "يجب أن تحتوي السيرة الذاتية على 50 حرفًا على الأقل"
+      },
+      "buttons": {
+        "back": "رجوع",
+        "next": "التالي",
+        "complete": "إكمال الملف الشخصي"
+      },
+      "selected": "محدد"
+    }
+  }
+}

@@ -1,0 +1,582 @@
+Q: Can you describe the child's family structure?
+A: Family structure refers to who lives in the household and their relationships (nuclear, single-parent, extended family, etc.), which helps contextualize the child's environment.
+
+Q: Does the child have brothers or sisters?
+A: Having siblings affects social development opportunities and family dynamics. Both having and not having siblings are normal variations.
+
+Q: Can you provide the names and ages of the siblings?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Do they all have the same biological parents?
+A: Whether children share both biological parents helps assess genetic relatedness and familial patterns that may be relevant to development.
+
+Q: Are any of the children adopted or fostered?
+A: Adoption or foster care history is important for understanding early life experiences, potential attachment disruptions, and access to biological family history.
+
+Q: Are any of the children from a previous marriage?
+A: Children from previous marriages may have experienced family transitions that could impact their development and adjustment.
+
+Q: Are there other people living with the child at home?
+A: Extended family members in the household can provide additional support, different caregiving models, or increased environmental complexity.
+
+Q: Have any siblings experienced developmental delays?
+A: Developmental delays in family members increase concern for similar issues in the child due to shared genetic and environmental factors.
+
+Q: Have any siblings had developmental problems requiring treatment?
+A: Known developmental disorders in relatives significantly increase risk for the child and inform what to look for during assessment.
+
+Q: Has either parent had developmental difficulties (such as delayed walking or speaking)?
+A: Parental history of developmental challenges suggests possible genetic factors that may influence the child's development.
+
+Q: Has either parent had developmental problems requiring treatment?
+A: Parental history of diagnosed developmental disorders indicates higher genetic loading and may warrant more comprehensive evaluation.
+
+Q: Is there anyone in the family with difficulties similar to the child's?
+A: Presence of similar challenges in other family members suggests possible hereditary or shared environmental contributions.
+
+Q: What type of educational setting did the child attend (kindergarten, primary school, special education)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How long did the child attend school?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child need special support or assistance at school?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child have difficulties with reading or spelling?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What is the child doing after leaving school?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What helps you best remember the period between age 4 and 5?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Where were you living during that time?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Were there any major events during that period (birth of sibling, moving house, family death, job change)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever been diagnosed with a medical or developmental condition?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have any hearing problems?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is the child currently taking any medication or treatment?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you tell me a general description of the child?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How would you describe the child's behavior if you had to identify them in a group of children of the same age?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What kinds of things does the child do when left alone?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: When does the child feel best?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What are the most difficult moments for the child?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How would you describe the child's language?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Do you currently have any concerns about the child's behavior or development? What are they?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How old was the child (in months) when you first noticed something unusual in their language, social interaction, or behavior?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What were the first signs or symptoms that concerned you?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Looking back, when do you think the child first showed developmental or behavioral difficulties?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child walk without support?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: If walking was delayed, at what age did the child sit without support?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How did toilet training progress in the child?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is the child dry during the day?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age was the child first toilet trained?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child achieve 12 consecutive months of dryness without accidents?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is the child dry during the night?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age was the child first dry at night?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child achieve 12 consecutive months of dry nights without accidents?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have bowel control (does not soil himself)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child first achieve full bowel control?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child achieve 12 consecutive months of bowel control without accidents?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How is the child's language currently? Has the child already started speaking?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child say his first meaningful words (other than 'mama' or 'papa')?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What were the child's first words?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How did the child show that he understood the meaning of these words? Can you give examples?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child ever use words without meaning or use them to name unrelated things?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child first combine words into meaningful sentences (2–3 words including a verb)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What were the child's first sentences? Can you give examples?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child use sentences that included verbs? Can you give examples?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever lost previously acquired language skills during early development?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a period where the child stopped speaking for several months after learning to talk?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Before the loss, did the child use at least 5 different meaningful words daily for at least 3 months?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What level of language did the child use before the loss occurred?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What could the child say before the change? Can you give examples?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child stop using at least 5 meaningful words spontaneously?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child stop using words to communicate with others?
+A: Extended family members in the household can provide additional support, different caregiving models, or increased environmental complexity.
+
+Q: Was there a loss in grammar or sentence structure abilities?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was the child's pronunciation or articulation affected?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the child first begin to lose language skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was the language loss associated with a significant physical illness?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How long did it take for the child to regain language skills after the loss?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has there been a period when the child clearly regressed or seemed to lose developmental skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: When did this regression occur?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What types of skills were lost?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child lose these skills at the same time as language loss?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a loss in intentional hand movements (grasping/holding objects)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a loss in motor skills (posture, walking, coordination)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a loss in self-care abilities (eating, dressing, toileting)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a loss in play skills (constructive or imaginative play)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was there a loss in social engagement and responsiveness?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: At what age did the main loss of non-language skills first clearly appear?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Was the loss of skills associated with a significant physical illness?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How long did it take for the child to recover the lost skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How much spoken language does the child understand without gestures or contextual cues?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can the child follow instructions such as retrieving objects, placing them somewhere new, or understanding 'yes' and 'no' without gestures?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What is the child's current level of spoken language use?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you provide examples of the child's speech (words, phrases, or sentences)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child use another person's hand or body as a tool to obtain something or perform an action?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How does the child behave when using another person's body (eye contact, sounds, gestures)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How clear is the child's pronunciation, and how well can others understand their speech?
+A: Extended family members in the household can provide additional support, different caregiving models, or increased environmental complexity.
+
+Q: Can you provide examples of sounds or words the child mispronounces?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child use repetitive or stereotyped phrases (including delayed echolalia)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you provide examples of repetitive or unusual phrases the child uses?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child use speech to engage socially (e.g., commenting, chatting) rather than only to request things?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you give examples of the child's social speech or comments?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can the child maintain a reciprocal conversation by building on what others say?
+A: Extended family members in the household can provide additional support, different caregiving models, or increased environmental complexity.
+
+Q: Can you provide examples of how the child responds in conversation?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child ask socially inappropriate questions or make comments at inappropriate times?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you give examples of inappropriate questions or remarks?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child confuse personal pronouns (I, you, he/she) in speech?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you provide examples of pronoun errors the child makes?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child use invented words or unusual personal meanings for words or phrases?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Provide examples of invented words or unusual meanings used by the child.
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child repeat phrases in a fixed or ritualized way, or insist others respond in a specific way?
+A: Extended family members in the household can provide additional support, different caregiving models, or increased environmental complexity.
+
+Q: Can you provide examples of repeated or ritualized speech patterns?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is there anything unusual in the child's intonation, volume, rhythm, or speech rate?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can you provide examples of unusual speech tone or rhythm?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: How does the child currently use words to communicate?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child spontaneously point to objects around them to show interest?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child wave goodbye or use other conventional gestures?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What does the child do when someone enters a room and speaks without calling their name?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Est-ce que l'enfant imite spontanément les membres de la famille ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Imite-t-il sans qu'on lui demande ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Utilise-t-il des objets pour faire semblant en imitant ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'imitation apparaît-elle spontanément dans le jeu ou seulement immédiatement après observation ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Quelle variété d'actions imite-t-il ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Imite-t-il des gestes ou caractéristiques personnelles (marche, gestes, posture) ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'enfant a-t-il déjà joué à des jeux imaginatifs avec d'autres enfants ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Comprenaient-ils le scénario du jeu partagé ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Peut-il donner un exemple de ce type de jeu ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Prend-il l'initiative dans le jeu ou suit-il les autres ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il entre 4 et 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Est-ce que l'enfant regarde directement lorsqu'il interagit ou parle ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Peut-on capter facilement son regard ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Suit-il les déplacements des autres avec le regard ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Regarde-t-il le visage des autres de manière intermittente ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il avec différentes personnes ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: À 4-5 ans, comment était son contact visuel ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'enfant sourit-il lorsqu'il s'approche de quelqu'un ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Sourit-il en guise d'accueil lors des rencontres ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Comment réagit-il lorsqu'on lui sourit ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Sourit-il lors des retrouvailles avec des personnes connues ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il à l'âge de 4 à 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'enfant montre-t-il spontanément des objets qui l'intéressent ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Apporte-t-il des jouets pour les montrer ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Attire-t-il l'attention sur ce qu'il fait ou regarde ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Le fait-il uniquement pour partager ou pour obtenir quelque chose ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il entre 4 et 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'enfant offre-t-il spontanément de partager des objets (jouets, nourriture, etc.) ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Partage-t-il avec d'autres enfants ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Le partage est-il spontané ou sur demande ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: À quelle fréquence cela se produit-il ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il entre 4 et 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'est-ce qui rend l'enfant heureux ou lui fait plaisir ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Comment exprime-t-il son plaisir ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Cherche-t-il à partager son plaisir avec les autres ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Montre-t-il ses réussites ou découvertes avec enthousiasme ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Sourit-il, parle-t-il ou vocalise-t-il pour partager ses émotions positives ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il entre 4 et 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: L'enfant réconforte-t-il spontanément lorsqu'une personne est triste ou blessée ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Que fait-il lorsqu'un parent pleure ou est blessé ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Son expression faciale change-t-elle pour montrer de l'empathie ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Réconforte-t-il aussi des frères et sœurs ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Le fait-il dans différentes situations ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Qu'en était-il entre 4 et 5 ans ?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Can the child organize his/her own play or activities without help?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What does the child do when left alone?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What was the behavior at 4–5 years old?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child participate spontaneously and initiate actions in these games?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child play games like peek-a-boo, clapping games, or 'Simon Says'?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What does the child think about other same-age children he does not know?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is the child interested in other children?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What does the child do when he sees another child in familiar situations?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What happens when another child approaches the child?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child respond differently to siblings or familiar children?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child actively avoid other children?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have unusual or highly focused interests that are intense, repetitive, and not socially typical?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have restricted interests or hobbies that are unusually intense or narrow?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child use objects repetitively or focus on parts of objects rather than using them functionally?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show compulsions or rituals (fixed sequences of actions or strict ordering)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show unusual sensory interests (touching, smelling, looking, listening excessively)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show general hypersensitivity to everyday sounds?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child shown unusual negative or irritated reactions to specific sounds (e.g., coughing, baby crying)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child shown similar negative reactions to other specific sensory stimuli (smells, tastes, visual patterns, touch)?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child become upset or resistant to minor changes in daily routines?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child react negatively to small, insignificant changes in the environment?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have a specific object he is unusually attached to and carries with him?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show unusual or repetitive movements of the hands or fingers?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show complex repetitive whole-body movements such as spinning or repetitive jumping?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does this behavior interfere with other activities?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: What happens if you try to stop this behavior?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is there anything unusual in how the child walks? For example, does he/she walk on tiptoes, skip, or exaggerate foot movements?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Do other people notice his/her way of walking?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever been aggressive toward family members or caregivers?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child shown aggression toward people outside the family, such as at school, in shops, or in public transport?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever intentionally harmed himself/herself, such as biting the arm, hitting the head, or other self-injurious behaviors?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever had episodes of rapid, deep, and repetitive breathing?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has he/she ever appeared to be repeatedly short of breath for a few seconds?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Has the child ever had fainting spells, seizures, epilepsy, or convulsions?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Based on all available information, at what age did developmental abnormalities most likely first appear?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have any unusually advanced or special skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Is the child particularly good with shapes, puzzles, or pattern recognition?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have an exceptional memory?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have special musical skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child show exceptional drawing skills?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have special reading abilities?
+A: This question helps gather important developmental and family history information for assessment.
+
+Q: Does the child have special calculation skills?
+A: This question helps gather important developmental and family history information for assessment.
+

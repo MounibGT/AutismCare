@@ -1,0 +1,2337 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "whoWeAre": "Who We Are",
+      "whyUs": "Why Us",
+      "approaches": "Approaches",
+      "services": "Services",
+      "servicesOverview": "All Services",
+      "schoolServices": "School Services",
+      "platform": "Platform",
+      "contact": "Contact",
+      "professional": "I am a Professional"
+    },
+    "login": "Login",
+    "getStarted": "Get Started",
+    "memberLogin": "Member Login",
+    "memberLoginDesc": "Access your wellness journey",
+    "professionalLogin": "Professional Login",
+    "professionalLoginDesc": "Access your dashboard"
+  },
+  "Footer": {
+    "partners": "Partners",
+    "partnerWithUs": "Partner with us",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "culture": "Culture, care and community",
+    "brandGuidelines": "Brand guidelines",
+    "platform": "Platform",
+    "integratedHealthPlatform": "Integrated Health Platform",
+    "eap": "Employee Assistance Program (EAP)",
+    "mentalHealthPlus": "Mental Health+",
+    "primaryCareWellness": "Primary Care Wellness",
+    "eapCalculator": "EAP cost savings calculator",
+    "contact": "Contact",
+    "ios": "AutismeCare for iOS",
+    "android": "AutismeCare for Android",
+    "helpCentre": "Help Centre",
+    "status": "Status",
+    "contactUs": "Contact Us",
+    "copyright": "AutismeCare © {year}",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "aoda": "AODA",
+    "cookiePolicy": "Cookie Policy",
+    "rightsAndResponsibilities": "Rights and Responsibilities"
+  },
+  "HeroSection": {
+    "tagline": "YOUR JOURNEY TO WELLNESS STARTS HERE",
+    "designedByPsychologists": "A Platform Designed by Psychologists",
+    "headline": "Find an Intelligent Solution for Early Autism Detection",
+    "description": "Take the first step toward a better understanding of your child’s development.Our platform leverages artificial intelligence and data analysis to support the early detection of Autism Spectrum Disorder (ASD). We provide reliable, objective, and innovative tools designed to assist healthcare professionals, researchers, and families at the stage when early intervention is most effective.",
+    "bookNow": "Book now",
+    "forSelf": "For yourself",
+    "forPatient": "For a patient",
+    "forLovedOne": "For a loved one",
+    "bookForSelfHint": "Are you looking for support for your own mental health journey?",
+    "bookForPatientHint": "Are you a physician or professional referring a patient for care?",
+    "bookForLovedOneHint": "Are you seeking help for a family member, partner, or child?",
+    "learnMore": "Learn more",
+    "back": "Back",
+    "personalizedCare": "Personalized Care",
+    "flexibleScheduling": "Flexible Scheduling",
+    "confidentialSupport": "Confidential Support"
+  },
+  "ValueSection": {
+    "title": "Intelligent Early Autism Detection Platform",
+    "subtitle": "Your gateway to innovative, data-driven assessment",
+    "description": "Our integrated intelligent platform offers centralized access to AI-powered tools for behavioral, visual, and vocal analysis in children. It supports the early detection of Autism Spectrum Disorder by providing objective and reliable indicators. At the same time, it assists healthcare professionals, researchers, and families with tailored solutions—available whenever and wherever early intervention is most effective.",
+    "integratedPlatform": "Integrated Health Platform™",
+    "benefits": {
+      "fastAccess": {
+        "title": "Quick Access",
+        "description": "Access intelligent screening and early assessment tools quickly and efficiently. Through AI-based solutions, our platform enables faster and more objective evaluations without lengthy procedures, supporting early intervention at the most critical stages of child development."
+      },
+      "varietyProfessionals": {
+        "title": "Variety of Tools and Expertise",
+        "description": "Benefit from a comprehensive combination of intelligent tools and AI-driven approaches. Each tool provides specialized analysis of behavior, vision, and communication to address the needs of early Autism Spectrum Disorder detection."
+      },
+      "educationalResources": {
+        "title": "Technical Resources",
+        "description": "Explore our professional library of videos and reading materials covering artificial intelligence, web development, machine learning, and data analysis. Our educational content is designed to support and strengthen your skills—even before launching your first project."
+      }
+    }
+  },
+  "HowItWorksSection": {
+    "badge": "Simple Process",
+    "title": "How It Works",
+    "subtitle": "Your journey to better mental health in three simple steps",
+    "cta": {
+      "question": "Ready to start your journey?",
+      "button": "Get Started Today"
+    }
+  },
+  "ClientAdvantagesSection": {
+    "badge": "YOUR BENEFITS",
+    "title": "An Intelligent Platform Designed for You",
+    "subtitle": "Gain quick access to AI-powered analytical tools and specialized educational content to support early autism detection and child development monitoring.",
+    "quickAccess": {
+      "title": "Quick Access",
+      "description": "Get an appointment quickly with a qualified professional, without long waiting lists."
+    },
+    "diverseProfessionals": {
+      "title": "Diverse Professionals",
+      "description": "Choose from a multidisciplinary team of specialists to find the one that suits you best."
+    },
+    "educationalContent": {
+      "title": "Educational Content",
+      "description": "Access videos and readings on anxiety, burnout, stress and more, even before starting your therapy."
+    },
+    "confidentiality": {
+      "title": "Guaranteed Confidentiality",
+      "description": "Your exchanges and personal information are protected according to the strictest standards."
+    },
+    "educationalHighlight": {
+      "title": "Start Your Journey Now",
+      "description": "Before your first appointment, explore our library of educational resources to better understand your situation and prepare for your follow-up."
+    },
+    "topics": {
+      "anxiety": "Anxiety",
+      "burnout": "Burnout",
+      "stress": "Stress",
+      "depression": "Depression",
+      "selfEsteem": "Self-Esteem"
+    },
+    "professionalsSection": {
+      "title": "Our Professionals at Your Service",
+      "subtitle": "A multidisciplinary team of specialists recognized by their professional orders."
+    },
+    "professionals": {
+      "psychologist": "Psychologist",
+      "psychotherapist": "Psychotherapist",
+      "neuropsychologist": "Neuropsychologist",
+      "socialWorker": "Social Worker",
+      "psychoeducator": "Psychoeducator",
+      "mentalHealthCounselor": "Mental Health Counselor",
+      "psychiatrist": "Psychiatrist"
+    },
+    "trustIndicators": {
+      "licensed": "Licensed Professionals",
+      "supervised": "Supervised Practice",
+      "confidential": "100% Confidential"
+    }
+  },
+  "ServiceSection": {
+    "title": "Our Integrated Health Platform™",
+    "subtitle": "Multiple health and wellness programs to support your organization.",
+    "subtitleLine2": "They work great on their own, but are even stronger together.",
+    "services": {
+      "eap": {
+        "startConsultation": "Start a consultation",
+        "speakProfessional": "Speak with a professional.",
+        "appointmentConfirmed": "Perfect! Your virtual appointment today at 8:45 AM is confirmed.",
+        "goToChat": "GO TO CHAT",
+        "carePlans": "Care Plans",
+        "noCarePlans": "You don't have any care plans yet",
+        "getCare": "GET CARE"
+      },
+      "mentalHealth": {
+        "videoSessionAvailable": "Video Session Available",
+        "therapistReady": "Dr. Sarah Johnson is ready for your scheduled therapy session.",
+        "onlineNow": "Online now",
+        "yourProgress": "Your Progress",
+        "weekOfTreatment": "Week 6 of treatment",
+        "moodTracking": "Mood tracking",
+        "viewFullReport": "View Full Report",
+        "selfHelpResources": "Self-Help Resources",
+        "newGuides": "12 new guides available",
+        "browseLibrary": "Browse Library"
+      },
+      "primaryCare": {
+        "doctorAvailable": "Doctor Available Now",
+        "doctorReady": "Dr. Michael Chen is ready to discuss your health concerns and medical questions.",
+        "availableForConsultation": "Available for consultation",
+        "appointmentScheduled": "Appointment Scheduled",
+        "tomorrowTime": "Tomorrow at 10:30 AM",
+        "doctorName": "Dr. Emily Roberts",
+        "inPerson": "In-person",
+        "checkupType": "General checkup and health assessment",
+        "viewDetails": "View Details",
+        "prescriptionReady": "Prescription Ready",
+        "availableAtPharmacy": "Available at your pharmacy",
+        "viewPrescription": "View Prescription"
+      },
+      "wellness": {
+        "dailyWellnessGoals": "Daily Wellness Goals",
+        "trackActivities": "Track nutrition, fitness, and mindfulness activities.",
+        "lifestyleCoaching": "Lifestyle Coaching",
+        "personalizedGuidance": "Personalized guidance available",
+        "bookCoachSession": "Book Coach Session",
+        "activityPrograms": "Activity Programs",
+        "yogaFitness": "Yoga, fitness & more",
+        "viewSchedule": "View Schedule"
+      }
+    }
+  },
+  "ProfessionalHero": {
+    "tagline": "FOR MENTAL HEALTH PROFESSIONALS",
+    "headline": "Focus on What You Do Best: Helping People",
+    "description": "Join our platform and let us handle the administrative work. Connect with clients who match your expertise, optimize your practice, and grow your impact.",
+    "joinPlatform": "Join Our Platform",
+    "learnMore": "Learn More",
+    "activeProfessionals": "1000+ Active Professionals",
+    "satisfactionRate": "95% Satisfaction Rate",
+    "platformSupport": "24/7 Platform Support"
+  },
+  "MatchingSystem": {
+    "badge": "SMART MATCHING SYSTEM",
+    "title": "Find Clients Who Are Right for You",
+    "subtitle": "Save time and energy with our intelligent matching system. Focus on the clinical aspects of your practice while we connect you with clients who align perfectly with your expertise and preferences.",
+    "issueType": "Issue Type",
+    "issueTypeDesc": "Match with clients based on the specific mental health challenges you specialize in treating",
+    "therapeuticApproach": "Therapeutic Approach",
+    "therapeuticApproachDesc": "Connect with clients who prefer your therapeutic methods and techniques",
+    "ageCategory": "Age Category",
+    "ageCategoryDesc": "Work with the age groups you're most experienced and comfortable with",
+    "expertise": "Expertise & Skills",
+    "expertiseDesc": "Leverage your unique competencies to help those who need them most",
+    "benefitTitle": "Work Smarter, Not Harder",
+    "benefitDesc": "Our precision matching means you spend less time on administrative tasks and more time doing what you love—providing quality mental health care. Every client connection is tailored to your professional strengths and preferences."
+  },
+  "PlatformBenefits": {
+    "badge": "WHY CHOOSE US",
+    "title": "Platform Benefits for Professionals",
+    "subtitle": "We provide comprehensive support so you can focus on what matters most—delivering exceptional mental health care to your clients.",
+    "simpleManagement": "Simple & Efficient Management",
+    "simpleManagementDesc": "Provide us with your available time slots, meet your clients, and we handle the rest—scheduling, billing, and administrative tasks.",
+    "stabilizePractice": "Stabilize Your Practice",
+    "stabilizePracticeDesc": "Maintain a consistent client base and steady revenue stream. Focus on growth without worrying about fluctuating income.",
+    "optimizeTime": "Optimize Your Time",
+    "optimizeTimeDesc": "Concentrate on clinical aspects of your practice and free up time for your personal life. We handle the business side.",
+    "practiceTools": "Practice Management Tools",
+    "practiceToolsDesc": "Access OWL Practice-style features including record keeping, scheduling, billing, and payroll management—all in one place.",
+    "virtualLibrary": "Virtual Library Access",
+    "virtualLibraryDesc": "Unlimited access to PDF books, research articles, psychological tests, and test correction platforms when needed.",
+    "contentDevelopment": "Content Development Support",
+    "contentDevelopmentDesc": "Get help creating podcasts, videos, and articles to expand your reach and generate additional revenue streams.",
+    "professionalDev": "Professional Development",
+    "professionalDevDesc": "Free training programs and receive a note-taking tablet after completing a certain number of sessions.",
+    "startupKit": "Startup Kit & Mentorship",
+    "startupKitDesc": "New psychologists receive comprehensive startup assistance and mentorship from experienced professionals.",
+    "supervision": "Free Supervision Access",
+    "supervisionDesc": "Get access to professional supervision when you need it, included in your membership at no extra cost.",
+    "community": "Support Community",
+    "communityDesc": "Join support groups for mutual aid, reflection, clinical discussions, and professional community building.",
+    "psychiatry": "Psychiatry Collaboration",
+    "psychiatryDesc": "Access discussions with psychiatrists through our partnership with Averroes for comprehensive patient care.",
+    "financial": "Financial Benefits",
+    "financialDesc": "Preferential rates with accountants, OPQ membership fee support based on sessions, and investment fund opportunities.",
+    "additionalPerksTitle": "Additional Perks & Opportunities",
+    "perk1": "Become a shareholder and collectively benefit from our success",
+    "perk2": "Social mission: Priority support for clients in remote regions",
+    "perk3": "Reduced rates for family/child cases with joint platform support",
+    "perk4": "$1 per session contribution to an investment fund"
+  },
+  "ProfessionalCTA": {
+    "badge": "READY TO GET STARTED?",
+    "title": "Join Our Community Today",
+    "description": "Take the next step in your professional journey. Join thousands of mental health professionals who have transformed their practice with our platform.",
+    "fact1": "No upfront costs",
+    "fact2": "Flexible scheduling",
+    "fact3": "Dedicated support team",
+    "fact4": "Join 1000+ professionals",
+    "startApplication": "Start Your Application",
+    "contactUs": "Contact Us",
+    "helpText": "Have questions? Our team is here to help you every step of the way."
+  },
+  "ClientHero": {
+    "tagline": "YOUR JOURNEY TO WELLNESS STARTS HERE",
+    "headline": "Find the Right Mental Health Support, Fast",
+    "description": "Connect with qualified professionals who understand your needs, no matter where you are. Begin your journey to better mental health today.",
+    "bookAppointment": "Book an Appointment",
+    "exploreResources": "Explore Resources",
+    "fastAccess": "Fast Access to Care",
+    "remoteInPerson": "Remote & In-Person",
+    "confidentialSupport": "Confidential Support"
+  },
+  "QuickAccess": {
+    "badge": "YOUR BENEFITS",
+    "title": "Get the Support You Need, When You Need It",
+    "subtitle": "We make mental health care accessible, convenient, and personalized to your unique situation.",
+    "findHelp": "Find Help Quickly",
+    "findHelpDesc": "No more endless waiting lists. Connect with qualified mental health professionals who are available to help you now.",
+    "accessAnywhere": "Access from Anywhere",
+    "accessAnywhereDesc": "Whether you're in a remote region or a major city, find the right professional who matches your needs, no matter the distance.",
+    "startJourney": "Start Your Journey Today",
+    "startJourneyDesc": "Begin with educational resources, self-learning materials, and readings while you prepare for your first session with a professional.",
+    "highlightTitle": "Don't Wait to Feel Better",
+    "highlightDesc": "Every journey begins with a single step. Whether you're seeking immediate support or wanting to learn more about mental wellness, we're here to guide you every step of the way."
+  },
+  "Resources": {
+    "badge": "EMPOWER YOURSELF",
+    "title": "Take Charge of Your Mental Wellness",
+    "subtitle": "Increase your knowledge, practice self-care, and prepare for your journey with our comprehensive educational resources.",
+    "freeAccessTitle": "Free Access Resources",
+    "educationalArticles": "Educational Articles",
+    "educationalArticlesDesc": "Access a comprehensive library of articles about mental health, self-care strategies, and wellness tips.",
+    "videoGuides": "Video Guides",
+    "videoGuidesDesc": "Watch educational videos on managing stress, anxiety, and building healthy habits to prepare for your journey.",
+    "selfAssessment": "Self-Assessment Tools",
+    "selfAssessmentDesc": "Use our guided questionnaires to better understand your needs and communicate effectively with professionals.",
+    "guidedMeditations": "Guided Meditations",
+    "guidedMeditationsDesc": "Begin your self-care practice with free guided meditation and mindfulness exercises.",
+    "premiumTitle": "Ready to Go Further?",
+    "premiumDesc": "Unlock premium resources including personalized learning paths, advanced self-care techniques, exclusive workshops, and one-on-one guidance to accelerate your mental wellness journey.",
+    "explorePremium": "Explore Premium Resources",
+    "benefitsNote": "Start with free resources to build your foundation, then explore premium options when you're ready to deepen your practice and accelerate your growth."
+  },
+  "ExploreTopics": {
+    "badge": "FIND ANSWERS",
+    "title": "Explore a topic",
+    "subtitle": "Access extensive free content on various mental health topics. Explore our educational resources to better understand your situation and find the right support for your needs.",
+    "learnMore": "Learn more"
+  },
+  "ClientCTA": {
+    "badge": "BEGIN YOUR JOURNEY",
+    "title": "Take the First Step Today",
+    "description": "Your mental wellness journey starts with a single decision. Connect with a professional who truly understands your needs.",
+    "fact1": "Personalized matching",
+    "fact2": "Flexible scheduling",
+    "fact3": "Secure & confidential",
+    "fact4": "Remote & in-person options",
+    "bookAppointment": "Book an Appointment",
+    "browseResources": "Browse Resources",
+    "helpText": "Questions? Our support team is available to help you find the right path forward."
+  },
+  "Auth": {
+    "layout": {
+      "logoAlt": "Logo"
+    },
+    "login": {
+      "title": "Welcome Back",
+      "description": "Sign in to your account to continue",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create one here",
+      "backToHome": "Back to home"
+    },
+    "verifyEmail": {
+      "title": "Verify Your Email",
+      "description": "Enter the verification code sent to your email",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "codeLabel": "Verification Code",
+      "codeHint": "Enter the 6-digit code sent to your email",
+      "verifyButton": "Verify Email",
+      "verifying": "Verifying...",
+      "successTitle": "Email Verified!",
+      "successDescription": "Your email has been successfully verified",
+      "verifiedMessage": "You can now log in to your account.",
+      "goToLogin": "Go to Login",
+      "backToHome": "Back to home",
+      "backToLogin": "Back to login",
+      "noCode": "Didn't receive a code?",
+      "requestNew": "Request a new one"
+    },
+    "signupSelection": {
+      "title": "Create Your Account",
+      "subtitle": "Select the option that best describes you",
+      "member": {
+        "title": "Member",
+        "description": "Create a personal account to book appointments, access resources, and begin your mental wellness journey.",
+        "cta": "Sign up as Member →"
+      },
+      "professional": {
+        "title": "Professional",
+        "description": "Join our platform as a mental health professional to connect with clients and grow your practice.",
+        "cta": "Sign up as Professional →"
+      },
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "memberSignup": {
+      "title": "Join as a Member",
+      "description": "Start your journey to better mental health",
+      "steps": {
+        "personalInfo": "Personal Info",
+        "personalInfoDesc": "Basic information",
+        "additionalInfo": "Additional Information",
+        "additionalInfoDesc": "Additional details",
+        "security": "Security",
+        "securityDesc": "Create password",
+        "confirm": "Confirm",
+        "confirmDesc": "Terms & conditions"
+      },
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "postalCode": "Postal Code",
+      "postalCodePlaceholder": "A1A 1A1",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "selectGender": "Select gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "language": "Preferred Language",
+      "selectLanguage": "Select language",
+      "english": "English",
+      "french": "French",
+      "issue": "Primary Issue",
+      "issuePlaceholder": "Describe your main concern",
+      "diagnosis": "Diagnosis (if known)",
+      "diagnosisPlaceholder": "Any known diagnosis",
+      "desiredProfessional": "Desired Professional Type",
+      "desiredProfessionalPlaceholder": "e.g., Psychologist, Therapist",
+      "availability": "Availability",
+      "availabilityPlaceholder": "Preferred days and times",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "passwordHint": "At least 8 characters with a mix of letters and numbers",
+      "confirmPassword": "Confirm Password",
+      "reviewTitle": "Review Your Information",
+      "name": "Name:",
+      "agreeToTerms": "I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "back": "Back",
+      "continue": "Continue",
+      "createAccount": "Create Account",
+      "creating": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "backToHome": "← Back to Home"
+    },
+    "professionalSignup": {
+      "title": "Join as a Professional",
+      "description": "Create your professional account and start connecting with clients",
+      "steps": {
+        "personalInfo": "Personal Info",
+        "personalInfoDesc": "Basic information",
+        "professional": "Professional",
+        "professionalDesc": "Credentials",
+        "security": "Security",
+        "securityDesc": "Create password",
+        "confirm": "Confirm",
+        "confirmDesc": "Terms & conditions"
+      },
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "license": "License Number",
+      "licensePlaceholder": "PSY-12345",
+      "specialty": "Specialty",
+      "specialtyPlaceholder": "Select specialty",
+      "specialtyOptions": {
+        "psychologist": "Psychologist",
+        "psychiatrist": "Psychiatrist",
+        "therapist": "Therapist",
+        "counselor": "Counselor",
+        "socialWorker": "Social Worker"
+      },
+      "location": "Location",
+      "locationPlaceholder": "City, State/Province",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "passwordHint": "At least 8 characters with a mix of letters and numbers",
+      "confirmPassword": "Confirm Password",
+      "reviewTitle": "Review Your Information",
+      "personalInformation": "Personal Information",
+      "professionalDetails": "Professional Details",
+      "name": "Name:",
+      "agreeToTerms": "I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "back": "Back",
+      "continue": "Continue",
+      "createAccount": "Create Account",
+      "creating": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "backToHome": "← Back to Home"
+    },
+    "forgotPassword": {
+      "title": "Reset Your Password",
+      "description": "Enter your email address and we'll send you a reset link",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "emailHint": "We'll send a password reset link to this email address",
+      "sendResetLink": "Send Reset Link",
+      "backToLogin": "Back to Login",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "backToHome": "← Back to Home",
+      "checkEmailTitle": "Check Your Email",
+      "checkEmailDescription": "We've sent you a password reset link",
+      "checkEmailMessage": "If an account exists for {email}, you will receive a password reset link shortly.",
+      "checkEmailSpam": "Please check your inbox and spam folder.",
+      "resendEmail": "Resend Email"
+    }
+  },
+  "BasicInformation": {
+    "title": "Basic Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "location": "Location",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "language": "Preferred Language",
+    "save": "Save",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "completeProfile": "Complete Profile",
+    "completeProfileTitle": "Complete Your Profile",
+    "edit": "Edit",
+    "subtitle": "Update your personal information",
+    "loading": "Loading profile...",
+    "noData": "No profile data found"
+  },
+  "Dashboard": {
+    "sidebar": {
+      "logo": "Logo",
+      "favicon": "favicon",
+      "dashboard": "Dashboard",
+      "overview": "Overview",
+      "profile": "Profile",
+      "schedule": "Schedule",
+      "billing": "Billing & Payments",
+      "clientManagement": "Client Management",
+      "proposals": "Client Proposals",
+      "myRequests": "My Requests",
+      "myClients": "My Clients",
+      "sessions": "Sessions",
+      "resources": "Resources",
+      "library": "Library",
+      "analytics": "Analytics",
+      "support": "Support",
+      "helpCenter": "Help Center",
+      "settings": "Settings",
+      "logout": "Logout",
+      "platformManagement": "Platform Management",
+      "professionals": "Professionals",
+      "patients": "Patients",
+      "systemSettings": "System Settings",
+      "reports": "Reports"
+    },
+    "overview": {
+      "title": "Welcome Back",
+      "subtitle": "Here's an overview of your practice",
+      "totalClients": "Total Clients",
+      "weekSessions": "This Week's Sessions",
+      "pendingBookings": "Pending Bookings",
+      "profileStatus": "Profile Status",
+      "pendingReview": "Pending Review",
+      "quickActions": "Quick Actions",
+      "completeProfile": "Complete Your Profile",
+      "completeProfileDesc": "Add your specializations, approaches, and availability to start matching with clients",
+      "setSchedule": "Set Your Schedule",
+      "setScheduleDesc": "Define your available time slots for client bookings"
+    },
+    "profile": {
+      "title": "Professional Profile",
+      "subtitle": "Manage your professional information and preferences",
+      "accountStatus": "Account Status:",
+      "pendingReview": "Pending Review",
+      "approved": "Approved",
+      "incomplete": "Incomplete",
+      "pendingReviewDesc": "Your account is currently under review. Complete your profile setup below to start matching with clients once approved.",
+      "incompleteDesc": "Please complete all required profile information to submit for review.",
+      "approvedDesc": "Your account is active and ready to accept clients.",
+      "completeSetupTitle": "Complete Your Professional Profile",
+      "completeSetupDesc": "To start matching with clients, please complete your professional profile with your specializations, approaches, and preferences.",
+      "completeNow": "Complete Profile Now",
+      "complete": "Complete",
+      "basicInfo": "Basic Information",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "location": "Location",
+      "license": "License Number",
+      "specialty": "Specialty",
+      "professionalSpec": "Professional Specializations",
+      "edit": "Edit",
+      "issueTypes": "Issue Types",
+      "approaches": "Therapeutic Approaches",
+      "ageCategories": "Age Categories",
+      "additionalSkills": "Additional Skills",
+      "about": "About",
+      "yearsExp": "Years of Experience",
+      "years": "years",
+      "bio": "Professional Bio",
+      "accessTitle": "What You'll Get Access To",
+      "benefit1": "Smart client matching based on your expertise",
+      "benefit2": "Practice management tools (scheduling, billing, records)",
+      "benefit3": "Virtual library with books, articles, and tests",
+      "benefit4": "Free supervision and professional development",
+      "benefit5": "Support community and clinical discussions",
+      "benefit6": "Content development assistance (podcasts, videos)",
+      "save": "Save",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "professionalInfo": "Professional Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "language": "Preferred Language"
+    },
+    "schedule": {
+      "title": "Availability Schedule",
+      "subtitle": "Define your working hours and availability for client bookings",
+      "sessionSettings": "Session Settings",
+      "defaultDuration": "Default Session Duration (minutes)",
+      "breakBetween": "Break Between Sessions (minutes)",
+      "minutes": "minutes",
+      "noBreak": "No break",
+      "weeklySchedule": "Weekly Schedule",
+      "setHours": "Set your available hours for each day",
+      "unavailable": "Unavailable",
+      "firstDayOfWeek": "First Day of Week",
+      "copyToAll": "Copy to all days",
+      "addTimeSlot": "Add time slot",
+      "to": "to",
+      "removeTimeSlot": "Remove time slot",
+      "save": "Save Schedule",
+      "summary": "Schedule Summary",
+      "workingDays": "Working Days",
+      "daysPerWeek": "days per week",
+      "sessionLength": "Session Length",
+      "minBreak": "min break",
+      "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      }
+    },
+    "clients": {
+      "title": "My Clients",
+      "subtitle": "Manage and view all your clients",
+      "totalClients": "Total Clients",
+      "activeClients": "Active Clients",
+      "pendingClients": "Pending Clients",
+      "inactiveClients": "Inactive Clients",
+      "searchPlaceholder": "Search clients by name or email...",
+      "filters": "Filters",
+      "hideFilters": "Hide Filters",
+      "showFilters": "Show Filters",
+      "status": "Status",
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive",
+      "pending": "Pending",
+      "issueType": "Issue Type",
+      "name": "Name",
+      "contact": "Contact",
+      "lastSession": "Last Session",
+      "totalSessions": "Total Sessions",
+      "actions": "Actions",
+      "viewDetails": "View Details",
+      "schedule": "Schedule",
+      "message": "Message",
+      "noClients": "No clients found",
+      "adjustFilters": "Try adjusting your search or filters",
+      "sessions": "sessions"
+    },
+    "sessions": {
+      "title": "Sessions",
+      "subtitle": "View and manage your client sessions",
+      "upcomingTitle": "Upcoming Sessions",
+      "nextSession": "Next Session",
+      "todaySchedule": "Today's Schedule",
+      "noSessionsToday": "No sessions scheduled for today",
+      "noUpcoming": "No upcoming sessions",
+      "allSessions": "All Sessions",
+      "searchPlaceholder": "Search sessions by client name...",
+      "filters": "Filters",
+      "hideFilters": "Hide Filters",
+      "showFilters": "Show Filters",
+      "status": "Status",
+      "all": "All",
+      "scheduled": "Scheduled",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noShow": "No Show",
+      "type": "Type",
+      "inPerson": "In-Person",
+      "video": "Video",
+      "phone": "Phone",
+      "payment": "Payment",
+      "paid": "Paid",
+      "pending": "Pending",
+      "overdue": "Overdue",
+      "client": "Client",
+      "dateTime": "Date & Time",
+      "duration": "Duration",
+      "amount": "Amount",
+      "issueType": "Issue Type",
+      "actions": "Actions",
+      "viewDetails": "View Details",
+      "startSession": "Start Session",
+      "addNotes": "Add Notes",
+      "noSessions": "No sessions found",
+      "adjustFilters": "Try adjusting your search or filters",
+      "minutes": "min"
+    },
+    "profileModal": {
+      "title": "Complete Your Profile",
+      "subtitle": "Help us match you with the right clients",
+      "steps": {
+        "issueTypes": "Issue Types",
+        "issueTypesDesc": "Specializations",
+        "approaches": "Approaches",
+        "approachesDesc": "Methods",
+        "ageGroups": "Age Groups",
+        "ageGroupsDesc": "Categories",
+        "additionalInfo": "Additional Info",
+        "additionalInfoDesc": "Skills & Bio"
+      },
+      "step1": {
+        "title": "Issue Types You Specialize In",
+        "required": "*",
+        "subtitle": "Select the mental health challenges you are qualified to treat",
+        "minSelection": "Select at least one issue type"
+      },
+      "step2": {
+        "title": "Therapeutic Approaches",
+        "subtitle": "Select the methods and approaches you use in your practice",
+        "minSelection": "Select at least one approach"
+      },
+      "step3": {
+        "title": "Age Categories",
+        "subtitle": "Select the age groups you work with",
+        "minSelection": "Select at least one age category"
+      },
+      "step4": {
+        "title": "Additional Information",
+        "subtitle": "Tell us more about your experience and skills",
+        "yearsExp": "Years of Experience",
+        "yearsExpRequired": "*",
+        "yearsPlaceholder": "e.g., 5",
+        "additionalSkills": "Additional Skills (Optional)",
+        "additionalSkillsDesc": "Select any additional competencies you have",
+        "bio": "Professional Bio",
+        "bioRequired": "*",
+        "bioPlaceholder": "Tell us about your approach, experience, and what makes your practice unique...",
+        "bioMinLength": "Bio must be at least 50 characters"
+      },
+      "buttons": {
+        "back": "Back",
+        "next": "Next",
+        "complete": "Complete Profile"
+      },
+      "selected": "selected"
+    },
+    "clientModal": {
+      "title": "Client Details",
+      "tabs": {
+        "overview": "Overview",
+        "sessions": "Sessions",
+        "notes": "Notes"
+      },
+      "overview": {
+        "contactInfo": "Contact Information",
+        "email": "Email",
+        "phone": "Phone",
+        "clientInfo": "Client Information",
+        "status": "Status",
+        "issueType": "Issue Type",
+        "joinedDate": "Joined Date",
+        "lastSession": "Last Session",
+        "totalSessions": "Total Sessions",
+        "sessions": "sessions",
+        "active": "Active",
+        "inactive": "Inactive",
+        "pending": "Pending"
+      },
+      "sessions": {
+        "title": "Session History",
+        "noSessions": "No sessions yet",
+        "duration": "min",
+        "date": "Date",
+        "type": "Type",
+        "status": "Status",
+        "payment": "Payment",
+        "notes": "Notes",
+        "viewNotes": "View notes",
+        "noNotes": "No notes",
+        "paid": "Paid",
+        "pending": "Pending",
+        "overdue": "Overdue",
+        "scheduled": "Scheduled",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "no-show": "No Show"
+      },
+      "actions": {
+        "schedule": "Schedule Session",
+        "message": "Send Message",
+        "close": "Close"
+      }
+    },
+    "requests": {
+      "title": "My Requests",
+      "subtitle": "Review and manage appointment requests from patients",
+      "totalRequests": "Total Requests",
+      "pending": "Pending",
+      "newClients": "New Clients",
+      "highPriority": "High Priority",
+      "searchPlaceholder": "Search by patient name, email, or issue type...",
+      "filters": "Filters",
+      "showFilters": "Show Filters",
+      "hideFilters": "Hide Filters",
+      "status": "Status",
+      "allStatuses": "All Statuses",
+      "clientType": "Client Type",
+      "allTypes": "All Types",
+      "newClientsFilter": "New Clients",
+      "returningClients": "Returning Clients",
+      "urgency": "Urgency",
+      "allUrgencyLevels": "All Urgency Levels",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "patient": "Patient",
+      "type": "Type",
+      "issue": "Issue",
+      "preferredDate": "Preferred Date",
+      "requested": "Requested",
+      "actions": "Actions",
+      "viewProfile": "View Profile",
+      "accept": "Accept",
+      "decline": "Decline",
+      "noRequests": "No requests found",
+      "adjustFilters": "Try adjusting your filters."
+    },
+    "scheduleCalendar": {
+      "title": "Schedule",
+      "subtitle": "Manage your sessions and appointments",
+      "showSessions": "Show Sessions",
+      "showRequests": "Show Requests",
+      "today": "Today",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "totalSessions": "Total Sessions",
+      "pendingRequests": "Pending Requests",
+      "startSession": "Start Session",
+      "viewDetails": "View Details",
+      "new": "New",
+      "weekOf": "Week of",
+      "noSessionsScheduled": "No sessions scheduled",
+      "noRequestsPending": "No requests pending"
+    },
+    "analytics": {
+      "badge": "Analytics",
+      "title": "Analytics coming soon.",
+      "description": "We're finalizing an analytics space to track your key metrics: engagement rate, client retention, clinical progress, and marketplace resource performance. Our team is actively working on setting up dashboards and custom exports.",
+      "whatsComing": "What's coming:",
+      "features": {
+        "dashboards": "Interactive dashboards",
+        "reports": "Downloadable reports",
+        "stats": "Statistics by intervention type",
+        "satisfaction": "Client satisfaction analysis"
+      },
+      "currentPhase": "Current phase",
+      "phaseDescription": "Data collection is ready and we're finishing the visualization interfaces. You'll gradually see the first reports appear as we iterate on the product.",
+      "specificNeeds": "Have specific needs?",
+      "specificNeedsDesc": "Tell us which metrics you'd like us to prioritize and we'll integrate them into the roadmap.",
+      "contactTeam": "Write to the product team",
+      "thankYou": "Thank you for your patience — this feature will be activated when the full platform launches. We'll notify you via email and in the dashboard."
+    },
+    "help": {
+      "badge": "Professional Support",
+      "title": "Support for Professionals",
+      "subtitle": "Get help with your practice, manage your clients, and make the most of our platform tools.",
+      "statsTitle": "Support Stats",
+      "searchPlaceholder": "Search guides, policies, and topics...",
+      "faqTitle": "Professional FAQs",
+      "results": "questions found",
+      "noResults": "No results found. Try a different search or contact our professional support team.",
+      "contactTitle": "Contact Support",
+      "showForm": "Send Message",
+      "hideForm": "Hide Form",
+      "typeLabel": "Category",
+      "type": {
+        "general": "General",
+        "technical": "Technical",
+        "billing": "Billing",
+        "compliance": "Compliance"
+      },
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Brief description of your inquiry",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your question or issue in detail...",
+      "priorityLabel": "Priority",
+      "priority": {
+        "low": "Low",
+        "normal": "Normal",
+        "high": "Urgent"
+      },
+      "submitButton": "Send Message",
+      "formSuccess": "Message sent successfully!",
+      "formSuccessDesc": "Our professional support team will respond within 1-2 hours.",
+      "guidesTitle": "Quick Guides",
+      "resourcesTitle": "Resources",
+      "hoursTitle": "Support Hours",
+      "chat": "Live Chat",
+      "email": "Email Support",
+      "phone": "Phone Support",
+      "emailHours": "24/7",
+      "phoneHours": "Mon-Fri 8am-6pm",
+      "importantTitle": "Important Information",
+      "importantDesc": "For urgent clinical questions, please contact our clinical support team directly at clinical@jecheminement.com"
+    },
+    "library": {
+      "badge": "Resource marketplace",
+      "title": "Share and discover the best of your expertise.",
+      "description": "Upload your videos, books, guides or webinars to support the professional community. Get inspired by your colleagues' creations, collaborate and make your practice shine.",
+      "uploadResource": "Upload a resource",
+      "myDownloads": "My downloads",
+      "searchPlaceholder": "Search for a resource, author or topic...",
+      "categories": {
+        "all": "All",
+        "videos": "Videos",
+        "ebooks": "Books & eBooks",
+        "webinars": "Webinars",
+        "guides": "Practical guides"
+      },
+      "popularResources": "Popular resources",
+      "resourceCount": "resource available",
+      "resourceCountPlural": "resources available",
+      "format": "Format",
+      "sharedOn": "Shared on Cheminement marketplace",
+      "pages": "pages",
+      "noResults": "No resources match your search at the moment. Try broadening your filters or be the first to share content!",
+      "read": "Read",
+      "download": "Download",
+      "access": "Access",
+      "free": "Free",
+      "paid": "Get Access"
+    }
+  },
+  "About": {
+    "hero": {
+      "badge": "Who We Are",
+      "designedBy": {
+        "label": "Our Difference",
+        "title": "A Platform Designed by Psychologists"
+      },
+      "headline": "At AutismeCare, we believe that everyone deserves human, safe, and personalized support tailored to their reality.",
+      "description1": "Our mission is to support your emotional and psychological well-being through a personalized journey designed to meet your unique needs and pace. We offer simple and caring access to a team of experts whose practice is regulated, recognized, and compliant with their professional order requirements.",
+      "description2": "Whatever your situation, you are accompanied by a qualified professional, ready to walk with you towards a more serene, balanced, and fulfilling life.",
+      "trustIndicators": {
+        "experts": "Team of Qualified Experts",
+        "certified": "Certified Professionals"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "description1": "With AutismeCare, you are no longer alone. We are here to support you, guide you, and help you journey towards a more serene, balanced, and fulfilling life.",
+      "description2": "Our platform offers a simple, human, and secure gateway to take care of your mental health – for you or your family – while giving you access to relevant tools, clear information, and reliable professional support."
+    },
+    "expertise": {
+      "badge": "Regulated and Recognized Expertise",
+      "title": "Ethics, rigor, and confidentiality at the heart of every interaction.",
+      "description1": "We are committed to protecting your privacy and personal information in accordance with current regulations, including Bill 25. Every intervention is based on rigorous standards and deep respect for your dignity.",
+      "description2": "Whether you consult a psychologist, psychotherapist, or other professional, you have the certainty of being accompanied by a qualified expert, recognized by their professional order.",
+      "cards": {
+        "confidentiality": {
+          "title": "Respect for Confidentiality",
+          "description": "Strict protection of your sensitive information and respect for ethical standards."
+        },
+        "quality": {
+          "title": "Professional Quality",
+          "description": "Regulated practices, rigorous supervision, and continuous training for each practitioner."
+        }
+      }
+    },
+    "personalizedJourney": {
+      "badge": "A Fully Personalized Journey",
+      "title": "Your journey is unique, your support is too.",
+      "description": "Our matching process aims to connect you with the professional who best suits your reality. Each meeting is designed to facilitate lasting engagement and promote the success of your therapeutic journey.",
+      "matchingTitle": "We Take Into Account",
+      "matchingPoints": [
+        "Your issue",
+        "Your approach preferences",
+        "Your communication style"
+      ],
+      "goal": "The goal: build a strong therapeutic relationship adapted to your needs."
+    },
+    "accessibility": {
+      "badge": "Accessible, flexible, wherever you are",
+      "title": "A platform designed to adapt to your daily life.",
+      "description": "We know your reality is unique. AutismeCare makes help accessible according to your preferences, so you can move forward at your own pace, wherever you are.",
+      "options": {
+        "remote": {
+          "title": "Remote Consultations",
+          "description": "Secure video calls to support you, whether you're at home, traveling, or in a remote area.",
+          "details": "No more geographical barriers, no more logistical obstacles."
+        },
+        "office": {
+          "title": "Office Consultations",
+          "description": "A warm and professional welcome for those who prefer direct human contact.",
+          "details": "Spaces designed for your comfort, confidentiality, and well-being."
+        },
+        "choice": {
+          "title": "Professional Choice",
+          "description": "You remain in control: find the specialist who suits you and build a solid therapeutic relationship.",
+          "details": "Our platform offers you transparent profiles and support to make the right choice."
+        }
+      }
+    }
+  },
+  "Services": {
+    "hero": {
+      "badge": "Our Services",
+      "headline": "A complete ecosystem of mental health services for adults, children, families, and schools.",
+      "description": "We bring together qualified professionals and specialized programs to support each person at every stage of their journey. Discover how we can support you and your family.",
+      "foundations": {
+        "title": "Our Foundations",
+        "items": [
+          "Qualified experts for every issue.",
+          "Intelligent matching for quick support.",
+          "A simple and reassuring platform to track your journey."
+        ]
+      }
+    },
+    "therapySpectrum": {
+      "badge": "1 · Complete Coverage of Therapeutic Needs",
+      "title": "Services dedicated to adults, children, couples, and families.",
+      "description": "We offer a comprehensive range of mental health services designed to support every member of your family. Each service is delivered by qualified professionals who tailor their approach to your unique needs.",
+      "imageAlt": "Diverse group of people receiving mental health support",
+      "services": {
+        "adult": {
+          "title": "Adult Psychotherapy",
+          "description": "Support for depression, anxiety, post-traumatic stress, obsessive-compulsive disorders, panic disorder, ADHD (assessment & follow-up), emotional management, self-esteem, relationship challenges, and life transition adaptation."
+        },
+        "child": {
+          "title": "Child & Adolescent Psychotherapy",
+          "description": "Targeted interventions for learning difficulties, behavioral disorders, ADHD, anxiety, oppositional defiant disorder, emotional management, social relationships, and self-esteem."
+        },
+        "family": {
+          "title": "Family Therapy",
+          "description": "Understanding dynamics, restoring communication, and building a more harmonious climate to move forward together."
+        },
+        "couple": {
+          "title": "Couple Therapy",
+          "description": "Navigate conflicts, strengthen connection, communicate better, and build a respectful and stable relationship."
+        },
+        "parenting": {
+          "title": "Parental Coaching",
+          "description": "Support to better understand your child's development, manage behavioral challenges, emotions, positive guidance, and continuity between school and home."
+        },
+        "workplace": {
+          "title": "Workplace Mental Health",
+          "description": "Specialized support for burnout, return-to-work transitions, and professional difficulties. We help you navigate work-related stress, rebuild confidence after leave, and develop sustainable strategies for a healthier work-life balance."
+        },
+        "schoolAnxiety": {
+          "title": "School Anxiety Support",
+          "description": "Targeted interventions for children and adolescents experiencing school-related anxiety, including performance anxiety, social fears, school refusal, and transition difficulties. We work with the child, family, and school to create a supportive environment."
+        }
+      }
+    },
+    "programs": {
+      "badge": "WHAT'S INCLUDED",
+      "title": "Comprehensive Mental Health Programs",
+      "subtitle": "Explore the features and benefits of each program. Our integrated approach ensures you receive personalized care tailored to your unique needs.",
+      "imageAlt": "Professional mental health support session",
+      "adult": {
+        "title": "Adult Psychotherapy",
+        "description": "Comprehensive mental health support for adults facing life's challenges. From anxiety and depression to relationship issues and life transitions, our qualified professionals provide personalized therapeutic care.",
+        "highlight": "Personalized treatment plans",
+        "features": [
+          "Individual therapy sessions with licensed psychologists",
+          "Evidence-based treatments (CBT, psychodynamic, humanistic)",
+          "Anxiety, depression, and stress management",
+          "ADHD assessment and ongoing support",
+          "Relationship and self-esteem counseling",
+          "Life transition and adaptation support"
+        ]
+      },
+      "child": {
+        "title": "Child & Adolescent Psychotherapy",
+        "description": "Specialized therapeutic support designed for the unique developmental needs of children and teenagers. We help young people navigate emotional challenges, behavioral difficulties, and developmental transitions.",
+        "highlight": "Age-appropriate interventions",
+        "features": [
+          "Play therapy and age-appropriate techniques",
+          "ADHD evaluation and behavioral strategies",
+          "Anxiety and emotional regulation support",
+          "Social skills development",
+          "School-related difficulties and learning support",
+          "Parent collaboration and guidance"
+        ]
+      },
+      "family": {
+        "title": "Family & Couple Therapy",
+        "description": "Strengthen family bonds and improve communication through guided therapeutic sessions. We help families and couples navigate conflicts, rebuild trust, and create healthier relationship dynamics.",
+        "highlight": "Improved communication",
+        "features": [
+          "Couple therapy and relationship counseling",
+          "Family dynamics assessment and intervention",
+          "Conflict resolution strategies",
+          "Communication skills development",
+          "Blended family support",
+          "Parental coaching and co-parenting guidance"
+        ]
+      },
+      "workplace": {
+        "title": "Workplace Mental Health",
+        "description": "Specialized support for work-related mental health challenges. We help professionals navigate burnout, manage return-to-work transitions, and develop sustainable strategies for career well-being.",
+        "highlight": "Return-to-work support",
+        "features": [
+          "Burnout assessment and recovery planning",
+          "Return-to-work transition support",
+          "Stress and workload management",
+          "Professional identity and confidence rebuilding",
+          "Work-life balance strategies",
+          "Career transition counseling"
+        ]
+      },
+      "schoolAnxiety": {
+        "title": "School Anxiety Support",
+        "description": "Targeted interventions for children and adolescents experiencing school-related anxiety. We work collaboratively with the child, family, and school to create a supportive environment for academic and emotional success.",
+        "highlight": "School-family collaboration",
+        "features": [
+          "Performance anxiety management",
+          "Social anxiety and peer relationship support",
+          "School refusal intervention",
+          "Test anxiety and academic stress coping",
+          "Transition support (new school, grade changes)",
+          "Teacher and school collaboration"
+        ]
+      }
+    },
+    "sentiersProgram": {
+      "badge": "2 · School Component — Sentiers Program",
+      "title": "A space dedicated to children, adolescents, families, and schools.",
+      "description": "The Sentiers program offers comprehensive support that combines clinical expertise, educational tools, and close collaboration with the school environment.",
+      "pillarsTitle": "The Program's Pillars",
+      "pillars": {
+        "assessment": {
+          "title": "Complete School Assessment",
+          "description": "Tests, observations, and analyses to understand the learning profile and specific needs."
+        },
+        "iep": {
+          "title": "Intervention Plans (IEP)",
+          "description": "Collaborative design of individualized plans with clear and measurable objectives."
+        },
+        "collaboration": {
+          "title": "Clinical Analysis & School-Family Collaboration",
+          "description": "An interdisciplinary team working with teachers, administrators, and parents."
+        },
+        "support": {
+          "title": "Individualized Support",
+          "description": "Psychosocial follow-up, parental coaching, ADHD/anxiety/learning guidance, classroom interventions."
+        }
+      },
+      "professionalsTitle": "We Work With",
+      "professionals": [
+        "School Psychologists",
+        "Psychoeducators",
+        "Special Education Technicians (SET)",
+        "Specialized Practitioners"
+      ],
+      "customSupport": "Tailored support to promote success, self-esteem, and well-being for young people, in partnership with their school and family environment.",
+      "networkTitle": "A Coordinated Network",
+      "networkDescription": "School teams, practitioners, family: we work together to implement the best strategies."
+    },
+    "complementaryServices": {
+      "badge": "3 · Complementary Services",
+      "title": "Resources to go further, at your own pace.",
+      "services": {
+        "adhd": {
+          "title": "ADHD Assessment (adult & child)",
+          "description": "Complete process with recommendations, follow-ups, interventions, and adaptation strategies for school, home, and work."
+        },
+        "selfLearning": {
+          "title": "Self-Learning & Educational Resources",
+          "description": "Free access to tools to start your journey: psychoeducation, breathing exercises, guided meditations, issue understanding sheets."
+        },
+        "paidContent": {
+          "title": "Specialized Paid Content",
+          "description": "Thematic programs, specialized videos, workshops, content created by our professionals, podcasts, articles, and capsules to deepen your learning."
+        }
+      },
+      "badge2": "Educational support to complement therapy"
+    },
+    "modelWorks": {
+      "title": "Why Our Model Works",
+      "description": "Whether you're taking the first step or continuing an already started follow-up, AutismeCare offers you a reliable space to move forward.",
+      "reasons": [
+        "Qualified and supervised experts",
+        "A deeply human approach",
+        "Intelligent matching that saves time",
+        "Quick access to relevant services",
+        "Varied offerings for every need",
+        "Total flexibility (online and in-person)",
+        "Educational support to complement therapy",
+        "A simple, reassuring, and secure platform"
+      ]
+    }
+  },
+  "Approaches": {
+    "hero": {
+      "badge": "Our Approaches",
+      "headline": "An approach built around you, by experts who listen and adapt to your reality.",
+      "description": "Every support is unique. We combine a deeply human approach with recognized clinical practices to build a tailored journey, respectful of your story, goals, and pace.",
+      "values": {
+        "title": "What We Stand For",
+        "respect": {
+          "title": "Respect for the Person",
+          "description": "You are at the heart of the process, never in an imposed model."
+        },
+        "rigor": {
+          "title": "Clinical Rigor",
+          "description": "Validated approaches, regulated and continuously updated."
+        },
+        "trust": {
+          "title": "Trust and Safety",
+          "description": "An ethical, confidential, and reassuring framework to move forward."
+        }
+      }
+    },
+    "personCentered": {
+      "badge": "1 · A Person-Centered Approach",
+      "title": "We adapt our support to your needs, not the other way around.",
+      "description": "Every individual has a story, a pace, a sensitivity. Building a tailored therapeutic journey means allowing your voice to be heard, your preferences to be respected, and your pace to be followed, without a prefabricated model.",
+      "note": "Inspired by our personalized journey concept: a unique approach, continuous adjustments, evolving support.",
+      "focus": {
+        "objectives": {
+          "title": "Your Objectives",
+          "description": "Clarify what you want to transform, improve, or consolidate to guide each session."
+        },
+        "issue": {
+          "title": "Your Issue",
+          "description": "We finely analyze your challenges to propose interventions aligned with your reality."
+        },
+        "style": {
+          "title": "Your Relational Style",
+          "description": "We adapt our presence, pace, and language to your way of relating."
+        },
+        "preferences": {
+          "title": "Your Therapeutic Preferences",
+          "description": "We adjust methods, tools, and meeting structure so you feel recognized and respected at every stage."
+        }
+      }
+    },
+    "clinicalApproaches": {
+      "badge": "2 · Recognized and Regulated Approaches",
+      "title": "Validated clinical models, carried by recognized experts.",
+      "description": "Our professionals practice according to scientifically recognized approaches regulated by their professional orders. Each method is specifically chosen for your situation.",
+      "imageAlt": "Therapist and client in a professional consultation setting",
+      "approaches": {
+        "cbt": {
+          "title": "Cognitive-Behavioral Therapies (CBT)",
+          "description": "Proven tools to act on thoughts, behaviors, and emotions that hold you back."
+        },
+        "psychodynamic": {
+          "title": "Psychodynamic Approaches",
+          "description": "Understand your deep dynamics and relational patterns for lasting transformation."
+        },
+        "systemic": {
+          "title": "Systemic Approaches",
+          "description": "Family, couple, groups: intervene on interactions to restore collective balance."
+        },
+        "humanistic": {
+          "title": "Humanistic Approaches",
+          "description": "An authentic, empathetic, and non-judgmental presence to promote your autonomy."
+        },
+        "mindfulness": {
+          "title": "Mindfulness / Mindful Awareness",
+          "description": "Strengthen attention, emotional regulation, and connection to self through guided practices."
+        },
+        "psychoeducation": {
+          "title": "Psychoeducation",
+          "description": "Structured support to understand, equip yourself, and implement adapted strategies."
+        },
+        "neuropsych": {
+          "title": "School and Neuropsychological Interventions",
+          "description": "Assessments, intervention plans, and specialized follow-ups to support educational success."
+        },
+        "coaching": {
+          "title": "Parental Coaching & Specialized Guidance",
+          "description": "Concrete support for ADHD, anxiety, emotional management, oppositional behaviors, etc."
+        }
+      }
+    },
+    "ethics": {
+      "badge": "3 · Ethics and Confidentiality",
+      "title": "We protect your trust, at every moment.",
+      "description": "Confidentiality is not an option, it's our foundation. We designed our platform and processes to ensure maximum protection of your privacy, from the first contact to the closure of your file.",
+      "note": "Each professional is a signatory to specific commitments regarding data protection and benefits from ongoing training on confidentiality.",
+      "commitments": {
+        "ethics": {
+          "title": "Respect for Ethical Rules",
+          "description": "Our practitioners respect the ethical codes of their professional orders and ensure the protection of your dignity."
+        },
+        "law25": {
+          "title": "Compliance with Bill 25",
+          "description": "We apply strict policies for the protection of your personal and sensitive data."
+        },
+        "security": {
+          "title": "Secure Information Management",
+          "description": "Robust technological systems and rigorous internal processes to guarantee confidentiality."
+        },
+        "confidentiality": {
+          "title": "Absolute Confidentiality",
+          "description": "Your journey is protected: exchanges, documents, and follow-ups are strictly confidential."
+        }
+      },
+      "securityHighlights": {
+        "canadianHosting": {
+          "title": "Data Hosted in Canada",
+          "description": "Your data is stored exclusively on Canadian servers, ensuring full data sovereignty and compliance with Canadian privacy laws."
+        },
+        "encryption": {
+          "title": "End-to-End Security",
+          "description": "Bank-level encryption protects all your communications and personal information at every step."
+        }
+      }
+    },
+    "flexibility": {
+      "badge": "4 · Flexibility: Where and When You Want",
+      "title": "Choose the support mode that fits your reality.",
+      "modalities": {
+        "online": {
+          "title": "Online Consultations",
+          "bullets": [
+            "Secure, encrypted video calls, simple to join",
+            "No travel required, ideal for busy schedules",
+            "Accessible everywhere, even in remote areas"
+          ]
+        },
+        "office": {
+          "title": "In-Office Consultations",
+          "bullets": [
+            "In-person meetings in a warm setting",
+            "For those who prefer direct contact",
+            "Spaces designed for confidentiality and comfort"
+          ]
+        }
+      },
+      "extras": {
+        "schedule": "Schedule flexibility",
+        "accessibility": "Accessibility everywhere",
+        "description": "We adjust planning and logistics according to your needs to offer you a smooth and reassuring experience."
+      }
+    },
+    "matching": {
+      "badge": "5 · Intelligent Matching",
+      "title": "The right professional, for the right person, at the right time.",
+      "description": "Our matching process saves time and provides high-quality support. You are connected to a professional who matches your clinical needs, relationship expectations, and daily reality.",
+      "highlight": "A major strength of AutismeCare",
+      "criteriaTitle": "Criteria Analyzed",
+      "criteria": [
+        "Issue and clinical needs",
+        "Desired therapeutic approach",
+        "Age, life cycle and context",
+        "Desired clinical experience",
+        "Personal preferences and availability"
+      ],
+      "steps": [
+        {
+          "title": "In-depth Analysis of Your Request",
+          "description": "We gather key information about your issue, goals, and context."
+        },
+        {
+          "title": "Identification of Matching Criteria",
+          "description": "Desired approach, age, desired clinical experience, personal preferences: we specify each parameter."
+        },
+        {
+          "title": "Selection of the Ideal Professional",
+          "description": "Our platform identifies the person who has the expertise, style, and availability suited to your situation."
+        },
+        {
+          "title": "Continuous Monitoring and Adjustments",
+          "description": "We remain present to ensure the quality of support and adjust if necessary."
+        }
+      ],
+      "stepLabel": "Step"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "badge": "Contact Page",
+      "headline": "We are here to support you.",
+      "description": "Whether you're starting a journey, seeking information, or want to be guided to the right professional, our team is available for you. Every request is handled with respect, confidentiality, and care.",
+      "expectations": {
+        "title": "What You Can Expect",
+        "items": [
+          "Attentive listening and a personalized response.",
+          "Support to clarify your needs.",
+          "Solutions adapted to your reality."
+        ]
+      }
+    },
+    "channels": {
+      "badge": "Contact Us",
+      "title": "An email is enough to start the conversation.",
+      "emailLabel": "Write to Us",
+      "email": "contact@monimpression.com",
+      "inquiries": {
+        "services": {
+          "title": "Services and Approaches",
+          "description": "Understand our services, clinical approaches, and available modalities."
+        },
+        "matching": {
+          "title": "Matching with a Professional",
+          "description": "Identify the person best suited to your issue and preferences."
+        },
+        "sentiers": {
+          "title": "Sentiers Program",
+          "description": "Get information about support dedicated to children, adolescents, and schools."
+        },
+        "support": {
+          "title": "Profile, Billing, and Support",
+          "description": "Create or update your profile, receive administrative help or clarification on billing."
+        }
+      },
+      "responseTime": "We respond to every message promptly and schedule, when needed, an exploratory call to clarify your expectations."
+    },
+    "form": {
+      "badge": "Contact Form",
+      "title": "Do you prefer to write to us differently? Fill out our form.",
+      "description": "Share your needs, questions, and availability. A manager will contact you as soon as possible to ensure personalized follow-up.",
+      "reasons": [
+        "Request an appointment or schedule a first meeting.",
+        "Get detailed information about our approaches and services.",
+        "Clarify your needs, objectives, and the context of your journey.",
+        "Receive help to prepare for your first appointment."
+      ],
+      "guidance": "We will guide you to the right professional and help you prepare well for your first meeting."
+    },
+    "emergency": {
+      "title": "In Case of Emergency",
+      "description": "If you are experiencing an emergency situation, go immediately to the nearest medical center or contact your region's emergency services.",
+      "callToAction": "Call 911 or your local emergency service"
+    },
+    "joinUs": {
+      "badge": "Join Our Team",
+      "title": "You are a professional in mental health? Join our mission.",
+      "description": "Become part of a collaborative platform dedicated to quality care, supported practice, and meaningful client relationships. Together, let's build a more human, accessible, and professional mental health ecosystem.",
+      "highlights": {
+        "matching": {
+          "title": "Intelligent Matching",
+          "description": "Meet clients who match your expertise and intervention style."
+        },
+        "support": {
+          "title": "Administrative Support",
+          "description": "Planning, billing, and follow-up: focus on clinical work, we handle the rest."
+        },
+        "tools": {
+          "title": "Practice Tools & Mentorship",
+          "description": "Access to management tools, mentorship, supervision, and the Je Diversifie program."
+        },
+        "flexibility": {
+          "title": "Flexible Model",
+          "description": "Work according to your availability, online or in office, with constant team support."
+        }
+      }
+    },
+    "support": {
+      "badge": "We're Here to Support You",
+      "title": "Have a question about a service, a consultation, or your profile?",
+      "description": "Our team provides personalized support to guide you through every step of your journey and resolve any doubts or questions.",
+      "areas": {
+        "services": {
+          "title": "Understanding Services",
+          "description": "We help you explore your issue, clarify your needs, and identify appropriate resources."
+        },
+        "consultations": {
+          "title": "How Consultations Work",
+          "description": "Detailed explanations about online or in-office meetings, planning, and follow-ups."
+        },
+        "billing": {
+          "title": "Billing and Payments",
+          "description": "Administrative support for receipts, insurance, payment plans, and reimbursements."
+        }
+      },
+      "contactPrompt": "Use our contact form or write to us directly. We respond quickly and guide you with clarity."
+    }
+  },
+  "Why": {
+    "hero": {
+      "badge": "Why Choose Us",
+      "headline": "Choosing AutismeCare means choosing a human, professional, and structured approach to take care of your mental health.",
+      "description": "Our platform was designed to eliminate obstacles, simplify access to help, and support you at every stage of your journey. We move forward with you, at your pace, so that every interaction is smooth, reassuring, and deeply human.",
+      "subtitle": "An experience built on trust and care"
+    },
+    "reasons": {
+      "badge": "Why Choose Us",
+      "title": "A human, professional, and structured approach to take care of your mental health.",
+      "description": "We eliminate obstacles, simplify access, and support you at every stage. Discover what makes AutismeCare unique.",
+      "timeline": {
+        "personalized": {
+          "id": "01",
+          "title": "A Truly Personalized Journey",
+          "description": "Your story, challenges, and goals are unique. Our intelligent matching identifies the professional best suited to your reality to build an authentic and motivating therapeutic relationship. You journey with someone who truly fits you.",
+          "chips": [
+            "Your issue",
+            "Your clinical needs",
+            "Approach preference (clinical or problem-based)"
+          ]
+        },
+        "qualified": {
+          "id": "02",
+          "title": "Qualified and Supervised Professionals",
+          "description": "Psychologists, psychotherapists, psychoeducators, and other specialists: you are supported by experts whose practice is recognized and rigorously regulated by their professional order.",
+          "chips": [
+            "Clinical competence",
+            "Continuous supervision",
+            "Proven practices"
+          ]
+        },
+        "ethics": {
+          "id": "03",
+          "title": "A Strong Commitment to Ethics and Confidentiality",
+          "description": "Your trust is essential. We apply high privacy protection standards, including Bill 25, to guarantee a safe and respectful space. Your information is protected. Your journey is respected. Your space is secure.",
+          "chips": [
+            "Data protection",
+            "Respect for the journey",
+            "Safe framework"
+          ]
+        }
+      }
+    },
+    "access": {
+      "badge": "Accessible wherever you are, when you need it",
+      "title": "You choose the modality that suits you, we ensure the quality of the experience.",
+      "description": "We eliminate barriers that prevent consultation and simplify your journey through a platform designed for you. You choose the option that suits you best, we support you with the same quality of care.",
+      "modes": {
+        "remote": {
+          "title": "Remote",
+          "description": "Access professional support via secure video calls, no matter where you are — at home, at work, traveling, or in a remote area.",
+          "highlight": "Total flexibility and continuity of follow-ups."
+        },
+        "office": {
+          "title": "In Office",
+          "description": "Enjoy a warm and professional environment for direct contact, if you prefer an in-person approach.",
+          "highlight": "A welcoming, confidential, and serene space."
+        },
+        "walk": {
+          "title": "Walk Therapy",
+          "description": "Experience therapy in motion — walking sessions in nature that combine movement, fresh air, and meaningful conversation.",
+          "highlight": "A refreshing alternative for active minds."
+        }
+      },
+      "platform": {
+        "badge": "A simple, human platform designed for you",
+        "title": "Your journey is smooth, reassuring, and continuously supported.",
+        "highlights": {
+          "navigation": {
+            "title": "Intuitive Navigation",
+            "description": "A clear interface that simplifies every action and guides you effortlessly."
+          },
+          "access": {
+            "title": "Quick Access",
+            "description": "Immediately find relevant services and adapt your journey to your needs."
+          },
+          "support": {
+            "title": "Continuous Support",
+            "description": "Our team is available to support you, answer your questions, and reassure you."
+          }
+        }
+      }
+    },
+    "familySupport": {
+      "badge": "Support for the Whole Family",
+      "title": "Whatever your challenge, we have a professional to help you.",
+      "description": "Adult psychotherapy, family therapy, school assessment, ADHD support, parental support, or psychoeducation: every member of your family can find their place and receive the necessary help.",
+      "coordinated": "A coordinated approach for the whole family.",
+      "imageAlt": "Happy family enjoying a moment together",
+      "services": {
+        "adult": {
+          "title": "Adult Psychotherapy",
+          "description": "Individualized support to navigate your personal and emotional challenges."
+        },
+        "family": {
+          "title": "Family Therapy",
+          "description": "Dialogue spaces to strengthen bonds, ease tensions, and move forward together."
+        },
+        "assessment": {
+          "title": "School and ADHD Assessment",
+          "description": "Complete assessments and action plans adapted to each child's specific needs."
+        },
+        "parenting": {
+          "title": "Parental Support and Psychoeducation",
+          "description": "Concrete tools to support your child's development and your role as a parent."
+        }
+      }
+    },
+    "supportCommitment": {
+      "badge": "A Commitment to Support You Every Step of the Way",
+      "title": "We accompany you from the first contact to the completion of your journey.",
+      "description": "From the moment you write to us to your last session, we ensure your experience is smooth, human, and supported. You are never alone.",
+      "steps": {
+        "contact": {
+          "title": "Initial Contact",
+          "description": "Our team responds quickly and personally to understand your needs and guide you towards the best solution."
+        },
+        "matching": {
+          "title": "Professional Matching",
+          "description": "We connect you with a professional who matches your reality, your preferences, and your objectives."
+        },
+        "followUp": {
+          "title": "Follow-up and Adjustment",
+          "description": "Throughout your journey, we remain available to adjust, answer your questions, and ensure your well-being."
+        }
+      },
+      "goal": "Our goal: that every person feels heard, supported, and accompanied at every stage."
+    }
+  },
+  "Client": {
+    "overview": {
+      "tagline": "Your Wellness Journey",
+      "welcome": "Welcome",
+      "welcomeMessage": "AutismeCare is here to support you, step by step. Everything is designed to make your journey human, caring, and aligned with your needs.",
+      "quote": "You're already moving forward. Continue at your own pace, we're with you.",
+      "todayMission": "Your mission today",
+      "todayMissionText": "Take a moment to breathe deeply, note your state of mind, and explore a self-care tool below.",
+      "requestStatus": {
+        "title": "Request Status",
+        "subtitle": "We're analyzing your profile to identify the best suited professional.",
+        "analyzing": "Under Review",
+        "matched": "Matched",
+        "pending": "Pending",
+        "takenCareBy": "Matching handled by AutismeCare team",
+        "lastUpdate": "Last update:",
+        "nextStep": "Next step:",
+        "nextStepText": "Confirmation of your professional and appointment proposal",
+        "editProfile": "Edit My Profile",
+        "contactTeam": "Contact Matching Team",
+        "changeHistory": "Change History",
+        "by": "By"
+      },
+      "upcomingAppointments": {
+        "title": "Upcoming Appointments",
+        "noAppointments": "No upcoming appointments",
+        "viewAll": "View All Appointments",
+        "with": "with",
+        "requestAppointment": "Request Appointment"
+      },
+      "quickActions": {
+        "title": "Quick Actions",
+        "viewProfile": "View My Profile",
+        "viewProfileDesc": "Update your information and preferences",
+        "manageAppointments": "Manage Appointments",
+        "manageAppointmentsDesc": "View and schedule your sessions",
+        "browseResources": "Browse Resources",
+        "browseResourcesDesc": "Access self-care tools and materials"
+      },
+      "support": {
+        "title": "Support & Help",
+        "email": "Email",
+        "emailDesc": "Write to us for any question or adjustment.",
+        "faq": "FAQ & Help",
+        "faqDesc": "Find answers to frequently asked questions.",
+        "billing": "Billing & Payments",
+        "billingDesc": "Track invoices, receipts, and insurance.",
+        "openFaq": "Open FAQ",
+        "billingCenter": "Billing Center"
+      }
+    },
+    "profile": {
+      "title": "My Profile",
+      "subtitle": "Manage your personal information and preferences",
+      "edit": "Edit",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "incomplete": "Incomplete",
+      "complete": "Complete",
+      "incompleteDesc": "Please complete your profile to help us match you with the right professional.",
+      "completeDesc": "Your profile is complete and ready for professional matching.",
+      "completeSetupTitle": "Complete Your Profile",
+      "completeSetupDesc": "Fill in your information to help us find the best professional for your needs.",
+      "completeNow": "Complete Profile Now",
+      "yes": "Yes",
+      "no": "No",
+      "completeProfile": "Complete Profile",
+      "completeProfileTitle": "Complete Your Profile",
+      "personalInfo": {
+        "title": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "addPhone": "Add",
+        "phonePlaceholder": "Enter phone number",
+        "language": "Preferred Language",
+        "gender": "Gender",
+        "dateOfBirth": "Date of Birth",
+        "location": "Location",
+        "concernedPerson": "Who is concerned?",
+        "myself": "Myself",
+        "myChild": "My child",
+        "myPartner": "My partner",
+        "other": "Other",
+        "years": "years"
+      },
+      "issue": {
+        "title": "Issue & Concern Details",
+        "concernedPerson": "Who is concerned?",
+        "primaryIssue": "Primary Issue",
+        "secondaryIssues": "Secondary Concerns",
+        "description": "Description",
+        "severity": "Severity Level",
+        "duration": "Duration"
+      },
+      "issueDetails": {
+        "title": "Issue & Concern Details",
+        "primaryIssue": "Primary Issue",
+        "secondaryIssues": "Secondary Concerns",
+        "description": "Description",
+        "descriptionPlaceholder": "Tell us more about what brings you here...",
+        "severity": "Severity Level",
+        "mild": "Mild",
+        "moderate": "Moderate",
+        "severe": "Severe",
+        "duration": "Duration",
+        "lessThanMonth": "Less than a month",
+        "oneToThree": "1-3 months",
+        "threeToSix": "3-6 months",
+        "moreThanSix": "More than 6 months"
+      },
+      "preferences": {
+        "title": "Appointment Preferences",
+        "availability": "Availability",
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening",
+        "weekend": "Weekend",
+        "weekends": "Weekends",
+        "Weekday mornings": "Weekday mornings",
+        "Weekday afternoons": "Weekday afternoons",
+        "Weekday evenings": "Weekday evenings",
+        "Weekend mornings": "Weekend mornings",
+        "Weekend afternoons": "Weekend afternoons",
+        "Weekend evenings": "Weekend evenings",
+        "Flexible": "Flexible",
+        "modality": "Preferred Modality",
+        "online": "Online",
+        "inPerson": "In-Person",
+        "both": "Both",
+        "location": "Location",
+        "locationPlaceholder": "City, Province",
+        "notes": "Additional Notes",
+        "notesPlaceholder": "Any preferences for your professional or appointments...",
+        "preferredGender": "Preferred Professional Gender",
+        "preferredAge": "Preferred Age Range",
+        "preferredApproach": "Preferred Therapeutic Approach"
+      },
+      "benefits": {
+        "title": "What You'll Get Access To",
+        "benefit1": "Personalized professional matching based on your needs",
+        "benefit2": "Secure and confidential online sessions",
+        "benefit3": "Access to wellness resources and self-care tools",
+        "benefit4": "Flexible scheduling that fits your life"
+      },
+      "accountInfo": {
+        "title": "Account Information",
+        "userId": "User ID",
+        "role": "Role",
+        "status": "Status",
+        "profileCompleted": "Profile Completed",
+        "memberSince": "Member Since",
+        "lastUpdated": "Last Updated"
+      },
+      "matching": {
+        "title": "Professional Matching",
+        "preferredGender": "Preferred Professional Gender",
+        "noPreference": "No preference",
+        "male": "Male",
+        "female": "Female",
+        "preferredAge": "Preferred Age Range",
+        "any": "Any",
+        "younger": "Younger (25-35)",
+        "middle": "Middle (35-50)",
+        "older": "Older (50+)",
+        "preferredApproach": "Preferred Therapeutic Approach",
+        "approachNote": "We'll match you based on your needs and preferences"
+      },
+      "billing": {
+        "title": "Billing Information",
+        "description": "Add a payment method to confirm your first appointment (no payment will be made until the appointment is confirmed).",
+        "managePayment": "Manage Payment Information",
+        "insurance": "Insurance Information",
+        "insuranceProvider": "Insurance Provider",
+        "policyNumber": "Policy Number",
+        "addInsurance": "Add Insurance Information"
+      }
+    },
+    "profileModal": {
+      "title": "Complete Your Profile",
+      "subtitle": "Help us match you with the right professional",
+      "steps": {
+        "healthBackground": "Health Background",
+        "healthBackgroundDesc": "Medical history and current health",
+        "mentalHealthHistory": "Mental Health History",
+        "mentalHealthHistoryDesc": "Previous therapy and conditions",
+        "currentConcerns": "Current Concerns",
+        "currentConcernsDesc": "Primary issues and symptoms",
+        "symptomsImpact": "Symptoms & Impact",
+        "symptomsImpactDesc": "Daily life effects",
+        "goalsPreferences": "Goals & Preferences",
+        "goalsPreferencesDesc": "Treatment goals and approaches",
+        "appointmentPreferences": "Appointment Preferences",
+        "appointmentPreferencesDesc": "Availability and modality",
+        "emergencyInfo": "Emergency Information",
+        "emergencyInfoDesc": "Contact and crisis plan",
+        "matchingPreferences": "Matching Preferences",
+        "matchingPreferencesDesc": "Professional preferences"
+      },
+      "step1": {
+        "title": "Health Background",
+        "subtitle": "Tell us about your health background",
+        "concernedPerson": "Who is concerned?",
+        "concernedPersonPlaceholder": "e.g., Myself, My child",
+        "medicalConditions": "Medical Conditions",
+        "medicalConditionsDesc": "Select any relevant medical conditions",
+        "currentMedications": "Current Medications",
+        "currentMedicationsPlaceholder": "List medications separated by commas",
+        "allergies": "Allergies",
+        "allergiesPlaceholder": "List allergies separated by commas",
+        "substanceUse": "Substance Use",
+        "substanceUsePlaceholder": "Describe any substance use"
+      },
+      "step2": {
+        "title": "Mental Health History",
+        "subtitle": "Tell us about your mental health background",
+        "previousTherapy": "Previous Therapy Experience",
+        "psychiatricHospitalization": "Psychiatric Hospitalization",
+        "previousTherapyDetails": "Previous Therapy Details",
+        "previousTherapyDetailsPlaceholder": "Describe your previous therapy experience",
+        "currentTreatment": "Current Treatment",
+        "currentTreatmentPlaceholder": "Describe any current treatment",
+        "diagnosedConditions": "Diagnosed Conditions",
+        "diagnosedConditionsDesc": "Select any diagnosed mental health conditions"
+      },
+      "step3": {
+        "title": "Current Concerns",
+        "required": "*",
+        "subtitle": "Describe your current mental health concerns",
+        "primaryIssue": "Primary Issue",
+        "primaryIssuePlaceholder": "What's your main concern?",
+        "secondaryIssues": "Secondary Issues",
+        "secondaryIssuesDesc": "Select any additional concerns",
+        "issueDescription": "Detailed Description",
+        "issueDescriptionPlaceholder": "Provide more details about your concerns",
+        "severity": "Severity Level",
+        "severityPlaceholder": "Select severity",
+        "duration": "Duration",
+        "durationPlaceholder": "How long have you been experiencing this?",
+        "triggeringSituation": "Triggering Situation",
+        "triggeringSituationPlaceholder": "Describe any triggering events"
+      },
+      "step4": {
+        "title": "Symptoms & Impact",
+        "subtitle": "How are your symptoms affecting your daily life?",
+        "symptoms": "Current Symptoms",
+        "symptomsDesc": "Select symptoms you're experiencing",
+        "dailyLifeImpact": "Impact on Daily Life",
+        "dailyLifeImpactPlaceholder": "Describe how this affects your daily life",
+        "sleepQuality": "Sleep Quality",
+        "sleepQualityPlaceholder": "Select sleep quality",
+        "appetiteChanges": "Appetite Changes",
+        "appetiteChangesPlaceholder": "Describe any changes in appetite"
+      },
+      "step5": {
+        "title": "Goals & Preferences",
+        "required": "*",
+        "subtitle": "What are your treatment goals?",
+        "treatmentGoals": "Treatment Goals",
+        "treatmentGoalsDesc": "Select your goals for therapy",
+        "therapyApproach": "Preferred Therapy Approach",
+        "therapyApproachDesc": "Select preferred approaches",
+        "concernsAboutTherapy": "Concerns About Therapy",
+        "concernsAboutTherapyPlaceholder": "Any concerns or questions about therapy?"
+      },
+      "step6": {
+        "title": "Appointment Preferences",
+        "required": "*",
+        "subtitle": "When and how would you like to meet?",
+        "availability": "Availability",
+        "availabilityDesc": "Select your preferred times",
+        "modality": "Preferred Modality",
+        "modalityPlaceholder": "Select modality",
+        "sessionFrequency": "Session Frequency",
+        "sessionFrequencyPlaceholder": "Select frequency",
+        "location": "Preferred Location",
+        "locationPlaceholder": "City or area",
+        "notes": "Additional Notes",
+        "notesPlaceholder": "Any other preferences?"
+      },
+      "step7": {
+        "title": "Emergency Information",
+        "required": "*",
+        "subtitle": "Provide emergency contact information",
+        "emergencyContactName": "Emergency Contact Name",
+        "emergencyContactNamePlaceholder": "Full name",
+        "emergencyContactPhone": "Emergency Contact Phone",
+        "emergencyContactPhonePlaceholder": "Phone number",
+        "emergencyContactRelation": "Relationship",
+        "emergencyContactRelationPlaceholder": "e.g., Spouse, Parent",
+        "crisisPlan": "Crisis Plan",
+        "crisisPlanPlaceholder": "Describe your crisis plan",
+        "suicidalThoughts": "Have you experienced suicidal thoughts?"
+      },
+      "step8": {
+        "title": "Matching Preferences",
+        "subtitle": "Help us find the right professional for you",
+        "preferredGender": "Preferred Professional Gender",
+        "preferredGenderPlaceholder": "Select preference",
+        "preferredAge": "Preferred Age Range",
+        "preferredAgePlaceholder": "Select age range",
+        "languagePreference": "Language Preference",
+        "languagePreferencePlaceholder": "Preferred language",
+        "culturalConsiderations": "Cultural Considerations",
+        "culturalConsiderationsPlaceholder": "Any cultural preferences?"
+      },
+      "preferences": {
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening",
+        "weekend": "Weekend",
+        "weekends": "Weekends"
+      },
+      "buttons": {
+        "back": "Back",
+        "next": "Next",
+        "complete": "Complete Profile",
+        "saveForLater": "Save for Later"
+      }
+    },
+    "appointments": {
+      "title": "My Appointments",
+      "subtitle": "View and manage your therapy sessions",
+      "upcoming": "Upcoming Appointments",
+      "past": "Past Appointments",
+      "cancelled": "Cancelled",
+      "noUpcoming": "No upcoming appointments",
+      "noPast": "No past appointments",
+      "requestNew": "Request New Appointment",
+      "error": "Failed to load appointments",
+      "retry": "Try Again",
+      "confirmCancelTitle": "Cancel Appointment",
+      "confirmCancelMessage": "Are you sure you want to cancel this appointment? This action cannot be undone.",
+      "cancelling": "Cancelling...",
+      "confirmCancel": "Yes, Cancel Appointment",
+      "cancel": "Cancel",
+      "status": {
+        "scheduled": "Scheduled",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "noShow": "No Show",
+        "pending": "Pending Confirmation"
+      },
+      "details": {
+        "professional": "Professional",
+        "date": "Date",
+        "time": "Time",
+        "duration": "Duration",
+        "modality": "Modality",
+        "location": "Location",
+        "notes": "Notes",
+        "amount": "Amount",
+        "paymentStatus": "Payment Status"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "reschedule": "Reschedule",
+        "cancel": "Cancel",
+        "joinSession": "Join Session",
+        "addToCalendar": "Add to Calendar",
+        "getDirections": "Get Directions"
+      },
+      "modality": {
+        "video": "Video Call",
+        "inPerson": "In-Person",
+        "phone": "Phone Call"
+      },
+      "payment": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "refunded": "Refunded"
+      },
+      "minutes": "min",
+      "with": "with"
+    },
+    "library": {
+      "badge": "Resource Library",
+      "title": "Self-Care & Educational Resources",
+      "description": "Access free articles, guided meditations, videos, and programs to support your mental wellness journey. Learn at your own pace.",
+      "searchPlaceholder": "Search resources, topics, or authors...",
+      "freeResources": "Free Resources",
+      "freeOnly": "Free Only",
+      "categories": {
+        "all": "All",
+        "videos": "Videos",
+        "articles": "Articles",
+        "audio": "Audio",
+        "meditations": "Meditations",
+        "guides": "Guides"
+      },
+      "availableResources": "Available Resources",
+      "resourceCount": "resource available",
+      "resourceCountPlural": "resources available",
+      "format": "Format",
+      "free": "Free",
+      "access": "Access",
+      "purchase": "Get Access",
+      "noResults": "No resources match your search. Try adjusting your filters or explore different categories."
+    },
+    "help": {
+      "badge": "Support Center",
+      "title": "How can we help you?",
+      "subtitle": "Find answers, contact our team, or browse our guides to make the most of your experience.",
+      "responseTime": "Typical response time",
+      "averageResponse": "Less than 2 hours during business hours",
+      "searchPlaceholder": "Search for help articles, guides, or topics...",
+      "faqTitle": "Frequently Asked Questions",
+      "results": "questions found",
+      "noResults": "No results found. Try a different search term or contact us directly.",
+      "contactTitle": "Contact Us",
+      "showForm": "Send Message",
+      "hideForm": "Hide Form",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Brief description of your inquiry",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your question or issue in detail...",
+      "priorityLabel": "Priority",
+      "priority": {
+        "low": "Low",
+        "normal": "Normal",
+        "high": "Urgent"
+      },
+      "submitButton": "Send Message",
+      "formSuccess": "Message sent successfully!",
+      "formSuccessDesc": "We will get back to you within 2-4 hours.",
+      "guidesTitle": "Quick Guides",
+      "hoursTitle": "Support Hours",
+      "chat": "Live Chat",
+      "email": "Email Support",
+      "phone": "Phone Support",
+      "emailHours": "24/7",
+      "phoneHours": "Mon-Fri 9am-5pm",
+      "emergencyTitle": "Crisis Support",
+      "importantDesc": "For urgent issues, please contact our support team directly.",
+      "statsTitle": "Your Statistics",
+      "resourcesTitle": "Resources",
+      "importantTitle": "Important Note",
+      "emergencyDesc": "If you are in crisis, please call our emergency hotline immediately."
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your account and preferences",
+      "profile": "Profile",
+      "profileDesc": "Update your personal information and preferences",
+      "notifications": "Notifications",
+      "notificationsDesc": "Configure your notification preferences",
+      "privacy": "Privacy & Security",
+      "privacyDesc": "Manage your security and privacy settings",
+      "billing": "Billing & Payments",
+      "billingDesc": "View your billing history and payment methods",
+      "appearance": "Appearance",
+      "appearanceDesc": "Customize the look and feel",
+      "language": "Language & Region",
+      "languageDesc": "Set your preferred language",
+      "data": "Data & Exports",
+      "dataDesc": "Export your data and manage preferences",
+      "account": "Account",
+      "accountDesc": "Manage your account settings",
+      "dangerZone": "Danger Zone",
+      "dangerZoneDesc": "Irreversible actions",
+      "saved": "Settings saved successfully",
+      "errorSaving": "Error saving settings",
+      "confirmDelete": "Are you sure you want to delete this?",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "edit": "Edit",
+      "view": "View",
+      "download": "Download"
+    },
+    "billing": {
+      "title": "Billing & Payments",
+      "subtitle": "Manage your billing and payment information",
+      "invoiceHistory": "Invoice History",
+      "noInvoices": "No invoices yet",
+      "paymentMethods": "Payment Methods",
+      "addPaymentMethod": "Add Payment Method",
+      "addVisaCard": "Add Visa Card",
+      "addPayPal": "Add PayPal",
+      "paymentMethodsNote": "Add a payment method to pay for your sessions.",
+      "noPaymentMethods": "No payment methods added",
+      "makeDefault": "Make Default",
+      "remove": "Remove",
+      "download": "Download",
+      "invoice": "Invoice",
+      "amount": "Amount",
+      "date": "Date",
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "failed": "Failed",
+        "refunded": "Refunded",
+        "processing": "Processing",
+        "cancelled": "Cancelled",
+        "completed": "Completed"
+      },
+      "paid": "Paid",
+      "pending": "Pending",
+      "failed": "Failed",
+      "refunded": "Refunded",
+      "paidOn": "Paid on",
+      "dueOn": "Due on",
+      "addNew": "Add New",
+      "default": "Default",
+      "cardNumber": "Card Number",
+      "expiryDate": "Expiry Date",
+      "billingAddress": "Billing Address",
+      "saveCard": "Save Card",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "success": "Success",
+      "error": "Error",
+      "saved": "Changes saved successfully",
+      "removed": "Payment method removed",
+      "totalOwed": "Total Owed",
+      "totalPaid": "Total Paid",
+      "hide": "Hide",
+      "show": "Show",
+      "paymentsOwed": "Payments Owed",
+      "paymentHistory": "Payment History",
+      "session": "Session",
+      "invoiceNumber": "Invoice Number",
+      "bankDetails": "Bank Details",
+      "updateBankDetails": "Update Bank Details",
+      "accountNumber": "Account Number",
+      "transitNumber": "Transit Number",
+      "bankDetailsNote": "Payments are deposited within 2-3 business days after session completion.",
+      "receivables": "Receivables",
+      "noReceivables": "No outstanding receivables",
+      "noPaymentHistory": "No payment history",
+      "grossAmount": "Gross Amount",
+      "platformFee": "Platform Fee",
+      "netAmount": "Net Amount",
+      "paidDate": "Paid Date",
+      "downloadInvoice": "Download Invoice",
+      "cancelReason": "Cancellation Reason"
+    }
+  },
+  "Professional": {
+    "overview": {
+      "tagline": "Professional Dashboard"
+    },
+    "help": {
+      "statsTitle": "Your Statistics",
+      "resourcesTitle": "Resources",
+      "importantTitle": "Important Note",
+      "importantDesc": "For urgent issues, please contact our support team directly.",
+      "guidesTitle": "Quick Guides",
+      "hoursTitle": "Support Hours"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your account and preferences",
+      "profile": "Profile",
+      "profileDesc": "Update your personal information and professional details",
+      "notifications": "Notifications",
+      "notificationsDesc": "Configure your notification preferences and alerts",
+      "privacy": "Privacy & Security",
+      "privacyDesc": "Manage your security settings and data privacy",
+      "billing": "Billing & Payments",
+      "billingDesc": "Manage your billing information and payment methods",
+      "appearance": "Appearance",
+      "appearanceDesc": "Customize the look and feel of your dashboard",
+      "language": "Language & Region",
+      "languageDesc": "Set your preferred language and regional settings",
+      "integrations": "Integrations",
+      "integrationsDesc": "Connect third-party apps and tools",
+      "data": "Data & Exports",
+      "dataDesc": "Export your data and manage storage",
+      "account": "Account",
+      "accountDesc": "Manage your account settings and preferences",
+      "dangerZone": "Danger Zone",
+      "dangerZoneDesc": "Irreversible actions that affect your account",
+      "security": "Security",
+      "twoFactor": "Two-Factor Authentication",
+      "twoFactorDesc": "Add an extra layer of security to your account",
+      "changePassword": "Change Password",
+      "sessions": "Active Sessions",
+      "sessionsDesc": "View and manage your active login sessions",
+      "devices": "Trusted Devices",
+      "devicesDesc": "Manage devices that remember your login",
+      "emailNotifications": "Email Notifications",
+      "pushNotifications": "Push Notifications",
+      "smsNotifications": "SMS Notifications",
+      "marketingEmails": "Marketing Emails",
+      "dailyDigest": "Daily Digest",
+      "sessionReminders": "Session Reminders",
+      "appointmentUpdates": "Appointment Updates",
+      "newMessages": "New Messages",
+      "clientRequests": "New Client Requests",
+      "weeklyReports": "Weekly Reports",
+      "saved": "Settings saved successfully",
+      "errorSaving": "Error saving settings",
+      "confirmDelete": "Are you sure you want to delete this?",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "edit": "Edit",
+      "view": "View",
+      "download": "Download"
+    },
+    "billing": {
+      "title": "Billing & Payments",
+      "subtitle": "Manage your billing and payment information",
+      "totalReceivables": "Total Receivables",
+      "totalReceived": "Total Received",
+      "monthlyRevenue": "This Month",
+      "bankDetails": "Bank Details",
+      "accountHolder": "Account Holder",
+      "institution": "Institution",
+      "accountNumber": "Account Number",
+      "transitNumber": "Transit Number",
+      "bankDetailsNote": "Payments are deposited within 2-3 business days after session completion.",
+      "updateBankDetails": "Update Bank Details",
+      "show": "Show",
+      "hide": "Hide",
+      "receivables": "Receivables",
+      "paymentHistory": "Payment History",
+      "noReceivables": "No outstanding receivables",
+      "noPaymentHistory": "No payment history",
+      "session": "Session",
+      "invoiceNumber": "Invoice Number",
+      "grossAmount": "Gross Amount",
+      "platformFee": "Platform Fee",
+      "netAmount": "Net Amount",
+      "paidDate": "Paid Date",
+      "downloadInvoice": "Download Invoice",
+      "cancelReason": "Cancellation Reason",
+      "paymentMethods": "Payment Methods",
+      "addPaymentMethod": "Add Payment Method",
+      "addVisaCard": "Add Visa Card",
+      "addPayPal": "Add PayPal Account",
+      "addBaridiMobe": "Add Baridi Mobe",
+      "paymentMethodsNote": "Choose a payment method to receive your earnings.",
+      "download": "Download",
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "upcoming": "Upcoming",
+        "overdue": "Overdue",
+        "processing": "Processing",
+        "refunded": "Refunded",
+        "cancelled": "Cancelled",
+        "completed": "Completed"
+      }
+    }
+  },
+  "billing": {
+    "title": "Billing & Payments",
+    "subtitle": "Manage your billing and payment information",
+    "totalReceivables": "Total Receivables",
+    "totalReceived": "Total Received",
+    "monthlyRevenue": "This Month",
+    "totalOwed": "Total Owed",
+    "totalPaid": "Total Paid",
+    "paymentsOwed": "Payments Owed",
+    "paymentMethods": "Payment Methods",
+    "addPaymentMethod": "Add Payment Method",
+    "addVisaCard": "Add Visa Card",
+    "addPayPal": "Add PayPal Account",
+    "addBaridiMobe": "Add Baridi Mobe",
+    "paymentMethodsNote": "You can add multiple payment methods for your convenience.",
+    "bankDetails": "Bank Details",
+    "accountHolder": "Account Holder",
+    "institution": "Institution",
+    "accountNumber": "Account Number",
+    "transitNumber": "Transit Number",
+    "bankDetailsNote": "Payments are deposited within 2-3 business days after session completion.",
+    "updateBankDetails": "Update Bank Details",
+    "show": "Show",
+    "hide": "Hide",
+    "receivables": "Receivables",
+    "paymentHistory": "Payment History",
+    "noReceivables": "No outstanding receivables",
+    "noPaymentsOwed": "No payments due at this time",
+    "noPaymentHistory": "No payment history",
+    "session": "Session",
+    "invoiceNumber": "Invoice Number",
+    "amount": "Amount",
+    "grossAmount": "Gross Amount",
+    "platformFee": "Platform Fee",
+    "netAmount": "Net Amount",
+    "paidDate": "Paid Date",
+    "downloadInvoice": "Download Invoice",
+    "downloadReceipt": "Download Receipt",
+    "cancelReason": "Cancellation Reason",
+    "payNow": "Pay Now",
+    "awaitingConfirmation": "Awaiting professional confirmation before payment",
+    "status": {
+      "paid": "Paid",
+      "pending": "Pending",
+      "upcoming": "Upcoming",
+      "overdue": "Overdue",
+      "processing": "Processing",
+      "refunded": "Refunded",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    }
+  }
+}

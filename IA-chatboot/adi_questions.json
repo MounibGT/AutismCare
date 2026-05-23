@@ -1,0 +1,477 @@
+[
+  {
+    "id": 1,
+    "question_en": "Can you describe the child's family structure?",
+    "question_fr": "Pouvez-vous décrire la composition de la famille de l’enfant ?",
+    "question_ar": "هل يمكنك وصف تركيبة عائلة الطفل؟",
+    "category": "family_history",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Normal nuclear family",
+      "Single parent",
+      "Separated parents",
+      "Extended family",
+      "Other"
+    ],
+    "score_map": {
+      "Normal nuclear family": 0,
+      "Single parent": 1,
+      "Separated parents": 1,
+      "Extended family": 0,
+      "Other": 1
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 2,
+    "question_en": "Does the child have brothers or sisters?",
+    "question_fr": "هل لدى الطفل إخوة أو أخوات؟",
+    "question_ar": "A-t-il des frères et sœurs ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 0,
+      "No": 1
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 3,
+    "question_en": "Can you provide the names and ages of the siblings?",
+    "question_fr": "هل يمكنك ذكر أسماء وأعمار الإخوة والأخوات؟",
+    "question_ar": "Pouvez-vous donner les noms et âges de ses frères et sœurs ?",
+    "category": "family_history",
+    "answer_type": "text",
+    "possible_answers": [],
+    "score_map": {},
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 4,
+    "question_en": "Do they all have the same biological parents?",
+    "question_fr": "هل جميع الإخوة لديهم نفس الوالدين البيولوجيين؟",
+    "question_ar": "Ont-ils les mêmes parents biologiques ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 0,
+      "No": 1
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 5,
+    "question_en": "Are any of the children adopted or fostered?",
+    "question_fr": "هل هناك أطفال تم تبنيهم أو احتضانهم في العائلة؟",
+    "question_ar": "Certains enfants ont-ils été adoptés ou accueillis dans la famille ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 1,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 6,
+    "question_en": "Are any of the children from a previous marriage?",
+    "question_fr": "هل هناك أطفال من زواج سابق؟",
+    "question_ar": "Certains enfants sont-ils issus d’un mariage précédent ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 1,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 7,
+    "question_en": "Are there other people living with the child at home?",
+    "question_fr": "هل هناك أشخاص آخرون يعيشون مع الطفل في المنزل؟",
+    "question_ar": "Y a-t-il d'autres personnes qui vivent avec l’enfant à la maison ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 0,
+      "No": 1
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 8,
+    "question_en": "Have any siblings experienced developmental delays?",
+    "question_fr": "هل عانى أحد الإخوة أو الأخوات من تأخر في النمو؟",
+    "question_ar": "Certains frères et sœurs ont-ils eu un retard de développement ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 2,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 9,
+    "question_en": "Have any siblings had developmental problems requiring treatment?",
+    "question_fr": "هل عانى أحد الإخوة أو الأخوات من مشاكل في النمو استدعت علاجًا؟",
+    "question_ar": "Certains frères et sœurs ont-ils eu des problèmes de développement nécessitant un traitement ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 2,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 10,
+    "question_en": "Has either parent had developmental difficulties (such as delayed walking or speaking)?",
+    "question_fr": "هل عانى أحد الوالدين من صعوبات في النمو (مثل تأخر المشي أو الكلام)؟",
+    "question_ar": "L’un des parents a-t-il eu des difficultés de développement (comme retard de marche ou de parole) ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 2,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 11,
+    "question_en": "Has either parent had developmental problems requiring treatment?",
+    "question_fr": "هل عانى أحد الوالدين من مشاكل في النمو استدعت علاجًا؟",
+    "question_ar": "L’un des parents a-t-il eu des problèmes de développement nécessitant un traitement ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 2,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 12,
+    "question_en": "Is there anyone in the family with difficulties similar to the child's?",
+    "question_fr": "هل يوجد شخص في العائلة يعاني من صعوبات مشابهة لصعوبات الطفل؟",
+    "question_ar": "Y a-t-il quelqu’un dans la famille ayant des difficultés similaires à celles de l’enfant ?",
+    "category": "family_history",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 2,
+      "No": 0
+    },
+    "section": "Family History",
+    "description": "Questionnaire for developmental screening (not a diagnostic tool)"
+  },
+  {
+    "id": 60,
+    "question_en": "Can the child organize his/her own play or activities without help?",
+    "question_fr": "Est-ce que l’enfant est capable d’organiser ses propres jeux ou activités sans aide ?",
+    "question_ar": "هل يستطيع الطفل تنظيم لعبه أو أنشطته بدون مساعدة؟",
+    "category": "spontaneous_activity",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Spontaneously engages in varied appropriate activities",
+      "Limited range of initiated activities",
+      "Passive activities only (TV, listening)",
+      "No active or only repetitive/stereotyped activities"
+    ],
+    "score_map": {
+      "Spontaneously engages in varied appropriate activities": 0,
+      "Limited range of initiated activities": 1,
+      "Passive activities only (TV, listening)": 2,
+      "No active or only repetitive/stereotyped activities": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 60,
+    "question_en": "What does the child do when left alone?",
+    "question_fr": "Que fait l’enfant lorsqu’il est laissé seul ?",
+    "question_ar": "ماذا يفعل الطفل عندما يُترك وحده؟",
+    "category": "behavior_observation",
+    "answer_type": "text",
+    "possible_answers": [],
+    "score_map": {},
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 60,
+    "question_en": "What was the behavior at 4–5 years old?",
+    "question_fr": "Quel était le comportement à l’âge de 4 à 5 ans ?",
+    "question_ar": "كيف كان السلوك بين عمر 4 إلى 5 سنوات؟",
+    "category": "developmental_history",
+    "answer_type": "text",
+    "possible_answers": [],
+    "score_map": {},
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 61,
+    "question_en": "Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games?",
+    "question_fr": "Est-ce que l’enfant comprenait des jeux sociaux simples comme « le fermier est dans son pré » ou les rondes enfantines ?",
+    "question_ar": "هل كان الطفل يفهم الألعاب الاجتماعية البسيطة مثل الأناشيد أو الدوائر الغنائية؟",
+    "category": "social_imitation_play",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "Yes": 0,
+      "No": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 61,
+    "question_en": "Did the child participate spontaneously and initiate actions in these games?",
+    "question_fr": "Est-ce que l’enfant participait spontanément et initiait les actions dans ces jeux ?",
+    "question_ar": "هل كان الطفل يشارك تلقائيًا ويبدأ الأفعال في هذه الألعاب؟",
+    "category": "social_initiation",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Initiates and responds normally",
+      "Some participation but limited",
+      "Very limited participation",
+      "No participation"
+    ],
+    "score_map": {
+      "Initiates and responds normally": 0,
+      "Some participation but limited": 1,
+      "Very limited participation": 2,
+      "No participation": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 61,
+    "question_en": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games?",
+    "question_fr": "Est-ce que l’enfant participait à des jeux taquins comme « Je vais t’attraper ! » ou « la bébête qui monte » ?",
+    "question_ar": "هل شارك الطفل في ألعاب المزاح مثل المطاردة أو الدغدغة؟",
+    "category": "interactive_play",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Regular reciprocal play",
+      "Occasional participation",
+      "Minimal participation",
+      "No participation"
+    ],
+    "score_map": {
+      "Regular reciprocal play": 0,
+      "Occasional participation": 1,
+      "Minimal participation": 2,
+      "No participation": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 61,
+    "question_en": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'?",
+    "question_fr": "Est-ce que l’enfant joue à « coucou-caché », aux jeux de tape-mains ou à « Jacques a dit » ?",
+    "question_ar": "هل يلعب الطفل ألعاب مثل الغميضة أو التصفيق أو لعبة 'سايمون يقول'؟",
+    "category": "structured_social_play",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Yes, flexible and reciprocal",
+      "Yes, but limited",
+      "Rarely",
+      "No"
+    ],
+    "score_map": {
+      "Yes, flexible and reciprocal": 0,
+      "Yes, but limited": 1,
+      "Rarely": 2,
+      "No": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 62,
+    "question_en": "What does the child think about other same-age children he does not know?",
+    "question_fr": "Que pense l’enfant des autres enfants du même âge qu’il ne connaît pas ?",
+    "question_ar": "ماذا يفكر الطفل في الأطفال الآخرين من نفس العمر الذين لا يعرفهم؟",
+    "category": "peer_interest",
+    "answer_type": "text",
+    "possible_answers": [],
+    "score_map": {},
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 62,
+    "question_en": "Is the child interested in other children?",
+    "question_fr": "Est-ce que l’enfant est intéressé par les autres enfants ?",
+    "question_ar": "هل يهتم الطفل بالأطفال الآخرين؟",
+    "category": "peer_interest",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Clearly interested and tries to approach",
+      "Interested but no attempts to engage",
+      "Occasional interest",
+      "No interest"
+    ],
+    "score_map": {
+      "Clearly interested and tries to approach": 0,
+      "Interested but no attempts to engage": 1,
+      "Occasional interest": 2,
+      "No interest": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 62,
+    "question_en": "What does the child do when he sees another child in familiar situations?",
+    "question_fr": "Que fait l’enfant lorsqu’il voit un autre enfant dans une situation familière (bus, centre de loisirs, etc.) ?",
+    "question_ar": "ماذا يفعل الطفل عندما يرى طفلاً آخر في أماكن مألوفة؟",
+    "category": "peer_interaction_behavior",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Approaches or tries to interact",
+      "Observes but does not approach",
+      "Rarely notices other children",
+      "No interest at all"
+    ],
+    "score_map": {
+      "Approaches or tries to interact": 0,
+      "Observes but does not approach": 1,
+      "Rarely notices other children": 2,
+      "No interest at all": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 63,
+    "question_en": "What happens when another child approaches the child?",
+    "question_fr": "Que se passe-t-il lorsqu’un autre enfant s’approche de lui ?",
+    "question_ar": "ماذا يحدث عندما يقترب طفل آخر منه؟",
+    "category": "peer_approach_response",
+    "answer_type": "text",
+    "possible_answers": [],
+    "score_map": {},
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 63,
+    "question_en": "Does the child respond differently to siblings or familiar children?",
+    "question_fr": "Est-ce que l’enfant se comporte différemment avec un frère/sœur ou un enfant familier ?",
+    "question_ar": "هل يتصرف الطفل بشكل مختلف مع الإخوة أو الأطفال الذين يعرفهم؟",
+    "category": "familiar_vs_unfamiliar_response",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "Responds normally to peers and tries to interact",
+      "Responds sometimes, mainly with familiar children",
+      "Rare or inconsistent response",
+      "Avoids other children"
+    ],
+    "score_map": {
+      "Responds normally to peers and tries to interact": 0,
+      "Responds sometimes, mainly with familiar children": 1,
+      "Rare or inconsistent response": 2,
+      "Avoids other children": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 63,
+    "question_en": "Does the child actively avoid other children?",
+    "question_fr": "Est-ce que l’enfant évite activement les autres enfants ?",
+    "question_ar": "هل يتجنب الطفل الأطفال الآخرين بشكل نشط؟",
+    "category": "avoidance_behavior",
+    "answer_type": "single_choice",
+    "possible_answers": [
+      "No avoidance",
+      "Occasional avoidance",
+      "Frequent avoidance",
+      "Persistent avoidance"
+    ],
+    "score_map": {
+      "No avoidance": 0,
+      "Occasional avoidance": 1,
+      "Frequent avoidance": 2,
+      "Persistent avoidance": 3
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  },
+  {
+    "id": 1,
+    "question_en": "Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them?",
+    "question_fr": "Est-ce qu’il a une manière particulière de bouger ses mains devant son corps, par exemple se tordre les mains ou les frotter comme s’il les lavait ?",
+    "question_ar": "هل يقوم بحركات خاصة بيديه أمام جسمه مثل لف اليدين أو فركهما كأنه يغسلهما؟",
+    "category": "motor_stereotypies",
+    "answer_type": "yes_no",
+    "possible_answers": [
+      "Yes",
+      "No"
+    ],
+    "score_map": {
+      "No": 0
+    },
+    "section": "Language Regression - Types of Skills Lost",
+    "description": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+  }
+]

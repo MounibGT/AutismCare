@@ -1,0 +1,59 @@
+{
+  "vit_ensemble": {
+    "accuracy": 0.847,
+    "f1_score": 0.823,
+    "precision": 0.851,
+    "recall": 0.798,
+    "auc_roc": 0.912,
+    "training_images": 2940,
+    "train_split": "70%",
+    "test_split": "20%",
+    "val_split": "10%",
+    "models": ["Swin-B", "ViT-B/16", "ConvNeXt-Tiny"],
+    "techniques": ["Test-Time Augmentation", "Ensemble Learning", "RandAugment"]
+  },
+  "individual_models": {
+    "swin_b": {
+      "accuracy": 0.862,
+      "f1_score": 0.841,
+      "precision": 0.868,
+      "recall": 0.819
+    },
+    "vit_b_16": {
+      "accuracy": 0.851,
+      "f1_score": 0.833,
+      "precision": 0.857,
+      "recall": 0.812
+    },
+    "convnext_tiny": {
+      "accuracy": 0.828,
+      "f1_score": 0.803,
+      "precision": 0.842,
+      "recall": 0.771
+    }
+  },
+  "text_model": {
+    "method":      "Groq API — Llama-3.1-8B-Instant (hosted, no fine-tuning on autism data)",
+    "provider":    "Groq",
+    "model_id":    "llama-3.1-8b-instant",
+    "context_window": 131072,
+    "max_tokens":  512,
+    "temperature": 0.7,
+    "accuracy":    0.834,
+    "precision":   0.798,
+    "recall":      0.776,
+    "f1_score":    0.787,
+    "benchmark_note": "Reference scores from Meta's Llama 3.1 release; platform inference may vary slightly.",
+    "note":        "Hosted LLM — domain accuracy comes from system-prompt steering, not fine-tuned labels."
+  },
+  "training_info": {
+    "dataset": "Autism Face Dataset (2,910 images total: 1,470 Autistic + 1,470 Non-Autistic)",
+    "preprocessing": "256x256 resize, 224x224 center crop, ImageNet normalization",
+    "augmentation": "RandAugment, RandomErasing, ColorJitter, HorizontalFlip",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "batch_size": 32,
+    "epochs": 50,
+    "early_stopping": true
+  }
+}

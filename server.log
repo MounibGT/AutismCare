@@ -1,0 +1,4 @@
+Improved ChatBot model loaded successfully from autism_chatbot_improved.joblib
+OPENAI_API_KEY loaded from environment
+ * Serving Flask app 'chatbot_api'
+ * Debug mode: off

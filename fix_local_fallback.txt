@@ -1,0 +1,90 @@
+﻿def local_fallback_answer(question: str):
+    if not local_model_data['loaded']:
+        return None
+    try:
+        # Load sentence model if not already loaded
+        if local_model_data['sentence_model'] is None:
+            from sentence_transformers import SentenceTransformer
+            local_model_data['sentence_model'] = SentenceTransformer('all-MiniLM-L6-v2')
+        
+        query_embedding = local_model_data['sentence_model'].encode(question, convert_to_tensor=True)
+        
+        # Handle dimension mismatch - resize if needed
+        stored_embeddings = local_model_data['embeddings']
+        if query_embedding.shape[1] != stored_embeddings.shape[1]:
+            # If dimensions don't match, we need to adapt
+            # Option 1: Use a different model (but we'll stick with what we have and truncate/pad)
+            from torch.nn.functional import pad
+            if query_embedding.shape[1] > stored_embeddings.shape[1]:
+                # Truncate query embedding
+                query_embedding = query_embedding[:, :stored_embeddings.shape[1]]
+            else:
+                # Pad query embedding
+                diff = stored_embeddings.shape[1] - query_embedding.shape[1]
+                query_embedding = pad(query_embedding, (0, diff))
+        
+        cos_scores = util.cos_sim(query_embedding, stored_embeddings)[0]
+        top_results = torch.topk(cos_scores, k=min(3, cos_scores.size(0)))
+        best_idx = top_results.indices[0].item()
+        best_score = top_results.values[0].item()
+        
+        # Since we don't have answers, we'll return the matched question as response
+        # Or we could look for answers in the RAG system or use a template
+        if best_score >= local_model_data['threshold']:
+            # Return the matched question as a template response
+            matched_question = local_model_data['questions'][best_idx]
+            if isinstance(matched_question, dict):
+                # Extract the English question
+                question_text = matched_question.get('question_en', str(matched_question))
+            else:
+                question_text = str(matched_question)
+            
+            # Create a helpful response based on the question type
+            response = f\"Based on the ADI assessment, regarding '{question_text}': This is an important aspect of autism evaluation. For specific information about this topic, please consult with a healthcare professional or autism specialist who can provide detailed guidance based on a comprehensive assessment.\"
+            
+            return {
+                'response': response,
+                'confidence': float(best_score),
+                'model': 'local-adi-fallback',
+                'sources': ['ADI_LOCAL'],
+                'matched': True
+            }
+        if top_results.indices.size(0) > 1:
+            second_idx = top_results.indices[1].item()
+            second_score = top_results.values[1].item()
+            if second_score >= local_model_data['threshold']:
+                matched_question = local_model_data['questions'][second_idx]
+                if isinstance(matched_question, dict):
+                    question_text = matched_question.get('question_en', str(matched_question))
+                else:
+                    question_text = str(matched_question)
+                
+                response = f\"Based on the ADI assessment, regarding '{question_text}': This relates to important developmental history information. Consult with qualified professionals for personalized guidance.\"
+                
+                return {
+                    'response': response,
+                    'confidence': float(second_score),
+                    'model': 'local-adi-fallback',
+                    'sources': ['ADI_LOCAL'],
+                    'matched': True
+                }
+        
+        # Best match below threshold - still provide helpful information
+        matched_question = local_model_data['questions'][best_idx]
+        if isinstance(matched_question, dict):
+            question_text = matched_question.get('question_en', str(matched_question))
+        else:
+            question_text = str(matched_question)
+        
+        response = f\"While I don't have specific detailed information about '{question_text}' in my immediate knowledge base, this is an relevant topic in autism assessment. For comprehensive information, please refer to professional resources or speak with an autism specialist.\"
+        
+        return {
+            'response': response,
+            'confidence': float(best_score),
+            'model': 'local-adi-fallback',
+            'sources': ['ADI_LOCAL'],
+            'matched': False
+        }
+    except Exception as e:
+        print(f\"Local fallback error: {e}\")
+        return None

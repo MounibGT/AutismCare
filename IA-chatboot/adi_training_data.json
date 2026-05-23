@@ -1,0 +1,1394 @@
+[
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure? Specifically, what about 'Normal nuclear family'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Normal nuclear family': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure? Specifically, what about 'Single parent'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Single parent': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure? Specifically, what about 'Separated parents'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Separated parents': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure? Specifically, what about 'Extended family'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Extended family': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you describe the child's family structure? Specifically, what about 'Other'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Other': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child have brothers or sisters?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child have brothers or sisters? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child have brothers or sisters? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the names and ages of the siblings?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Do they all have the same biological parents?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Do they all have the same biological parents? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Do they all have the same biological parents? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children adopted or fostered?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children adopted or fostered? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children adopted or fostered? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children from a previous marriage?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children from a previous marriage? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are any of the children from a previous marriage? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are there other people living with the child at home?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are there other people living with the child at home? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Are there other people living with the child at home? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings experienced developmental delays?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings experienced developmental delays? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings experienced developmental delays? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings had developmental problems requiring treatment?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings had developmental problems requiring treatment? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Have any siblings had developmental problems requiring treatment? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental difficulties (such as delayed walking or speaking)?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental difficulties (such as delayed walking or speaking)? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental difficulties (such as delayed walking or speaking)? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental problems requiring treatment?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental problems requiring treatment? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Has either parent had developmental problems requiring treatment? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is there anyone in the family with difficulties similar to the child's?"
+      },
+      {
+        "role": "assistant",
+        "content": "Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is there anyone in the family with difficulties similar to the child's? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is there anyone in the family with difficulties similar to the child's? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Questionnaire for developmental screening (not a diagnostic tool)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can the child organize his/her own play or activities without help?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can the child organize his/her own play or activities without help? Specifically, what about 'Spontaneously engages in varied appropriate activities'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Spontaneously engages in varied appropriate activities': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can the child organize his/her own play or activities without help? Specifically, what about 'Limited range of initiated activities'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Limited range of initiated activities': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can the child organize his/her own play or activities without help? Specifically, what about 'Passive activities only (TV, listening)'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Passive activities only (TV, listening)': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Can the child organize his/her own play or activities without help? Specifically, what about 'No active or only repetitive/stereotyped activities'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No active or only repetitive/stereotyped activities': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when left alone?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What was the behavior at 4–5 years old?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child understand simple social games such as 'Farmer in the Dell' or nursery rhymes games? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate spontaneously and initiate actions in these games?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate spontaneously and initiate actions in these games? Specifically, what about 'Initiates and responds normally'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Initiates and responds normally': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate spontaneously and initiate actions in these games? Specifically, what about 'Some participation but limited'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Some participation but limited': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate spontaneously and initiate actions in these games? Specifically, what about 'Very limited participation'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Very limited participation': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate spontaneously and initiate actions in these games? Specifically, what about 'No participation'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No participation': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games? Specifically, what about 'Regular reciprocal play'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Regular reciprocal play': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games? Specifically, what about 'Occasional participation'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Occasional participation': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games? Specifically, what about 'Minimal participation'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Minimal participation': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Did the child participate in teasing games or interactive play such as 'I’m going to catch you!' or tickling games? Specifically, what about 'No participation'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No participation': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'? Specifically, what about 'Yes, flexible and reciprocal'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes, flexible and reciprocal': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'? Specifically, what about 'Yes, but limited'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes, but limited': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'? Specifically, what about 'Rarely'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Rarely': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child play games like peek-a-boo, clapping games, or 'Simon Says'? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child think about other same-age children he does not know?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is the child interested in other children?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is the child interested in other children? Specifically, what about 'Clearly interested and tries to approach'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Clearly interested and tries to approach': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is the child interested in other children? Specifically, what about 'Interested but no attempts to engage'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Interested but no attempts to engage': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is the child interested in other children? Specifically, what about 'Occasional interest'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Occasional interest': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Is the child interested in other children? Specifically, what about 'No interest'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No interest': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when he sees another child in familiar situations?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when he sees another child in familiar situations? Specifically, what about 'Approaches or tries to interact'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Approaches or tries to interact': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when he sees another child in familiar situations? Specifically, what about 'Observes but does not approach'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Observes but does not approach': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when he sees another child in familiar situations? Specifically, what about 'Rarely notices other children'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Rarely notices other children': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What does the child do when he sees another child in familiar situations? Specifically, what about 'No interest at all'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No interest at all': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "What happens when another child approaches the child?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child respond differently to siblings or familiar children?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child respond differently to siblings or familiar children? Specifically, what about 'Responds normally to peers and tries to interact'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Responds normally to peers and tries to interact': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child respond differently to siblings or familiar children? Specifically, what about 'Responds sometimes, mainly with familiar children'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Responds sometimes, mainly with familiar children': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child respond differently to siblings or familiar children? Specifically, what about 'Rare or inconsistent response'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Rare or inconsistent response': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child respond differently to siblings or familiar children? Specifically, what about 'Avoids other children'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Avoids other children': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child actively avoid other children?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child actively avoid other children? Specifically, what about 'No avoidance'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No avoidance': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child actively avoid other children? Specifically, what about 'Occasional avoidance'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Occasional avoidance': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child actively avoid other children? Specifically, what about 'Frequent avoidance'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Frequent avoidance': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child actively avoid other children? Specifically, what about 'Persistent avoidance'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Persistent avoidance': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them?"
+      },
+      {
+        "role": "assistant",
+        "content": "Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them? Specifically, what about 'Yes'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'Yes': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an autism support assistant. You provide helpful, accurate, and compassionate information about autism spectrum disorder, assessment, therapies, and support strategies. Always include appropriate medical disclaimers when discussing diagnosis or treatment."
+      },
+      {
+        "role": "user",
+        "content": "Does the child show any special hand movements in front of the body, such as twisting the hands or rubbing them together as if washing them? Specifically, what about 'No'?"
+      },
+      {
+        "role": "assistant",
+        "content": "Regarding 'No': Assessment of specific language abilities lost for at least 3 months after being previously acquired"
+      }
+    ]
+  }
+]

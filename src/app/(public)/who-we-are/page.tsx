@@ -1,0 +1,24 @@
+import ColorTransition from "@/components/ui/ColorTransition";
+import {
+  AboutHeroSection,
+  AccessibilitySection,
+  CommitmentSection,
+  ExpertiseSection,
+  PersonalizedJourneySection,
+} from "@/components/sections/about";
+
+export default function WhoWeArePage() {
+  return (
+    <main>
+      <AboutHeroSection />
+      <ColorTransition fromColor="accent" toColor="background" />
+      <PersonalizedJourneySection />
+      <ColorTransition fromColor="background" toColor="muted" />
+      <ExpertiseSection />
+      <ColorTransition fromColor="muted" toColor="background" />
+      <AccessibilitySection />
+      <ColorTransition fromColor="background" toColor="accent" />
+      <CommitmentSection />
+    </main>
+  );
+}
