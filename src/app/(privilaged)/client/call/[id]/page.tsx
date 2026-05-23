@@ -176,70 +176,99 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     return pc;
   }, []);
 
-  // Start the call (for caller)
-  const startCall = useCallback(async () => {
-    const stream = await initializeMedia();
-    if (!stream) return;
-    
-    const pc = createPeerConnection(stream);
-    
-    try {
-      const offer = await pc.createOffer();
-      await pc.setLocalDescription(offer);
-      
-      // Send offer to server (in production, this would go to a signaling server)
-      const res = await fetch(`/api/calls/${callId}/offer`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ offer: pc.localDescription }),
-      });
-      
-      const data = await res.json();
-      if (data.answer) {
-        await pc.setRemoteDescription(new RTCSessionDescription(data.answer));
-      }
-      
-      setCallStatus("calling");
-    } catch (err) {
-      console.error("Error starting call:", err);
-    }
-  }, [initializeMedia, createPeerConnection, callId]);
+// Poll for answer after sending offer
+   const pollForAnswer = useCallback(async (pc: RTCPeerConnection, maxAttempts = 30) => {
+     let attempts = 0;
+     while (attempts < maxAttempts) {
+       try {
+         const res = await fetch(`/api/calls/${callId}/offer`, {
+           credentials: "include",
+         });
+         const data = await res.json();
+         
+         if (data.answer) {
+           await pc.setRemoteDescription(new RTCSessionDescription(data.answer));
+           return true;
+         }
+       } catch (err) {
+         console.error("Error polling for answer:", err);
+       }
+       
+       attempts++;
+       await new Promise(resolve => setTimeout(resolve, 1000));
+     }
+     return false;
+   }, [callId]);
 
-  // Answer the call (for receiver)
-  const answerCall = useCallback(async () => {
-    const stream = await initializeMedia();
-    if (!stream) return;
-    
-    const pc = createPeerConnection(stream);
-    
-    try {
-      // Get offer from server
-      const offerRes = await fetch(`/api/calls/${callId}/offer`, {
-        credentials: "include",
-      });
-      const offerData = await offerRes.json();
-      
-      if (offerData.offer) {
-        await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
-        
-        const answer = await pc.createAnswer();
-        await pc.setLocalDescription(answer);
-        
-        // Send answer to server
-        await fetch(`/api/calls/${callId}/answer`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ answer: pc.localDescription }),
-        });
-        
-        setCallStatus("connected");
-      }
-    } catch (err) {
-      console.error("Error answering call:", err);
-    }
-  }, [initializeMedia, createPeerConnection, callId]);
+   // Start the call (for caller)
+   const startCall = useCallback(async () => {
+     const stream = await initializeMedia();
+     if (!stream) return;
+     
+     const pc = createPeerConnection(stream);
+     
+     try {
+       const offer = await pc.createOffer();
+       await pc.setLocalDescription(offer);
+       
+       // Send offer to server
+       await fetch(`/api/calls/${callId}/offer`, {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         credentials: "include",
+         body: JSON.stringify({ offer: pc.localDescription }),
+       });
+       
+       // Poll for answer from receiver
+       setCallStatus("calling");
+       const gotAnswer = await pollForAnswer(pc);
+       
+       if (!gotAnswer) {
+         console.error("No answer received from receiver");
+       }
+     } catch (err) {
+       console.error("Error starting call:", err);
+     }
+   }, [initializeMedia, createPeerConnection, callId, pollForAnswer]);
+
+// Answer the call (for receiver)
+   const answerCall = useCallback(async () => {
+     const stream = await initializeMedia();
+     if (!stream) return;
+     
+     const pc = createPeerConnection(stream);
+     
+     try {
+       // Get offer from server
+       const offerRes = await fetch(`/api/calls/${callId}/offer`, {
+         credentials: "include",
+       });
+       const offerData = await offerRes.json();
+       
+       if (offerData.offer) {
+         await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
+         
+         const answer = await pc.createAnswer();
+         await pc.setLocalDescription(answer);
+         
+         // Send answer to server
+         await fetch(`/api/calls/${callId}/answer`, {
+           method: "POST",
+           headers: { "Content-Type": "application/json" },
+           credentials: "include",
+           body: JSON.stringify({ answer: pc.localDescription }),
+         });
+         
+         // Set connected status - the ontrack handler will also set this when remote stream arrives
+         setCallStatus("connected");
+       } else {
+         console.error("No offer found from caller");
+       }
+     } catch (err) {
+       console.error("Error answering call:", err);
+       setError("Failed to connect to the call. Please try again.");
+     }
+   }, [initializeMedia, createPeerConnection, callId]);
 
   // Toggle mute
   const toggleMute = () => {
@@ -263,34 +292,48 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     }
   };
 
-  // End call
-  const endCall = useCallback(async () => {
-    try {
-      // Stop local stream
-      if (localStreamRef.current) {
-        localStreamRef.current.getTracks().forEach((track) => track.stop());
-      }
-      
-      // Close peer connection
-      if (peerConnectionRef.current) {
-        peerConnectionRef.current.close();
-      }
-      
-      // Update call status on server
-      await fetch(`/api/calls/${callId}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ status: "ended" }),
-      });
-      
-      // Redirect to dashboard
-      router.push("/client/dashboard");
-    } catch (err) {
-      console.error("Error ending call:", err);
-      router.push("/client/dashboard");
-    }
-  }, [callId, router]);
+// Get redirect path based on user role
+   const getRedirectPath = useCallback(async () => {
+     try {
+       const res = await fetch("/api/users/me", { credentials: "include" });
+       const data = await res.json();
+       if (data.role === "professional") return "/professional/dashboard";
+       return "/client/dashboard";
+     } catch {
+       return "/client/dashboard";
+     }
+   }, []);
+
+   // End call
+   const endCall = useCallback(async () => {
+     try {
+       // Stop local stream
+       if (localStreamRef.current) {
+         localStreamRef.current.getTracks().forEach((track) => track.stop());
+       }
+       
+       // Close peer connection
+       if (peerConnectionRef.current) {
+         peerConnectionRef.current.close();
+       }
+       
+       // Update call status on server
+       await fetch(`/api/calls/${callId}`, {
+         method: "PATCH",
+         headers: { "Content-Type": "application/json" },
+         credentials: "include",
+         body: JSON.stringify({ status: "ended" }),
+       });
+       
+       // Redirect to appropriate dashboard
+       const redirectPath = await getRedirectPath();
+       router.push(redirectPath);
+     } catch (err) {
+       console.error("Error ending call:", err);
+       const redirectPath = await getRedirectPath();
+       router.push(redirectPath);
+     }
+   }, [callId, router, getRedirectPath]);
 
   // Auto-start WebRTC when call is accepted (for both caller and receiver)
   const hasAutoConnected = useRef(false);
@@ -301,25 +344,32 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
   startCallRef.current = startCall;
   answerCallRef.current = answerCall;
   
-  useEffect(() => {
-    // Auto-connect when call is accepted - works for both caller and receiver
-    if (callStatus === "accepted" && callInfo && currentUserId && !hasAutoConnected.current) {
-      const isCaller = callInfo.callerId === currentUserId;
-      hasAutoConnected.current = true;
-      
-      if (isCaller) {
-        // Caller: start the call (send offer)
-        setTimeout(() => {
-          startCallRef.current?.();
-        }, 1500);
-      } else {
-        // Receiver (professional): answer the call
-        setTimeout(() => {
-          answerCallRef.current?.();
-        }, 500);
-      }
-    }
-  }, [callStatus, callInfo, currentUserId]);
+useEffect(() => {
+     // Auto-connect when call is accepted - works for both caller and receiver
+     if (callStatus === "accepted" && callInfo && currentUserId && !hasAutoConnected.current) {
+       const isCaller = callInfo.callerId === currentUserId;
+       hasAutoConnected.current = true;
+       
+       if (isCaller) {
+         // Caller: start the call (send offer)
+         setTimeout(() => {
+           startCallRef.current?.();
+         }, 1500);
+       } else {
+         // Receiver (professional): answer the call
+         setTimeout(() => {
+           answerCallRef.current?.();
+         }, 500);
+       }
+     }
+   }, [callStatus, callInfo, currentUserId]);
+
+   // Handle rejected or ended calls
+   useEffect(() => {
+     if (callInfo?.status === "rejected" || callInfo?.status === "ended") {
+       setError(callInfo.status === "rejected" ? "Call was rejected" : "Call has ended");
+     }
+   }, [callInfo?.status]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -341,20 +391,23 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     );
   }
 
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-900">
-        <Card className="max-w-md w-full">
-          <CardContent className="p-6 text-center">
-            <p className="text-red-500 mb-4">{error}</p>
-            <Button onClick={() => router.push("/client/dashboard")}>
-              Return to Dashboard
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
+if (error) {
+     return (
+       <div className="min-h-screen flex items-center justify-center bg-gray-900">
+         <Card className="max-w-md w-full">
+           <CardContent className="p-6 text-center">
+             <p className="text-red-500 mb-4">{error}</p>
+             <Button onClick={async () => {
+               const redirectPath = await getRedirectPath();
+               router.push(redirectPath);
+             }}>
+               Return to Dashboard
+             </Button>
+           </CardContent>
+         </Card>
+       </div>
+     );
+   }
 
   const isCaller = callInfo?.callerId === currentUserId;
   const otherPartyName = isCaller ? callInfo?.receiverName : callInfo?.callerName;
