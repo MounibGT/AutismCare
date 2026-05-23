@@ -108,13 +108,18 @@ export default function IncomingCallNotifier() {
       const data = await response.json();
 
       if (response.ok) {
-        // Navigate to call page - check if current user is professional or client
-        const sessionRes = await fetch("/api/users/me", { credentials: "include" });
+        // Navigate to call page — route based on the caller's actual role
+        const sessionRes = await fetch("/api/users/me", {
+          credentials: "include",
+        });
         const sessionData = await sessionRes.json();
-        
+
         setIncomingCall(null);
-        // Both professionals and clients can use the same call page
-        router.push(`/client/call/${incomingCall.id}`);
+        const callPath =
+          sessionData.role === "professional"
+            ? `/professional/call/${incomingCall.id}`
+            : `/client/call/${incomingCall.id}`;
+        router.push(callPath);
       } else {
         alert(data.error || "Failed to accept call");
       }

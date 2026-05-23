@@ -25,20 +25,22 @@ export default function StatusToggle({ variant = "header" }: StatusToggleProps) 
     fetchCallStatus();
   }, []);
 
-  const fetchCallStatus = async () => {
-    try {
-      const response = await fetch("/api/users/me/call-status");
-      const data = await response.json();
-      if (response.ok) {
-        setIsOnline(data.isOnline || false);
-        setCallStatus(data.callStatus || "offline");
-      }
-    } catch (error) {
-      console.error("Error fetching call status:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+   const fetchCallStatus = async () => {
+     try {
+       const response = await fetch("/api/users/me/call-status", {
+         credentials: 'include',
+       });
+       const data = await response.json();
+       if (response.ok) {
+         setIsOnline(data.isOnline || false);
+         setCallStatus(data.callStatus || "offline");
+       }
+     } catch (error) {
+       console.error("Error fetching call status:", error);
+     } finally {
+       setIsLoading(false);
+     }
+   };
 
   const updateStatus = async (online: boolean, status: string) => {
     try {

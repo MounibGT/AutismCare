@@ -432,10 +432,19 @@ export default function SessionsPage() {
       });
 
       const data = await response.json();
-      
+
       if (response.ok) {
-        // Navigate to call page
-        window.location.href = `/client/call/${data.call.id}`;
+        // Navigate to call page — use role-aware path so professionals
+        // never land on a hardcoded /client/call/ URL
+        const sessionRes = await fetch("/api/users/me", {
+          credentials: "include",
+        });
+        const sessionData = await sessionRes.json();
+        const callPath =
+          sessionData.role === "professional"
+            ? `/professional/call/${data.call.id}`
+            : `/client/call/${data.call.id}`;
+        window.location.href = callPath;
       } else {
         alert(data.error || "Failed to start call. Make sure you're available.");
       }

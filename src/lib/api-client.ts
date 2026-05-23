@@ -22,14 +22,14 @@ class ApiClient {
   ): Promise<T> {
     const { data, ...fetchOptions } = options;
 
-    const config: RequestInit = {
-      ...fetchOptions,
-      credentials: 'include', // Include cookies for session authentication
-      headers: {
-        "Content-Type": "application/json",
-        ...fetchOptions.headers,
-      },
-    };
+     const config: RequestInit = {
+       ...fetchOptions,
+       credentials: 'include', // Include cookies for session authentication
+       headers: {
+         "Content-Type": "application/json",
+         ...fetchOptions.headers,
+       },
+     };
 
     if (data) {
       config.body = JSON.stringify(data);
