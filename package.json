@@ -42,6 +42,8 @@
     "nodemailer": "^7.0.11",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3",
     "stripe": "^19.3.1",
     "tailwind-merge": "^3.4.0"
@@ -53,6 +55,7 @@
     "@types/nodemailer": "^7.0.4",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@types/simple-peer": "^9.11.9",
     "babel-plugin-react-compiler": "1.0.0",
     "baseline-browser-mapping": "^2.9.19",
     "eslint": "^9.39.1",
