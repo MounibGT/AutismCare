@@ -16,13 +16,16 @@ interface CallInfo {
   type: string;
 }
 
-// STUN servers for WebRTC (public free servers)
+// STUN/TURN servers for WebRTC
 const ICE_SERVERS = {
   iceServers: [
-    { urls: "stun:stun.l.google.com:19302" },
-    { urls: "stun:stun1.l.google.com:19302" },
-    { urls: "stun:stun2.l.google.com:19302" },
-    // Free TURN server (may have usage limits - consider getting your own for production)
+    { 
+      urls: "stun:stun.l.google.com:19302" 
+    },
+    { 
+      urls: "stun:stun1.l.google.com:19302" 
+    },
+    // TURN server for NAT/firewall traversal (free public server)
     {
       urls: "turn:openrelay.metered.ca:80",
       username: "openrelayproject",
@@ -53,6 +56,8 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
   const remoteVideoRef = useRef<HTMLVideoElement>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
+  const iceIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const processedCandidatesRef = useRef<Set<string>>(new Set());
 
   // Get current user info
   useEffect(() => {
@@ -84,12 +89,9 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
         if (!isCancelled && data.call) {
           setCallInfo(data.call);
           
-          // Determine if we're the caller or receiver
           const isCaller = data.call.callerId === currentUserId;
           
-          // Check call status - if accepted, update status
           if (data.call.status === "accepted") {
-            // Call was accepted, both parties can now connect
             setCallStatus("accepted");
           } else if (data.call.status === "pending") {
             setCallStatus(isCaller ? "calling" : "waiting");
@@ -113,7 +115,6 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     if (currentUserId) {
       fetchCallInfo();
       
-      // Poll for call status updates every 2 seconds
       const interval = setInterval(() => {
         if (callStatus === "calling" || callStatus === "waiting") {
           fetchCallInfo();
@@ -149,16 +150,58 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     }
   }, []);
 
-// Create WebRTC peer connection
+  // Cleanup function
+  const cleanup = useCallback(() => {
+    if (iceIntervalRef.current) {
+      clearInterval(iceIntervalRef.current);
+      iceIntervalRef.current = null;
+    }
+    if (peerConnectionRef.current) {
+      peerConnectionRef.current.close();
+      peerConnectionRef.current = null;
+    }
+    processedCandidatesRef.current.clear();
+  }, []);
+
+  // Fetch and add ICE candidates from the opposite peer
+  const fetchAndAddIceCandidates = useCallback(async (pc: RTCPeerConnection) => {
+    try {
+      const res = await fetch(`/api/calls/${callId}/ice-candidate`, {
+        credentials: "include",
+      });
+      const data = await res.json();
+      
+      if (data.iceCandidates && data.iceCandidates.length > 0) {
+        for (const candidate of data.iceCandidates) {
+          // Create unique ID to prevent duplicates
+          const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
+          if (!processedCandidatesRef.current.has(candidateId)) {
+            try {
+              await pc.addIceCandidate(new RTCIceCandidate(candidate));
+              processedCandidatesRef.current.add(candidateId);
+            } catch (err) {
+              console.error("Failed to add ICE candidate:", err);
+            }
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Error fetching ICE candidates:", err);
+    }
+  }, [callId]);
+
+  // Create WebRTC peer connection
   const createPeerConnection = useCallback((stream: MediaStream) => {
+    cleanup();
+    
     const pc = new RTCPeerConnection(ICE_SERVERS);
     
-    // Add local tracks to the connection
+    // Add local tracks
     stream.getTracks().forEach((track) => {
       pc.addTrack(track, stream);
     });
     
-    // Handle incoming remote tracks
+    // Handle remote tracks (this is where video appears)
     pc.ontrack = (event) => {
       console.log("Received remote track:", event.streams[0]);
       if (remoteVideoRef.current && event.streams[0]) {
@@ -167,11 +210,10 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
       }
     };
     
-    // Handle ICE candidates
+    // Send ICE candidates as they're generated
     pc.onicecandidate = (event) => {
       if (event.candidate) {
-        console.log("ICE candidate:", event.candidate);
-        // Send ICE candidate to the other peer via server
+        console.log("Sending ICE candidate:", event.candidate);
         fetch(`/api/calls/${callId}/ice-candidate`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -183,169 +225,138 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
       }
     };
     
-    // Track processed candidates to avoid duplicates
-    const processedCandidateIds = new Set<string>();
-    
-    // Poll for ICE candidates from the other peer
-    const pollForIceCandidates = async () => {
-      try {
-        const res = await fetch(`/api/calls/${callId}/ice-candidate`, {
-          credentials: "include",
-        });
-        const data = await res.json();
-        
-        // Add received ICE candidates to the connection
-        if (data.iceCandidates && data.iceCandidates.length > 0) {
-          for (const candidate of data.iceCandidates) {
-            // Create a unique ID for the candidate to track processed ones
-            const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
-            if (!processedCandidateIds.has(candidateId)) {
-              try {
-                await pc.addIceCandidate(new RTCIceCandidate(candidate));
-                processedCandidateIds.add(candidateId);
-              } catch (err) {
-                console.error("Error adding ICE candidate:", err);
-              }
-            }
-          }
-        }
-      } catch (err) {
-        console.error("Error polling for ICE candidates:", err);
-      }
-    };
-    
-    // Start polling for ICE candidates
-    const iceInterval = setInterval(pollForIceCandidates, 1000);
-    
+    // Connection state changes
     pc.onconnectionstatechange = () => {
       console.log("Connection state:", pc.connectionState);
       if (pc.connectionState === "connected") {
         setCallStatus("connected");
       } else if (pc.connectionState === "disconnected" || pc.connectionState === "failed") {
         setCallStatus("disconnected");
-        clearInterval(iceInterval);
       }
     };
     
     peerConnectionRef.current = pc;
     return pc;
-  }, []);
+  }, [callId, cleanup]);
 
-// Poll for answer after sending offer
-   const pollForAnswer = useCallback(async (pc: RTCPeerConnection, maxAttempts = 30) => {
-     let attempts = 0;
-     while (attempts < maxAttempts) {
-       try {
-         const res = await fetch(`/api/calls/${callId}`, {
-           credentials: "include",
-         });
-         const data = await res.json();
-
-         if (data.call && data.call.answer) {
-           await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
-           return true;
-         }
-       } catch (err) {
-         console.error("Error polling for answer:", err);
-       }
-
-       attempts++;
-       await new Promise(resolve => setTimeout(resolve, 1000));
-     }
-     return false;
-   }, [callId]);
-
-   // Wait for ICE gathering to complete
-   const waitForIceGathering = (pc: RTCPeerConnection): Promise<void> => {
-     return new Promise((resolve) => {
-       if (pc.iceGatheringState === "complete") {
-         resolve();
-       } else {
-         const checkState = () => {
-           if (pc.iceGatheringState === "complete") {
-             pc.removeEventListener("icegatheringstatechange", checkState);
-             resolve();
-           }
-         };
-         pc.addEventListener("icegatheringstatechange", checkState);
-         // Timeout after 5 seconds
-         setTimeout(resolve, 5000);
-       }
-     });
-   };
-
-// Start the call (for caller)
-    const startCall = useCallback(async () => {
-      const stream = await initializeMedia();
-      if (!stream) return;
+  // Start the call (for caller)
+  const startCall = useCallback(async () => {
+    const stream = await initializeMedia();
+    if (!stream) return;
+    
+    const pc = createPeerConnection(stream);
+    
+    try {
+      const offer = await pc.createOffer({
+        offerToReceiveAudio: true,
+        offerToReceiveVideo: true,
+      });
+      await pc.setLocalDescription(offer);
       
-      const pc = createPeerConnection(stream);
+      // Send offer to server
+      await fetch(`/api/calls/${callId}/offer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ offer: pc.localDescription }),
+      });
       
-      try {
-        const offer = await pc.createOffer();
-        await pc.setLocalDescription(offer);
-        
-        // Send offer to server
-        await fetch(`/api/calls/${callId}/offer`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ offer: pc.localDescription }),
-        });
-        
-        // Wait for ICE gathering to complete before polling for answer
-        await waitForIceGathering(pc);
-        
-        // Poll for answer from receiver
-        setCallStatus("calling");
-        const gotAnswer = await pollForAnswer(pc);
-        
-        if (!gotAnswer) {
-          console.error("No answer received from receiver");
+      setCallStatus("calling");
+      
+      // Wait for ICE candidates to be gathered and stored before polling for answer
+      // This ensures receiver has our ICE candidates when they answer
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Start ICE candidate polling  
+      iceIntervalRef.current = setInterval(async () => {
+        await fetchAndAddIceCandidates(pc);
+      }, 1000);
+      
+      // Poll for answer
+      let attempts = 0;
+      const maxAttempts = 60;
+      
+      while (attempts < maxAttempts) {
+        try {
+          const res = await fetch(`/api/calls/${callId}`, {
+            credentials: "include",
+          });
+          const data = await res.json();
+          
+          if (data.call && data.call.answer) {
+            await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
+            return;
+          }
+        } catch (err) {
+          console.error("Error polling for answer:", err);
         }
-      } catch (err) {
-        console.error("Error starting call:", err);
+        
+        attempts++;
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
-    }, [initializeMedia, createPeerConnection, callId, pollForAnswer, waitForIceGathering]);
+      
+      if (attempts >= maxAttempts) {
+        setError("Call timed out - no answer received");
+      }
+    } catch (err) {
+      console.error("Error starting call:", err);
+      setError("Failed to start call");
+    }
+  }, [initializeMedia, createPeerConnection, callId, fetchAndAddIceCandidates]);
 
-// Answer the call (for receiver)
-   const answerCall = useCallback(async () => {
-     const stream = await initializeMedia();
-     if (!stream) return;
-     
-     const pc = createPeerConnection(stream);
-     
-     try {
-       // Get offer from server
-       const offerRes = await fetch(`/api/calls/${callId}/offer`, {
-         credentials: "include",
-       });
-       const offerData = await offerRes.json();
-       
-       if (offerData.offer) {
-         await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
-         
-         const answer = await pc.createAnswer();
-         await pc.setLocalDescription(answer);
-         
-         // Send answer to server
-         await fetch(`/api/calls/${callId}/answer`, {
-           method: "POST",
-           headers: { "Content-Type": "application/json" },
-           credentials: "include",
-           body: JSON.stringify({ answer: pc.localDescription }),
-         });
-         
-         // Set connected status - the ontrack handler will also set this when remote stream arrives
-         setCallStatus("connected");
-       } else {
-         console.error("No offer found from caller");
-       }
-     } catch (err) {
-       console.error("Error answering call:", err);
-       setError("Failed to connect to the call. Please try again.");
-     }
-   }, [initializeMedia, createPeerConnection, callId]);
+  // Answer the call (for receiver)
+  const answerCall = useCallback(async () => {
+    const stream = await initializeMedia();
+    if (!stream) return;
+    
+    const pc = createPeerConnection(stream);
+    
+    try {
+      // Get offer from server
+      const offerRes = await fetch(`/api/calls/${callId}/offer`, {
+        credentials: "include",
+      });
+      const offerData = await offerRes.json();
+      
+      if (!offerData.offer) {
+        setError("No offer found from caller");
+        return;
+      }
+      
+      // Set remote description with the offer
+      await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
+      
+      // Wait a moment for ICE candidates to arrive from caller
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Poll for ICE candidates from caller before creating answer
+      for (let i = 0; i < 3; i++) {
+        await fetchAndAddIceCandidates(pc);
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+      
+      // Create answer
+      const answer = await pc.createAnswer();
+      await pc.setLocalDescription(answer);
+      
+      // Send answer to server
+      await fetch(`/api/calls/${callId}/answer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ answer: pc.localDescription }),
+      });
+      
+      // Start ICE candidate polling
+      iceIntervalRef.current = setInterval(async () => {
+        await fetchAndAddIceCandidates(pc);
+      }, 1000);
+      
+    } catch (err) {
+      console.error("Error answering call:", err);
+      setError("Failed to answer call. Please try again.");
+    }
+  }, [initializeMedia, createPeerConnection, callId, fetchAndAddIceCandidates]);
 
   // Toggle mute
   const toggleMute = () => {
@@ -369,96 +380,84 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     }
   };
 
-// Get redirect path based on user role
-   const getRedirectPath = useCallback(async () => {
-     try {
-       const res = await fetch("/api/users/me", { credentials: "include" });
-       const data = await res.json();
-       if (data.role === "professional") return "/professional/dashboard";
-       return "/client/dashboard";
-     } catch {
-       return "/client/dashboard";
-     }
-   }, []);
+  // Get redirect path based on user role
+  const getRedirectPath = useCallback(async () => {
+    try {
+      const res = await fetch("/api/users/me", { credentials: "include" });
+      const data = await res.json();
+      if (data.role === "professional") return "/professional/dashboard";
+      return "/client/dashboard";
+    } catch {
+      return "/client/dashboard";
+    }
+  }, []);
 
-   // End call
-   const endCall = useCallback(async () => {
-     try {
-       // Stop local stream
-       if (localStreamRef.current) {
-         localStreamRef.current.getTracks().forEach((track) => track.stop());
-       }
-       
-       // Close peer connection
-       if (peerConnectionRef.current) {
-         peerConnectionRef.current.close();
-       }
-       
-       // Update call status on server
-       await fetch(`/api/calls/${callId}`, {
-         method: "PATCH",
-         headers: { "Content-Type": "application/json" },
-         credentials: "include",
-         body: JSON.stringify({ status: "ended" }),
-       });
-       
-       // Redirect to appropriate dashboard
-       const redirectPath = await getRedirectPath();
-       router.push(redirectPath);
-     } catch (err) {
-       console.error("Error ending call:", err);
-       const redirectPath = await getRedirectPath();
-       router.push(redirectPath);
-     }
-   }, [callId, router, getRedirectPath]);
+  // End call
+  const endCall = useCallback(async () => {
+    cleanup();
+    
+    try {
+      if (localStreamRef.current) {
+        localStreamRef.current.getTracks().forEach((track) => track.stop());
+      }
+      
+      await fetch(`/api/calls/${callId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ status: "ended" }),
+      });
+    } catch (err) {
+      console.error("Error ending call:", err);
+    }
+    
+    const redirectPath = await getRedirectPath();
+    router.push(redirectPath);
+  }, [callId, router, getRedirectPath, cleanup]);
 
-  // Auto-start WebRTC when call is accepted (for both caller and receiver)
+  // Auto-start WebRTC when call is accepted
   const hasAutoConnected = useRef(false);
   const startCallRef = useRef(startCall);
   const answerCallRef = useRef(answerCall);
   
-  // Keep refs updated
   startCallRef.current = startCall;
   answerCallRef.current = answerCall;
   
-useEffect(() => {
-     // Auto-connect when call is accepted - works for both caller and receiver
-     if (callStatus === "accepted" && callInfo && currentUserId && !hasAutoConnected.current) {
-       const isCaller = callInfo.callerId === currentUserId;
-       hasAutoConnected.current = true;
-       
-       if (isCaller) {
-         // Caller: start the call (send offer)
-         setTimeout(() => {
-           startCallRef.current?.();
-         }, 1500);
-       } else {
-         // Receiver (professional): answer the call
-         setTimeout(() => {
-           answerCallRef.current?.();
-         }, 500);
-       }
-     }
-   }, [callStatus, callInfo, currentUserId]);
+  useEffect(() => {
+    if (callStatus === "accepted" && callInfo && currentUserId && !hasAutoConnected.current) {
+      const isCaller = callInfo.callerId === currentUserId;
+      hasAutoConnected.current = true;
+      
+      if (isCaller) {
+        // Caller: start the call (send offer) - start immediately
+        setTimeout(() => {
+          startCallRef.current?.();
+        }, 300);
+      } else {
+        // Receiver (professional): answer the call - wait for caller to create offer
+        setTimeout(() => {
+          answerCallRef.current?.();
+        }, 2000);
+      }
+    }
+  }, [callStatus, callInfo, currentUserId]);
 
-   // Handle rejected or ended calls
-   useEffect(() => {
-     if (callInfo?.status === "rejected" || callInfo?.status === "ended") {
-       setError(callInfo.status === "rejected" ? "Call was rejected" : "Call has ended");
-     }
-   }, [callInfo?.status]);
+  // Handle rejected or ended calls
+  useEffect(() => {
+    if (callInfo?.status === "rejected" || callInfo?.status === "ended") {
+      setError(callInfo.status === "rejected" ? "Call was rejected" : "Call has ended");
+    }
+  }, [callInfo?.status]);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
+      cleanup();
       if (localStreamRef.current) {
         localStreamRef.current.getTracks().forEach((track) => track.stop());
       }
-      if (peerConnectionRef.current) {
-        peerConnectionRef.current.close();
-      }
     };
-  }, []);
+  }, [cleanup]);
 
   if (isLoading) {
     return (
@@ -468,23 +467,23 @@ useEffect(() => {
     );
   }
 
-if (error) {
-     return (
-       <div className="min-h-screen flex items-center justify-center bg-gray-900">
-         <Card className="max-w-md w-full">
-           <CardContent className="p-6 text-center">
-             <p className="text-red-500 mb-4">{error}</p>
-             <Button onClick={async () => {
-               const redirectPath = await getRedirectPath();
-               router.push(redirectPath);
-             }}>
-               Return to Dashboard
-             </Button>
-           </CardContent>
-         </Card>
-       </div>
-     );
-   }
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <Card className="max-w-md w-full">
+          <CardContent className="p-6 text-center">
+            <p className="text-red-500 mb-4">{error}</p>
+            <Button onClick={async () => {
+              const redirectPath = await getRedirectPath();
+              router.push(redirectPath);
+            }}>
+              Return to Dashboard
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   const isCaller = callInfo?.callerId === currentUserId;
   const otherPartyName = isCaller ? callInfo?.receiverName : callInfo?.callerName;
