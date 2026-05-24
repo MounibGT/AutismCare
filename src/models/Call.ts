@@ -12,10 +12,11 @@ export interface ICall extends Document {
   // WebRTC signaling fields
   offer?: any;
   answer?: any;
-  iceCandidates?: any[];
+  callerIceCandidates?: any[];
+  receiverIceCandidates?: any[];
   startedAt?: Date;
   endedAt?: Date;
-  duration?: number; // in seconds
+  duration?: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -61,11 +62,14 @@ const CallSchema = new Schema<ICall>(
       type: Schema.Types.Mixed,
       default: null,
     },
-    iceCandidates: [
-      {
-        type: Schema.Types.Mixed,
-      },
-    ],
+    callerIceCandidates: {
+      type: [Schema.Types.Mixed],
+      default: [],
+    },
+    receiverIceCandidates: {
+      type: [Schema.Types.Mixed],
+      default: [],
+    },
     startedAt: Date,
     endedAt: Date,
     duration: {

@@ -5,6 +5,7 @@ import Call from "@/models/Call";
 import { authOptions } from "@/lib/auth";
 
 // GET - Get ice candidates for the call (for polling)
+// Returns candidates from the OPPOSITE peer (what we need to add to our connection)
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> },
@@ -17,7 +18,6 @@ export async function GET(
     }
 
     await connectToDatabase();
-
     const { id } = await params;
     const call = await Call.findById(id);
 
@@ -26,15 +26,18 @@ export async function GET(
     }
 
     // Check if user is part of the call
-    if (
-      call.callerId.toString() !== session.user.id &&
-      call.receiverId.toString() !== session.user.id
-    ) {
+    const isCaller = call.callerId.toString() === session.user.id;
+    if (!isCaller && call.receiverId.toString() !== session.user.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Return ice candidates
-    return NextResponse.json({ iceCandidates: call.iceCandidates || [] });
+    // Fetch candidates from the opposite peer
+    // Caller wants receiver's candidates, receiver wants caller's candidates
+    const candidates = isCaller 
+      ? (call.receiverIceCandidates || [])
+      : (call.callerIceCandidates || []);
+
+    return NextResponse.json({ iceCandidates: candidates });
   } catch (error: any) {
     console.error("Get ice candidates error:", error);
     return NextResponse.json({ error: "Failed to get ice candidates" }, { status: 500 });
@@ -44,7 +47,7 @@ export async function GET(
 // POST - Add an ice candidate (for sending ice candidates)
 export async function POST(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string> > }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const session = await getServerSession(authOptions);
@@ -61,7 +64,6 @@ export async function POST(
     }
 
     await connectToDatabase();
-
     const { id } = await params;
     const call = await Call.findById(id);
 
@@ -70,18 +72,19 @@ export async function POST(
     }
 
     // Check if user is part of the call
-    if (
-      call.callerId.toString() !== session.user.id &&
-      call.receiverId.toString() !== session.user.id
-    ) {
+    const isCaller = call.callerId.toString() === session.user.id;
+    if (!isCaller && call.receiverId.toString() !== session.user.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Add ice candidate to the call
-    if (!call.iceCandidates) {
-      call.iceCandidates = [];
+    // Add ice candidate to the appropriate array based on sender
+    if (isCaller) {
+      call.callerIceCandidates = call.callerIceCandidates || [];
+      call.callerIceCandidates.push(candidate);
+    } else {
+      call.receiverIceCandidates = call.receiverIceCandidates || [];
+      call.receiverIceCandidates.push(candidate);
     }
-    call.iceCandidates.push(candidate);
     await call.save();
 
     return NextResponse.json({ success: true });

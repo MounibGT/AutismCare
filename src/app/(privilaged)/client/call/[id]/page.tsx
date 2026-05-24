@@ -22,6 +22,17 @@ const ICE_SERVERS = {
     { urls: "stun:stun.l.google.com:19302" },
     { urls: "stun:stun1.l.google.com:19302" },
     { urls: "stun:stun2.l.google.com:19302" },
+    // Free TURN server (may have usage limits - consider getting your own for production)
+    {
+      urls: "turn:openrelay.metered.ca:80",
+      username: "openrelayproject",
+      credential: "openrelayproject",
+    },
+    {
+      urls: "turn:openrelay.metered.ca:443",
+      username: "openrelayproject",
+      credential: "openrelayproject",
+    },
   ],
 };
 
@@ -138,7 +149,7 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     }
   }, []);
 
-  // Create WebRTC peer connection
+// Create WebRTC peer connection
   const createPeerConnection = useCallback((stream: MediaStream) => {
     const pc = new RTCPeerConnection(ICE_SERVERS);
     
@@ -160,8 +171,51 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     pc.onicecandidate = (event) => {
       if (event.candidate) {
         console.log("ICE candidate:", event.candidate);
+        // Send ICE candidate to the other peer via server
+        fetch(`/api/calls/${callId}/ice-candidate`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ candidate: event.candidate }),
+        }).catch(err => {
+          console.error("Error sending ICE candidate:", err);
+        });
       }
     };
+    
+    // Track processed candidates to avoid duplicates
+    const processedCandidateIds = new Set<string>();
+    
+    // Poll for ICE candidates from the other peer
+    const pollForIceCandidates = async () => {
+      try {
+        const res = await fetch(`/api/calls/${callId}/ice-candidate`, {
+          credentials: "include",
+        });
+        const data = await res.json();
+        
+        // Add received ICE candidates to the connection
+        if (data.iceCandidates && data.iceCandidates.length > 0) {
+          for (const candidate of data.iceCandidates) {
+            // Create a unique ID for the candidate to track processed ones
+            const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
+            if (!processedCandidateIds.has(candidateId)) {
+              try {
+                await pc.addIceCandidate(new RTCIceCandidate(candidate));
+                processedCandidateIds.add(candidateId);
+              } catch (err) {
+                console.error("Error adding ICE candidate:", err);
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Error polling for ICE candidates:", err);
+      }
+    };
+    
+    // Start polling for ICE candidates
+    const iceInterval = setInterval(pollForIceCandidates, 1000);
     
     pc.onconnectionstatechange = () => {
       console.log("Connection state:", pc.connectionState);
@@ -169,6 +223,7 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
         setCallStatus("connected");
       } else if (pc.connectionState === "disconnected" || pc.connectionState === "failed") {
         setCallStatus("disconnected");
+        clearInterval(iceInterval);
       }
     };
     
@@ -181,55 +236,77 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
      let attempts = 0;
      while (attempts < maxAttempts) {
        try {
-         const res = await fetch(`/api/calls/${callId}/offer`, {
+         const res = await fetch(`/api/calls/${callId}`, {
            credentials: "include",
          });
          const data = await res.json();
-         
-         if (data.answer) {
-           await pc.setRemoteDescription(new RTCSessionDescription(data.answer));
+
+         if (data.call && data.call.answer) {
+           await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
            return true;
          }
        } catch (err) {
          console.error("Error polling for answer:", err);
        }
-       
+
        attempts++;
        await new Promise(resolve => setTimeout(resolve, 1000));
      }
      return false;
    }, [callId]);
 
-   // Start the call (for caller)
-   const startCall = useCallback(async () => {
-     const stream = await initializeMedia();
-     if (!stream) return;
-     
-     const pc = createPeerConnection(stream);
-     
-     try {
-       const offer = await pc.createOffer();
-       await pc.setLocalDescription(offer);
-       
-       // Send offer to server
-       await fetch(`/api/calls/${callId}/offer`, {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         credentials: "include",
-         body: JSON.stringify({ offer: pc.localDescription }),
-       });
-       
-       // Poll for answer from receiver
-       setCallStatus("calling");
-       const gotAnswer = await pollForAnswer(pc);
-       
-       if (!gotAnswer) {
-         console.error("No answer received from receiver");
+   // Wait for ICE gathering to complete
+   const waitForIceGathering = (pc: RTCPeerConnection): Promise<void> => {
+     return new Promise((resolve) => {
+       if (pc.iceGatheringState === "complete") {
+         resolve();
+       } else {
+         const checkState = () => {
+           if (pc.iceGatheringState === "complete") {
+             pc.removeEventListener("icegatheringstatechange", checkState);
+             resolve();
+           }
+         };
+         pc.addEventListener("icegatheringstatechange", checkState);
+         // Timeout after 5 seconds
+         setTimeout(resolve, 5000);
        }
-     } catch (err) {
-       console.error("Error starting call:", err);
-     }
-   }, [initializeMedia, createPeerConnection, callId, pollForAnswer]);
+     });
+   };
+
+// Start the call (for caller)
+    const startCall = useCallback(async () => {
+      const stream = await initializeMedia();
+      if (!stream) return;
+      
+      const pc = createPeerConnection(stream);
+      
+      try {
+        const offer = await pc.createOffer();
+        await pc.setLocalDescription(offer);
+        
+        // Send offer to server
+        await fetch(`/api/calls/${callId}/offer`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ offer: pc.localDescription }),
+        });
+        
+        // Wait for ICE gathering to complete before polling for answer
+        await waitForIceGathering(pc);
+        
+        // Poll for answer from receiver
+        setCallStatus("calling");
+        const gotAnswer = await pollForAnswer(pc);
+        
+        if (!gotAnswer) {
+          console.error("No answer received from receiver");
+        }
+      } catch (err) {
+        console.error("Error starting call:", err);
+      }
+    }, [initializeMedia, createPeerConnection, callId, pollForAnswer, waitForIceGathering]);
 
 // Answer the call (for receiver)
    const answerCall = useCallback(async () => {
