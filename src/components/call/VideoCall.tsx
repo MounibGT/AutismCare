@@ -12,8 +12,6 @@ interface VideoCallProps {
 	userName: string;
 }
 
-let SimplePeer: any; // 👈 IMPORTANT (loaded dynamically)
-
 export default function VideoCall({ roomId, userId, userName }: VideoCallProps) {
 	const [localStream, setLocalStream] = useState<MediaStream | null>(null);
 	const [remoteStream, setRemoteStream] = useState<MediaStream | null>(null);
@@ -30,14 +28,10 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 
 	const router = useRouter();
 
-	// Load simple-peer ONLY on client
-	useEffect(() => {
-		const loadPeer = async () => {
-			SimplePeer = (await import('simple-peer')).default;
-		};
-
-		loadPeer();
-	}, []);
+	// Load peer ONLY in browser runtime (NO build-time import)
+	const loadPeer = async () => {
+		return (await import('simple-peer')).default;
+	};
 
 	// Socket connection
 	useEffect(() => {
@@ -63,7 +57,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		});
 
 		socket.on('user-joined', ({ userId: newUserId }) => {
-			createPeer(newUserId, true);
+			void createPeer(newUserId, true);
 		});
 
 		socket.on('user-left', ({ userId }) => {
@@ -84,7 +78,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		});
 	}, [roomId, userId, userName]);
 
-	// Get camera
+	// Get camera/mic
 	useEffect(() => {
 		const getMedia = async () => {
 			try {
@@ -101,7 +95,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 
 				setIsLoading(false);
 			} catch (err) {
-				setError('Camera access denied');
+				setError('Camera / Microphone access denied');
 				setIsLoading(false);
 			}
 		};
@@ -109,9 +103,12 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		getMedia();
 	}, []);
 
+	// CREATE PEER (FIXED - async dynamic import)
 	const createPeer = useCallback(
-		(userId: string, initiator: boolean) => {
-			if (!SimplePeer || !localStream) return;
+		async (userId: string, initiator: boolean) => {
+			if (!localStream) return;
+
+			const SimplePeer = (await import('simple-peer')).default;
 
 			const peer = new SimplePeer({
 				initiator,
@@ -153,6 +150,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		[localStream, roomId]
 	);
 
+	// Cleanup
 	const cleanup = useCallback(() => {
 		peerRef.current?.destroy();
 		peerRef.current = null;
@@ -164,6 +162,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		setIsConnected(false);
 	}, [localStream]);
 
+	// Controls
 	const toggleMute = () => {
 		const audio = localStream?.getAudioTracks()[0];
 		if (audio) {
@@ -186,6 +185,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		router.push('/');
 	};
 
+	// Loading UI
 	if (isLoading) {
 		return (
 			<div className="flex items-center justify-center h-screen">
@@ -195,10 +195,11 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		);
 	}
 
+	// Error UI
 	if (error) {
 		return (
 			<div className="flex items-center justify-center h-screen">
-				<div>
+				<div className="text-center">
 					<X />
 					<p>{error}</p>
 					<Button onClick={endCall}>End Call</Button>
@@ -215,6 +216,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 			{/* Remote Video */}
 			<video ref={remoteVideoRef} autoPlay playsInline className="w-full" />
 
+			{/* Controls */}
 			<div className="flex gap-2 p-4">
 				<Button onClick={toggleMute}>
 					{isMuted ? <MicOff /> : <Mic />}
