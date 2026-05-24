@@ -2,359 +2,232 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import io from 'socket.io-client';
-import SimplePeer from 'simple-peer';
 import { Button } from '@/components/ui/button';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Video, Mic, MicOff, VideoOff, PhoneOff, X } from 'lucide-react';
 
 interface VideoCallProps {
-  roomId: string;
-  userId: string;
-  userName: string;
+	roomId: string;
+	userId: string;
+	userName: string;
 }
 
+let SimplePeer: any; // 👈 IMPORTANT (loaded dynamically)
+
 export default function VideoCall({ roomId, userId, userName }: VideoCallProps) {
-  const [localStream, setLocalStream] = useState<MediaStream | null>(null);
-  const [remoteStream, setRemoteStream] = useState<MediaStream | null>(null);
-  const [isConnected, setIsConnected] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [isVideoOff, setIsVideoOff] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+	const [localStream, setLocalStream] = useState<MediaStream | null>(null);
+	const [remoteStream, setRemoteStream] = useState<MediaStream | null>(null);
+	const [isConnected, setIsConnected] = useState(false);
+	const [isMuted, setIsMuted] = useState(false);
+	const [isVideoOff, setIsVideoOff] = useState(false);
+	const [error, setError] = useState<string | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
 
-  const socketRef = useRef<any>(null);
-  const peerRef = useRef<any>(null);
-  const localVideoRef = useRef<HTMLVideoElement>(null);
-  const remoteVideoRef = useRef<HTMLVideoElement>(null);
+	const socketRef = useRef<any>(null);
+	const peerRef = useRef<any>(null);
+	const localVideoRef = useRef<HTMLVideoElement>(null);
+	const remoteVideoRef = useRef<HTMLVideoElement>(null);
 
-  const router = useRouter();
-  const pathname = usePathname();
-  const [searchParams] = useSearchParams();
+	const router = useRouter();
 
-  // Initialize socket connection
-  useEffect(() => {
-    // Get socket URL from environment or use default
-    const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
-    
-    socketRef.current = io(socketUrl, {
-      transports: ['websocket'],
-    });
+	// Load simple-peer ONLY on client
+	useEffect(() => {
+		const loadPeer = async () => {
+			SimplePeer = (await import('simple-peer')).default;
+		};
 
-    setupSocketListeners();
+		loadPeer();
+	}, []);
 
-    return () => {
-      cleanup();
-      socketRef.current.disconnect();
-    };
-  }, []);
+	// Socket connection
+	useEffect(() => {
+		const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
 
-  // Setup socket event listeners
-  const setupSocketListeners = useCallback(() => {
-    const socket = socketRef.current;
-    
-    socket.on('connect', () => {
-      console.log('Connected to socket server');
-      // Join the room
-      socket.emit('join-room', { roomId, userId, userName });
-    });
+		socketRef.current = io(socketUrl, {
+			transports: ['websocket'],
+		});
 
-    socket.on('user-joined', ({ userId: newUserId, userName: newUserName }) => {
-      console.log(`User joined: ${newUserName}`);
-      // Create peer connection for the new user
-      createPeer(newUserId, true); // true = initiator
-    });
+		setupSocketListeners();
 
-    socket.on('user-left', ({ userId }) => {
-      console.log(`User left: ${userId}`);
-      if (peerRef.current && peerRef.current.userId === userId) {
-        peerRef.current.destroy();
-        peerRef.current = null;
-        setRemoteStream(null);
-        setIsConnected(false);
-      }
-    });
+		return () => {
+			cleanup();
+			socketRef.current?.disconnect();
+		};
+	}, []);
 
-    socket.on('signal', (data) => {
-      if (peerRef.current) {
-        peerRef.current.signal(data.signal);
-      }
-    });
+	const setupSocketListeners = useCallback(() => {
+		const socket = socketRef.current;
 
-    socket.on('error', (err) => {
-      console.error('Socket error:', err);
-      setError(err.message || 'Socket error occurred');
-    });
+		socket.on('connect', () => {
+			socket.emit('join-room', { roomId, userId, userName });
+		});
 
-    socket.on('disconnect', () => {
-      console.log('Disconnected from socket server');
-      setIsConnected(false);
-    });
-  }, [roomId, userId, userName]);
+		socket.on('user-joined', ({ userId: newUserId }) => {
+			createPeer(newUserId, true);
+		});
 
-  // Get user media (camera and microphone)
-  useEffect(() => {
-    const getLocalStream = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: true,
-          audio: true,
-        });
-        setLocalStream(stream);
-        
-        // Set local video element srcObject
-        if (localVideoRef.current) {
-          localVideoRef.current.srcObject = stream;
-        }
-        
-        setIsLoading(false);
-      } catch (err) {
-        console.error('Error accessing media devices:', err);
-        setError('Failed to access camera and microphone');
-        setIsLoading(false);
-      }
-    };
+		socket.on('user-left', ({ userId }) => {
+			if (peerRef.current?.userId === userId) {
+				peerRef.current.destroy();
+				peerRef.current = null;
+				setRemoteStream(null);
+				setIsConnected(false);
+			}
+		});
 
-    getLocalStream();
-  }, []);
+		socket.on('signal', (data) => {
+			peerRef.current?.signal(data.signal);
+		});
 
-  // Create WebRTC peer connection
-  const createPeer = useCallback((userId: string, initiator: boolean) => {
-    if (!localStream) {
-      console.error('Local stream not available');
-      return null;
-    }
+		socket.on('disconnect', () => {
+			setIsConnected(false);
+		});
+	}, [roomId, userId, userName]);
 
-    const peer = new SimplePeer({
-      initiator,
-      stream: localStream,
-      trickle: false,
-    });
+	// Get camera
+	useEffect(() => {
+		const getMedia = async () => {
+			try {
+				const stream = await navigator.mediaDevices.getUserMedia({
+					video: true,
+					audio: true,
+				});
 
-    peer.on('signal', (data: any) => {
-      // Send signal to the other user via socket
-      socketRef.current.emit('signal', {
-        roomId,
-        userId: userId,
-        signal: data,
-      });
-    });
+				setLocalStream(stream);
 
-    peer.on('stream', (stream: MediaStream) => {
-      setRemoteStream(stream);
-      setIsConnected(true);
-      
-      // Set remote video element srcObject
-      if (remoteVideoRef.current) {
-        remoteVideoRef.current.srcObject = stream;
-      }
-    });
+				if (localVideoRef.current) {
+					localVideoRef.current.srcObject = stream;
+				}
 
-    peer.on('close', () => {
-      setIsConnected(false);
-      setRemoteStream(null);
-    });
+				setIsLoading(false);
+			} catch (err) {
+				setError('Camera access denied');
+				setIsLoading(false);
+			}
+		};
 
-    peer.on('error', (err) => {
-      console.error('Peer error:', err);
-      setError('Connection error');
-    });
+		getMedia();
+	}, []);
 
-    // Store userId for cleanup
-    (peer as any).userId = userId;
-    return peer;
-  }, [localStream, roomId, socketRef]);
+	const createPeer = useCallback(
+		(userId: string, initiator: boolean) => {
+			if (!SimplePeer || !localStream) return;
 
-  // Cleanup function
-  const cleanup = useCallback(() => {
-    if (peerRef.current) {
-      peerRef.current.destroy();
-      peerRef.current = null;
-    }
-    if (localStream) {
-      localStream.getTracks().forEach(track => track.stop());
-      setLocalStream(null);
-    }
-    setRemoteStream(null);
-    setIsConnected(false);
-  }, []);
+			const peer = new SimplePeer({
+				initiator,
+				stream: localStream,
+				trickle: false,
+			});
 
-  // Toggle mute/unmute
-  const toggleMute = useCallback(() => {
-    if (!localStream) return;
-    
-    const audioTrack = localStream.getAudioTracks()[0];
-    if (audioTrack) {
-      audioTrack.enabled = !audioTrack.enabled;
-      setIsMuted(!audioTrack.enabled);
-    }
-  }, [localStream]);
+			peer.on('signal', (data: any) => {
+				socketRef.current.emit('signal', {
+					roomId,
+					userId,
+					signal: data,
+				});
+			});
 
-  // Toggle video on/off
-  const toggleVideo = useCallback(() => {
-    if (!localStream) return;
-    
-    const videoTrack = localStream.getVideoTracks()[0];
-    if (videoTrack) {
-      videoTrack.enabled = !videoTrack.enabled;
-      setIsVideoOff(!videoTrack.enabled);
-    }
-  }, [localStream]);
+			peer.on('stream', (stream: MediaStream) => {
+				setRemoteStream(stream);
+				setIsConnected(true);
 
-  // End call
-  const endCall = useCallback(() => {
-    cleanup();
-    // Notify others that we're leaving
-    if (socketRef.current) {
-      socketRef.current.emit('leave-room', { roomId, userId });
-    }
-    // Navigate back or redirect
-    router.push('/');
-  }, [cleanup, router, roomId, userId, socketRef]);
+				if (remoteVideoRef.current) {
+					remoteVideoRef.current.srcObject = stream;
+				}
+			});
 
-  if (isLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary/10 text-primary mb-4">
-            <Video className="h-5 w-5" />
-          </div>
-          <h2 className="text-lg font-medium text-gray-900">Setting up call...</h2>
-          <p className="mt-2 text-sm text-gray-500">
-            Accessing camera and microphone
-          </p>
-        </div>
-      </div>
-    );
-  }
+			peer.on('close', () => {
+				setIsConnected(false);
+				setRemoteStream(null);
+			});
 
-  if (error) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-50/20 text-red-500 mb-4">
-            <X className="h-5 w-5" />
-          </div>
-          <h2 className="text-lg font-medium text-gray-900">Call Error</h2>
-          <p className="mt-2 text-sm text-gray-500">{error}</p>
-          <Button variant="outline" onClick={endCall}>
-            End Call
-          </Button>
-        </div>
-      </div>
-    );
-  }
+			peer.on('error', () => {
+				setError('Connection error');
+			});
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Call Header */}
-      <div className="bg-white shadow-sm">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="flex items-center space-x-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/20 text-primary flex-shrink-0">
-              <Video className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-gray-900">
-                Call in Room {roomId.substring(0, 8)}...
-              </h3>
-              <p className="text-sm text-gray-500">
-                {userName} • {isConnected ? 'Connected' : 'Connecting...'}
-              </p>
-            </div>
-          </div>
-          <Button 
-            variant="destructive" 
-            size="icon" 
-            onClick={endCall}
-            className="p-2"
-          >
-            <PhoneOff className="h-4 w-4" />
-          </Button>
-        </div>
-      </div>
+			(peer as any).userId = userId;
+			peerRef.current = peer;
 
-      {/* Main Call Content */}
-      <div className="flex flex-col items-center pt-6 pb-10">
-        {/* Local Video Preview */}
-        <div className="w-full max-w-2xl mb-6">
-          <div className="relative overflow-hidden rounded-xl bg-gray-200">
-            <video 
-              ref={localVideoRef}
-              autoPlay
-              muted
-              playsInline
-              className="w-full h-64 object-cover"
-            />
-            {!localStream && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/50">
-                <div className="text-center text-white">
-                  <Video className="h-6 w-6 mb-2" />
-                  <p className="text-sm">No video</p>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="mt-2 flex items-center justify-between px-4">
-            <span className="text-sm text-gray-600">Your Video</span>
-            <div className="flex items-center space-x-3">
-              <Button 
-                variant="outline" 
-                size="icon" 
-                onClick={toggleMute}
-                className="p-2"
-                aria-label={isMuted ? 'Unmute' : 'Mute'}
-              >
-                {isMuted ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
-              </Button>
-              <Button 
-                variant="outline" 
-                size="icon" 
-                onClick={toggleVideo}
-                className="p-2"
-                aria-label={isVideoOff ? 'Show Video' : 'Hide Video'}
-              >
-                {isVideoOff ? <VideoOff className="h-4 w-4" /> : <Video className="h-4 w-4" />}
-              </Button>
-            </div>
-          </div>
-        </div>
+			return peer;
+		},
+		[localStream, roomId]
+	);
 
-        {/* Remote Video */}
-        <div className="w-full max-w-2xl">
-          <div className="relative overflow-hidden rounded-xl bg-gray-200">
-            <video 
-              ref={remoteVideoRef}
-              autoPlay
-              playsInline
-              className="w-full h-96 object-cover"
-            />
-            {!remoteStream && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/50">
-                <div className="text-center text-white">
-                  <Video className="h-6 w-6 mb-2" />
-                  <p className="text-sm">Waiting for remote video...</p>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="mt-2 text-center text-sm text-gray-600">
-            {isConnected ? 'Remote Video' : 'Connecting...'}
-          </div>
-        </div>
+	const cleanup = useCallback(() => {
+		peerRef.current?.destroy();
+		peerRef.current = null;
 
-        {/* Connection Status */}
-        {!isConnected && remoteStream && (
-          <div className="mt-4 px-6 py-3 bg-green-50 border border-green-200 rounded-lg">
-            <div className="flex items-center space-x-3">
-              <Video className="h-4 w-4 text-green-600" />
-              <div>
-                <p className="text-sm font-medium text-gray-900">Connected</p>
-                <p className="text-xs text-green-600">Call is active</p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+		localStream?.getTracks().forEach((t) => t.stop());
+
+		setLocalStream(null);
+		setRemoteStream(null);
+		setIsConnected(false);
+	}, [localStream]);
+
+	const toggleMute = () => {
+		const audio = localStream?.getAudioTracks()[0];
+		if (audio) {
+			audio.enabled = !audio.enabled;
+			setIsMuted(!audio.enabled);
+		}
+	};
+
+	const toggleVideo = () => {
+		const video = localStream?.getVideoTracks()[0];
+		if (video) {
+			video.enabled = !video.enabled;
+			setIsVideoOff(!video.enabled);
+		}
+	};
+
+	const endCall = () => {
+		cleanup();
+		socketRef.current?.emit('leave-room', { roomId, userId });
+		router.push('/');
+	};
+
+	if (isLoading) {
+		return (
+			<div className="flex items-center justify-center h-screen">
+				<Video className="animate-pulse" />
+				<p>Setting up call...</p>
+			</div>
+		);
+	}
+
+	if (error) {
+		return (
+			<div className="flex items-center justify-center h-screen">
+				<div>
+					<X />
+					<p>{error}</p>
+					<Button onClick={endCall}>End Call</Button>
+				</div>
+			</div>
+		);
+	}
+
+	return (
+		<div className="h-screen bg-black text-white">
+			{/* Local Video */}
+			<video ref={localVideoRef} autoPlay muted playsInline className="w-1/3" />
+
+			{/* Remote Video */}
+			<video ref={remoteVideoRef} autoPlay playsInline className="w-full" />
+
+			<div className="flex gap-2 p-4">
+				<Button onClick={toggleMute}>
+					{isMuted ? <MicOff /> : <Mic />}
+				</Button>
+
+				<Button onClick={toggleVideo}>
+					{isVideoOff ? <VideoOff /> : <Video />}
+				</Button>
+
+				<Button onClick={endCall}>
+					<PhoneOff />
+				</Button>
+			</div>
+		</div>
+	);
 }
