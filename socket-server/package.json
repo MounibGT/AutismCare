@@ -1,0 +1,19 @@
+{
+  "name": "video-call-socket-server",
+  "version": "1.0.0",
+  "description": "Socket.IO server for video calling feature",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "keywords": ["socket.io", "webrtc", "video-call"],
+  "author": "",
+  "license": "ISC"
+}
