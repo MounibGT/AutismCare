@@ -16,8 +16,7 @@ from flask import Flask, request, jsonify
 
 # ── paths ──────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR   = os.path.dirname(SCRIPT_DIR)
-MODEL_PATH = os.path.join(BASE_DIR, "best_vit_model.pth")
+MODEL_PATH = os.path.join(SCRIPT_DIR, "vit_weights.pth")
 
 # ── model ──────────────────────────────────────────────────────────────
 class FineTunedViT(nn.Module):
@@ -96,6 +95,6 @@ def predict():
 
 if __name__ == "__main__":
     print(f"ViT inference server starting on http://localhost:5001")
-    print(f"Model: best_vit_model.pth ({os.path.getsize(MODEL_PATH) // (1024*1024)} MB)")
+    print(f"Model: vit_weights.pth ({os.path.getsize(MODEL_PATH) // (1024*1024)} MB)")
     print(f"Device: {device}")
     app.run(host="0.0.0.0", port=5001, threaded=True)

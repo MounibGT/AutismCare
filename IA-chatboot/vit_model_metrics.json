@@ -1,0 +1,10 @@
+{
+  "final_accuracy": 0.8571428571428571,
+  "best_accuracy": 0.8571428571428571,
+  "epochs": 5,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "train_samples": 2352,
+  "val_samples": 588,
+  "model_architecture": "Ensemble (Swin-B + ViT-B/16 + ConvNeXt-Tiny)"
+}
