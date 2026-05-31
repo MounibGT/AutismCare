@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import io from 'socket.io-client';
+import io, { Socket } from 'socket.io-client';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { Video, Mic, MicOff, VideoOff, PhoneOff, X } from 'lucide-react';
+import SimplePeer from 'simple-peer';
 
 interface VideoCallProps {
 	roomId: string;
@@ -12,7 +13,16 @@ interface VideoCallProps {
 	userName: string;
 }
 
-export default function VideoCall({ roomId, userId, userName }: VideoCallProps) {
+type SignalData = {
+	signal: SimplePeer.SignalData;
+	from: string;
+};
+
+export default function VideoCall({
+	roomId,
+	userId,
+	userName,
+}: VideoCallProps) {
 	const [localStream, setLocalStream] = useState<MediaStream | null>(null);
 	const [remoteStream, setRemoteStream] = useState<MediaStream | null>(null);
 	const [isConnected, setIsConnected] = useState(false);
@@ -21,64 +31,58 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 	const [error, setError] = useState<string | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 
-	const socketRef = useRef<any>(null);
-	const peerRef = useRef<any>(null);
-	const localVideoRef = useRef<HTMLVideoElement>(null);
-	const remoteVideoRef = useRef<HTMLVideoElement>(null);
+	const socketRef = useRef<Socket | null>(null);
+	const peerRef = useRef<SimplePeer.Instance | null>(null);
+
+	const localVideoRef = useRef<HTMLVideoElement | null>(null);
+	const remoteVideoRef = useRef<HTMLVideoElement | null>(null);
 
 	const router = useRouter();
 
-	// Load peer ONLY in browser runtime (NO build-time import)
-	const loadPeer = async () => {
-		return (await import('simple-peer')).default;
-	};
-
-	// Socket connection
+	// ================= SOCKET =================
 	useEffect(() => {
-		const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
+		const socketUrl =
+			process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
 
-		socketRef.current = io(socketUrl, {
+		const socket = io(socketUrl, {
 			transports: ['websocket'],
 		});
 
-		setupSocketListeners();
-
-		return () => {
-			cleanup();
-			socketRef.current?.disconnect();
-		};
-	}, []);
-
-	const setupSocketListeners = useCallback(() => {
-		const socket = socketRef.current;
+		socketRef.current = socket;
 
 		socket.on('connect', () => {
 			socket.emit('join-room', { roomId, userId, userName });
 		});
 
-		socket.on('user-joined', ({ userId: newUserId }) => {
-			void createPeer(newUserId, true);
+		socket.on('user-joined', async ({ userId: newUserId }: { userId: string }) => {
+			await createPeer(newUserId, true);
 		});
 
-		socket.on('user-left', ({ userId }) => {
-			if (peerRef.current?.userId === userId) {
-				peerRef.current.destroy();
+		socket.on('signal', async (data: SignalData) => {
+			if (peerRef.current) {
+				peerRef.current.signal(data.signal);
+			}
+		});
+
+		socket.on('user-left', ({ userId: leftUserId }: { userId: string }) => {
+			if ((peerRef.current as any)?.userId === leftUserId) {
+				peerRef.current?.destroy();
 				peerRef.current = null;
 				setRemoteStream(null);
 				setIsConnected(false);
 			}
 		});
 
-		socket.on('signal', (data) => {
-			peerRef.current?.signal(data.signal);
-		});
-
 		socket.on('disconnect', () => {
 			setIsConnected(false);
 		});
+
+		return () => {
+			socket.disconnect();
+		};
 	}, [roomId, userId, userName]);
 
-	// Get camera/mic
+	// ================= MEDIA =================
 	useEffect(() => {
 		const getMedia = async () => {
 			try {
@@ -94,7 +98,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 				}
 
 				setIsLoading(false);
-			} catch (err) {
+			} catch {
 				setError('Camera / Microphone access denied');
 				setIsLoading(false);
 			}
@@ -103,23 +107,21 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		getMedia();
 	}, []);
 
-	// CREATE PEER (FIXED - async dynamic import)
+	// ================= PEER =================
 	const createPeer = useCallback(
-		async (userId: string, initiator: boolean) => {
-			if (!localStream) return;
-
-			const SimplePeer = (await import('simple-peer')).default;
+		async (remoteUserId: string, initiator: boolean) => {
+			if (!localStream || !socketRef.current) return;
 
 			const peer = new SimplePeer({
 				initiator,
-				stream: localStream,
 				trickle: false,
+				stream: localStream,
 			});
 
-			peer.on('signal', (data: any) => {
-				socketRef.current.emit('signal', {
+			peer.on('signal', (data) => {
+				socketRef.current?.emit('signal', {
 					roomId,
-					userId,
+					userId: remoteUserId,
 					signal: data,
 				});
 			});
@@ -142,15 +144,14 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 				setError('Connection error');
 			});
 
-			(peer as any).userId = userId;
-			peerRef.current = peer;
+			(peer as any).userId = remoteUserId;
 
-			return peer;
+			peerRef.current = peer;
 		},
 		[localStream, roomId]
 	);
 
-	// Cleanup
+	// ================= CLEANUP =================
 	const cleanup = useCallback(() => {
 		peerRef.current?.destroy();
 		peerRef.current = null;
@@ -162,7 +163,7 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		setIsConnected(false);
 	}, [localStream]);
 
-	// Controls
+	// ================= CONTROLS =================
 	const toggleMute = () => {
 		const audio = localStream?.getAudioTracks()[0];
 		if (audio) {
@@ -185,17 +186,16 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 		router.push('/');
 	};
 
-	// Loading UI
+	// ================= UI =================
 	if (isLoading) {
 		return (
 			<div className="flex items-center justify-center h-screen">
 				<Video className="animate-pulse" />
-				<p>Setting up call...</p>
+				<p className="ml-2">Setting up call...</p>
 			</div>
 		);
 	}
 
-	// Error UI
 	if (error) {
 		return (
 			<div className="flex items-center justify-center h-screen">
@@ -209,15 +209,26 @@ export default function VideoCall({ roomId, userId, userName }: VideoCallProps) 
 	}
 
 	return (
-		<div className="h-screen bg-black text-white">
-			{/* Local Video */}
-			<video ref={localVideoRef} autoPlay muted playsInline className="w-1/3" />
-
+		<div className="h-screen bg-black text-white relative">
 			{/* Remote Video */}
-			<video ref={remoteVideoRef} autoPlay playsInline className="w-full" />
+			<video
+				ref={remoteVideoRef}
+				autoPlay
+				playsInline
+				className="w-full h-full object-cover"
+			/>
+
+			{/* Local Video */}
+			<video
+				ref={localVideoRef}
+				autoPlay
+				muted
+				playsInline
+				className="absolute bottom-4 right-4 w-48 h-32 border rounded-lg"
+			/>
 
 			{/* Controls */}
-			<div className="flex gap-2 p-4">
+			<div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
 				<Button onClick={toggleMute}>
 					{isMuted ? <MicOff /> : <Mic />}
 				</Button>
