@@ -1,22 +1,3 @@
-"""
-Vision Transformer (ViT) Analysis for Autism Screening
-Uses existing trained model files or fallback simulation
-"""
-
-import torch
-import torch.nn as nn
-from torchvision import transforms, models
-from PIL import Image
-import io
-import base64
-import numpy as np
-from typing import Dict, Tuple
-
-"""
-Vision Transformer (ViT) Analysis for Autism Screening
-Uses existing trained model files or fallback simulation
-"""
-
 import torch
 import torch.nn as nn
 from torchvision import transforms, models
@@ -31,7 +12,7 @@ import json
 class ViTAnalyzer:
     def __init__(self):
         self.models = []
-        self.ensemble_weights = []
+        self.ensemble_weights = [0.4, 0.35, 0.25]  # Default weights
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.transform = transforms.Compose([
             transforms.Resize((256, 256)),
@@ -44,7 +25,7 @@ class ViTAnalyzer:
     def _load_metrics(self) -> Dict:
         """Load pre-computed model metrics from training"""
         # These metrics come from your training logs in IA-chatboot/
-        metrics_file = '../IA-chatboot/model_metrics.json'
+        metrics_file = os.path.join(os.path.dirname(__file__), '..', 'IA-chatboot', 'vit_model_metrics.json')
         if os.path.exists(metrics_file):
             with open(metrics_file, 'r') as f:
                 return json.load(f)
@@ -65,7 +46,7 @@ class ViTAnalyzer:
     
     def load_models(self):
         """Load ensemble models from IA-chatboot directory"""
-        model_dir = '../IA-chatboot'
+        model_dir = os.path.join(os.path.dirname(__file__), '..', 'IA-chatboot')
         model_files = [
             os.path.join(model_dir, 'best_ensemble_0.pth'),
             os.path.join(model_dir, 'best_ensemble_1.pth'),
@@ -79,7 +60,7 @@ class ViTAnalyzer:
             if os.path.exists(model_file):
                 try:
                     model_type = model_types[i]
-                    checkpoint = torch.load(model_file, map_location=self.device)
+                    checkpoint = torch.load(model_file, map_location=self.device, weights_only=False)
                     
                     # Create model architecture
                     if model_type == 'swin_b':
@@ -102,14 +83,23 @@ class ViTAnalyzer:
                 except Exception as e:
                     print(f'❌ Error loading {model_file}: {e}')
         
+        # Load ensemble weights from checkpoint
+        ensemble_ckpt_path = os.path.join(model_dir, 'best_ensemble_vit.pth')
+        if os.path.exists(ensemble_ckpt_path):
+            try:
+                ckpt = torch.load(ensemble_ckpt_path, map_location=self.device, weights_only=False)
+                self.ensemble_weights = ckpt.get('ensemble_weights', [0.4, 0.35, 0.25])
+            except Exception as e:
+                print(f'Could not load ensemble weights: {e}')
+        
         # Fallback to single model if ensemble not available
         if loaded_count == 0:
-            single_model_path = '../best_vit_model.pth'
+            single_model_path = os.path.join(model_dir, 'vit_weights.pth')
             if os.path.exists(single_model_path):
                 try:
                     model = models.vit_b_16(weights=None)
                     model.heads.head = nn.Linear(model.heads.head.in_features, 2)
-                    model.load_state_dict(torch.load(single_model_path, map_location=self.device))
+                    model.load_state_dict(torch.load(single_model_path, map_location=self.device, weights_only=False))
                     model = model.to(self.device)
                     model.eval()
                     self.models.append(model)
@@ -118,7 +108,7 @@ class ViTAnalyzer:
                 except Exception as e:
                     print(f'❌ Error loading single model: {e}')
         
-        print(f'📊 Models loaded: {len(self.models)}')
+        print(f'📊 Models loaded: {len(self.models)}, weights: {self.ensemble_weights}')
     
     async def analyze(self, image_base64: str) -> Dict:
         """Analyze image and return autism screening prediction"""
@@ -247,6 +237,6 @@ analyzer = ViTAnalyzer()
 async def analyze_autism_image(image_base64: str) -> Dict:
     """Main entry point for image analysis"""
     global analyzer
-    if analyzer.model is None:
-        analyzer.load_model()
+    if len(analyzer.models) == 0:
+        analyzer.load_models()
     return await analyzer.analyze(image_base64)

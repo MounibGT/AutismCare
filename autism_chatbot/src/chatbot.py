@@ -239,7 +239,7 @@ class AutismChatbot:
         return questions, answers
     
     def train_text_model(self, questions: List[str], answers: List[str], 
-                        epochs: int = 50, batch_size: int = 32, lr: float = 0.001):
+                        epochs: int = 15,atch_size: int = 32, lr: float = 0.001):
         """Train text model for Q&A"""
         print("Training text model...")
         

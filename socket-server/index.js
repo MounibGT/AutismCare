@@ -1,91 +1,104 @@
-const io = require('socket.io')(3001, {
+const express = require("express");
+const http = require("http");
+const { Server } = require("socket.io");
+
+const app = express();
+
+const server = http.createServer(app);
+
+const io = new Server(server, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"]
-  }
+    methods: ["GET", "POST"],
+  },
 });
 
-const users = new Map(); // Map of socketId to user info
-const rooms = new Map(); // Map of roomId to Set of userIds
+const users = new Map();
+const rooms = new Map();
 
-io.on('connection', (socket) => {
-  console.log('User connected:', socket.id);
+io.on("connection", (socket) => {
+  console.log("User connected:", socket.id);
 
-  socket.on('join-room', ({ roomId, userId, userName }) => {
-    console.log(`User ${userName} (${userId}) attempting to join room ${roomId}`);
-    
-    // Store user info
+  socket.on("join-room", ({ roomId, userId, userName }) => {
+    console.log(`User ${userName} (${userId}) joining room ${roomId}`);
+
     users.set(socket.id, { userId, userName, roomId });
-    
-    // Add user to room
+
     if (!rooms.has(roomId)) {
       rooms.set(roomId, new Set());
     }
-    const roomUsers = rooms.get(roomId);
-    roomUsers.add(userId);
-    
-    // Notify others in the room about the new user
-    socket.to(roomId).emit('user-joined', { userId, userName });
-    
-    // Join the socket room
+
+    const existingUsers = Array.from(rooms.get(roomId));
+
+    rooms.get(roomId).add(userId);
+
     socket.join(roomId);
-    
-    console.log(`User ${userName} joined room ${roomId}. Users in room: ${roomUsers.size}`);
+
+    socket.emit("all-users", existingUsers);
+
+    socket.to(roomId).emit("user-joined", { userId, userName });
+
+    console.log(
+      `User ${userName} joined room ${roomId}. Users in room: ${rooms.get(roomId).size}`
+    );
   });
 
-  socket.on('signal', ({ roomId, userId, signal }) => {
-    // Forward signal to others in the room (except sender)
-    socket.to(roomId).emit('signal', { userId, signal });
+  socket.on("signal", ({ roomId, userId, signal, senderUserId }) => {
+    socket.to(roomId).emit("signal", {
+      userId: senderUserId,
+      signal,
+    });
   });
 
-  socket.on('leave-room', ({ roomId, userId }) => {
-    // Remove user from room
+  socket.on("leave-room", ({ roomId, userId }) => {
     if (rooms.has(roomId)) {
       const roomUsers = rooms.get(roomId);
+
       roomUsers.delete(userId);
-      
-      // Notify others in the room
-      socket.to(roomId).emit('user-left', { userId });
-      
-      // Clean up empty rooms
+
+      socket.to(roomId).emit("user-left", { userId });
+
       if (roomUsers.size === 0) {
         rooms.delete(roomId);
       }
     }
-    
-    // Leave the socket room
+
     socket.leave(roomId);
-    
+
+    users.delete(socket.id);
+
     console.log(`User ${userId} left room ${roomId}`);
   });
 
-  socket.on('disconnect', () => {
+  socket.on("disconnect", () => {
     const user = users.get(socket.id);
+
     if (user) {
       const { roomId, userId, userName } = user;
-      
-      // Remove user from room
+
       if (rooms.has(roomId)) {
         const roomUsers = rooms.get(roomId);
+
         roomUsers.delete(userId);
-        
-        // Notify others in the room
-        socket.to(roomId).emit('user-left', { userId });
-        
-        // Clean up empty rooms
+
+        socket.to(roomId).emit("user-left", { userId });
+
         if (roomUsers.size === 0) {
           rooms.delete(roomId);
         }
       }
-      
-      // Remove user from map
+
       users.delete(socket.id);
-      
+
       console.log(`User ${userName} disconnected from room ${roomId}`);
     } else {
-      console.log('User disconnected (no user info):', socket.id);
+      console.log("User disconnected:", socket.id);
     }
   });
 });
 
-console.log('Socket.IO server running on port 3001');
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, () => {
+  console.log(`Socket.IO server running on port ${PORT}`);
+});
