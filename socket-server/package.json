@@ -8,12 +8,18 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
   },
-  "keywords": ["socket.io", "webrtc", "video-call"],
+  "keywords": [
+    "socket.io",
+    "webrtc",
+    "video-call"
+  ],
   "author": "",
   "license": "ISC"
 }
