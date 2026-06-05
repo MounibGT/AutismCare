@@ -1,0 +1,7 @@
+@"
+[phases.install]
+cmds = ["npm install"]
+
+[start]
+cmd = "node index.js"
+"@ | Out-File -FilePath nixpacks.toml -Encoding utf8
