@@ -52,12 +52,13 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
   const [callStatus, setCallStatus] = useState<string>("connecting");
   const [currentUserId, setCurrentUserId] = useState<string>("");
 
-  const localVideoRef = useRef<HTMLVideoElement>(null);
-  const remoteVideoRef = useRef<HTMLVideoElement>(null);
-  const localStreamRef = useRef<MediaStream | null>(null);
-  const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
-  const iceIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const processedCandidatesRef = useRef<Set<string>>(new Set());
+   const localVideoRef = useRef<HTMLVideoElement>(null);
+   const remoteVideoRef = useRef<HTMLVideoElement>(null);
+   const localStreamRef = useRef<MediaStream | null>(null);
+   const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
+   const iceIntervalRef = useRef<NodeJS.Timeout | null>(null);
+   const processedCandidatesRef = useRef<Set<string>>(new Set());
+   const pendingCandidatesRef = useRef<any[]>([]);
 
   // Get current user info
   useEffect(() => {
@@ -163,32 +164,38 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
     processedCandidatesRef.current.clear();
   }, []);
 
-  // Fetch and add ICE candidates from the opposite peer
-  const fetchAndAddIceCandidates = useCallback(async (pc: RTCPeerConnection) => {
-    try {
-      const res = await fetch(`/api/calls/${callId}/ice-candidate`, {
-        credentials: "include",
-      });
-      const data = await res.json();
-      
-      if (data.iceCandidates && data.iceCandidates.length > 0) {
-        for (const candidate of data.iceCandidates) {
-          // Create unique ID to prevent duplicates
-          const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
-          if (!processedCandidatesRef.current.has(candidateId)) {
-            try {
-              await pc.addIceCandidate(new RTCIceCandidate(candidate));
-              processedCandidatesRef.current.add(candidateId);
-            } catch (err) {
-              console.error("Failed to add ICE candidate:", err);
-            }
-          }
-        }
-      }
-    } catch (err) {
-      console.error("Error fetching ICE candidates:", err);
-    }
-  }, [callId]);
+   // Fetch and add ICE candidates from the opposite peer
+   const fetchAndAddIceCandidates = useCallback(async (pc: RTCPeerConnection) => {
+     try {
+       const res = await fetch(`/api/calls/${callId}/ice-candidate`, {
+         credentials: "include",
+       });
+       const data = await res.json();
+       
+       if (data.iceCandidates && data.iceCandidates.length > 0) {
+         for (const candidate of data.iceCandidates) {
+           // Create unique ID to prevent duplicates
+           const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
+           if (!processedCandidatesRef.current.has(candidateId)) {
+             try {
+               // CRITICAL: Check if remoteDescription is set before adding ICE candidate
+               if (!pc.remoteDescription) {
+                 pendingCandidatesRef.current.push(candidate);
+                 return;
+               }
+               
+               await pc.addIceCandidate(new RTCIceCandidate(candidate));
+               processedCandidatesRef.current.add(candidateId);
+             } catch (err) {
+               console.error("Failed to add ICE candidate:", err);
+             }
+           }
+         }
+       }
+     } catch (err) {
+       console.error("Error fetching ICE candidates:", err);
+     }
+   }, [callId]);
 
   // Create WebRTC peer connection
   const createPeerConnection = useCallback((stream: MediaStream) => {
@@ -283,10 +290,16 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
           });
           const data = await res.json();
           
-          if (data.call && data.call.answer) {
-            await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
-            return;
-          }
+           if (data.call && data.call.answer) {
+             await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
+             
+             // Flush any pending ICE candidates that were received before remoteDescription was set
+             for (const c of pendingCandidatesRef.current) {
+               await pc.addIceCandidate(new RTCIceCandidate(c));
+             }
+             pendingCandidatesRef.current = [];
+             return;
+           }
         } catch (err) {
           console.error("Error polling for answer:", err);
         }
@@ -323,10 +336,16 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
         return;
       }
       
-      // Set remote description with the offer
-      await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
-      
-      // Wait a moment for ICE candidates to arrive from caller
+       // Set remote description with the offer
+       await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
+       
+       // Flush any pending ICE candidates that were received before remoteDescription was set
+       for (const c of pendingCandidatesRef.current) {
+         await pc.addIceCandidate(new RTCIceCandidate(c));
+       }
+       pendingCandidatesRef.current = [];
+       
+       // Wait a moment for ICE candidates to arrive from caller
       await new Promise(resolve => setTimeout(resolve, 500));
       
       // Poll for ICE candidates from caller before creating answer
