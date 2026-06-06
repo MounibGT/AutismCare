@@ -58,6 +58,7 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
   const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
   const iceIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const processedCandidatesRef = useRef<Set<string>>(new Set());
+  const pendingCandidatesRef = useRef<RTCIceCandidate[]>([]);
 
   // Get current user info
   useEffect(() => {
@@ -161,6 +162,7 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
       peerConnectionRef.current = null;
     }
     processedCandidatesRef.current.clear();
+    pendingCandidatesRef.current = [];
   }, []);
 
   // Fetch and add ICE candidates from the opposite peer
@@ -176,8 +178,15 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
           const candidateId = `${candidate.candidate}-${candidate.sdpMid}-${candidate.sdpMLineIndex}`;
           if (!processedCandidatesRef.current.has(candidateId)) {
             try {
-              await pc.addIceCandidate(new RTCIceCandidate(candidate));
-              processedCandidatesRef.current.add(candidateId);
+              // Only add if remote description is set; otherwise queue for later
+              if (pc.remoteDescription) {
+                await pc.addIceCandidate(new RTCIceCandidate(candidate));
+                processedCandidatesRef.current.add(candidateId);
+              } else {
+                // Store for later when remote description is set
+                pendingCandidatesRef.current.push(new RTCIceCandidate(candidate));
+                processedCandidatesRef.current.add(candidateId);
+              }
             } catch (err) {
               console.error("Failed to add ICE candidate:", err);
             }
@@ -262,14 +271,9 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
 
       setCallStatus("calling");
 
-      // Poll for answer and ICE candidates
+      // Poll for answer first, only then start ICE polling
       let attempts = 0;
       const maxAttempts = 60;
-
-      // Start ICE candidate polling
-      iceIntervalRef.current = setInterval(async () => {
-        await fetchAndAddIceCandidates(pc);
-      }, 1000);
 
       while (attempts < maxAttempts) {
         try {
@@ -279,7 +283,24 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
           const data = await res.json();
 
           if (data.call && data.call.answer) {
+            // Set remote description FIRST
             await pc.setRemoteDescription(new RTCSessionDescription(data.call.answer));
+            
+            // Flush any pending ICE candidates that were received before remoteDescription was set
+            for (const c of pendingCandidatesRef.current) {
+              try {
+                await pc.addIceCandidate(c);
+              } catch (err) {
+                console.error("Failed to add pending ICE candidate:", err);
+              }
+            }
+            pendingCandidatesRef.current = [];
+            
+            // THEN start ICE candidate polling after remote description is set
+            iceIntervalRef.current = setInterval(async () => {
+              await fetchAndAddIceCandidates(pc);
+            }, 1000);
+            
             return;
           }
         } catch (err) {
@@ -326,18 +347,20 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
         return;
       }
 
-      // Set remote description with the offer
+      // Set remote description with the offer FIRST
       await pc.setRemoteDescription(new RTCSessionDescription(offerData.offer));
 
-      // Poll for ICE candidates from caller - this is critical for connection
-      let iceRetries = 0;
-      while (iceRetries < 10) {
-        await fetchAndAddIceCandidates(pc);
-        await new Promise(resolve => setTimeout(resolve, 300));
-        iceRetries++;
+      // Flush any pending ICE candidates that were received before remoteDescription was set
+      for (const c of pendingCandidatesRef.current) {
+        try {
+          await pc.addIceCandidate(c);
+        } catch (err) {
+          console.error("Failed to add pending ICE candidate:", err);
+        }
       }
+      pendingCandidatesRef.current = [];
 
-      // Create answer
+      // Create answer (after remote description is set)
       const answer = await pc.createAnswer();
       await pc.setLocalDescription(answer);
 
@@ -349,7 +372,11 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
         body: JSON.stringify({ answer: pc.localDescription }),
       });
 
-      // Start continuous ICE candidate polling
+      // NOW start polling for ICE candidates (after remote description is set and answer sent)
+      // First, try to get any pending ICE candidates from caller
+      await fetchAndAddIceCandidates(pc);
+      
+      // Then start continuous polling
       iceIntervalRef.current = setInterval(async () => {
         await fetchAndAddIceCandidates(pc);
       }, 1000);

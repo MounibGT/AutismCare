@@ -181,7 +181,8 @@ export default function CallPage({ params }: { params: Promise<{ id: string }> }
                // CRITICAL: Check if remoteDescription is set before adding ICE candidate
                if (!pc.remoteDescription) {
                  pendingCandidatesRef.current.push(candidate);
-                 return;
+                 processedCandidatesRef.current.add(candidateId);
+                 continue;
                }
                
                await pc.addIceCandidate(new RTCIceCandidate(candidate));
